@@ -1,10 +1,20 @@
 # VAL — Virginia Lottery Lab
 
-A local research bot for Virginia drawing games. It downloads official draw history, generates small batches of picks, runs chronological backtests and Monte Carlo frequency checks, and records prospective picks alongside equal-sized uniform random controls.
+A research bot for Virginia drawing games that runs automatically on GitHub Actions, with an optional local dashboard. It downloads official draw history, generates small batches of picks, runs chronological backtests and Monte Carlo frequency checks, and records prospective picks alongside equal-sized uniform random controls.
 
 **No method here has an established predictive edge.** More calculations do not make a fair independent draw predictable. Backtest hits and partial matches are not evidence of profit. Start with paper picks.
 
-## Run
+## Use it directly on GitHub — no computer setup
+
+Open **[the latest daily report](reports/latest.md)** to read picks and results. The **[Daily VAL bot workflow](https://github.com/deshawnclark116-prog/VAL/actions/workflows/bot.yml)** runs daily at **10:30 UTC** (5:30 a.m. Virginia standard time / 6:30 a.m. daylight time), and also when its code is updated. GitHub may delay scheduled runs. You can also open the workflow and select **Run workflow** to refresh it manually.
+
+Each run updates nine official game feeds, scores previous saved batches, generates three ensemble combinations and three random controls per game/session, runs 100-draw rolling comparisons and 1,000 simulated histories per game, and commits a readable report back to this repository. Separate Day/Night picks and five Cash Pop sessions produce 16 daily batches. Re-running on the same Eastern date reuses that day's picks. They target the first selected-session drawing on a **later Eastern date**, so check the target-date explanation in the report. No tickets are purchased.
+
+The repository stores `reports/latest.md`, `reports/picks.json`, full analysis in `reports/analysis.json`, and the complete accumulated prediction ledger in `reports/ledger.json`. These records are public because this repository is public. The interactive dashboard below is optional; GitHub Actions runs the scheduled bot without a computer left on. GitHub displays Markdown reports; it does not host the running Python dashboard.
+
+Actions must be enabled, and repository policy must allow the workflow's `contents: write` permission to save reports. The workflow's last run is the source of truth for whether it executed successfully. If a feed fails, the report identifies that game; no new picks are made from a stale failed download. GitHub can disable schedules after 60 days of inactivity in public repositories; re-enable the workflow if needed. There are no external API keys to configure.
+
+## Optional local dashboard
 
 Requires **Python 3.11+** with IANA timezone data (normally included on Linux/macOS). No Python packages, API keys, or paid services are required. Windows systems missing timezone data can install `tzdata` using `python -m pip install tzdata`.
 
@@ -23,7 +33,7 @@ For optional periodic updates while the bot is running:
 python3 val.py serve --interval 360
 ```
 
-This refreshes the nine supported official downloads at startup and every six hours. Closing the process stops updates. It is a local app, not an unattended hosted service. The server binds to loopback only; no gambling accounts are connected and no tickets are purchased.
+This refreshes the nine supported official downloads at startup and every six hours. Closing the local process stops those local updates; the GitHub Actions schedule is independent. The local server binds to loopback only; no gambling accounts are connected and no tickets are purchased.
 
 ## Coverage
 

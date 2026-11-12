@@ -1,0 +1,1024 @@
+{
+  "generated_at": "2026-11-12T22:44:24.465232+00:00",
+  "batches": [
+    {
+      "game": "pick3",
+      "name": "Pick 3",
+      "id": 1,
+      "created": "2026-11-12T22:44:26.510905+00:00",
+      "stream": "Day",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            2,
+            6,
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            9,
+            6,
+            5
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            8,
+            2,
+            2
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            5,
+            3,
+            3
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            4,
+            5,
+            7
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            1,
+            2,
+            0
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "pick3",
+      "name": "Pick 3",
+      "id": 2,
+      "created": "2026-11-12T22:44:26.525034+00:00",
+      "stream": "Night",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            9,
+            3,
+            9
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            4,
+            6,
+            9
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            6,
+            0,
+            0
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            4,
+            5,
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            1,
+            7,
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            2,
+            2,
+            7
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "pick4",
+      "name": "Pick 4",
+      "id": 3,
+      "created": "2026-11-12T22:44:29.148064+00:00",
+      "stream": "Day",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            5,
+            8,
+            9,
+            0
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            1,
+            3,
+            7,
+            7
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            9,
+            4,
+            6,
+            8
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            2,
+            1,
+            8,
+            3
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            6,
+            6,
+            3,
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            9,
+            5,
+            5,
+            1
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "pick4",
+      "name": "Pick 4",
+      "id": 4,
+      "created": "2026-11-12T22:44:29.161575+00:00",
+      "stream": "Night",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            0,
+            3,
+            3,
+            5
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            2,
+            2,
+            5,
+            1
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            1,
+            4,
+            6,
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            0,
+            3,
+            1,
+            7
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            3,
+            7,
+            8,
+            3
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "pick5",
+      "name": "Pick 5",
+      "id": 5,
+      "created": "2026-11-12T22:44:30.640707+00:00",
+      "stream": "Day",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            8,
+            0,
+            1,
+            6,
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            1,
+            4,
+            1,
+            3,
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            0,
+            0,
+            1,
+            5,
+            9
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            4,
+            1,
+            5,
+            6,
+            1
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            9,
+            6,
+            2,
+            8,
+            5
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            5,
+            6,
+            2,
+            2,
+            8
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "pick5",
+      "name": "Pick 5",
+      "id": 6,
+      "created": "2026-11-12T22:44:30.666129+00:00",
+      "stream": "Night",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            3,
+            5,
+            5,
+            1,
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            3,
+            9,
+            3,
+            6,
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            4,
+            7,
+            3,
+            7,
+            0
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            6,
+            7,
+            2,
+            0,
+            6
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            6,
+            9,
+            8,
+            3,
+            2
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            3,
+            9,
+            9,
+            6,
+            2
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "cash5",
+      "name": "Cash 5",
+      "id": 7,
+      "created": "2026-11-12T22:44:33.149870+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            5,
+            11,
+            13,
+            20,
+            29
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            5,
+            17,
+            35,
+            37,
+            38
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            2,
+            16,
+            19,
+            20,
+            44
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            8,
+            12,
+            15,
+            30,
+            32
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            8,
+            25,
+            31,
+            37,
+            39
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            8,
+            24,
+            31,
+            36,
+            45
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "powerball",
+      "name": "Powerball",
+      "id": 8,
+      "created": "2026-11-12T22:44:34.350983+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            19,
+            32,
+            40,
+            52,
+            67
+          ],
+          "bonus": 5
+        },
+        {
+          "numbers": [
+            3,
+            4,
+            7,
+            62,
+            63
+          ],
+          "bonus": 18
+        },
+        {
+          "numbers": [
+            8,
+            9,
+            38,
+            59,
+            69
+          ],
+          "bonus": 19
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            20,
+            26,
+            31,
+            34,
+            52
+          ],
+          "bonus": 9
+        },
+        {
+          "numbers": [
+            14,
+            16,
+            35,
+            45,
+            60
+          ],
+          "bonus": 16
+        },
+        {
+          "numbers": [
+            5,
+            8,
+            14,
+            28,
+            55
+          ],
+          "bonus": 21
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "megamillions",
+      "name": "Mega Millions",
+      "id": 9,
+      "created": "2026-11-12T22:44:35.674520+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            5,
+            39,
+            60,
+            61,
+            63
+          ],
+          "bonus": 1
+        },
+        {
+          "numbers": [
+            9,
+            17,
+            25,
+            36,
+            47
+          ],
+          "bonus": 22
+        },
+        {
+          "numbers": [
+            4,
+            19,
+            27,
+            34,
+            50
+          ],
+          "bonus": 1
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            12,
+            20,
+            23,
+            32,
+            60
+          ],
+          "bonus": 14
+        },
+        {
+          "numbers": [
+            1,
+            7,
+            40,
+            56,
+            63
+          ],
+          "bonus": 12
+        },
+        {
+          "numbers": [
+            1,
+            6,
+            11,
+            12,
+            70
+          ],
+          "bonus": 9
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "millionaireforlife",
+      "name": "Millionaire for Life",
+      "id": 10,
+      "created": "2026-11-12T22:44:36.484042+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            2,
+            27,
+            42,
+            54,
+            58
+          ],
+          "bonus": 1
+        },
+        {
+          "numbers": [
+            6,
+            24,
+            32,
+            42,
+            49
+          ],
+          "bonus": 3
+        },
+        {
+          "numbers": [
+            2,
+            15,
+            38,
+            43,
+            45
+          ],
+          "bonus": 4
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            24,
+            34,
+            37,
+            43,
+            55
+          ],
+          "bonus": 3
+        },
+        {
+          "numbers": [
+            14,
+            18,
+            20,
+            21,
+            58
+          ],
+          "bonus": 2
+        },
+        {
+          "numbers": [
+            7,
+            12,
+            46,
+            50,
+            55
+          ],
+          "bonus": 5
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "bankamillion",
+      "name": "Bank a Million",
+      "id": 11,
+      "created": "2026-11-12T22:44:37.513975+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            12,
+            25,
+            29,
+            35,
+            39,
+            40
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            15,
+            17,
+            18,
+            34,
+            35,
+            40
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            15,
+            20,
+            28,
+            30,
+            31,
+            36
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            1,
+            11,
+            14,
+            18,
+            20,
+            34
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            1,
+            11,
+            12,
+            24,
+            26,
+            29
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            14,
+            16,
+            22,
+            31,
+            32,
+            37
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "cashpop",
+      "name": "Cash Pop",
+      "id": 12,
+      "created": "2026-11-12T22:44:38.821963+00:00",
+      "stream": "Coffee Break",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            11
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            2
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            12
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            13
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            4
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "cashpop",
+      "name": "Cash Pop",
+      "id": 13,
+      "created": "2026-11-12T22:44:38.857696+00:00",
+      "stream": "Lunch Break",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            7
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            4
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            15
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            12
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            14
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "cashpop",
+      "name": "Cash Pop",
+      "id": 14,
+      "created": "2026-11-12T22:44:38.885496+00:00",
+      "stream": "Rush Hour",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            7
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            14
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            3
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            12
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "cashpop",
+      "name": "Cash Pop",
+      "id": 15,
+      "created": "2026-11-12T22:44:38.910542+00:00",
+      "stream": "Prime Time",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            6
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            10
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            9
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            15
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            5
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            8
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    },
+    {
+      "game": "cashpop",
+      "name": "Cash Pop",
+      "id": 16,
+      "created": "2026-11-12T22:44:38.942197+00:00",
+      "stream": "After Hours",
+      "method": "ensemble",
+      "picks": [
+        {
+          "numbers": [
+            2
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            8
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            14
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            14
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            12
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            7
+          ],
+          "bonus": null
+        }
+      ],
+      "result": null
+    }
+  ],
+  "failures": []
+}
