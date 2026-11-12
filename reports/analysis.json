@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T22:52:10.707709+00:00",
+  "generated_at": "2026-11-12T22:53:08.934516+00:00",
   "games": [
     {
       "game": "pick3",
@@ -230,7 +230,7 @@
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 5.26,
+        "statistic": 5.259999999999999,
         "p_value": 0.8211788211788211,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
@@ -308,8 +308,8 @@
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 40.940000000000005,
-        "p_value": 0.45554445554445555,
+        "statistic": 40.94000000000002,
+        "p_value": 0.45454545454545453,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -464,8 +464,8 @@
       "frequency_check": {
         "trials": 1000,
         "draws": 167,
-        "statistic": 67.79041916167664,
-        "p_value": 0.38161838161838163,
+        "statistic": 67.79041916167665,
+        "p_value": 0.3786213786213786,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -543,7 +543,7 @@
         "trials": 1000,
         "draws": 200,
         "statistic": 45.739999999999995,
-        "p_value": 0.7502497502497503,
+        "p_value": 0.7482517482517482,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -620,7 +620,7 @@
       "frequency_check": {
         "trials": 1000,
         "draws": 167,
-        "statistic": 36.00399201596806,
+        "statistic": 36.00399201596808,
         "p_value": 0.38161838161838163,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
@@ -699,7 +699,7 @@
         "trials": 1000,
         "draws": 200,
         "statistic": 12.399999999999999,
-        "p_value": 0.5734265734265734,
+        "p_value": 0.5704295704295704,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     }

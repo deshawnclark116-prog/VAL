@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-12T17:52:10.707709-05:00 · Eastern time
+Updated: 2026-11-12T17:53:08.934516-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -51,12 +51,12 @@ Pending batches: 25. This report retains the original saved picks and controls; 
 | Pick 3 | 0 / 300 | 0 / 300 | 0.3926 |
 | Pick 4 | 0 / 300 | 0 / 300 | 0.9510 |
 | Pick 5 | 0 / 300 | 0 / 300 | 0.8212 |
-| Cash 5 | 0 / 300 | 0 / 300 | 0.4555 |
+| Cash 5 | 0 / 300 | 0 / 300 | 0.4545 |
 | Powerball | 0 / 300 | 0 / 300 | 0.7163 |
-| Mega Millions | 0 / 300 | 0 / 300 | 0.3816 |
-| Millionaire for Life | 0 / 300 | 0 / 300 | 0.7502 |
+| Mega Millions | 0 / 300 | 0 / 300 | 0.3786 |
+| Millionaire for Life | 0 / 300 | 0 / 300 | 0.7483 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3816 |
-| Cash Pop | 19 / 300 | 20 / 300 | 0.5734 |
+| Cash Pop | 19 / 300 | 20 / 300 | 0.5704 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
