@@ -6,7 +6,7 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-from val import ET, GAMES, Store, backtest, generate, simulate, sync_game
+from val import ET, GAMES, Store, backtest, generate, simulate, sync_game, draw_schedule, next_draw
 
 
 def restore(store, path):
@@ -48,34 +48,43 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
     now = now or datetime.now(timezone.utc)
     day = now.astimezone(ET).date()
     restore(store,output/"ledger.json")
-    report = ["# VAL daily report", "", f"Generated: {now.isoformat()} · Eastern date: {day}", "",
+    report = ["# VAL next-draw report", "", f"Updated: {now.astimezone(ET).isoformat()} · Eastern time", "",
               "Paper picks for research. These weights are not proven winning probabilities.", "",
               "## Picks", "",
-              "Each batch targets the first draw in its selected session on an Eastern date **after its creation date**. Same-day draws are excluded. Picks for games without a draw tomorrow wait for their next eligible draw.", "",
-              "Three unique combinations per game/session, with three saved random control combinations. Re-running on the same Eastern date reuses saved batches.", "",
-              "| Game | Session | Batch | Combinations | Latest loaded draw (ET) |", "| --- | --- | --- | --- | --- |"]
+              "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
+              "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
+              "Three unique combinations per target, with three saved random controls. If the latest completed result is missing, the game waits rather than generating from outdated input.", "",
+              "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
         if "id" not in g: continue
         try:
             syncer(store,game)
-            history=store.history(game)
+            history=[r for r in store.history(game) if datetime.fromisoformat(r["at"])<=now]
             if not history: raise ValueError("No history received")
             age=(day-datetime.fromisoformat(history[-1]["at"]).astimezone(ET).date()).days
             if age>7: raise ValueError(f"Latest draw is {age} days old; new picks skipped")
             # Settle previous saved batches using newly downloaded results.
             ledger=store.ledger(game)
-            for stream in sessions(game):
-                selected=store.history(game,stream)
-                existing=next((r for r in ledger if r["stream"]==stream and datetime.fromisoformat(r["created"]).astimezone(ET).date()==day),None)
-                if existing is None:
-                    picks=generate(game,selected,"ensemble",count)
-                    baseline=generate(game,[],"random",len(picks))
-                    pid=store.record(game,stream,"ensemble",picks,baseline)
-                    existing=next(r for r in store.ledger(game) if r["id"]==pid)
-                batches.append(dict(game=game,name=g["name"],**existing))
-                latest=datetime.fromisoformat(selected[-1]["at"]).astimezone(ET).isoformat()
-                report.append(f"| {g['name']} | {stream} | #{existing['id']} | "+" / ".join(f"`{selection(p)}`" for p in existing["picks"])+f" | {latest} |")
+            expected=max((d for d in draw_schedule(game,now) if datetime.fromisoformat(d["at"])<=now),key=lambda d:d["at"])
+            if not any(r["at"]==expected["at"] and r["stream"]==expected["stream"] for r in history):
+                stamp=datetime.fromisoformat(expected["at"]).astimezone(ET).isoformat()
+                raise ValueError(f"Waiting for latest completed {expected['stream']} result ({stamp}); new picks withheld")
+            target=next_draw(game,now)
+            if (datetime.fromisoformat(target["at"])-now).total_seconds()<15*60:
+                raise ValueError("Next draw is less than 15 minutes away; waiting for its result before preparing the following draw")
+            stream=target["stream"]
+            existing=next((r for r in ledger if r.get("target")==target),None)
+            if existing is None:
+                picks=generate(game,history,"ensemble",count)
+                baseline=generate(game,[],"random",len(picks))
+                pid=store.record(game,stream,"ensemble",picks,baseline,target=target,training_latest=history[-1],created=now)
+                existing=next(r for r in store.ledger(game) if r["id"]==pid)
+            batches.append(dict(game=game,name=g["name"],**existing))
+            used=existing["training_latest"]
+            latest=datetime.fromisoformat(used["at"]).astimezone(ET).isoformat()
+            target_label=datetime.fromisoformat(target["at"]).astimezone(ET).isoformat()
+            report.append(f"| {g['name']} | {target_label} | {stream} | #{existing['id']} | "+" / ".join(f"`{selection(p)}`" for p in existing["picks"])+f" | {latest} | `{selection(used)}` ({used['stream']}) |")
             # Analysis uses All sessions, clearly separate from prospective session picks.
             test=backtest(game,history,count=count,tests=100)
             mc=simulate(game,history,trials=trials)
@@ -84,7 +93,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             failures.append(dict(game=game,error=safe(exc)))
         all_records.extend(dict(game=game,**r) for r in store.ledger(game))
     report += ["", "## Prospective results", "",
-               "Every saved batch is retained in [ledger.json](ledger.json), including losses. Exact hits require all selected main numbers and the special ball where applicable. Partial matches are not prize wins. Repeated batches on one drawing are correlated.", "",
+               "Every saved batch is retained in [ledger.json](ledger.json), including losses. New batches settle only against their explicit target date/time/session. Older batches retain their original later-date scoring rule and are not retargeted or replaced. Exact hits require all selected main numbers and the special ball where applicable. Partial matches are not prize wins. Repeated batches on one drawing are correlated.", "",
                "| Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |",
                "| --- | --- | --- | --- | --- | --- |"]
     for game,g in GAMES.items():
@@ -104,7 +113,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
         report.append(f"| {GAMES[row['game']]['name']} | {e['exact']} / {e['tickets']} | {r['exact']} / {r['tickets']} | {row['frequency_check']['p_value']:.4f} |")
     report += ["", "Full five-method statistics and simulation details: [analysis.json](analysis.json).", "",
                "## Coverage and update status", "",
-               "Nine recurring games update from Virginia Lottery official downloads. Pick 3/4/5 have separate Day and Night picks; Cash Pop has five separate sessions. Keno needs a CSV import in the local dashboard and is not automatically picked here. Seasonal raffle ticket numbers are assigned. FIREBALL, EZ Match, multipliers, payouts, and ROI are not modeled.", "",
+               "Nine recurring games update from Virginia Lottery official downloads. Same-day Pick 3/4/5 results are supplemented from the official latest-result cards. Each game shows only its next upcoming session; completed sessions are used as input. Keno needs a CSV import in the local dashboard and is not automatically picked here. Seasonal raffle ticket numbers are assigned. FIREBALL, EZ Match, multipliers, payouts, and ROI are not modeled.", "",
                "[Official Virginia game rules and results](https://www.valottery.com/alldrawgames)", ""]
     if failures:
         report += ["### Update / analysis failures", ""]

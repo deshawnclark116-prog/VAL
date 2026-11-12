@@ -1,8 +1,8 @@
-name: Daily VAL bot
+name: VAL next-draw bot
 
 on:
   schedule:
-    - cron: '30 10 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
   push:
     branches: [main]

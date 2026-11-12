@@ -6,13 +6,17 @@ A research bot for Virginia drawing games that runs automatically on GitHub Acti
 
 ## Use it directly on GitHub — no computer setup
 
-Open **[the latest daily report](reports/latest.md)** to read picks and results. The **[Daily VAL bot workflow](https://github.com/deshawnclark116-prog/VAL/actions/workflows/bot.yml)** runs daily at **10:30 UTC** (5:30 a.m. Virginia standard time / 6:30 a.m. daylight time), and also when its code is updated. GitHub may delay scheduled runs. You can also open the workflow and select **Run workflow** to refresh it manually.
+Open **[the latest next-draw report](reports/latest.md)** to read picks and results. The **[VAL next-draw bot workflow](https://github.com/deshawnclark116-prog/VAL/actions/workflows/bot.yml)** refreshes hourly at minute 17, and when its code is updated. GitHub may delay scheduled runs. Open the workflow and select **Run workflow** for a manual refresh.
 
-Each run updates nine official game feeds, scores previous saved batches, generates three ensemble combinations and three random controls per game/session, runs 100-draw rolling comparisons and 1,000 simulated histories per game, and commits a readable report back to this repository. Separate Day/Night picks and five Cash Pop sessions produce 16 daily batches. Re-running on the same Eastern date reuses that day's picks. They target the first selected-session drawing on a **later Eastern date**, so check the target-date explanation in the report. No tickets are purchased.
+Each report shows **one next upcoming draw per game**, with its date, Eastern time, session, and the latest completed winning result used as input. After Day has been drawn, Pick 3/4/5 target Night using previous results from **all sessions**, including today's Day result. Cash Pop targets only its next session. Jackpot games respect their drawing weekdays. The report is a snapshot at its update time; a row expires at its stated target time and waits for the next workflow refresh.
 
-The repository stores `reports/latest.md`, `reports/picks.json`, full analysis in `reports/analysis.json`, and the complete accumulated prediction ledger in `reports/ledger.json`. These records are public because this repository is public. The interactive dashboard below is optional; GitHub Actions runs the scheduled bot without a computer left on. GitHub displays Markdown reports; it does not host the running Python dashboard.
+The full-history download can omit today's partially completed Day/Night pair. The bot supplements same-day Pick results from the official latest-result cards. Before generating picks it checks that the most recently scheduled completed result is present. Missing results cause that game to wait, rather than silently using old data. It avoids generating a new batch within 15 minutes of its draw. Once saved, a batch stays fixed for that exact target and is scored only against that date/time/session. Previous batches retain their original scoring rule and remain in the ledger.
 
-Actions must be enabled, and repository policy must allow the workflow's `contents: write` permission to save reports. The workflow's last run is the source of truth for whether it executed successfully. If a feed fails, the report identifies that game; no new picks are made from a stale failed download. GitHub can disable schedules after 60 days of inactivity in public repositories; re-enable the workflow if needed. There are no external API keys to configure.
+Each run downloads nine game feeds, settles previous batches, saves three ensemble combinations and three random controls per upcoming draw, and runs historical comparisons plus 1,000 frequency simulations per game. The full report includes the exact source history timestamp and latest winning numbers used. No tickets are purchased.
+
+The repository stores `reports/latest.md`, `reports/picks.json`, `reports/analysis.json`, and the complete `reports/ledger.json`. These records are public because this repository is public. The interactive dashboard below is optional; GitHub Actions runs without a computer left on. GitHub displays reports rather than hosting the running Python dashboard.
+
+Actions must be enabled and allow the workflow's `contents: write` permission to save reports. The workflow's last run shows whether it executed successfully. GitHub can disable schedules after 60 days of inactivity in public repositories; re-enable the workflow if needed. There are no external API keys to configure.
 
 ## Optional local dashboard
 
@@ -79,9 +83,9 @@ The randomness check compares aggregate frequency dispersion `sum((observed - ex
 
 ### Prospective ledger
 
-Each generated batch saves its creation time, method, session, selections, and the same number of uniform random controls in local SQLite. It settles against the first loaded draw in that session **on a later Eastern calendar date**. Same-day draws are deliberately excluded because source histories often have dates rather than actual event timestamps. Refresh history after the target drawing to settle it. Batches retain both wins and losses; generating more batches does not erase earlier ones. The ledger shows all sessions for the selected game. Multiple batches targeting the same draw are correlated and are not independent trials.
+Each batch saves creation time, picks, random controls, and an explicit target draw date/time/session. Scheduled picks also preserve the latest training result. New batches can target a same-day future draw, and settle only against that exact target when results arrive. The GitHub runner trains on completed results across all sessions of the same game so that today's daytime result informs a night prediction. Manual dashboard session filters still select the training subset; its default All setting includes both sessions. Keno's manual local batches and legacy batches without explicit targets retain the older first-selected-session-draw-on-a-later-Eastern-date rule.
 
-The database is local and user-editable; this is a research log, not a tamper-proof audit service. Imported records carry a user-import source label. Preserve your database to preserve your ledger.
+The complete ledger keeps both wins and losses. Older batches are never retargeted or deleted when targeting rules change. Multiple batches targeting one drawing are correlated, not independent trials. The local database and repository ledger are user-editable research logs, not tamper-proof audit services. Imported results carry a user-import source label. Preserve the ledger to preserve the record.
 
 ## CSV format
 

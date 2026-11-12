@@ -12,7 +12,7 @@ import statistics
 import threading
 import urllib.request
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -34,6 +34,55 @@ GAMES = {
     "cashpop": dict(name="Cash Pop", size=1, pool=15, id=40),
     "keno": dict(name="Keno", size=5, pool=80, drawn=20),
 }
+
+def draw_schedule(game, now, stream="All"):
+    """Scheduled Eastern draw times around now, with DST and weekday rules."""
+    if game == "keno": raise ValueError("Keno automatic targeting is not available")
+    times = [("Main",23,0)]
+    weekdays = set(range(7))
+    if GAMES[game].get("digits"): times=[("Day",13,59),("Night",23,0)]
+    elif game == "cashpop": times=[("Coffee Break",9,0),("Lunch Break",12,0),("Rush Hour",17,0),("Prime Time",21,0),("After Hours",23,59)]
+    elif game == "powerball": weekdays={0,2,5};times=[("Main",22,59)]
+    elif game == "megamillions": weekdays={1,4}
+    elif game == "bankamillion": weekdays={2,5}
+    elif game == "millionaireforlife": times=[("Main",23,15)]
+    day=now.astimezone(ET).date()
+    draws=[]
+    for offset in range(-8,9):
+        date=day+timedelta(days=offset)
+        if date.weekday() not in weekdays: continue
+        for session,hour,minute in times:
+            if stream != "All" and session != stream: continue
+            draws.append(dict(at=datetime(date.year,date.month,date.day,hour,minute,tzinfo=ET).astimezone(timezone.utc).isoformat(),stream=session))
+    return sorted(draws,key=lambda x:x["at"])
+
+def next_draw(game,now,stream="All"):
+    return next(d for d in draw_schedule(game,now,stream) if datetime.fromisoformat(d["at"])>now)
+
+def parse_latest_digits(game,text):
+    """Supplement same-day digit results omitted by the full-day download."""
+    from html import unescape
+    g=GAMES[game]
+    card=re.search(r'<a\b[^>]*\bid="game-'+str(g["id"])+r'"[^>]*>(.*?)</a>',text,re.S)
+    if not card: raise ValueError("Latest-result game card was not found")
+    date=re.search(r'Latest Drawing:\s*\w+\s+(\d+/\d+/\d+)',card[1])
+    if not date: raise ValueError("Latest-result date was not found")
+    day=datetime.strptime(date[1],"%m/%d/%Y")
+    rows=[]
+    for css,stream,hour,minute in [("daytime","Day",13,59),("evening","Night",23,0)]:
+        ul=re.search(r'<ul\b[^>]*class="'+css+r'"[^>]*>(.*?)</ul>',card[1],re.S)
+        if not ul: continue
+        digits=[]
+        for li in re.findall(r'<li\b[^>]*>(.*?)</li>',ul[1],re.S):
+            value=unescape(re.sub(r'<[^>]+>', '', li)).strip()
+            if re.fullmatch(r'\d',value): digits.append(int(value))
+        if not digits: continue  # A future session contains dashes, never zeroes.
+        if len(digits) != g["size"]+1: raise ValueError("Unexpected latest digit-result format")
+        validate(game,digits[:-1])
+        rows.append(dict(game=game,at=day.replace(hour=hour,minute=minute,tzinfo=ET).astimezone(timezone.utc).isoformat(),
+                         stream=stream,numbers=digits[:-1],bonus=None,extra=digits[-1],source="Virginia Lottery latest-result page"))
+    if not rows: raise ValueError("No completed digit results on latest-result page")
+    return rows
 
 def validate(game, numbers, bonus=None, draw=True):
     g = GAMES[game]
@@ -117,11 +166,15 @@ class Store:
         with self.connect() as db:
             rows = db.execute("SELECT data FROM draws WHERE game=? ORDER BY at,stream", (game,)).fetchall()
         return [r for x in rows if (r := json.loads(x[0])) and (stream == "All" or r["stream"] == stream)]
-    def record(self, game, stream, method, picks, baseline):
+    def record(self, game, stream, method, picks, baseline, target=None, training_latest=None, created=None):
         data = dict(picks=picks, baseline=baseline)
+        created=created or datetime.now(timezone.utc)
+        if target:
+            if datetime.fromisoformat(target["at"])<=created: raise ValueError("Target draw has already occurred")
+            data.update(target=target,training_latest=training_latest)
         with self.connect() as db:
             cur = db.execute("INSERT INTO predictions(game,created,stream,method,data) VALUES(?,?,?,?,?)",
-                (game, datetime.now(timezone.utc).isoformat(), stream, method, json.dumps(data)))
+                (game, created.isoformat(), stream, method, json.dumps(data)))
             return cur.lastrowid
     def ledger(self, game):
         history = self.history(game)
@@ -132,8 +185,12 @@ class Store:
                 data = json.loads(data)
                 if result is None:
                     created_day = datetime.fromisoformat(created).astimezone(ET).date()
-                    future = next((d for d in history if datetime.fromisoformat(d["at"]).astimezone(ET).date() > created_day
-                                   and (stream == "All" or d["stream"] == stream)), None)
+                    if data.get("target"):
+                        future=next((d for d in history if d["at"]==data["target"]["at"] and d["stream"]==data["target"]["stream"]),None)
+                    else:
+                        # Preserve the original contract for batches created before explicit targets.
+                        future = next((d for d in history if datetime.fromisoformat(d["at"]).astimezone(ET).date() > created_day
+                                       and (stream == "All" or d["stream"] == stream)), None)
                     if future:
                         result = json.dumps(dict(draw=future, model=score_batch(game,data["picks"],future), random=score_batch(game,data["baseline"],future)))
                         db.execute("UPDATE predictions SET result=? WHERE id=?", (result,pid))
@@ -251,6 +308,10 @@ def sync_game(store,game):
         request=urllib.request.Request(f"https://www.valottery.com/api/v1/downloadall?gameId={g['id']}",headers={"User-Agent":"VAL/1.0 (draw history research)"})
         with urllib.request.urlopen(request,timeout=35) as response: text=response.read(12_000_000).decode("utf-8-sig")
         added=store.put(parse_official(game,text))
+        if g.get("digits"):
+            latest_request=urllib.request.Request(f"https://www.valottery.com/data/draw-games/{game}",headers={"User-Agent":"VAL/1.1 (draw history research)"})
+            with urllib.request.urlopen(latest_request,timeout=35) as response: latest=response.read(3_000_000).decode("utf-8-sig")
+            added+=store.put(parse_latest_digits(game,latest))
         with store.connect() as db: db.execute("INSERT OR REPLACE INTO sync VALUES(?,?,NULL)",(game,datetime.now(timezone.utc).isoformat()))
         store.ledger(game)
         return dict(game=game,added=added)
@@ -321,10 +382,14 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=="/api/sync": return self.send(200,sync_game(self.store,game))
             if self.path=="/api/picks":
                 method=body.get("method","ensemble"); count=int(body.get("count",5))
+                created=datetime.now(timezone.utc)
+                history=[r for r in history if datetime.fromisoformat(r["at"])<=created]
                 picks=generate(game,history,method,count)
                 baseline=generate(game,[],"random",len(picks))
-                pid=self.store.record(game,stream,method,picks,baseline)
-                return self.send(200,dict(id=pid,picks=picks,baseline=baseline))
+                target=next_draw(game,created,stream) if game!="keno" else None
+                pid=self.store.record(game,stream,method,picks,baseline,target=target,
+                                      training_latest=history[-1] if history else None,created=created)
+                return self.send(200,dict(id=pid,picks=picks,baseline=baseline,target=target))
             if self.path in ("/api/backtest","/api/simulate"):
                 if not self.gate.acquire(blocking=False): return self.send(429,dict(error="An analysis is already running"))
                 try:
