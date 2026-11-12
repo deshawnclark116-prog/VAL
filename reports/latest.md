@@ -1,6 +1,6 @@
 # VAL daily report
 
-Generated: 2026-11-12T22:44:24.465232+00:00 · Eastern date: 2026-11-12
+Generated: 2026-11-12T22:45:14.784541+00:00 · Eastern date: 2026-11-12
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -53,15 +53,15 @@ Pending batches: 16. This report retains the original saved picks and controls; 
 
 | Game (all sessions) | Ensemble exact hits / tickets | Random exact hits / tickets | Frequency-check p-value |
 | --- | --- | --- | --- |
-| Pick 3 | 0 / 300 | 0 / 300 | 0.3217 |
+| Pick 3 | 0 / 300 | 0 / 300 | 0.3207 |
 | Pick 4 | 0 / 300 | 0 / 300 | 0.9441 |
 | Pick 5 | 0 / 300 | 0 / 300 | 0.8212 |
-| Cash 5 | 0 / 300 | 0 / 300 | 0.4555 |
+| Cash 5 | 0 / 300 | 0 / 300 | 0.4545 |
 | Powerball | 0 / 300 | 0 / 300 | 0.7163 |
-| Mega Millions | 0 / 300 | 0 / 300 | 0.3816 |
-| Millionaire for Life | 0 / 300 | 0 / 300 | 0.7502 |
+| Mega Millions | 0 / 300 | 0 / 300 | 0.3786 |
+| Millionaire for Life | 0 / 300 | 0 / 300 | 0.7483 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3816 |
-| Cash Pop | 19 / 300 | 20 / 300 | 0.5734 |
+| Cash Pop | 19 / 300 | 20 / 300 | 0.5704 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
