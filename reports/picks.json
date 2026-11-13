@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T22:53:08.934516+00:00",
+  "generated_at": "2026-11-13T03:26:21.802059+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -726,11 +726,17 @@
     {
       "game": "cashpop",
       "name": "Cash Pop",
-      "id": 25,
-      "created": "2026-11-12T22:52:10.707709+00:00",
-      "stream": "Prime Time",
+      "id": 26,
+      "created": "2026-11-13T03:26:21.802059+00:00",
+      "stream": "After Hours",
       "method": "ensemble",
       "picks": [
+        {
+          "numbers": [
+            11
+          ],
+          "bonus": null
+        },
         {
           "numbers": [
             13
@@ -739,13 +745,7 @@
         },
         {
           "numbers": [
-            7
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            15
+            12
           ],
           "bonus": null
         }
@@ -753,33 +753,33 @@
       "baseline": [
         {
           "numbers": [
-            1
+            15
           ],
           "bonus": null
         },
         {
           "numbers": [
-            7
+            9
           ],
           "bonus": null
         },
         {
           "numbers": [
-            2
+            8
           ],
           "bonus": null
         }
       ],
       "target": {
-        "at": "2026-11-13T02:00:00+00:00",
-        "stream": "Prime Time"
+        "at": "2026-11-13T04:59:00+00:00",
+        "stream": "After Hours"
       },
       "training_latest": {
         "game": "cashpop",
-        "at": "2026-11-12T22:00:00+00:00",
-        "stream": "Rush Hour",
+        "at": "2026-11-13T02:00:00+00:00",
+        "stream": "Prime Time",
         "numbers": [
-          13
+          12
         ],
         "bonus": null,
         "extra": null,
