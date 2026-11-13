@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T12:14:57.209539+00:00",
+  "generated_at": "2026-11-13T19:49:50.592389+00:00",
   "games": [
     {
       "game": "pick3",
@@ -10,10 +10,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.30333333333333334,
+            "average_matches": 0.31,
             "ci95": [
-              0.250725440457672,
-              0.3559412262089947
+              0.24822490958537471,
+              0.3717750904146253
             ],
             "bonus_matches": 0
           },
@@ -21,11 +21,11 @@
             "method": "frequency",
             "draws": 100,
             "tickets": 300,
-            "exact": 0,
-            "average_matches": 0.31,
+            "exact": 1,
+            "average_matches": 0.2866666666666666,
             "ci95": [
-              0.25565066893919985,
-              0.36434933106080014
+              0.22231744548167015,
+              0.3510158878516631
             ],
             "bonus_matches": 0
           },
@@ -34,10 +34,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.26999999999999996,
+            "average_matches": 0.3,
             "ci95": [
-              0.21149403859741422,
-              0.3285059614025857
+              0.23335987060156485,
+              0.36664012939843516
             ],
             "bonus_matches": 0
           },
@@ -46,10 +46,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.29666666666666663,
+            "average_matches": 0.30666666666666664,
             "ci95": [
-              0.24422294299416714,
-              0.34911039033916613
+              0.24459565848960607,
+              0.3687376748437272
             ],
             "bonus_matches": 0
           },
@@ -57,25 +57,25 @@
             "method": "ensemble",
             "draws": 100,
             "tickets": 300,
-            "exact": 0,
-            "average_matches": 0.3,
+            "exact": 1,
+            "average_matches": 0.29666666666666663,
             "ci95": [
-              0.24163791954131716,
-              0.35836208045868284
+              0.23307569115830146,
+              0.3602576421750318
             ],
             "bonus_matches": 0
           }
         ],
-        "from_draw": "2026-09-24T17:59:00+00:00",
-        "to_draw": "2026-11-13T04:00:00+00:00",
+        "from_draw": "2026-09-25T03:00:00+00:00",
+        "to_draw": "2026-11-13T18:59:00+00:00",
         "expected_matches": 0.3,
         "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 9.7,
-        "p_value": 0.38461538461538464,
+        "statistic": 9.366666666666667,
+        "p_value": 0.40559440559440557,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -88,10 +88,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.4433333333333333,
+            "average_matches": 0.36333333333333334,
             "ci95": [
-              0.36616665932180004,
-              0.5205000073448666
+              0.2913467789085149,
+              0.4353198877581518
             ],
             "bonus_matches": 0
           },
@@ -100,10 +100,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.42,
+            "average_matches": 0.3433333333333333,
             "ci95": [
-              0.3565957526197291,
-              0.4834042473802709
+              0.2793637965317564,
+              0.40730287013491023
             ],
             "bonus_matches": 0
           },
@@ -112,10 +112,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.43666666666666665,
+            "average_matches": 0.35333333333333333,
             "ci95": [
-              0.3661322131293884,
-              0.5072011202039449
+              0.2852087178678261,
+              0.4214579487988406
             ],
             "bonus_matches": 0
           },
@@ -124,10 +124,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.45,
+            "average_matches": 0.35,
             "ci95": [
-              0.36991600929786966,
-              0.5300839907021304
+              0.28344079367865066,
+              0.4165592063213493
             ],
             "bonus_matches": 0
           },
@@ -136,24 +136,24 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.4533333333333333,
+            "average_matches": 0.35,
             "ci95": [
-              0.3822963719924707,
-              0.5243702946741959
+              0.28676257483389594,
+              0.413237425166104
             ],
             "bonus_matches": 0
           }
         ],
-        "from_draw": "2026-09-24T17:59:00+00:00",
-        "to_draw": "2026-11-13T04:00:00+00:00",
+        "from_draw": "2026-09-25T03:00:00+00:00",
+        "to_draw": "2026-11-13T18:59:00+00:00",
         "expected_matches": 0.4,
         "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 3.2249999999999996,
-        "p_value": 0.952047952047952,
+        "statistic": 3.3249999999999997,
+        "p_value": 0.951048951048951,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -166,10 +166,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.48333333333333334,
+            "average_matches": 0.5233333333333333,
             "ci95": [
-              0.41238443374769485,
-              0.5542822329189718
+              0.4512510122684494,
+              0.5954156543982172
             ],
             "bonus_matches": 0
           },
@@ -178,10 +178,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.48333333333333334,
+            "average_matches": 0.52,
             "ci95": [
-              0.4105841755711529,
-              0.5560824910955138
+              0.444949203584181,
+              0.595050796415819
             ],
             "bonus_matches": 0
           },
@@ -190,10 +190,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.4533333333333333,
+            "average_matches": 0.51,
             "ci95": [
-              0.3835208167281609,
-              0.5231458499385058
+              0.43602837805635064,
+              0.5839716219436494
             ],
             "bonus_matches": 0
           },
@@ -202,10 +202,10 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.48666666666666664,
+            "average_matches": 0.5233333333333333,
             "ci95": [
-              0.41389084403890775,
-              0.5594424892944255
+              0.4524573951857132,
+              0.5942092714809535
             ],
             "bonus_matches": 0
           },
@@ -214,16 +214,16 @@
             "draws": 100,
             "tickets": 300,
             "exact": 0,
-            "average_matches": 0.45666666666666667,
+            "average_matches": 0.5166666666666666,
             "ci95": [
-              0.3855478148152453,
-              0.5277855185180881
+              0.4404444444444444,
+              0.5928888888888888
             ],
             "bonus_matches": 0
           }
         ],
-        "from_draw": "2026-09-24T17:59:00+00:00",
-        "to_draw": "2026-11-13T04:00:00+00:00",
+        "from_draw": "2026-09-25T03:00:00+00:00",
+        "to_draw": "2026-11-13T18:59:00+00:00",
         "expected_matches": 0.5,
         "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
       },
@@ -633,28 +633,16 @@
             "method": "random",
             "draws": 100,
             "tickets": 300,
-            "exact": 21,
-            "average_matches": 0.06999999999999999,
+            "exact": 15,
+            "average_matches": 0.049999999999999996,
             "ci95": [
-              0.04325513485829828,
-              0.0967448651417017
+              0.0265538082895344,
+              0.0734461917104656
             ],
             "bonus_matches": 0
           },
           {
             "method": "frequency",
-            "draws": 100,
-            "tickets": 300,
-            "exact": 16,
-            "average_matches": 0.05333333333333333,
-            "ci95": [
-              0.029261073987071916,
-              0.07740559267959474
-            ],
-            "bonus_matches": 0
-          },
-          {
-            "method": "recent",
             "draws": 100,
             "tickets": 300,
             "exact": 19,
@@ -666,14 +654,26 @@
             "bonus_matches": 0
           },
           {
+            "method": "recent",
+            "draws": 100,
+            "tickets": 300,
+            "exact": 23,
+            "average_matches": 0.07666666666666666,
+            "ci95": [
+              0.049033764467465484,
+              0.10429956886586783
+            ],
+            "bonus_matches": 0
+          },
+          {
             "method": "cold",
             "draws": 100,
             "tickets": 300,
-            "exact": 21,
-            "average_matches": 0.06999999999999999,
+            "exact": 16,
+            "average_matches": 0.05333333333333333,
             "ci95": [
-              0.04325513485829828,
-              0.0967448651417017
+              0.029261073987071916,
+              0.07740559267959474
             ],
             "bonus_matches": 0
           },
@@ -681,25 +681,25 @@
             "method": "ensemble",
             "draws": 100,
             "tickets": 300,
-            "exact": 20,
-            "average_matches": 0.06666666666666667,
+            "exact": 30,
+            "average_matches": 0.09999999999999999,
             "ci95": [
-              0.04040167842789259,
-              0.09293165490544074
+              0.06990967581717322,
+              0.13009032418282676
             ],
             "bonus_matches": 0
           }
         ],
-        "from_draw": "2026-10-24T13:00:00+00:00",
-        "to_draw": "2026-11-13T04:59:00+00:00",
+        "from_draw": "2026-10-24T21:00:00+00:00",
+        "to_draw": "2026-11-13T17:00:00+00:00",
         "expected_matches": 0.06666666666666667,
         "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 11.5,
-        "p_value": 0.6383616383616384,
+        "statistic": 12.999999999999996,
+        "p_value": 0.5214785214785215,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     }
