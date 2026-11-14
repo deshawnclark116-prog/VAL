@@ -1072,7 +1072,33 @@
           }
         ]
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "cashpop",
+          "at": "2026-11-13T22:00:00+00:00",
+          "stream": "Rush Hour",
+          "numbers": [
+            6
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 3,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 3,
+          "bonus_matches": 0
+        }
+      }
     },
     {
       "id": 15,
@@ -3170,6 +3196,97 @@
           "stream": "Lunch Break",
           "numbers": [
             8
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": {
+        "draw": {
+          "game": "cashpop",
+          "at": "2026-11-13T22:00:00+00:00",
+          "stream": "Rush Hour",
+          "numbers": [
+            6
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 3,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 3,
+          "bonus_matches": 0
+        }
+      }
+    },
+    {
+      "id": 37,
+      "game": "cashpop",
+      "created": "2026-11-14T00:53:40.096906+00:00",
+      "stream": "Prime Time",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              13
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              1
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              8
+            ],
+            "bonus": null
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              14
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              11
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              7
+            ],
+            "bonus": null
+          }
+        ],
+        "target": {
+          "at": "2026-11-14T02:00:00+00:00",
+          "stream": "Prime Time"
+        },
+        "training_latest": {
+          "game": "cashpop",
+          "at": "2026-11-13T22:00:00+00:00",
+          "stream": "Rush Hour",
+          "numbers": [
+            6
           ],
           "bonus": null,
           "extra": null,

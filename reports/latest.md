@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-13T14:49:50.592389-05:00 · Eastern time
+Updated: 2026-11-13T19:53:40.096906-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -22,7 +22,7 @@ Three unique combinations per target, with three saved random controls. If the l
 | Mega Millions | 2026-11-13T23:00:00-05:00 | Main | #22 | `13 33 34 45 46 + 12` / `1 3 13 27 30 + 17` / `6 26 28 49 66 + 16` | 2026-11-10T23:00:00-05:00 | `2 18 25 30 65 + 22` (Main) |
 | Millionaire for Life | 2026-11-13T23:15:00-05:00 | Main | #31 | `10 11 27 32 33 + 5` / `6 13 17 22 56 + 1` / `27 35 41 56 57 + 3` | 2026-11-12T23:15:00-05:00 | `6 22 27 29 39 + 5` (Main) |
 | Bank a Million | 2026-11-14T23:00:00-05:00 | Main | #24 | `2 19 22 24 27 36` / `3 9 22 26 36 39` / `8 15 22 24 27 30` | 2026-11-11T23:00:00-05:00 | `5 6 15 24 25 28` (Main) |
-| Cash Pop | 2026-11-13T17:00:00-05:00 | Rush Hour | #36 | `15` / `11` / `7` | 2026-11-13T12:00:00-05:00 | `8` (Lunch Break) |
+| Cash Pop | 2026-11-13T21:00:00-05:00 | Prime Time | #37 | `13` / `1` / `8` | 2026-11-13T17:00:00-05:00 | `6` (Rush Hour) |
 
 ## Prospective results
 
@@ -38,9 +38,9 @@ Every saved batch is retained in [ledger.json](ledger.json), including losses. N
 | Mega Millions | 0 | 0 | 0 | 0 | 0 |
 | Millionaire for Life | 1 | 3 | 0 | 3 | 0 |
 | Bank a Million | 0 | 0 | 0 | 0 | 0 |
-| Cash Pop | 5 | 15 | 1 | 15 | 0 |
+| Cash Pop | 7 | 21 | 1 | 21 | 0 |
 
-Pending batches: 20. This report retains the original saved picks and controls; no retrospective replacement.
+Pending batches: 19. This report retains the original saved picks and controls; no retrospective replacement.
 
 ## Historical checks
 
@@ -56,7 +56,7 @@ Pending batches: 20. This report retains the original saved picks and controls; 
 | Mega Millions | 0 / 300 | 0 / 300 | 0.3786 |
 | Millionaire for Life | 0 / 300 | 0 / 300 | 0.7882 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3816 |
-| Cash Pop | 30 / 300 | 15 / 300 | 0.5215 |
+| Cash Pop | 19 / 300 | 21 / 300 | 0.5005 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
