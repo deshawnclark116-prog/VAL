@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-14T10:07:21.424412-05:00 · Eastern time
+Updated: 2026-11-14T14:56:42.280863-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,15 +14,15 @@ Three unique combinations per target, with three saved random controls. If the l
 
 | Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-14T13:59:00-05:00 | Day | #38 | `8 6 7` / `8 9 1` / `2 5 8` | 2026-11-13T23:00:00-05:00 | `0 1 1` (Night) |
-| Pick 4 | 2026-11-14T13:59:00-05:00 | Day | #39 | `0 6 4 9` / `2 9 0 3` / `1 2 3 9` | 2026-11-13T23:00:00-05:00 | `1 8 6 3` (Night) |
-| Pick 5 | 2026-11-14T13:59:00-05:00 | Day | #40 | `1 5 3 8 4` / `2 4 4 1 4` / `4 5 6 7 4` | 2026-11-13T23:00:00-05:00 | `2 2 7 3 0` (Night) |
+| Pick 3 | 2026-11-14T23:00:00-05:00 | Night | #46 | `3 2 5` / `1 7 7` / `9 7 7` | 2026-11-14T13:59:00-05:00 | `3 8 0` (Day) |
+| Pick 4 | 2026-11-14T23:00:00-05:00 | Night | #47 | `4 3 2 1` / `4 2 2 6` / `2 4 8 6` | 2026-11-14T13:59:00-05:00 | `9 9 2 2` (Day) |
+| Pick 5 | 2026-11-14T23:00:00-05:00 | Night | #48 | `4 2 4 5 6` / `0 8 8 1 2` / `9 9 6 9 2` | 2026-11-14T13:59:00-05:00 | `2 0 7 2 0` (Day) |
 | Cash 5 | 2026-11-14T23:00:00-05:00 | Main | #41 | `7 8 24 30 37` / `1 10 16 33 37` / `7 22 29 38 41` | 2026-11-13T23:00:00-05:00 | `18 22 33 34 45` (Main) |
 | Powerball | 2026-11-14T22:59:00-05:00 | Main | #21 | `5 11 43 60 66 + 11` / `2 30 39 40 66 + 20` / `17 34 37 55 57 + 22` | 2026-11-11T22:59:00-05:00 | `8 42 45 51 57 + 17` (Main) |
 | Mega Millions | 2026-11-17T23:00:00-05:00 | Main | #42 | `13 28 42 50 60 + 15` / `13 31 37 43 68 + 19` / `10 26 27 64 70 + 16` | 2026-11-13T23:00:00-05:00 | `10 22 33 49 57 + 18` (Main) |
 | Millionaire for Life | 2026-11-14T23:15:00-05:00 | Main | #43 | `16 22 30 49 51 + 3` / `11 15 16 48 54 + 5` / `10 13 28 45 53 + 1` | 2026-11-13T23:15:00-05:00 | `34 37 46 50 52 + 4` (Main) |
 | Bank a Million | 2026-11-14T23:00:00-05:00 | Main | #24 | `2 19 22 24 27 36` / `3 9 22 26 36 39` / `8 15 22 24 27 30` | 2026-11-11T23:00:00-05:00 | `5 6 15 24 25 28` (Main) |
-| Cash Pop | 2026-11-14T12:00:00-05:00 | Lunch Break | #45 | `12` / `7` / `4` | 2026-11-14T09:00:00-05:00 | `15` (Coffee Break) |
+| Cash Pop | 2026-11-14T17:00:00-05:00 | Rush Hour | #49 | `3` / `8` / `13` | 2026-11-14T12:00:00-05:00 | `12` (Lunch Break) |
 
 ## Prospective results
 
@@ -30,15 +30,15 @@ Every saved batch is retained in [ledger.json](ledger.json), including losses. N
 
 | Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |
 | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 5 | 15 | 0 | 15 | 0 |
-| Pick 4 | 5 | 15 | 0 | 15 | 0 |
-| Pick 5 | 5 | 15 | 0 | 15 | 0 |
+| Pick 3 | 6 | 18 | 0 | 18 | 0 |
+| Pick 4 | 6 | 18 | 0 | 18 | 0 |
+| Pick 5 | 6 | 18 | 0 | 18 | 0 |
 | Cash 5 | 3 | 9 | 0 | 9 | 0 |
 | Powerball | 0 | 0 | 0 | 0 | 0 |
 | Mega Millions | 2 | 6 | 0 | 6 | 0 |
 | Millionaire for Life | 3 | 9 | 0 | 9 | 0 |
 | Bank a Million | 0 | 0 | 0 | 0 | 0 |
-| Cash Pop | 11 | 33 | 2 | 33 | 1 |
+| Cash Pop | 12 | 36 | 3 | 36 | 1 |
 
 Pending batches: 11. This report retains the original saved picks and controls; no retrospective replacement.
 
@@ -48,15 +48,15 @@ Pending batches: 11. This report retains the original saved picks and controls; 
 
 | Game (all sessions) | Ensemble exact hits / tickets | Random exact hits / tickets | Frequency-check p-value |
 | --- | --- | --- | --- |
-| Pick 3 | 0 / 300 | 1 / 300 | 0.5015 |
-| Pick 4 | 0 / 300 | 0 / 300 | 0.9630 |
-| Pick 5 | 0 / 300 | 0 / 300 | 0.6513 |
+| Pick 3 | 0 / 300 | 0 / 300 | 0.6184 |
+| Pick 4 | 0 / 300 | 0 / 300 | 0.9660 |
+| Pick 5 | 0 / 300 | 0 / 300 | 0.6364 |
 | Cash 5 | 0 / 300 | 0 / 300 | 0.3716 |
 | Powerball | 0 / 300 | 0 / 300 | 0.7163 |
 | Mega Millions | 0 / 300 | 0 / 300 | 0.3267 |
 | Millionaire for Life | 0 / 300 | 0 / 300 | 0.7982 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3816 |
-| Cash Pop | 17 / 300 | 14 / 300 | 0.6474 |
+| Cash Pop | 19 / 300 | 19 / 300 | 0.6244 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
