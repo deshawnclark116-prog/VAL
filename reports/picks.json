@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T19:56:42.280863+00:00",
+  "generated_at": "2026-11-14T23:56:07.852856+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -726,26 +726,26 @@
     {
       "game": "cashpop",
       "name": "Cash Pop",
-      "id": 49,
-      "created": "2026-11-14T19:56:42.280863+00:00",
-      "stream": "Rush Hour",
+      "id": 50,
+      "created": "2026-11-14T23:56:07.852856+00:00",
+      "stream": "Prime Time",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            3
+            9
           ],
           "bonus": null
         },
         {
           "numbers": [
-            8
+            2
           ],
           "bonus": null
         },
         {
           "numbers": [
-            13
+            5
           ],
           "bonus": null
         }
@@ -753,33 +753,33 @@
       "baseline": [
         {
           "numbers": [
-            15
+            9
           ],
           "bonus": null
         },
         {
           "numbers": [
-            14
+            10
           ],
           "bonus": null
         },
         {
           "numbers": [
-            4
+            3
           ],
           "bonus": null
         }
       ],
       "target": {
-        "at": "2026-11-14T22:00:00+00:00",
-        "stream": "Rush Hour"
+        "at": "2026-11-15T02:00:00+00:00",
+        "stream": "Prime Time"
       },
       "training_latest": {
         "game": "cashpop",
-        "at": "2026-11-14T17:00:00+00:00",
-        "stream": "Lunch Break",
+        "at": "2026-11-14T22:00:00+00:00",
+        "stream": "Rush Hour",
         "numbers": [
-          12
+          15
         ],
         "bonus": null,
         "extra": null,
