@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T07:38:10.606028+00:00",
+  "generated_at": "2026-11-14T15:07:21.424412+00:00",
   "games": [
     {
       "game": "pick3",
@@ -633,6 +633,18 @@
             "method": "random",
             "draws": 100,
             "tickets": 300,
+            "exact": 14,
+            "average_matches": 0.04666666666666666,
+            "ci95": [
+              0.023882640916041233,
+              0.0694506924172921
+            ],
+            "bonus_matches": 0
+          },
+          {
+            "method": "frequency",
+            "draws": 100,
+            "tickets": 300,
             "exact": 16,
             "average_matches": 0.05333333333333333,
             "ci95": [
@@ -642,26 +654,14 @@
             "bonus_matches": 0
           },
           {
-            "method": "frequency",
-            "draws": 100,
-            "tickets": 300,
-            "exact": 21,
-            "average_matches": 0.06999999999999999,
-            "ci95": [
-              0.04325513485829828,
-              0.0967448651417017
-            ],
-            "bonus_matches": 0
-          },
-          {
             "method": "recent",
             "draws": 100,
             "tickets": 300,
-            "exact": 20,
-            "average_matches": 0.06666666666666667,
+            "exact": 18,
+            "average_matches": 0.06,
             "ci95": [
-              0.04040167842789259,
-              0.09293165490544074
+              0.03477330258186255,
+              0.08522669741813745
             ],
             "bonus_matches": 0
           },
@@ -669,11 +669,11 @@
             "method": "cold",
             "draws": 100,
             "tickets": 300,
-            "exact": 15,
-            "average_matches": 0.049999999999999996,
+            "exact": 12,
+            "average_matches": 0.04,
             "ci95": [
-              0.0265538082895344,
-              0.0734461917104656
+              0.018662222685088763,
+              0.06133777731491124
             ],
             "bonus_matches": 0
           },
@@ -681,25 +681,25 @@
             "method": "ensemble",
             "draws": 100,
             "tickets": 300,
-            "exact": 23,
-            "average_matches": 0.07666666666666666,
+            "exact": 17,
+            "average_matches": 0.056666666666666664,
             "ci95": [
-              0.049033764467465484,
-              0.10429956886586783
+              0.03200168901951572,
+              0.0813316443138176
             ],
             "bonus_matches": 0
           }
         ],
-        "from_draw": "2026-10-25T13:00:00+00:00",
-        "to_draw": "2026-11-14T04:59:00+00:00",
+        "from_draw": "2026-10-25T16:00:00+00:00",
+        "to_draw": "2026-11-14T14:00:00+00:00",
         "expected_matches": 0.06666666666666667,
         "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 12.249999999999998,
-        "p_value": 0.5834165834165834,
+        "statistic": 11.499999999999998,
+        "p_value": 0.6473526473526473,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     }
