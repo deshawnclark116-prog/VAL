@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T06:37:20.944342+00:00",
+  "generated_at": "2026-11-15T14:47:10.476184+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -726,14 +726,40 @@
     {
       "game": "cashpop",
       "name": "Cash Pop",
-      "id": 58,
-      "created": "2026-11-15T06:37:20.944342+00:00",
-      "stream": "Coffee Break",
+      "id": 59,
+      "created": "2026-11-15T14:47:10.476184+00:00",
+      "stream": "Lunch Break",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            1
+            4
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            9
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            3
+          ],
+          "bonus": null
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            15
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
+            10
           ],
           "bonus": null
         },
@@ -742,44 +768,18 @@
             14
           ],
           "bonus": null
-        },
-        {
-          "numbers": [
-            8
-          ],
-          "bonus": null
-        }
-      ],
-      "baseline": [
-        {
-          "numbers": [
-            13
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            7
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            12
-          ],
-          "bonus": null
         }
       ],
       "target": {
-        "at": "2026-11-15T14:00:00+00:00",
-        "stream": "Coffee Break"
+        "at": "2026-11-15T17:00:00+00:00",
+        "stream": "Lunch Break"
       },
       "training_latest": {
         "game": "cashpop",
-        "at": "2026-11-15T04:59:00+00:00",
-        "stream": "After Hours",
+        "at": "2026-11-15T14:00:00+00:00",
+        "stream": "Coffee Break",
         "numbers": [
-          3
+          11
         ],
         "bonus": null,
         "extra": null,

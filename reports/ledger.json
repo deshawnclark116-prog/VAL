@@ -5942,6 +5942,97 @@
           "source": "Virginia Lottery official download"
         }
       },
+      "result": {
+        "draw": {
+          "game": "cashpop",
+          "at": "2026-11-15T14:00:00+00:00",
+          "stream": "Coffee Break",
+          "numbers": [
+            11
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 3,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 3,
+          "bonus_matches": 0
+        }
+      }
+    },
+    {
+      "id": 59,
+      "game": "cashpop",
+      "created": "2026-11-15T14:47:10.476184+00:00",
+      "stream": "Lunch Break",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              4
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              9
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              3
+            ],
+            "bonus": null
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              15
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              10
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              14
+            ],
+            "bonus": null
+          }
+        ],
+        "target": {
+          "at": "2026-11-15T17:00:00+00:00",
+          "stream": "Lunch Break"
+        },
+        "training_latest": {
+          "game": "cashpop",
+          "at": "2026-11-15T14:00:00+00:00",
+          "stream": "Coffee Break",
+          "numbers": [
+            11
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        }
+      },
       "result": null
     }
   ]

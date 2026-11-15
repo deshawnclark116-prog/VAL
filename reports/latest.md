@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-15T01:37:20.944342-05:00 · Eastern time
+Updated: 2026-11-15T09:47:10.476184-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -22,7 +22,7 @@ Three unique combinations per target, with three saved random controls. If the l
 | Mega Millions | 2026-11-17T23:00:00-05:00 | Main | #42 | `13 28 42 50 60 + 15` / `13 31 37 43 68 + 19` / `10 26 27 64 70 + 16` | 2026-11-13T23:00:00-05:00 | `10 22 33 49 57 + 18` (Main) |
 | Millionaire for Life | 2026-11-15T23:15:00-05:00 | Main | #56 | `10 34 40 41 43 + 1` / `5 17 18 27 41 + 5` / `9 14 18 21 56 + 2` | 2026-11-14T23:15:00-05:00 | `2 10 24 29 54 + 1` (Main) |
 | Bank a Million | 2026-11-18T23:00:00-05:00 | Main | #57 | `7 15 28 31 34 38` / `16 17 20 22 27 34` / `2 19 26 29 31 34` | 2026-11-14T23:00:00-05:00 | `1 7 9 10 26 38` (Main) |
-| Cash Pop | 2026-11-15T09:00:00-05:00 | Coffee Break | #58 | `1` / `14` / `8` | 2026-11-14T23:59:00-05:00 | `3` (After Hours) |
+| Cash Pop | 2026-11-15T12:00:00-05:00 | Lunch Break | #59 | `4` / `9` / `3` | 2026-11-15T09:00:00-05:00 | `11` (Coffee Break) |
 
 ## Prospective results
 
@@ -38,7 +38,7 @@ Every saved batch is retained in [ledger.json](ledger.json), including losses. N
 | Mega Millions | 2 | 6 | 0 | 6 | 0 |
 | Millionaire for Life | 4 | 12 | 0 | 12 | 0 |
 | Bank a Million | 2 | 6 | 0 | 6 | 0 |
-| Cash Pop | 14 | 42 | 4 | 42 | 3 |
+| Cash Pop | 15 | 45 | 4 | 45 | 3 |
 
 Pending batches: 9. This report retains the original saved picks and controls; no retrospective replacement.
 
@@ -56,7 +56,7 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 | Mega Millions | 0 / 300 | 0 / 300 | 0.3267 |
 | Millionaire for Life | 0 / 300 | 0 / 300 | 0.7642 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3886 |
-| Cash Pop | 21 / 300 | 22 / 300 | 0.6474 |
+| Cash Pop | 20 / 300 | 16 / 300 | 0.6304 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
