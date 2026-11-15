@@ -36,6 +36,19 @@ class FullHistoryAuditTests(unittest.TestCase):
         self.assertEqual(rows[1]["fireball"],0)
         self.assertEqual(rows[2]["numbers"],[1,0,1])
 
+    def test_conflicting_same_day_results_are_quarantined(self):
+        sample=("Results for Pick 3\n"
+                "11/09/2008; Day: 5,1,1; Night: 3,7,4\n"
+                "11/09/2008; Night: 4,9,2\n"
+                "11/10/2008; Night: 4,3,6\n")
+        from unittest.mock import patch
+        with patch("research_decades.MIN_ROWS",{"pick3":2}):
+            rows,audit=parse_complete_archive("pick3",sample,with_audit=True)
+        self.assertEqual(len(rows),2)
+        self.assertEqual(audit["conflicting_draw_keys_excluded"],1)
+        self.assertEqual(rows[0]["numbers"],[5,1,1])
+        self.assertEqual(rows[1]["numbers"],[4,3,6])
+
     def test_reject_unknown_source_line(self):
         from unittest.mock import patch
         with patch("research_decades.MIN_ROWS",{"pick3":1}):

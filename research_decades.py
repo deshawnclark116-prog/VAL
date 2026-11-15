@@ -27,11 +27,11 @@ FOOTERS = {"All information is entered manually, and is subject to human error."
            "Therefore, we can not guarantee the accuracy of this information."}
 
 
-def parse_complete_archive(game, content):
-    """Fail closed: every source row must be interpreted, with zero-padding kept."""
+def parse_complete_archive(game, content, with_audit=False):
+    """Fail closed on format; quarantine contradictory same-draw source entries."""
     if game not in GAMES: raise ValueError(game)
     width = GAMES[game][1]
-    rows, seen = [], set()
+    seen, conflicts, exact_duplicates = {}, {}, 0
     for lineno, raw in enumerate(content.splitlines(), 1):
         line = raw.strip()
         if not line or line in KNOWN_HEADER or line in FOOTERS: continue
@@ -57,16 +57,31 @@ def parse_complete_archive(game, content):
                 fireball = int(fm.group(1))
                 i += 1
             key = (draw_date.isoformat(), stream)
-            if key in seen: raise ValueError(f"Duplicate official draw: {game} {key}")
-            seen.add(key)
-            rows.append({"date": draw_date.isoformat(), "stream": stream,
-                         "numbers": digits, "fireball": fireball})
+            row = {"date": draw_date.isoformat(), "stream": stream,
+                   "numbers": digits, "fireball": fireball}
+            if key in seen:
+                if seen[key]["row"] == row:
+                    exact_duplicates += 1
+                else:
+                    if key not in conflicts:
+                        conflicts[key] = [seen[key]]
+                    conflicts[key].append({"row": row, "line": lineno})
+            else:
+                seen[key] = {"row": row, "line": lineno}
             found += 1
         if found == 0: raise ValueError(f"{game} line {lineno} contains no draw")
+    # Never choose which of two conflicting published results is correct.
+    rows = [item["row"] for key, item in seen.items() if key not in conflicts]
     rows.sort(key=lambda r: (r["date"], r["stream"] == "Night"))
     if len(rows) < MIN_ROWS[game]:
         raise ValueError(f"{game} unexpectedly short official history: {len(rows)}")
-    return rows
+    audit = {"exact_duplicate_lines": exact_duplicates,
+             "conflicting_draw_keys_excluded": len(conflicts),
+             "conflicting_results": [
+                 {"date": key[0], "stream": key[1], "source_rows": values}
+                 for key, values in sorted(conflicts.items())
+             ]}
+    return (rows, audit) if with_audit else rows
 
 
 def fetch_full(game):
@@ -75,8 +90,10 @@ def fetch_full(game):
     with urllib.request.urlopen(req, timeout=90) as response:
         raw = response.read(15_000_000)
     content = raw.decode("utf-8-sig")
-    return parse_complete_archive(game, content), {
-        "url": url, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()
+    rows, audit = parse_complete_archive(game, content, with_audit=True)
+    return rows, {
+        "url": url, "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
+        "quality_audit": audit
     }
 
 
@@ -302,6 +319,14 @@ def summary_md(result):
                      f"{x['draws']:,} | {x['first_year']}–{x['last_year']} | "
                      f"{x['streams'].get('Day',0):,} | {x['streams'].get('Night',0):,} | "
                      f"{x['fireball_draws']:,} |")
+    lines.extend(["", "## Source quality", ""])
+    for game, g in result["games"].items():
+        a = g["coverage"]["source"]["quality_audit"]
+        lines.append(f"- {game}: excluded {a['conflicting_draw_keys_excluded']} contradictory date/session record(s)"
+                     f"; collapsed {a['exact_duplicate_lines']} exact duplicate(s).")
+        for conflict in a["conflicting_results"][:10]:
+            versions = ", ".join("".join(map(str, entry["row"]["numbers"])) for entry in conflict["source_rows"])
+            lines.append(f"  - {conflict['date']} {conflict['stream']}: {versions} (source disagreement)")
     lines.extend([
         "",
         "## Broad historical tests",
