@@ -38,9 +38,30 @@ class DailyBotTests(unittest.TestCase):
             self.assertIn('Keno needs a CSV import',(output/'latest.md').read_text())
             batches=json.loads((output/'picks.json').read_text())['batches']
             p3=next(b for b in batches if b['game']=='pick3')
+            self.assertEqual([p['rank'] for p in p3['picks']], [1,2,3])
+            self.assertEqual([p['role'] for p in p3['picks']], ['primary','alternative_1','alternative_2'])
+            self.assertTrue(all('model_weight_score' in p for p in p3['picks']))
+            self.assertIn('**Primary:**', (output/'latest.md').read_text())
             self.assertEqual(p3['target']['stream'],'Night')
             self.assertEqual(p3['training_latest']['stream'],'Day')
             self.assertEqual(datetime.fromisoformat(p3['target']['at']).astimezone(ET).date(),self.now.astimezone(ET).date())
+    def test_old_saved_batch_stays_unranked(self):
+        output=self.root/'reports'
+        output.mkdir(parents=True,exist_ok=True)
+        store=Store(self.root/'source.db')
+        self.fake_sync(store,'pick3')
+        original=[dict(numbers=[1,2,3],bonus=None),dict(numbers=[4,5,6],bonus=None),
+                  dict(numbers=[7,8,9],bonus=None)]
+        target=next_draw('pick3',self.now)
+        store.record('pick3','Night','ensemble',original,original,target=target,
+                     training_latest=store.history('pick3')[-1],created=self.now)
+        scheduled_bot.save_ledger(store,output/'ledger.json')
+        with patch.object(scheduled_bot,'backtest',return_value=dict(results=[dict(method=m,exact=0,tickets=300) for m in ('ensemble','random')])),patch.object(scheduled_bot,'simulate',return_value=dict(p_value=.5)):
+            scheduled_bot.run(Store(self.root/'restored.db'),output,syncer=self.fake_sync,now=self.now)
+        old=next(x for x in json.loads((output/'ledger.json').read_text())['predictions'] if x['game']=='pick3')
+        self.assertEqual(old['data']['picks'],original)
+        self.assertIn('legacy: unranked',(output/'latest.md').read_text())
+
     def test_feed_failure_skips_new_picks_and_is_visible(self):
         def fail(store,game): raise OSError('feed unavailable')
         result=scheduled_bot.run(Store(self.root/'failed.db'),self.root/'reports',syncer=fail)

@@ -53,6 +53,35 @@ class CoreTests(unittest.TestCase):
                 self.assertEqual(len(picks),15 if game=="cashpop" else 20)
                 self.assertEqual(len({json.dumps(p) for p in picks}),len(picks))
                 for p in picks:val.validate(game,p["numbers"],p["bonus"],draw=False)
+    def test_ranked_primary_keeps_all_original_candidates(self):
+        for game in ("pick3", "pick4", "pick5", "cash5", "powerball", "megamillions",
+                     "millionaireforlife", "bankamillion", "cashpop"):
+            history = self.history(game)
+            picks = val.generate(game, history, "ensemble", 3, random.Random(42))
+            ranked = val.rank_ensemble_picks(game, history, picks)
+            self.assertEqual(sorted((tuple(p["numbers"]), p["bonus"]) for p in picks),
+                             sorted((tuple(p["numbers"]), p["bonus"]) for p in ranked))
+            self.assertEqual([p["rank"] for p in ranked], [1, 2, 3])
+            self.assertEqual([p["role"] for p in ranked],
+                             ["primary", "alternative_1", "alternative_2"])
+            self.assertEqual([p["ranking_version"] for p in ranked],
+                             ["ensemble_sampling_v1"] * 3)
+            self.assertEqual([p["model_weight_score"] for p in ranked],
+                             sorted((p["model_weight_score"] for p in ranked), reverse=True))
+            self.assertTrue(all(p["model_weight_score"] > 0 for p in ranked))
+            self.assertTrue(all("rank" not in p for p in picks))
+
+    def test_digit_ranking_uses_per_position_weights(self):
+        history = self.history("pick3")
+        candidates = [dict(numbers=[9,9,9],bonus=None), dict(numbers=[0,0,0],bonus=None),
+                      dict(numbers=[1,1,1],bonus=None)]
+        ranked = val.rank_ensemble_picks("pick3", history, candidates)
+        weights = [val.model_selection_weights("pick3", history, position=i) for i in range(3)]
+        for pick in ranked:
+            expected = 1.0
+            for i, n in enumerate(pick["numbers"]): expected *= weights[i][n]
+            self.assertAlmostEqual(pick["model_weight_score"], expected)
+
     def test_match_semantics(self):
         p=dict(numbers=[0,1,1],bonus=None); d=dict(numbers=[1,0,1],bonus=None)
         self.assertEqual(val.score("pick3",p,d)["matches"],1)

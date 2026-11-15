@@ -197,6 +197,59 @@ class Store:
                 out.append(dict(id=pid,created=created,stream=stream,method=method,**data,result=json.loads(result) if result else None))
             return out
 
+def model_selection_weights(game, history, method="ensemble", position=None, bonus=False):
+    """Experimental selection weights, NOT calibrated winning probabilities."""
+    if method not in METHODS: raise ValueError("Unknown method")
+    g = GAMES[game]
+    low = 0 if g.get("digits") else 1
+    values = list(range(low, low + g["pool"]))
+    pool = list(range(1, g["bonus"] + 1)) if bonus else values
+    if method == "random": return [1] * len(pool)
+    history = history[-500:]
+    total = Counter(); recent = Counter()
+    for i, row in enumerate(history):
+        ns = [row["bonus"]] if bonus else ([row["numbers"][position]] if position is not None else row["numbers"])
+        total.update(ns)
+        if i >= len(history) - 50: recent.update(ns)
+    hot = [total[v] + 2 for v in pool]
+    rec = [recent[v] + 2 for v in pool]
+    cold = [1 / math.sqrt(x) for x in hot]
+    if method == "frequency": return hot
+    if method == "recent": return rec
+    if method == "cold": return cold
+    return [0.4*h/sum(hot) + 0.4*r/sum(rec) + 0.2*c/sum(cold) for h,r,c in zip(hot,rec,cold)]
+
+
+def rank_ensemble_picks(game, history, picks):
+    """Rank existing ensemble-sampled picks by model weight, not winning odds."""
+    from itertools import permutations
+    if len(history) < 30: raise ValueError("At least 30 historical draws are required")
+    g = GAMES[game]; low = 0 if g.get("digits") else 1
+    main = ([model_selection_weights(game, history, position=i) for i in range(g["size"])]
+            if g.get("digits") else model_selection_weights(game, history))
+    bonus_weights = model_selection_weights(game, history, bonus=True) if g.get("bonus") else None
+    def weight_score(pick):
+        if g.get("digits"):
+            result = math.prod(main[i][n] for i, n in enumerate(pick["numbers"]))
+        else:
+            # Generated ball combinations are sorted; sum probabilities of all
+            # their underlying weighted-without-replacement draw orders.
+            result = 0.0
+            for sequence in permutations(pick["numbers"]):
+                remaining, probability = 1.0, 1.0
+                for number in sequence:
+                    weight = main[number - low]
+                    probability *= weight / remaining
+                    remaining -= weight
+                result += probability
+        if bonus_weights is not None: result *= bonus_weights[pick["bonus"] - 1]
+        return result
+    scored = [(weight_score(p), i, p) for i, p in enumerate(picks)]
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    return [dict(pick, rank=rank, role=("primary" if rank == 1 else f"alternative_{rank-1}"),
+                 model_weight_score=score, ranking_version="ensemble_sampling_v1")
+            for rank, (score, _, pick) in enumerate(scored, 1)]
+
 def sample_weights(values, weights, size, rng, replace=False):
     values, weights = list(values), list(weights)
     out = []
@@ -215,24 +268,9 @@ def generate(game, history, method="ensemble", count=5, rng=None):
     low = 0 if g.get("digits") else 1
     values = list(range(low, low+g["pool"]))
     history = history[-500:]
-    def weights(position=None, bonus=False):
-        pool = list(range(1,g["bonus"]+1)) if bonus else values
-        if method == "random": return [1]*len(pool)
-        total = Counter(); recent = Counter()
-        for i, row in enumerate(history):
-            ns = [row["bonus"]] if bonus else ([row["numbers"][position]] if position is not None else row["numbers"])
-            total.update(ns)
-            if i >= len(history)-50: recent.update(ns)
-        hot = [total[v]+2 for v in pool]
-        rec = [recent[v]+2 for v in pool]
-        cold = [1/math.sqrt(x) for x in hot]
-        if method == "frequency": return hot
-        if method == "recent": return rec
-        if method == "cold": return cold
-        # Fixed normalized blend. Weights are experimental, not win probabilities.
-        return [0.4*h/sum(hot)+0.4*r/sum(rec)+0.2*c/sum(cold) for h,r,c in zip(hot,rec,cold)]
-    main_weights = [weights(i) for i in range(g["size"])] if g.get("digits") else weights()
-    bonus_weights = weights(bonus=True) if g.get("bonus") else None
+    main_weights = ([model_selection_weights(game, history, method, position=i) for i in range(g["size"])]
+                    if g.get("digits") else model_selection_weights(game, history, method))
+    bonus_weights = model_selection_weights(game, history, method, bonus=True) if g.get("bonus") else None
     picks, seen = [], set()
     # Cash Pop has only 15 possible single-number combinations.
     limit = min(count, g["pool"]) if g["size"] == 1 else count

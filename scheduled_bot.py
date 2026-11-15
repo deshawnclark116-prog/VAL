@@ -6,7 +6,7 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-from val import ET, GAMES, Store, backtest, generate, simulate, sync_game, draw_schedule, next_draw
+from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, simulate, sync_game, draw_schedule, next_draw
 
 
 def restore(store, path):
@@ -43,6 +43,13 @@ def selection(pick):
     return " ".join(str(n) for n in pick["numbers"]) + (" + " + str(pick["bonus"]) if pick["bonus"] is not None else "")
 
 
+def ranked_selection(picks):
+    """Never retroactively rank older saved combinations."""
+    if all(p.get("rank") == i for i, p in enumerate(picks, 1)):
+        roles = ("Primary", "Alt 1", "Alt 2")
+        return " / ".join(f"**{roles[i] if i < 3 else 'Alt'}:** `{selection(p)}`" for i, p in enumerate(picks))
+    return " / ".join(f"`{selection(p)}`" for p in picks) + " (legacy: unranked)"
+
 def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
     output = Path(output); output.mkdir(parents=True,exist_ok=True)
     now = now or datetime.now(timezone.utc)
@@ -53,7 +60,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
               "## Picks", "",
               "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
-              "Three unique combinations per target, with three saved random controls. If the latest completed result is missing, the game waits rather than generating from outdated input.", "",
+              "Three unique combinations per target, with three saved random controls. New batches label Primary, Alt 1, and Alt 2 using experimental model sampling weights, not calibrated winning chances. Previously saved batches remain unranked and unchanged. If the latest completed result is missing, the game waits rather than generating from outdated input.", "",
               "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
@@ -76,7 +83,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             stream=target["stream"]
             existing=next((r for r in ledger if r.get("target")==target),None)
             if existing is None:
-                picks=generate(game,history,"ensemble",count)
+                picks=rank_ensemble_picks(game,history,generate(game,history,"ensemble",count))
                 baseline=generate(game,[],"random",len(picks))
                 pid=store.record(game,stream,"ensemble",picks,baseline,target=target,training_latest=history[-1],created=now)
                 existing=next(r for r in store.ledger(game) if r["id"]==pid)
@@ -84,7 +91,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             used=existing["training_latest"]
             latest=datetime.fromisoformat(used["at"]).astimezone(ET).isoformat()
             target_label=datetime.fromisoformat(target["at"]).astimezone(ET).isoformat()
-            report.append(f"| {g['name']} | {target_label} | {stream} | #{existing['id']} | "+" / ".join(f"`{selection(p)}`" for p in existing["picks"])+f" | {latest} | `{selection(used)}` ({used['stream']}) |")
+            report.append(f"| {g['name']} | {target_label} | {stream} | #{existing['id']} | "+ranked_selection(existing["picks"])+f" | {latest} | `{selection(used)}` ({used['stream']}) |")
             # Analysis uses All sessions, clearly separate from prospective session picks.
             test=backtest(game,history,count=count,tests=100)
             mc=simulate(game,history,trials=trials)
