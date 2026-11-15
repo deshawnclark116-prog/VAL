@@ -1,0 +1,40 @@
+name: VAL complete decades archive audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_decades.py'
+      - 'tests/test_research_decades.py'
+      - '.github/workflows/research_decades.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: val-decades-audit
+  cancel-in-progress: false
+
+jobs:
+  decades:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate all VAL models and history audit
+        run: python -m unittest discover -s tests -v
+      - name: Audit complete official digit archives
+        run: python research_decades.py
+      - name: Publish research report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_decades.md reports/research_decades.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish full historical digit audit'
+          git pull --rebase origin main
+          git push origin HEAD:main
