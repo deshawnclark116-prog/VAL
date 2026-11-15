@@ -127,7 +127,23 @@ def same_digit_binomial(observed, trials, probability):
     mu = trials * probability
     sigma = math.sqrt(trials * probability * (1 - probability))
     z = (observed - mu) / sigma
-    p = math.erfc(abs(z) / math.sqrt(2))
+    if min(mu, trials - mu) < 10:
+        # Rare full-ticket repeats require exact binomial tails, NOT normal
+        # approximation: an observed single Pick-5 repeat could otherwise look
+        # dramatically more significant than it actually is.
+        pmf = math.exp(trials * math.log1p(-probability))
+        cdf = 0.0
+        left = 0.0
+        for k in range(trials + 1):
+            cdf += pmf
+            if k == observed:
+                left = cdf
+                break
+            pmf *= (trials - k) * probability / ((k + 1) * (1 - probability))
+        upper = max(0.0, 1.0 - (left - pmf))
+        p = min(1.0, 2 * min(left, upper))
+    else:
+        p = math.erfc(abs(z) / math.sqrt(2))
     return {"observed": observed, "trials": trials, "expected": round(mu, 3),
             "z": round(z, 5), "p": p}
 
