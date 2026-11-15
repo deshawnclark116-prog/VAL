@@ -1,0 +1,776 @@
+{
+  "produced_utc": "2026-11-15T23:46:07.519574+00:00",
+  "version": "val_challenger_lab_v1",
+  "seed": 20261115,
+  "methods": [
+    "random",
+    "ensemble",
+    "bayes_long",
+    "decay_30",
+    "session_hier",
+    "transition",
+    "pair_chain",
+    "echo_repeat"
+  ],
+  "games": {
+    "pick3": {
+      "history_draws": 1172,
+      "heldout_draws": 1122,
+      "heldout_first": "2025-05-03T17:59:00+00:00",
+      "heldout_last": "2026-11-15T04:00:00+00:00",
+      "tickets_per_method": 10000,
+      "tickets_per_draw": [
+        8,
+        9
+      ],
+      "methods": {
+        "random": {
+          "tickets": 10000,
+          "straight": 14,
+          "any_order": 57,
+          "box_only": 43,
+          "fireball_any_order": 157,
+          "fireball_straight": 37,
+          "fireball_only_any_order": 136,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.401,
+          "mean_log_score_advantage_vs_fair_nats": 0.0,
+          "approx_95pct_interval_nats": [
+            0.0,
+            0.0
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 11,
+              "any_order": 46
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 3,
+              "any_order": 11
+            }
+          }
+        },
+        "ensemble": {
+          "tickets": 10000,
+          "straight": 12,
+          "any_order": 58,
+          "box_only": 46,
+          "fireball_any_order": 150,
+          "fireball_straight": 34,
+          "fireball_only_any_order": 138,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.362,
+          "mean_log_score_advantage_vs_fair_nats": -0.0349332,
+          "approx_95pct_interval_nats": [
+            -0.0492295,
+            -0.0206369
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 8,
+              "any_order": 29
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 4,
+              "any_order": 29
+            }
+          }
+        },
+        "bayes_long": {
+          "tickets": 10000,
+          "straight": 9,
+          "any_order": 53,
+          "box_only": 44,
+          "fireball_any_order": 148,
+          "fireball_straight": 34,
+          "fireball_only_any_order": 131,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.384,
+          "mean_log_score_advantage_vs_fair_nats": -0.0239085,
+          "approx_95pct_interval_nats": [
+            -0.0372693,
+            -0.0105477
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 6,
+              "any_order": 34
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 3,
+              "any_order": 19
+            }
+          }
+        },
+        "decay_30": {
+          "tickets": 10000,
+          "straight": 9,
+          "any_order": 51,
+          "box_only": 42,
+          "fireball_any_order": 135,
+          "fireball_straight": 30,
+          "fireball_only_any_order": 123,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.738,
+          "mean_log_score_advantage_vs_fair_nats": -0.044415,
+          "approx_95pct_interval_nats": [
+            -0.0609108,
+            -0.0279193
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 7,
+              "any_order": 41
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 2,
+              "any_order": 10
+            }
+          }
+        },
+        "session_hier": {
+          "tickets": 10000,
+          "straight": 9,
+          "any_order": 53,
+          "box_only": 44,
+          "fireball_any_order": 147,
+          "fireball_straight": 29,
+          "fireball_only_any_order": 130,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.565,
+          "mean_log_score_advantage_vs_fair_nats": -0.0375359,
+          "approx_95pct_interval_nats": [
+            -0.0526138,
+            -0.0224581
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 5,
+              "any_order": 37
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 4,
+              "any_order": 16
+            }
+          }
+        },
+        "transition": {
+          "tickets": 10000,
+          "straight": 8,
+          "any_order": 58,
+          "box_only": 50,
+          "fireball_any_order": 149,
+          "fireball_straight": 23,
+          "fireball_only_any_order": 131,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.467,
+          "mean_log_score_advantage_vs_fair_nats": -0.0970236,
+          "approx_95pct_interval_nats": [
+            -0.1253425,
+            -0.0687048
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 5,
+              "any_order": 39
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 3,
+              "any_order": 19
+            }
+          }
+        },
+        "pair_chain": {
+          "tickets": 10000,
+          "straight": 6,
+          "any_order": 48,
+          "box_only": 42,
+          "fireball_any_order": 145,
+          "fireball_straight": 35,
+          "fireball_only_any_order": 130,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.554,
+          "mean_log_score_advantage_vs_fair_nats": -0.0674256,
+          "approx_95pct_interval_nats": [
+            -0.0917043,
+            -0.0431468
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 3,
+              "any_order": 31
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 3,
+              "any_order": 17
+            }
+          }
+        },
+        "echo_repeat": {
+          "tickets": 10000,
+          "straight": 10,
+          "any_order": 39,
+          "box_only": 29,
+          "fireball_any_order": 147,
+          "fireball_straight": 25,
+          "fireball_only_any_order": 134,
+          "expected_straight_fair": 10.0,
+          "expected_any_order_fair": 51.298,
+          "mean_log_score_advantage_vs_fair_nats": -0.0231568,
+          "approx_95pct_interval_nats": [
+            -0.0370086,
+            -0.009305
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 8,
+              "any_order": 26
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 2,
+              "any_order": 13
+            }
+          }
+        }
+      }
+    },
+    "pick4": {
+      "history_draws": 1172,
+      "heldout_draws": 1122,
+      "heldout_first": "2025-05-03T17:59:00+00:00",
+      "heldout_last": "2026-11-15T04:00:00+00:00",
+      "tickets_per_method": 10000,
+      "tickets_per_draw": [
+        8,
+        9
+      ],
+      "methods": {
+        "random": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 22,
+          "box_only": 22,
+          "fireball_any_order": 63,
+          "fireball_straight": 3,
+          "fireball_only_any_order": 55,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.547,
+          "mean_log_score_advantage_vs_fair_nats": 0.0,
+          "approx_95pct_interval_nats": [
+            0.0,
+            0.0
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 12
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 10
+            }
+          }
+        },
+        "ensemble": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 12,
+          "box_only": 12,
+          "fireball_any_order": 74,
+          "fireball_straight": 3,
+          "fireball_only_any_order": 71,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.682,
+          "mean_log_score_advantage_vs_fair_nats": -0.0475088,
+          "approx_95pct_interval_nats": [
+            -0.0644661,
+            -0.0305514
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 6
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 6
+            }
+          }
+        },
+        "bayes_long": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order": 19,
+          "box_only": 18,
+          "fireball_any_order": 67,
+          "fireball_straight": 7,
+          "fireball_only_any_order": 59,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.681,
+          "mean_log_score_advantage_vs_fair_nats": -0.0391173,
+          "approx_95pct_interval_nats": [
+            -0.0545904,
+            -0.0236442
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 11
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 1,
+              "any_order": 8
+            }
+          }
+        },
+        "decay_30": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 12,
+          "box_only": 12,
+          "fireball_any_order": 48,
+          "fireball_straight": 3,
+          "fireball_only_any_order": 45,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.584,
+          "mean_log_score_advantage_vs_fair_nats": -0.0632052,
+          "approx_95pct_interval_nats": [
+            -0.0830511,
+            -0.0433593
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 7
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 5
+            }
+          }
+        },
+        "session_hier": {
+          "tickets": 10000,
+          "straight": 3,
+          "any_order": 16,
+          "box_only": 13,
+          "fireball_any_order": 76,
+          "fireball_straight": 7,
+          "fireball_only_any_order": 67,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.663,
+          "mean_log_score_advantage_vs_fair_nats": -0.0525861,
+          "approx_95pct_interval_nats": [
+            -0.0715187,
+            -0.0336536
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 3,
+              "any_order": 11
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 5
+            }
+          }
+        },
+        "transition": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order": 17,
+          "box_only": 16,
+          "fireball_any_order": 74,
+          "fireball_straight": 10,
+          "fireball_only_any_order": 66,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.522,
+          "mean_log_score_advantage_vs_fair_nats": -0.1572101,
+          "approx_95pct_interval_nats": [
+            -0.1909111,
+            -0.1235092
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 13
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 1,
+              "any_order": 4
+            }
+          }
+        },
+        "pair_chain": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 13,
+          "box_only": 13,
+          "fireball_any_order": 60,
+          "fireball_straight": 5,
+          "fireball_only_any_order": 57,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.608,
+          "mean_log_score_advantage_vs_fair_nats": -0.1083897,
+          "approx_95pct_interval_nats": [
+            -0.1380575,
+            -0.0787218
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 7
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 6
+            }
+          }
+        },
+        "echo_repeat": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order": 14,
+          "box_only": 13,
+          "fireball_any_order": 47,
+          "fireball_straight": 5,
+          "fireball_only_any_order": 42,
+          "expected_straight_fair": 1.0,
+          "expected_any_order_fair": 17.654,
+          "mean_log_score_advantage_vs_fair_nats": -0.0373326,
+          "approx_95pct_interval_nats": [
+            -0.0527109,
+            -0.0219542
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 1,
+              "any_order": 11
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 3
+            }
+          }
+        }
+      }
+    },
+    "pick5": {
+      "history_draws": 1172,
+      "heldout_draws": 1122,
+      "heldout_first": "2025-05-03T17:59:00+00:00",
+      "heldout_last": "2026-11-15T04:00:00+00:00",
+      "tickets_per_method": 10000,
+      "tickets_per_draw": [
+        8,
+        9
+      ],
+      "methods": {
+        "random": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 4,
+          "box_only": 4,
+          "fireball_any_order": 19,
+          "fireball_straight": 0,
+          "fireball_only_any_order": 19,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.119,
+          "mean_log_score_advantage_vs_fair_nats": 0.0,
+          "approx_95pct_interval_nats": [
+            0.0,
+            0.0
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 3
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 1
+            }
+          }
+        },
+        "ensemble": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order": 7,
+          "box_only": 6,
+          "fireball_any_order": 28,
+          "fireball_straight": 0,
+          "fireball_only_any_order": 26,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.114,
+          "mean_log_score_advantage_vs_fair_nats": -0.0537459,
+          "approx_95pct_interval_nats": [
+            -0.072663,
+            -0.0348288
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 1,
+              "any_order": 6
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 1
+            }
+          }
+        },
+        "bayes_long": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 7,
+          "box_only": 7,
+          "fireball_any_order": 30,
+          "fireball_straight": 1,
+          "fireball_only_any_order": 27,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.157,
+          "mean_log_score_advantage_vs_fair_nats": -0.0466261,
+          "approx_95pct_interval_nats": [
+            -0.0640272,
+            -0.0292249
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 5
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 2
+            }
+          }
+        },
+        "decay_30": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 9,
+          "box_only": 9,
+          "fireball_any_order": 29,
+          "fireball_straight": 0,
+          "fireball_only_any_order": 24,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.122,
+          "mean_log_score_advantage_vs_fair_nats": -0.0718973,
+          "approx_95pct_interval_nats": [
+            -0.0937321,
+            -0.0500625
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 7
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 2
+            }
+          }
+        },
+        "session_hier": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 5,
+          "box_only": 5,
+          "fireball_any_order": 33,
+          "fireball_straight": 1,
+          "fireball_only_any_order": 32,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.142,
+          "mean_log_score_advantage_vs_fair_nats": -0.064277,
+          "approx_95pct_interval_nats": [
+            -0.084384,
+            -0.0441699
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 4
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 1
+            }
+          }
+        },
+        "transition": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order": 10,
+          "box_only": 9,
+          "fireball_any_order": 32,
+          "fireball_straight": 0,
+          "fireball_only_any_order": 29,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.205,
+          "mean_log_score_advantage_vs_fair_nats": -0.2059645,
+          "approx_95pct_interval_nats": [
+            -0.24278,
+            -0.169149
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 1,
+              "any_order": 6
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 4
+            }
+          }
+        },
+        "pair_chain": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order": 6,
+          "box_only": 6,
+          "fireball_any_order": 21,
+          "fireball_straight": 1,
+          "fireball_only_any_order": 19,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.185,
+          "mean_log_score_advantage_vs_fair_nats": -0.1622362,
+          "approx_95pct_interval_nats": [
+            -0.1943064,
+            -0.1301659
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 5
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 0,
+              "any_order": 1
+            }
+          }
+        },
+        "echo_repeat": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order": 12,
+          "box_only": 11,
+          "fireball_any_order": 27,
+          "fireball_straight": 1,
+          "fireball_only_any_order": 23,
+          "expected_straight_fair": 0.1,
+          "expected_any_order_fair": 7.09,
+          "mean_log_score_advantage_vs_fair_nats": -0.0510794,
+          "approx_95pct_interval_nats": [
+            -0.0683539,
+            -0.0338048
+          ],
+          "exploratory_periods": {
+            "exploratory_early": {
+              "draws": 748,
+              "tickets": 6732,
+              "straight": 0,
+              "any_order": 9
+            },
+            "exploratory_late": {
+              "draws": 374,
+              "tickets": 3268,
+              "straight": 1,
+              "any_order": 3
+            }
+          }
+        }
+      }
+    }
+  }
+}
