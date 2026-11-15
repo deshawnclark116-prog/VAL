@@ -1,0 +1,40 @@
+name: VAL 10000 historical picks study
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_10k.py'
+      - 'tests/test_research_10k.py'
+      - '.github/workflows/research_10k.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: val-10k-study
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run every validation test
+        run: python -m unittest discover -s tests -v
+      - name: Compare 10000 historical picks per method per game
+        run: python research_10k.py --tickets 10000
+      - name: Publish the research-only results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_10k.json reports/research_10k.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record VAL historical 10000-pick method comparison'
+          git pull --rebase origin main
+          git push origin HEAD:main
