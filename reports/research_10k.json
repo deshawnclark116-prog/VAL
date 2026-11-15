@@ -1,0 +1,276 @@
+{
+  "generated_at": "2026-11-15T23:40:00.722618+00:00",
+  "source": "Virginia Lottery official bulk download",
+  "research_version": "val_historical_digit_methods_10k_v1",
+  "cutoff": "2025-04-08",
+  "seed": 20261115,
+  "games": {
+    "pick3": {
+      "game": "pick3",
+      "history_draws": 1172,
+      "training_draws_before_first_test": 50,
+      "distinct_held_out_draws": 1122,
+      "held_out_from": "2025-05-03T17:59:00+00:00",
+      "held_out_to": "2026-11-15T04:00:00+00:00",
+      "draw_sessions": [
+        "Day",
+        "Night"
+      ],
+      "tickets_per_method": 10000,
+      "ticket_allocation_per_draw": [
+        8,
+        9
+      ],
+      "methods": {
+        "random": {
+          "tickets": 10000,
+          "straight": 14,
+          "any_order_including_straight": 57,
+          "box_only": 43,
+          "fireball_straight": 37,
+          "fireball_any_order": 157,
+          "fireball_only_any_order": 136,
+          "expected_straight_fair_draw": 10.0,
+          "expected_any_order_fair_draw": 51.401,
+          "draws_with_straight": 14,
+          "draws_with_any_order": 57,
+          "draws_with_fireball_any_order": 152
+        },
+        "frequency": {
+          "tickets": 10000,
+          "straight": 11,
+          "any_order_including_straight": 48,
+          "box_only": 37,
+          "fireball_straight": 25,
+          "fireball_any_order": 129,
+          "fireball_only_any_order": 114,
+          "expected_straight_fair_draw": 10.0,
+          "expected_any_order_fair_draw": 51.189,
+          "draws_with_straight": 11,
+          "draws_with_any_order": 47,
+          "draws_with_fireball_any_order": 119
+        },
+        "recent": {
+          "tickets": 10000,
+          "straight": 13,
+          "any_order_including_straight": 57,
+          "box_only": 44,
+          "fireball_straight": 28,
+          "fireball_any_order": 118,
+          "fireball_only_any_order": 105,
+          "expected_straight_fair_draw": 10.0,
+          "expected_any_order_fair_draw": 51.494,
+          "draws_with_straight": 13,
+          "draws_with_any_order": 55,
+          "draws_with_fireball_any_order": 112
+        },
+        "cold": {
+          "tickets": 10000,
+          "straight": 11,
+          "any_order_including_straight": 44,
+          "box_only": 33,
+          "fireball_straight": 32,
+          "fireball_any_order": 139,
+          "fireball_only_any_order": 122,
+          "expected_straight_fair_draw": 10.0,
+          "expected_any_order_fair_draw": 51.379,
+          "draws_with_straight": 11,
+          "draws_with_any_order": 43,
+          "draws_with_fireball_any_order": 136
+        },
+        "ensemble": {
+          "tickets": 10000,
+          "straight": 12,
+          "any_order_including_straight": 58,
+          "box_only": 46,
+          "fireball_straight": 34,
+          "fireball_any_order": 150,
+          "fireball_only_any_order": 138,
+          "expected_straight_fair_draw": 10.0,
+          "expected_any_order_fair_draw": 51.362,
+          "draws_with_straight": 12,
+          "draws_with_any_order": 56,
+          "draws_with_fireball_any_order": 144
+        }
+      }
+    },
+    "pick4": {
+      "game": "pick4",
+      "history_draws": 1172,
+      "training_draws_before_first_test": 50,
+      "distinct_held_out_draws": 1122,
+      "held_out_from": "2025-05-03T17:59:00+00:00",
+      "held_out_to": "2026-11-15T04:00:00+00:00",
+      "draw_sessions": [
+        "Day",
+        "Night"
+      ],
+      "tickets_per_method": 10000,
+      "ticket_allocation_per_draw": [
+        8,
+        9
+      ],
+      "methods": {
+        "random": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order_including_straight": 22,
+          "box_only": 22,
+          "fireball_straight": 3,
+          "fireball_any_order": 63,
+          "fireball_only_any_order": 55,
+          "expected_straight_fair_draw": 1.0,
+          "expected_any_order_fair_draw": 17.547,
+          "draws_with_straight": 0,
+          "draws_with_any_order": 22,
+          "draws_with_fireball_any_order": 63
+        },
+        "frequency": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order_including_straight": 14,
+          "box_only": 14,
+          "fireball_straight": 3,
+          "fireball_any_order": 55,
+          "fireball_only_any_order": 50,
+          "expected_straight_fair_draw": 1.0,
+          "expected_any_order_fair_draw": 17.61,
+          "draws_with_straight": 0,
+          "draws_with_any_order": 14,
+          "draws_with_fireball_any_order": 53
+        },
+        "recent": {
+          "tickets": 10000,
+          "straight": 2,
+          "any_order_including_straight": 15,
+          "box_only": 13,
+          "fireball_straight": 3,
+          "fireball_any_order": 65,
+          "fireball_only_any_order": 60,
+          "expected_straight_fair_draw": 1.0,
+          "expected_any_order_fair_draw": 17.633,
+          "draws_with_straight": 2,
+          "draws_with_any_order": 14,
+          "draws_with_fireball_any_order": 64
+        },
+        "cold": {
+          "tickets": 10000,
+          "straight": 2,
+          "any_order_including_straight": 21,
+          "box_only": 19,
+          "fireball_straight": 4,
+          "fireball_any_order": 62,
+          "fireball_only_any_order": 52,
+          "expected_straight_fair_draw": 1.0,
+          "expected_any_order_fair_draw": 17.598,
+          "draws_with_straight": 2,
+          "draws_with_any_order": 21,
+          "draws_with_fireball_any_order": 61
+        },
+        "ensemble": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order_including_straight": 12,
+          "box_only": 12,
+          "fireball_straight": 3,
+          "fireball_any_order": 74,
+          "fireball_only_any_order": 71,
+          "expected_straight_fair_draw": 1.0,
+          "expected_any_order_fair_draw": 17.682,
+          "draws_with_straight": 0,
+          "draws_with_any_order": 12,
+          "draws_with_fireball_any_order": 71
+        }
+      }
+    },
+    "pick5": {
+      "game": "pick5",
+      "history_draws": 1172,
+      "training_draws_before_first_test": 50,
+      "distinct_held_out_draws": 1122,
+      "held_out_from": "2025-05-03T17:59:00+00:00",
+      "held_out_to": "2026-11-15T04:00:00+00:00",
+      "draw_sessions": [
+        "Day",
+        "Night"
+      ],
+      "tickets_per_method": 10000,
+      "ticket_allocation_per_draw": [
+        8,
+        9
+      ],
+      "methods": {
+        "random": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order_including_straight": 4,
+          "box_only": 4,
+          "fireball_straight": 0,
+          "fireball_any_order": 19,
+          "fireball_only_any_order": 19,
+          "expected_straight_fair_draw": 0.1,
+          "expected_any_order_fair_draw": 7.119,
+          "draws_with_straight": 0,
+          "draws_with_any_order": 4,
+          "draws_with_fireball_any_order": 19
+        },
+        "frequency": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order_including_straight": 5,
+          "box_only": 5,
+          "fireball_straight": 0,
+          "fireball_any_order": 28,
+          "fireball_only_any_order": 27,
+          "expected_straight_fair_draw": 0.1,
+          "expected_any_order_fair_draw": 7.133,
+          "draws_with_straight": 0,
+          "draws_with_any_order": 5,
+          "draws_with_fireball_any_order": 28
+        },
+        "recent": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order_including_straight": 15,
+          "box_only": 14,
+          "fireball_straight": 0,
+          "fireball_any_order": 20,
+          "fireball_only_any_order": 14,
+          "expected_straight_fair_draw": 0.1,
+          "expected_any_order_fair_draw": 7.138,
+          "draws_with_straight": 1,
+          "draws_with_any_order": 15,
+          "draws_with_fireball_any_order": 20
+        },
+        "cold": {
+          "tickets": 10000,
+          "straight": 0,
+          "any_order_including_straight": 8,
+          "box_only": 8,
+          "fireball_straight": 2,
+          "fireball_any_order": 27,
+          "fireball_only_any_order": 25,
+          "expected_straight_fair_draw": 0.1,
+          "expected_any_order_fair_draw": 7.116,
+          "draws_with_straight": 0,
+          "draws_with_any_order": 8,
+          "draws_with_fireball_any_order": 26
+        },
+        "ensemble": {
+          "tickets": 10000,
+          "straight": 1,
+          "any_order_including_straight": 7,
+          "box_only": 6,
+          "fireball_straight": 0,
+          "fireball_any_order": 28,
+          "fireball_only_any_order": 26,
+          "expected_straight_fair_draw": 0.1,
+          "expected_any_order_fair_draw": 7.114,
+          "draws_with_straight": 1,
+          "draws_with_any_order": 7,
+          "draws_with_fireball_any_order": 28
+        }
+      }
+    }
+  }
+}
