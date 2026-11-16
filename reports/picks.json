@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T08:00:41.491883+00:00",
+  "generated_at": "2026-11-16T18:35:39.689332+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -782,83 +782,12 @@
         "source": "Virginia Lottery official download"
       },
       "result": null
-    },
-    {
-      "game": "cashpop",
-      "name": "Cash Pop",
-      "id": 70,
-      "created": "2026-11-16T08:00:41.491883+00:00",
-      "stream": "Coffee Break",
-      "method": "ensemble",
-      "picks": [
-        {
-          "numbers": [
-            15
-          ],
-          "bonus": null,
-          "rank": 1,
-          "role": "primary",
-          "model_weight_score": 0.06464815993462136,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            10
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "model_weight_score": 0.06137921510939605,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            4
-          ],
-          "bonus": null,
-          "rank": 3,
-          "role": "alternative_2",
-          "model_weight_score": 0.058294803942084514,
-          "ranking_version": "ensemble_sampling_v1"
-        }
-      ],
-      "baseline": [
-        {
-          "numbers": [
-            14
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            1
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            13
-          ],
-          "bonus": null
-        }
-      ],
-      "target": {
-        "at": "2026-11-16T14:00:00+00:00",
-        "stream": "Coffee Break"
-      },
-      "training_latest": {
-        "game": "cashpop",
-        "at": "2026-11-16T04:59:00+00:00",
-        "stream": "After Hours",
-        "numbers": [
-          4
-        ],
-        "bonus": null,
-        "extra": null,
-        "source": "Virginia Lottery official download"
-      },
-      "result": null
     }
   ],
-  "failures": []
+  "failures": [
+    {
+      "game": "cashpop",
+      "error": "Waiting for latest completed Lunch Break result (2026-11-16T12:00:00-05:00); new picks withheld"
+    }
+  ]
 }

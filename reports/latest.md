@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-16T03:00:41.491883-05:00 · Eastern time
+Updated: 2026-11-16T13:35:39.689332-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -22,7 +22,6 @@ Three unique combinations per target, with three saved random controls. New batc
 | Mega Millions | 2026-11-17T23:00:00-05:00 | Main | #42 | `13 28 42 50 60 + 15` / `13 31 37 43 68 + 19` / `10 26 27 64 70 + 16` (legacy: unranked) | 2026-11-13T23:00:00-05:00 | `10 22 33 49 57 + 18` (Main) |
 | Millionaire for Life | 2026-11-16T23:15:00-05:00 | Main | #69 | **Primary:** `23 34 35 41 48 + 3` / **Alt 1:** `3 12 13 21 24 + 3` / **Alt 2:** `10 25 45 48 49 + 4` | 2026-11-15T23:15:00-05:00 | `5 7 11 20 52 + 3` (Main) |
 | Bank a Million | 2026-11-18T23:00:00-05:00 | Main | #57 | `7 15 28 31 34 38` / `16 17 20 22 27 34` / `2 19 26 29 31 34` (legacy: unranked) | 2026-11-14T23:00:00-05:00 | `1 7 9 10 26 38` (Main) |
-| Cash Pop | 2026-11-16T09:00:00-05:00 | Coffee Break | #70 | **Primary:** `15` / **Alt 1:** `10` / **Alt 2:** `4` | 2026-11-15T23:59:00-05:00 | `4` (After Hours) |
 
 ## Prospective results
 
@@ -56,7 +55,6 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 | Mega Millions | 0 / 300 | 0 / 300 | 0.3267 |
 | Millionaire for Life | 0 / 300 | 0 / 300 | 0.7692 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3886 |
-| Cash Pop | 30 / 300 | 26 / 300 | 0.7143 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
@@ -66,4 +64,6 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 [Official Virginia game rules and results](https://www.valottery.com/alldrawgames)
 
-All nine automatic history updates and analyses completed.
+### Update / analysis failures
+
+- Cash Pop: Waiting for latest completed Lunch Break result (2026-11-16T12:00:00-05:00); new picks withheld
