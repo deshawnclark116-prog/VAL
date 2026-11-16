@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-15T17:53:51.177754-05:00 · Eastern time
+Updated: 2026-11-15T20:04:02.235869-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
