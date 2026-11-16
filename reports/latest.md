@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-15T20:04:02.235869-05:00 · Eastern time
+Updated: 2026-11-16T03:00:41.491883-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,15 +14,15 @@ Three unique combinations per target, with three saved random controls. New batc
 
 | Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-15T23:00:00-05:00 | Night | #60 | `9 6 2` / `2 6 2` / `9 3 5` (legacy: unranked) | 2026-11-15T13:59:00-05:00 | `2 7 8` (Day) |
-| Pick 4 | 2026-11-15T23:00:00-05:00 | Night | #61 | `8 0 5 9` / `7 9 8 3` / `3 0 6 1` (legacy: unranked) | 2026-11-15T13:59:00-05:00 | `6 8 4 9` (Day) |
-| Pick 5 | 2026-11-15T23:00:00-05:00 | Night | #62 | `3 3 4 0 6` / `0 7 2 8 4` / `5 7 2 2 0` (legacy: unranked) | 2026-11-15T13:59:00-05:00 | `6 6 5 5 6` (Day) |
-| Cash 5 | 2026-11-15T23:00:00-05:00 | Main | #54 | `7 8 15 23 37` / `4 11 19 30 31` / `5 9 22 25 28` (legacy: unranked) | 2026-11-14T23:00:00-05:00 | `2 11 31 40 44` (Main) |
+| Pick 3 | 2026-11-16T13:59:00-05:00 | Day | #65 | **Primary:** `6 0 1` / **Alt 1:** `6 7 6` / **Alt 2:** `8 2 0` | 2026-11-15T23:00:00-05:00 | `6 4 5` (Night) |
+| Pick 4 | 2026-11-16T13:59:00-05:00 | Day | #66 | **Primary:** `0 4 7 4` / **Alt 1:** `7 1 3 2` / **Alt 2:** `0 3 5 7` | 2026-11-15T23:00:00-05:00 | `6 5 7 1` (Night) |
+| Pick 5 | 2026-11-16T13:59:00-05:00 | Day | #67 | **Primary:** `9 4 4 1 2` / **Alt 1:** `2 8 1 7 0` / **Alt 2:** `5 8 9 7 3` | 2026-11-15T23:00:00-05:00 | `0 8 4 0 4` (Night) |
+| Cash 5 | 2026-11-16T23:00:00-05:00 | Main | #68 | **Primary:** `20 26 35 36 39` / **Alt 1:** `6 8 14 22 24` / **Alt 2:** `13 16 18 19 33` | 2026-11-15T23:00:00-05:00 | `2 8 9 14 42` (Main) |
 | Powerball | 2026-11-16T22:59:00-05:00 | Main | #55 | `10 19 21 32 57 + 18` / `6 10 25 37 42 + 4` / `4 37 54 60 61 + 20` (legacy: unranked) | 2026-11-14T22:59:00-05:00 | `9 44 49 51 68 + 4` (Main) |
 | Mega Millions | 2026-11-17T23:00:00-05:00 | Main | #42 | `13 28 42 50 60 + 15` / `13 31 37 43 68 + 19` / `10 26 27 64 70 + 16` (legacy: unranked) | 2026-11-13T23:00:00-05:00 | `10 22 33 49 57 + 18` (Main) |
-| Millionaire for Life | 2026-11-15T23:15:00-05:00 | Main | #56 | `10 34 40 41 43 + 1` / `5 17 18 27 41 + 5` / `9 14 18 21 56 + 2` (legacy: unranked) | 2026-11-14T23:15:00-05:00 | `2 10 24 29 54 + 1` (Main) |
+| Millionaire for Life | 2026-11-16T23:15:00-05:00 | Main | #69 | **Primary:** `23 34 35 41 48 + 3` / **Alt 1:** `3 12 13 21 24 + 3` / **Alt 2:** `10 25 45 48 49 + 4` | 2026-11-15T23:15:00-05:00 | `5 7 11 20 52 + 3` (Main) |
 | Bank a Million | 2026-11-18T23:00:00-05:00 | Main | #57 | `7 15 28 31 34 38` / `16 17 20 22 27 34` / `2 19 26 29 31 34` (legacy: unranked) | 2026-11-14T23:00:00-05:00 | `1 7 9 10 26 38` (Main) |
-| Cash Pop | 2026-11-15T21:00:00-05:00 | Prime Time | #64 | **Primary:** `12` / **Alt 1:** `10` / **Alt 2:** `3` | 2026-11-15T17:00:00-05:00 | `1` (Rush Hour) |
+| Cash Pop | 2026-11-16T09:00:00-05:00 | Coffee Break | #70 | **Primary:** `15` / **Alt 1:** `10` / **Alt 2:** `4` | 2026-11-15T23:59:00-05:00 | `4` (After Hours) |
 
 ## Prospective results
 
@@ -30,15 +30,15 @@ Every saved batch is retained in [ledger.json](ledger.json), including losses. N
 
 | Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |
 | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 8 | 24 | 0 | 24 | 0 |
-| Pick 4 | 8 | 24 | 0 | 24 | 0 |
-| Pick 5 | 8 | 24 | 0 | 24 | 0 |
-| Cash 5 | 4 | 12 | 0 | 12 | 0 |
+| Pick 3 | 9 | 27 | 0 | 27 | 0 |
+| Pick 4 | 9 | 27 | 0 | 27 | 0 |
+| Pick 5 | 9 | 27 | 0 | 27 | 0 |
+| Cash 5 | 5 | 15 | 0 | 15 | 0 |
 | Powerball | 2 | 6 | 0 | 6 | 0 |
 | Mega Millions | 2 | 6 | 0 | 6 | 0 |
-| Millionaire for Life | 4 | 12 | 0 | 12 | 0 |
+| Millionaire for Life | 5 | 15 | 0 | 15 | 0 |
 | Bank a Million | 2 | 6 | 0 | 6 | 0 |
-| Cash Pop | 17 | 51 | 4 | 51 | 4 |
+| Cash Pop | 18 | 54 | 4 | 54 | 4 |
 
 Pending batches: 9. This report retains the original saved picks and controls; no retrospective replacement.
 
@@ -48,15 +48,15 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble exact hits / tickets | Random exact hits / tickets | Frequency-check p-value |
 | --- | --- | --- | --- |
-| Pick 3 | 0 / 300 | 0 / 300 | 0.5544 |
-| Pick 4 | 1 / 300 | 0 / 300 | 0.9830 |
-| Pick 5 | 0 / 300 | 0 / 300 | 0.7473 |
-| Cash 5 | 0 / 300 | 0 / 300 | 0.4206 |
+| Pick 3 | 2 / 300 | 1 / 300 | 0.4985 |
+| Pick 4 | 0 / 300 | 0 / 300 | 0.9930 |
+| Pick 5 | 0 / 300 | 0 / 300 | 0.8142 |
+| Cash 5 | 0 / 300 | 0 / 300 | 0.4446 |
 | Powerball | 0 / 300 | 0 / 300 | 0.7053 |
 | Mega Millions | 0 / 300 | 0 / 300 | 0.3267 |
-| Millionaire for Life | 0 / 300 | 0 / 300 | 0.7642 |
+| Millionaire for Life | 0 / 300 | 0 / 300 | 0.7692 |
 | Bank a Million | 0 / 300 | 0 / 300 | 0.3886 |
-| Cash Pop | 17 / 300 | 17 / 300 | 0.5934 |
+| Cash Pop | 30 / 300 | 26 / 300 | 0.7143 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
