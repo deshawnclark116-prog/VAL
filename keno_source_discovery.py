@@ -57,6 +57,34 @@ def run():
         except Exception as exc:
             d["error"]=str(exc)
         results["pages"][url]=d
+    # Inspect only scripts already publicly loaded by the Lottery page;
+    # record short endpoint/context extracts, never publish complete JS bundles.
+    script_urls=[
+        "https://gamesrv1.valottery.com/MWC/mwc-app.js",
+        "https://cdn.valottery.com/jscript/app.bundle.js?cachebuster=20260302",
+        "https://cdn.valottery.com/dist/js/val.bundle.js",
+    ]
+    results["script_inspection"]={}
+    for url in script_urls:
+        item={}
+        try:
+            body,status,final=fetch(url)
+            item.update(status=status,chars=len(body),url=final)
+            tokens=["keno","pastnumbers","pastdraw","kenohistory","getdraw","getresults",
+                    "drawhistory","drawresults","/api/","api/keno","latestdraw"]
+            for token in tokens:
+                positions=[match.start() for match in list(re.finditer(re.escape(token),body,re.I))[:20]]
+                item[token+"_occurrences"]=len(positions)
+                item[token+"_contexts"]=[
+                    body[max(0,i-130):i+240]
+                    for i in positions[:6]]
+            item["http_endpoints"]=[
+                x for x in sorted(set(re.findall(
+                   r"https?://[A-Za-z0-9./_\-?=%&]{9,180}",body)))
+                if "keno" in x.lower() or "/api/" in x.lower()
+            ][:70]
+        except Exception as e:item["error"]=str(e)
+        results["script_inspection"][url]=item
     dest=Path("reports/keno_source_discovery.json")
     dest.parent.mkdir(exist_ok=True)
     dest.write_text(json.dumps(results,indent=2)+"\n")
