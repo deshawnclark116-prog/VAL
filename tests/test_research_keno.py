@@ -25,10 +25,10 @@ class KenoResearchTests(unittest.TestCase):
         self.assertAlmostEqual(sum(p.values()),1)
         self.assertAlmostEqual(sum(k*prob for k,prob in p.items()),1.25)
         self.assertLess(p[5],.001)
-        # Historical official Keno 5-spot is 3=$2,4=$20,5=$450 only.
+        # Current Keno with BULLS-EYE main-game five-spot also pays for 0 hits.
         from research_keno import PRIZE_FIVE_SPOT
-        self.assertEqual(PRIZE_FIVE_SPOT[0],0)
-        self.assertAlmostEqual(sum(p[k]*PRIZE_FIVE_SPOT[k] for k in range(6)),.7,places=2)
+        self.assertEqual(PRIZE_FIVE_SPOT[0],2)
+        self.assertAlmostEqual(sum(p[k]*PRIZE_FIVE_SPOT[k] for k in range(6)),1.1543,places=3)
         self.assertEqual(match_count([1,2,3,4,5],list(range(1,21))),5)
         self.assertEqual(match_count([1,2,3,4,5],list(range(60,80))),0)
 

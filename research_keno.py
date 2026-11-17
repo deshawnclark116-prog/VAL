@@ -25,11 +25,11 @@ from val import METHODS, GAMES, generate
 SOURCE_URL="https://www.comparethelotto.com/us/results-virginia-keno?refresh=true"
 TRAINING_DRAWS=30
 PICKS_PER_METHOD=3
-# Original official Keno $1 five-spot schedule pays ONLY 3, 4, 5 matches.
-# See https://www.valottery.com/en/data/draw-games/keno
-# New BULLS-EYE page presents a conflicting zero-match row; do not infer
-# a zero-match payout for the historical standard five-spot game.
-PRIZE_FIVE_SPOT={0:0, 1:0, 2:0, 3:2, 4:20, 5:450}
+# Current official Keno-with-BULLS-EYE main-game $1 five-spot schedule,
+# WITHOUT purchasing optional BULLS-EYE. Current chart explicitly pays $2
+# for zero matches: https://www.valottery.com/data/draw-games/keno
+# The older /en/ page omits that prize and is NOT the current paytable.
+PRIZE_FIVE_SPOT={0:2, 1:0, 2:0, 3:2, 4:20, 5:450}
 
 
 class ExtractText(HTMLParser):
@@ -211,15 +211,14 @@ def markdown(report):
         "Only previous **available** rows train each test. No future data.",
         "Game: pick five numbers from 1–80; official outcome contains 20.",
         "Each ticket averages 1.25 matches by chance.",
-        "Classic $1 five-spot payouts for 3/4/5 matches are used,",
-        "excluding optional BULLS-EYE; no zero-match prize is assumed.",
+        "Current published $1 five-spot MAIN-game pays $2 for 0 matches,",
+        "$0 for 1-2 matches, $2 for 3, $20 for 4, $450 for 5;",
+        "optional BULLS-EYE is not purchased or scored.",
         "No money was wagered.",
         "",
-        "IMPORTANT: Current Keno with BULLS-EYE website shows an inconsistent",
-        "zero-match row for five spots. The separate original Keno prize table",
-        "does not pay for zero-match five-spot tickets, so this report",
-        "uses the original five-spot $1 schedule as an illustrative basis.",
-        "Do not treat the estimated dollar results as official settlement.",
+        "Prize schedule source: https://www.valottery.com/data/draw-games/keno.",
+        "The older /en/ page omits the 0-match prize and is outdated.",
+        "These dollar results are illustrative, not official settlement.",
         "",
         "| Method | Tickets | Avg matches | 3+ matches | 4+ matches | 5/5 | Gross hypothetical return per $1 |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
