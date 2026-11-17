@@ -1,0 +1,205 @@
+{
+  "generated_utc": "2026-11-17T14:28:26.587859+00:00",
+  "version": "val_keno_five_spot_real_history_v1",
+  "source": {
+    "url": "https://www.comparethelotto.com/us/results-virginia-keno?refresh=true",
+    "sha256": "4a712f57441cdd29a0c94ea9cfbafbb8effdd28719d7ac4a85acb8f0dc3dc70d",
+    "verified_official": false
+  },
+  "coverage": {
+    "unique_draws": 50,
+    "duplicate_listings": 1,
+    "missing_draw_ids_between_first_and_last": 13,
+    "first_draw_id": 807628,
+    "last_draw_id": 807690,
+    "first_date": "2026-11-17",
+    "last_date": "2026-11-17"
+  },
+  "test": {
+    "training_draws": 30,
+    "heldout_draws": 20,
+    "tickets_per_method": 60,
+    "ticket_spots": 5,
+    "winning_numbers_per_draw": 20,
+    "fair_expected_matches_per_ticket": 1.25,
+    "fair_match_distribution": {
+      "0": 0.22718420819686644,
+      "1": 0.4056860860658329,
+      "2": 0.27045739071055525,
+      "3": 0.08393505228948267,
+      "4": 0.01209233804170513,
+      "5": 0.0006449246955576069
+    },
+    "fair_expected_gross_return_per_$1_play": 1.154301,
+    "random_control": {
+      "tickets": 60,
+      "draws": 20,
+      "distribution_matches": {
+        "0": 15,
+        "1": 27,
+        "2": 13,
+        "3": 4,
+        "4": 1,
+        "5": 0
+      },
+      "total_matches": 69,
+      "avg_matches_per_ticket": 1.15,
+      "full_five_match_tickets": 0,
+      "four_or_more_tickets": 1,
+      "three_or_more_tickets": 5,
+      "gross_hypothetical_prize_dollars": 58,
+      "hypothetical_ticket_cost_dollars": 60,
+      "hypothetical_net_dollars": -2,
+      "hypothetical_return_per_dollar": 0.96667,
+      "by_year": {
+        "2026": {
+          "tickets": 60,
+          "total_matches": 69,
+          "gross_return": 58
+        }
+      }
+    },
+    "methods": {
+      "random": {
+        "tickets": 60,
+        "draws": 20,
+        "distribution_matches": {
+          "0": 15,
+          "1": 24,
+          "2": 18,
+          "3": 3,
+          "4": 0,
+          "5": 0
+        },
+        "total_matches": 69,
+        "avg_matches_per_ticket": 1.15,
+        "full_five_match_tickets": 0,
+        "four_or_more_tickets": 0,
+        "three_or_more_tickets": 3,
+        "gross_hypothetical_prize_dollars": 36,
+        "hypothetical_ticket_cost_dollars": 60,
+        "hypothetical_net_dollars": -24,
+        "hypothetical_return_per_dollar": 0.6,
+        "by_year": {
+          "2026": {
+            "tickets": 60,
+            "total_matches": 69,
+            "gross_return": 36
+          }
+        }
+      },
+      "frequency": {
+        "tickets": 60,
+        "draws": 20,
+        "distribution_matches": {
+          "0": 18,
+          "1": 25,
+          "2": 15,
+          "3": 1,
+          "4": 1,
+          "5": 0
+        },
+        "total_matches": 62,
+        "avg_matches_per_ticket": 1.03333,
+        "full_five_match_tickets": 0,
+        "four_or_more_tickets": 1,
+        "three_or_more_tickets": 2,
+        "gross_hypothetical_prize_dollars": 58,
+        "hypothetical_ticket_cost_dollars": 60,
+        "hypothetical_net_dollars": -2,
+        "hypothetical_return_per_dollar": 0.96667,
+        "by_year": {
+          "2026": {
+            "tickets": 60,
+            "total_matches": 62,
+            "gross_return": 58
+          }
+        }
+      },
+      "recent": {
+        "tickets": 60,
+        "draws": 20,
+        "distribution_matches": {
+          "0": 18,
+          "1": 19,
+          "2": 18,
+          "3": 4,
+          "4": 1,
+          "5": 0
+        },
+        "total_matches": 71,
+        "avg_matches_per_ticket": 1.18333,
+        "full_five_match_tickets": 0,
+        "four_or_more_tickets": 1,
+        "three_or_more_tickets": 5,
+        "gross_hypothetical_prize_dollars": 64,
+        "hypothetical_ticket_cost_dollars": 60,
+        "hypothetical_net_dollars": 4,
+        "hypothetical_return_per_dollar": 1.06667,
+        "by_year": {
+          "2026": {
+            "tickets": 60,
+            "total_matches": 71,
+            "gross_return": 64
+          }
+        }
+      },
+      "cold": {
+        "tickets": 60,
+        "draws": 20,
+        "distribution_matches": {
+          "0": 10,
+          "1": 24,
+          "2": 19,
+          "3": 7,
+          "4": 0,
+          "5": 0
+        },
+        "total_matches": 83,
+        "avg_matches_per_ticket": 1.38333,
+        "full_five_match_tickets": 0,
+        "four_or_more_tickets": 0,
+        "three_or_more_tickets": 7,
+        "gross_hypothetical_prize_dollars": 34,
+        "hypothetical_ticket_cost_dollars": 60,
+        "hypothetical_net_dollars": -26,
+        "hypothetical_return_per_dollar": 0.56667,
+        "by_year": {
+          "2026": {
+            "tickets": 60,
+            "total_matches": 83,
+            "gross_return": 34
+          }
+        }
+      },
+      "ensemble": {
+        "tickets": 60,
+        "draws": 20,
+        "distribution_matches": {
+          "0": 11,
+          "1": 30,
+          "2": 11,
+          "3": 5,
+          "4": 2,
+          "5": 1
+        },
+        "total_matches": 80,
+        "avg_matches_per_ticket": 1.33333,
+        "full_five_match_tickets": 1,
+        "four_or_more_tickets": 3,
+        "three_or_more_tickets": 8,
+        "gross_hypothetical_prize_dollars": 522,
+        "hypothetical_ticket_cost_dollars": 60,
+        "hypothetical_net_dollars": 462,
+        "hypothetical_return_per_dollar": 8.7,
+        "by_year": {
+          "2026": {
+            "tickets": 60,
+            "total_matches": 80,
+            "gross_return": 522
+          }
+        }
+      }
+    }
+  }
+}
