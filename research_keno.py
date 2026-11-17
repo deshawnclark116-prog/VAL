@@ -25,7 +25,11 @@ from val import METHODS, GAMES, generate
 SOURCE_URL="https://www.comparethelotto.com/us/results-virginia-keno?refresh=true"
 TRAINING_DRAWS=30
 PICKS_PER_METHOD=3
-PRIZE_FIVE_SPOT={0:2, 1:0, 2:0, 3:2, 4:20, 5:450}
+# Original official Keno $1 five-spot schedule pays ONLY 3, 4, 5 matches.
+# See https://www.valottery.com/en/data/draw-games/keno
+# New BULLS-EYE page presents a conflicting zero-match row; do not infer
+# a zero-match payout for the historical standard five-spot game.
+PRIZE_FIVE_SPOT={0:0, 1:0, 2:0, 3:2, 4:20, 5:450}
 
 
 class ExtractText(HTMLParser):
@@ -121,6 +125,7 @@ def grade_method(rows, method, control=False, seed=20261115, train=TRAINING_DRAW
     tallies=Counter()
     split=Counter()
     year_stats={}
+    major_hits=[]
     for i in range(train,len(rows)):
         target=rows[i]
         previous=rows[max(0,i-500):i]
@@ -133,6 +138,12 @@ def grade_method(rows, method, control=False, seed=20261115, train=TRAINING_DRAW
         for ticket in picks:
             k=match_count(ticket["numbers"],target["numbers"])
             tallies[k]+=1
+            if k>=4:
+                major_hits.append({
+                    "draw_id":target["draw_id"],"date":target["date"],
+                    "ticket":ticket["numbers"],"draw_numbers":target["numbers"],
+                    "matches":k,
+                })
             split["total_matches"]+=k
             split["returned_$1_tickets"]+=PRIZE_FIVE_SPOT[k]
             year=target["date"][:4]
@@ -152,6 +163,7 @@ def grade_method(rows, method, control=False, seed=20261115, train=TRAINING_DRAW
         "hypothetical_ticket_cost_dollars":tickets,
         "hypothetical_net_dollars":split["returned_$1_tickets"]-tickets,
         "hypothetical_return_per_dollar":round(split["returned_$1_tickets"]/tickets,5),
+        "major_match_audit":major_hits,
         "by_year":year_stats
     }
 
@@ -199,8 +211,15 @@ def markdown(report):
         "Only previous **available** rows train each test. No future data.",
         "Game: pick five numbers from 1–80; official outcome contains 20.",
         "Each ticket averages 1.25 matches by chance.",
-        "Standard $1 five-spot payouts are used, excluding optional BULLS-EYE;",
-        "no money was wagered.",
+        "Classic $1 five-spot payouts for 3/4/5 matches are used,",
+        "excluding optional BULLS-EYE; no zero-match prize is assumed.",
+        "No money was wagered.",
+        "",
+        "IMPORTANT: Current Keno with BULLS-EYE website shows an inconsistent",
+        "zero-match row for five spots. The separate original Keno prize table",
+        "does not pay for zero-match five-spot tickets, so this report",
+        "uses the original five-spot $1 schedule as an illustrative basis.",
+        "Do not treat the estimated dollar results as official settlement.",
         "",
         "| Method | Tickets | Avg matches | 3+ matches | 4+ matches | 5/5 | Gross hypothetical return per $1 |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
@@ -210,10 +229,19 @@ def markdown(report):
         lines.append(f"| {name} | {details['tickets']} | {details['avg_matches_per_ticket']:.3f} | "
                      f"{details['three_or_more_tickets']} | {details['four_or_more_tickets']} | "
                      f"{details['full_five_match_tickets']} | "
-                     f"\${details['hypothetical_return_per_dollar']:.3f} |")
+                     f"${details['hypothetical_return_per_dollar']:.3f} |")
+    lines+=["", "## Four- and five-match audit trail", ""]
+    for name, details in [("random_control",test["random_control"]), *test["methods"].items()]:
+        for hit in details["major_match_audit"]:
+            lines.append(
+                f"- {name}: draw #{hit['draw_id']} ({hit['date']}) "
+                f"ticket {', '.join(map(str,hit['ticket']))}; "
+                f"{hit['matches']}/5 matched; official-unverified source draw "
+                f"{', '.join(map(str,hit['draw_numbers']))}"
+            )
     lines+=["",
             f"Fair expected five-spot gross return per $1: "
-            f"\${test['fair_expected_gross_return_per_$1_play']:.3f}.",
+            f"${test['fair_expected_gross_return_per_$1_play']:.3f}.",
             "Overall profit cannot be established from a short sample:",
             "rare top payouts dominate financial results, and selecting winners",
             "after viewing test data creates multiple-testing bias.",
