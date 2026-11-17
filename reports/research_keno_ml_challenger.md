@@ -19,7 +19,7 @@ static frequency control and exact fair null.
 | calibration_selected_champion | 524/2133 | 24.57% | -0.00000634 | [-0.00001005, -0.00000304] |
 
 25 independent random ticket controls, one ball per draw:
-mean 1.40%, range 0.09% to 11.67%.
+mean 24.92%, range 23.68% to 26.54%.
 
 The 25% chance baseline is the expected hit rate under fair selection.
 Brier score assesses ALL 80 probabilities per drawing and cannot

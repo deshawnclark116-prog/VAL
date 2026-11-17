@@ -396,9 +396,9 @@
   },
   "placebo_random_controls": {
     "n": 25,
-    "average": 0.014008438818565401,
-    "minimum": 0.0009376465072667605,
-    "maximum": 0.11673699015471167
+    "average": 0.24924519456165026,
+    "minimum": 0.236755743084857,
+    "maximum": 0.2653539615564932
   },
   "research_limitations": [
     "Historical archive was already inspected in earlier research, so even final chronology is not independently untouched.",
@@ -407,5 +407,5 @@
     "Five experimental architectures / calibration comparisons should not be repurposed as guaranteed lottery predictions.",
     "No promotion unless a locked candidate later beats fair uniform on genuinely future draws."
   ],
-  "generated_utc": "2026-11-17T17:06:29.927939+00:00"
+  "generated_utc": "2026-11-17T17:07:47.684921+00:00"
 }
