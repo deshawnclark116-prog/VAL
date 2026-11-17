@@ -1,0 +1,411 @@
+{
+  "version": "val_keno_ml_adversarial_v1",
+  "official_draws": 10665,
+  "train": {
+    "n": 6399,
+    "dates": [
+      "2026-10-17T00:02:00",
+      "2026-11-04T04:58:00"
+    ]
+  },
+  "calibration": {
+    "n": 2133,
+    "dates": [
+      "2026-11-04T05:02:00",
+      "2026-11-10T06:26:00"
+    ]
+  },
+  "final": {
+    "n": 2133,
+    "dates": [
+      "2026-11-10T06:30:00",
+      "2026-11-16T09:45:30"
+    ]
+  },
+  "features": [
+    "p_last_10",
+    "p_last_50",
+    "p_last_250",
+    "p_last_1000",
+    "p_last_3000",
+    "p_all_previous",
+    "present_lag_1",
+    "present_lag_2",
+    "present_lag_3",
+    "present_lag_5",
+    "present_lag_10",
+    "present_lag_20",
+    "draws_since_number_last_seen",
+    "number_scaled",
+    "draw_time_sin",
+    "draw_time_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "draw_id_mod_2",
+    "draw_id_mod_8"
+  ],
+  "architectures": [
+    "regularized_linear",
+    "nonlinear_boosted",
+    "static_frequency",
+    "uniform_null"
+  ],
+  "calibration_grid": [
+    {
+      "name": "regularized_linear",
+      "alpha": 0.0,
+      "validation_brier": 0.1875
+    },
+    {
+      "name": "regularized_linear",
+      "alpha": 0.25,
+      "validation_brier": 0.1875001047115383
+    },
+    {
+      "name": "regularized_linear",
+      "alpha": 0.5,
+      "validation_brier": 0.18750069156913496
+    },
+    {
+      "name": "regularized_linear",
+      "alpha": 0.75,
+      "validation_brier": 0.18750176057278994
+    },
+    {
+      "name": "regularized_linear",
+      "alpha": 1.0,
+      "validation_brier": 0.1875033117225033
+    },
+    {
+      "name": "nonlinear_boosted",
+      "alpha": 0.0,
+      "validation_brier": 0.1875
+    },
+    {
+      "name": "nonlinear_boosted",
+      "alpha": 0.25,
+      "validation_brier": 0.18750383852139305
+    },
+    {
+      "name": "nonlinear_boosted",
+      "alpha": 0.5,
+      "validation_brier": 0.18751112618686713
+    },
+    {
+      "name": "nonlinear_boosted",
+      "alpha": 0.75,
+      "validation_brier": 0.18752186299642218
+    },
+    {
+      "name": "nonlinear_boosted",
+      "alpha": 1.0,
+      "validation_brier": 0.18753604895005827
+    },
+    {
+      "name": "static_frequency",
+      "alpha": 0.0,
+      "validation_brier": 0.1875
+    },
+    {
+      "name": "static_frequency",
+      "alpha": 0.25,
+      "validation_brier": 0.18749746951254395
+    },
+    {
+      "name": "static_frequency",
+      "alpha": 0.5,
+      "validation_brier": 0.18749836396964867
+    },
+    {
+      "name": "static_frequency",
+      "alpha": 0.75,
+      "validation_brier": 0.18750268337131415
+    },
+    {
+      "name": "static_frequency",
+      "alpha": 1.0,
+      "validation_brier": 0.18751042771754034
+    }
+  ],
+  "frozen_selected_model": {
+    "name": "static_frequency",
+    "alpha": 0.25,
+    "validation_brier": 0.18749746951254395
+  },
+  "final_scores": {
+    "fair_uniform": {
+      "draws": 2133,
+      "one_ball_hit_count": 521,
+      "one_ball_hit_rate": 0.24425691514299108,
+      "fair_expected_hit_rate": 0.25,
+      "wilson_95": [
+        0.22649373746504053,
+        0.2629396393467924
+      ],
+      "day_cluster_bootstrap_hit_rate_95": [
+        0.22849915682967958,
+        0.26541717049576785
+      ],
+      "p_vs_25pct": 0.556837130417599,
+      "average_brier": 0.1875,
+      "brier_advantage_vs_fair": 0.0,
+      "day_cluster_bootstrap_brier_advantage_95": [
+        0.0,
+        0.0
+      ],
+      "log_loss": 0.5623351446188083,
+      "sum_to_20_probability_invariant": true,
+      "first_half_rate": 0.23639774859287055,
+      "second_half_rate": 0.2521087160262418,
+      "first_five_audit": [
+        {
+          "draw_id": 805210,
+          "predicted_ball": 23,
+          "hit": false
+        },
+        {
+          "draw_id": 805211,
+          "predicted_ball": 69,
+          "hit": true
+        },
+        {
+          "draw_id": 805212,
+          "predicted_ball": 74,
+          "hit": false
+        },
+        {
+          "draw_id": 805213,
+          "predicted_ball": 65,
+          "hit": false
+        },
+        {
+          "draw_id": 805214,
+          "predicted_ball": 40,
+          "hit": false
+        }
+      ]
+    },
+    "regularized_linear_unshrunk": {
+      "draws": 2133,
+      "one_ball_hit_count": 542,
+      "one_ball_hit_rate": 0.2541022034692921,
+      "fair_expected_hit_rate": 0.25,
+      "wilson_95": [
+        0.23607974554323322,
+        0.27300880832992236
+      ],
+      "day_cluster_bootstrap_hit_rate_95": [
+        0.23290986085904417,
+        0.27756145998042314
+      ],
+      "p_vs_25pct": 0.6799493621557126,
+      "average_brier": 0.18750782339573113,
+      "brier_advantage_vs_fair": -7.823395731121057e-06,
+      "day_cluster_bootstrap_brier_advantage_95": [
+        -1.2296048098210745e-05,
+        -3.0620298695412993e-06
+      ],
+      "log_loss": 0.562356015339409,
+      "sum_to_20_probability_invariant": true,
+      "first_half_rate": 0.275797373358349,
+      "second_half_rate": 0.232427366447985,
+      "first_five_audit": [
+        {
+          "draw_id": 805210,
+          "predicted_ball": 5,
+          "hit": false
+        },
+        {
+          "draw_id": 805211,
+          "predicted_ball": 54,
+          "hit": true
+        },
+        {
+          "draw_id": 805212,
+          "predicted_ball": 10,
+          "hit": false
+        },
+        {
+          "draw_id": 805213,
+          "predicted_ball": 10,
+          "hit": true
+        },
+        {
+          "draw_id": 805214,
+          "predicted_ball": 23,
+          "hit": true
+        }
+      ]
+    },
+    "nonlinear_boosted_unshrunk": {
+      "draws": 2133,
+      "one_ball_hit_count": 513,
+      "one_ball_hit_rate": 0.24050632911392406,
+      "fair_expected_hit_rate": 0.25,
+      "wilson_95": [
+        0.2228452954311731,
+        0.25910039488110836
+      ],
+      "day_cluster_bootstrap_hit_rate_95": [
+        0.22211808809746955,
+        0.26073520425018465
+      ],
+      "p_vs_25pct": 0.3233597779305315,
+      "average_brier": 0.18752817784552422,
+      "brier_advantage_vs_fair": -2.8177845524235396e-05,
+      "day_cluster_bootstrap_brier_advantage_95": [
+        -5.089745245352097e-05,
+        -1.2067433951222786e-05
+      ],
+      "log_loss": 0.5624094046408424,
+      "sum_to_20_probability_invariant": true,
+      "first_half_rate": 0.225140712945591,
+      "second_half_rate": 0.25585754451733833,
+      "first_five_audit": [
+        {
+          "draw_id": 805210,
+          "predicted_ball": 17,
+          "hit": true
+        },
+        {
+          "draw_id": 805211,
+          "predicted_ball": 17,
+          "hit": false
+        },
+        {
+          "draw_id": 805212,
+          "predicted_ball": 18,
+          "hit": false
+        },
+        {
+          "draw_id": 805213,
+          "predicted_ball": 17,
+          "hit": false
+        },
+        {
+          "draw_id": 805214,
+          "predicted_ball": 17,
+          "hit": false
+        }
+      ]
+    },
+    "static_frequency_unshrunk": {
+      "draws": 2133,
+      "one_ball_hit_count": 524,
+      "one_ball_hit_rate": 0.24566338490389122,
+      "fair_expected_hit_rate": 0.25,
+      "wilson_95": [
+        0.2278623881884794,
+        0.26437887106068536
+      ],
+      "day_cluster_bootstrap_hit_rate_95": [
+        0.22604254210576408,
+        0.26347866854195967
+      ],
+      "p_vs_25pct": 0.6617239908799141,
+      "average_brier": 0.187545927911197,
+      "brier_advantage_vs_fair": -4.592791119700177e-05,
+      "day_cluster_bootstrap_brier_advantage_95": [
+        -6.074012137232007e-05,
+        -3.27013463278793e-05
+      ],
+      "log_loss": 0.5624581867755911,
+      "sum_to_20_probability_invariant": true,
+      "first_half_rate": 0.24859287054409004,
+      "second_half_rate": 0.24273664479850046,
+      "first_five_audit": [
+        {
+          "draw_id": 805210,
+          "predicted_ball": 22,
+          "hit": true
+        },
+        {
+          "draw_id": 805211,
+          "predicted_ball": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 805212,
+          "predicted_ball": 22,
+          "hit": true
+        },
+        {
+          "draw_id": 805213,
+          "predicted_ball": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 805214,
+          "predicted_ball": 22,
+          "hit": false
+        }
+      ]
+    },
+    "calibration_selected_champion": {
+      "draws": 2133,
+      "one_ball_hit_count": 524,
+      "one_ball_hit_rate": 0.24566338490389122,
+      "fair_expected_hit_rate": 0.25,
+      "wilson_95": [
+        0.2278623881884794,
+        0.26437887106068536
+      ],
+      "day_cluster_bootstrap_hit_rate_95": [
+        0.22604254210576408,
+        0.26347866854195967
+      ],
+      "p_vs_25pct": 0.6617239908799141,
+      "average_brier": 0.18750634456095813,
+      "brier_advantage_vs_fair": -6.34456095812696e-06,
+      "day_cluster_bootstrap_brier_advantage_95": [
+        -1.0047613501956814e-05,
+        -3.0379197408461107e-06
+      ],
+      "log_loss": 0.562352080590104,
+      "sum_to_20_probability_invariant": true,
+      "first_half_rate": 0.24859287054409004,
+      "second_half_rate": 0.24273664479850046,
+      "first_five_audit": [
+        {
+          "draw_id": 805210,
+          "predicted_ball": 22,
+          "hit": true
+        },
+        {
+          "draw_id": 805211,
+          "predicted_ball": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 805212,
+          "predicted_ball": 22,
+          "hit": true
+        },
+        {
+          "draw_id": 805213,
+          "predicted_ball": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 805214,
+          "predicted_ball": 22,
+          "hit": false
+        }
+      ]
+    }
+  },
+  "placebo_random_controls": {
+    "n": 25,
+    "average": 0.014008438818565401,
+    "minimum": 0.0009376465072667605,
+    "maximum": 0.11673699015471167
+  },
+  "research_limitations": [
+    "Historical archive was already inspected in earlier research, so even final chronology is not independently untouched.",
+    "About one month of drawings; subtle stable biases may not be identifiable.",
+    "Only observed draw outcomes are available. Internal RNG implementation and seed are unknown.",
+    "Five experimental architectures / calibration comparisons should not be repurposed as guaranteed lottery predictions.",
+    "No promotion unless a locked candidate later beats fair uniform on genuinely future draws."
+  ],
+  "generated_utc": "2026-11-17T17:06:29.927939+00:00"
+}
