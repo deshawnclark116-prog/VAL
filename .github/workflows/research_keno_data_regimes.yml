@@ -1,0 +1,36 @@
+name: VAL Keno generator provenance and regime audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_keno_data_regimes.py'
+      - 'tests/test_research_keno_data_regimes.py'
+      - '.github/workflows/research_keno_data_regimes.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: val-keno-generator-provenance
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate data provenance parser
+        run: python -m unittest tests/test_research_keno_data_regimes.py -v
+      - name: Audit the actual frozen official archive
+        run: python research_keno_data_regimes.py
+      - name: Publish observed source coverage and generator context
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/keno_data_regimes.md reports/keno_data_regimes.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish Keno RNG provenance and archive coverage audit'
+          git pull --rebase origin main
+          git push origin HEAD:main
