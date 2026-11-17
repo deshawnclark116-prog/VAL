@@ -24,7 +24,14 @@ from datetime import datetime, timezone
 from itertools import combinations
 from pathlib import Path
 
-from research_keno_one_ticket import read_archive
+import gzip
+def read_archive(path="reports/keno_official_history.json.gz"):
+    with gzip.open(path,"rt",encoding="utf-8") as f:
+        rows=json.load(f)
+    ids=[r["draw_id"] for r in rows]
+    if ids!=sorted(set(ids)):
+        raise ValueError("Official draw archive must be ordered and unique")
+    return rows
 from research_keno_official import Counters, predict
 from research_keno import PRIZE_FIVE_SPOT, exact_fair_match_probabilities, match_count, stable_rng
 
