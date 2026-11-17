@@ -1,0 +1,36 @@
+name: VAL official Keno thousands of draws
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_keno_official.py'
+      - 'tests/test_research_keno_official.py'
+      - '.github/workflows/research_keno_official.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: val-keno-official
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test VAL and Keno model equivalence
+        run: python -m unittest discover -s tests -v
+      - name: Download official Keno and backtest fixed contenders
+        run: python research_keno_official.py --page-size 350
+      - name: Persist Keno analysis and source archive
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_keno_official.md reports/research_keno_official.json reports/keno_official_history.json.gz
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish official Keno multi-thousand-draw results'
+          git pull --rebase origin main
+          git push origin HEAD:main
