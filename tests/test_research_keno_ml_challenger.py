@@ -1,9 +1,14 @@
 import math,random,unittest
-import numpy as np
-from research_keno_ml_challenger import (
-  build_dataset, normalized_prob, calibrate, brier, pick_one,
-  day_cluster_interval, score, placebo_random_rates, FEATURE_NAMES
-)
+try:
+    import numpy as np
+    from research_keno_ml_challenger import (
+      build_dataset, normalized_prob, calibrate, brier, pick_one,
+      day_cluster_interval, score, placebo_random_rates, FEATURE_NAMES
+    )
+except ModuleNotFoundError as exc:
+    if exc.name not in ("numpy","sklearn"):
+        raise
+    np=None
 
 def draws(n=30):
     rand=random.Random(511)
@@ -14,6 +19,7 @@ def draws(n=30):
                          date="2026-11-01",numbers=nums))
     return rows
 
+@unittest.skipUnless(np is not None,'Scientific dependencies installed in ML research workflow')
 class AdvancedMLTests(unittest.TestCase):
     def test_no_future_number_leakage(self):
         rows=draws(35)
