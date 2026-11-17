@@ -237,6 +237,19 @@ def forecast_models(models,x,static_frequency):
     return outputs
 
 
+def placebo_random_rates(targets,draw_ids,n_controls=25):
+    if targets.shape!=(len(draw_ids),80):
+        raise ValueError("Placebo targets/ids must align")
+    rates=[]
+    for k in range(n_controls):
+        correct=0
+        for i,draw_id in enumerate(draw_ids):
+            guess=stable_rng(SEED,"control",k,int(draw_id)).randint(1,80)
+            correct+=int(targets[i,guess-1])
+        rates.append(correct/len(draw_ids))
+    return rates
+
+
 def evaluate(rows):
     n=len(rows)
     train_end=int(.60*n)
@@ -281,10 +294,9 @@ def evaluate(rows):
     final_scores["calibration_selected_champion"]=score(
         "calibration_selected_champion",selected,final_y,final_rows,final_ids)
     # Independent one-ball random placebo controls, same final draw set.
-    placebo_hits=[]
-    for k in range(25):
-        guesses=[stable_rng(SEED,"control",k,int(id)).randint(1,80) for id in final_ids]
-        placebo_hits.append(sum(final_y[i,guess-1] for i,guess in enumerate(guesses))/len(final_rows))
+    # Explicit Python int conversion is essential: np.uint8 accumulation
+    # otherwise wraps around at 256 and silently corrupts the report.
+    placebo_hits=placebo_random_rates(final_y,final_ids,25)
     # Log only chosen models: final-period alternatives are diagnostic, not eligible for promotion.
     return {
         "version":"val_keno_ml_adversarial_v1",

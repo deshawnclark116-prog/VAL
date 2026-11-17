@@ -2,7 +2,7 @@ import math,random,unittest
 import numpy as np
 from research_keno_ml_challenger import (
   build_dataset, normalized_prob, calibrate, brier, pick_one,
-  day_cluster_interval, score, FEATURE_NAMES
+  day_cluster_interval, score, placebo_random_rates, FEATURE_NAMES
 )
 
 def draws(n=30):
@@ -47,6 +47,17 @@ class AdvancedMLTests(unittest.TestCase):
         ci=day_cluster_interval([.1,.1,.2,.2,.3,.3],
                                 ["a","a","b","b","c","c"])
         self.assertTrue(ci[0]<=.2<=ci[1])
+    def test_random_placebo_counts_no_uint8_overflow(self):
+        rng=random.Random(2011)
+        y=np.zeros((1500,80),dtype=np.uint8)
+        for i in range(1500):
+            y[i,rng.sample(range(80),20)]=1
+        rates=placebo_random_rates(y,np.arange(1500)+8000,5)
+        self.assertEqual(len(rates),5)
+        # Under the old buggy numpy.uint8 sum, ALL rates falsely
+        # appeared less than 256/1500=17.1%.
+        self.assertTrue(all(.20<rate<.30 for rate in rates),rates)
+
     def test_detects_strong_synthetic_bias(self):
         # A genuine biased generator is easy for the probability score to
         # distinguish from fair guessing: first ball ALWAYS appears.
