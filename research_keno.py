@@ -25,11 +25,10 @@ from val import METHODS, GAMES, generate
 SOURCE_URL="https://www.comparethelotto.com/us/results-virginia-keno?refresh=true"
 TRAINING_DRAWS=30
 PICKS_PER_METHOD=3
-# Current official Keno-with-BULLS-EYE main-game $1 five-spot schedule,
-# WITHOUT purchasing optional BULLS-EYE. Current chart explicitly pays $2
-# for zero matches: https://www.valottery.com/data/draw-games/keno
-# The older /en/ page omits that prize and is NOT the current paytable.
-PRIZE_FIVE_SPOT={0:2, 1:0, 2:0, 3:2, 4:20, 5:450}
+# Authoritative 2026 Keno Director's Order 134, Section H page 8,
+# five-spot base wager: 0/1/2 no prize; 3=$2, 4=$20, 5=$450.
+# Current website's $2 at 0 matches contradicts the signed official rules.
+PRIZE_FIVE_SPOT={0:0, 1:0, 2:0, 3:2, 4:20, 5:450}
 
 
 class ExtractText(HTMLParser):
@@ -211,14 +210,11 @@ def markdown(report):
         "Only previous **available** rows train each test. No future data.",
         "Game: pick five numbers from 1–80; official outcome contains 20.",
         "Each ticket averages 1.25 matches by chance.",
-        "Current published $1 five-spot MAIN-game pays $2 for 0 matches,",
-        "$0 for 1-2 matches, $2 for 3, $20 for 4, $450 for 5;",
-        "optional BULLS-EYE is not purchased or scored.",
-        "No money was wagered.",
-        "",
-        "Prize schedule source: https://www.valottery.com/data/draw-games/keno.",
-        "The older /en/ page omits the 0-match prize and is outdated.",
-        "These dollar results are illustrative, not official settlement.",
+        "2026 Director's Order No. 134 page 8 governs $1 five-spot:",
+        "zero to two matches pay nothing; 3=$2, 4=$20, 5=$450.",
+        "The public marketing page incorrectly lists 0 matches as $2.",
+        "The BULLS-EYE add-on is not purchased or scored.",
+        "No money wagered. Financial figures are hypothetical.",
         "",
         "| Method | Tickets | Avg matches | 3+ matches | 4+ matches | 5/5 | Gross hypothetical return per $1 |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",

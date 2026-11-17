@@ -25,10 +25,10 @@ class KenoResearchTests(unittest.TestCase):
         self.assertAlmostEqual(sum(p.values()),1)
         self.assertAlmostEqual(sum(k*prob for k,prob in p.items()),1.25)
         self.assertLess(p[5],.001)
-        # Current Keno with BULLS-EYE main-game five-spot also pays for 0 hits.
+        # Signed 2026 Director's Order No. 134 page 8 controls.
         from research_keno import PRIZE_FIVE_SPOT
-        self.assertEqual(PRIZE_FIVE_SPOT[0],2)
-        self.assertAlmostEqual(sum(p[k]*PRIZE_FIVE_SPOT[k] for k in range(6)),1.1543,places=3)
+        self.assertEqual(PRIZE_FIVE_SPOT[0],0)
+        self.assertAlmostEqual(sum(p[k]*PRIZE_FIVE_SPOT[k] for k in range(6)),.699933,places=5)
         self.assertEqual(match_count([1,2,3,4,5],list(range(1,21))),5)
         self.assertEqual(match_count([1,2,3,4,5],list(range(60,80))),0)
 
