@@ -1,0 +1,131 @@
+{
+  "version": "val_keno_history_lineage_v1",
+  "official_api_archive_file": "reports/keno_official_history.json.gz",
+  "archive_draws": 10665,
+  "first_draw": {
+    "draw_id": 796674,
+    "timestamp": "2026-10-17T00:02:00"
+  },
+  "last_draw": {
+    "draw_id": 807344,
+    "timestamp": "2026-11-16T09:45:30"
+  },
+  "archive_calendar_days": 31,
+  "daily_counts": {
+    "2026-10-17": 352,
+    "2026-10-18": 352,
+    "2026-10-19": 351,
+    "2026-10-20": 351,
+    "2026-10-21": 352,
+    "2026-10-22": 351,
+    "2026-10-23": 352,
+    "2026-10-24": 352,
+    "2026-10-25": 352,
+    "2026-10-26": 352,
+    "2026-10-27": 352,
+    "2026-10-28": 352,
+    "2026-10-29": 352,
+    "2026-10-30": 352,
+    "2026-10-31": 351,
+    "2026-11-01": 352,
+    "2026-11-02": 352,
+    "2026-11-03": 352,
+    "2026-11-04": 352,
+    "2026-11-05": 352,
+    "2026-11-06": 351,
+    "2026-11-07": 352,
+    "2026-11-08": 352,
+    "2026-11-09": 352,
+    "2026-11-10": 351,
+    "2026-11-11": 352,
+    "2026-11-12": 352,
+    "2026-11-13": 351,
+    "2026-11-14": 352,
+    "2026-11-15": 352,
+    "2026-11-16": 112
+  },
+  "missing_draw_ids": 6,
+  "draw_id_gaps": [
+    {
+      "previous_id": 797893,
+      "next_id": 797895,
+      "missing": 1
+    },
+    {
+      "previous_id": 798593,
+      "next_id": 798595,
+      "missing": 1
+    },
+    {
+      "previous_id": 801743,
+      "next_id": 801745,
+      "missing": 1
+    },
+    {
+      "previous_id": 803843,
+      "next_id": 803845,
+      "missing": 1
+    },
+    {
+      "previous_id": 805243,
+      "next_id": 805245,
+      "missing": 1
+    },
+    {
+      "previous_id": 806293,
+      "next_id": 806295,
+      "missing": 1
+    }
+  ],
+  "known_documented_events": [
+    {
+      "event": "Original Virginia Keno rollout",
+      "period": "2020-08",
+      "confidence": "Virginia Lottery financial report (primary)"
+    },
+    {
+      "event": "Trusted Draw RNG deployment public announcement",
+      "period": "2026-02",
+      "confidence": "Vendor press release published March 4, 2026; exact go-live date not established"
+    },
+    {
+      "event": "Lottery announced drawing unavailability for an update",
+      "period": "2026-11-16T01:00:00",
+      "confidence": "Official Lottery announcement; does NOT establish RNG replacement"
+    }
+  ],
+  "segments": {
+    "before_announced_nov16_2026_update": {
+      "count": 10568,
+      "first": "2026-10-17T00:02:00",
+      "last": "2026-11-16T00:58:00",
+      "bullseye_non_null": 0
+    },
+    "on_or_after_announced_nov16_2026_update": {
+      "count": 97,
+      "first": "2026-11-16T01:34:00",
+      "last": "2026-11-16T09:45:30",
+      "bullseye_non_null": 92
+    }
+  },
+  "raw_number_order_lost_in_archive": true,
+  "number_order_warning": "Ingestion normalize() calls sorted(nums), so archived number order cannot support an output-order analysis; raw field semantics were not independently verified.",
+  "source_limitations": [
+    "About one month of archived draws, despite Keno being offered since August 2020.",
+    "Older historical records have NOT yet been recovered or verified.",
+    "Exact Virginia deployment timestamp for Trusted Draw NOT verified.",
+    "The November 16, 2026 Lottery software/drawing update is known; its effect on RNG internals is NOT established.",
+    "The source's time-zone handling and system processing gaps need explicit validation before regime-boundary inference.",
+    "No internal RNG seed, hardware logs, or auditable draw proofs exist in this archived JSON.",
+    "Vendor claims about audit integrity are not independently tested here."
+  ],
+  "sources": {
+    "VA_KENO_START": "https://rga.lis.virginia.gov/Published/2024/RD107/PDF",
+    "VA_TRUSTED_DRAW_LAUNCH": "https://publications.world-lotteries.org/blog-posts/szrek2solutions-electronic-draw-solution-launched-by-brightstar-lottery-for-virginia-lottery",
+    "VENDOR_TECHNICAL_DESCRIPTION": "https://szrek.com/products/trusted-draw/",
+    "VENDOR_INTEGRITY_SYSTEM": "https://szrek.com/products/trusted-audit/",
+    "VA_DRAWING_UPDATE": "https://www.valottery.com/",
+    "VA_KENO_PUBLIC_GAME": "https://www.valottery.com/en/data/draw-games/keno"
+  },
+  "generated_utc": "2026-11-17T17:19:39.607220+00:00"
+}
