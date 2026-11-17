@@ -78,6 +78,15 @@ def run():
                 item[token+"_contexts"]=[
                     body[max(0,i-130):i+240]
                     for i in positions[:6]]
+            item["keno_api_contexts"] = [
+                {"needle":needle,
+                 "contexts":[body[max(0,i-2300):i+1400]
+                             for i in [m.start() for m in list(re.finditer(
+                                  re.escape(needle),body,re.I))[:4]]]}
+                for needle in ("keno results", "30===T.requestObject.gameId",
+                               "requestObject.gameId","pastnumbers-pager",
+                               "api/v1/past","pastdraws", "api/v1/keno")
+            ]
             item["http_endpoints"]=[
                 x for x in sorted(set(re.findall(
                    r"https?://[A-Za-z0-9./_\-?=%&]{9,180}",body)))
