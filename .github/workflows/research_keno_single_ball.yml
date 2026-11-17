@@ -1,0 +1,36 @@
+name: VAL Keno single-ball 25-percent baseline audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_keno_single_ball.py'
+      - 'tests/test_research_keno_single_ball.py'
+      - '.github/workflows/research_keno_single_ball.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: val-keno-single-ball
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run all tests including single-ball validation
+        run: python -m unittest discover -s tests -v
+      - name: Score one and only one Keno ball per official historical draw
+        run: python research_keno_single_ball.py
+      - name: Publish single-ball hit-rate report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_keno_single_ball.md reports/research_keno_single_ball.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish one-ball Keno 25-percent benchmark experiment'
+          git pull --rebase origin main
+          git push origin HEAD:main
