@@ -94,6 +94,41 @@ def run():
             ][:70]
         except Exception as e:item["error"]=str(e)
         results["script_inspection"][url]=item
+    # Official website uses POST /api/v1/drawnumbers for Keno gameId=30.
+    # Perform ONE small read-only request to learn schema/totalPages.
+    from urllib.parse import urlencode
+    url="https://www.valottery.com/api/v1/drawnumbers"
+    variants=(
+       {"gameId":30, "page":1, "pageSize":20},
+       {"gameId":30, "page":0, "pageSize":20},
+    )
+    results["official_api_probe"]=[]
+    for payload in variants:
+        record={"url":url,"payload":payload}
+        try:
+            req=urllib.request.Request(
+                url,data=urlencode(payload).encode(),method="POST",
+                headers={"User-Agent":"Mozilla/5.0",
+                         "Referer":"https://www.valottery.com/data/draw-games/keno",
+                         "Content-Type":"application/x-www-form-urlencoded",
+                         "Accept":"application/json"})
+            with urllib.request.urlopen(req,timeout=40) as response:
+                raw=response.read(200000)
+                record["status"]=response.status
+                record["content_type"]=response.headers.get("Content-Type")
+                record["size"]=len(raw)
+            obj=json.loads(raw)
+            record["type"]=type(obj).__name__
+            if isinstance(obj,dict):
+                record["keys"]=list(obj)[:25]
+                record["totalPages"]=obj.get("totalPages")
+                record["currentPage"]=obj.get("currentPage")
+                record["totalCount"]=obj.get("totalCount")
+                record["sample_data"]=(obj.get("data") or [])[:2] if isinstance(obj.get("data"),list) else str(obj.get("data"))[:1000]
+            else: record["sample"]=str(obj)[:1000]
+        except Exception as e:record["error"]=str(e)
+        results["official_api_probe"].append(record)
+        if record.get("status")==200 and record.get("sample_data"):break
     dest=Path("reports/keno_source_discovery.json")
     dest.parent.mkdir(exist_ok=True)
     dest.write_text(json.dumps(results,indent=2)+"\n")
