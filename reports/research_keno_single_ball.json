@@ -1,0 +1,513 @@
+{
+  "version": "val_keno_single_ball_chronological_v1",
+  "source": "frozen official Virginia Keno API data",
+  "archive_draws": 10665,
+  "training_draws": 6399,
+  "testing_draws": 4266,
+  "train_range": [
+    "2026-10-17T00:02:00",
+    "2026-11-04T04:58:00"
+  ],
+  "test_range": [
+    "2026-11-04T05:02:00",
+    "2026-11-16T09:45:30"
+  ],
+  "chance_per_ball": 0.25,
+  "model_specification": "Single selected number from 1..80 per method per draw",
+  "candidate_names": [
+    "global_hot",
+    "recent_50_hot",
+    "recent_500_hot",
+    "recent_500_cold",
+    "last_draw_ball",
+    "time_bucket_hot",
+    "lag_transition",
+    "original_ensemble_weighted"
+  ],
+  "research_caveat": "Archive already explored; this is not an independent prospective holdout.",
+  "results": {
+    "global_hot": {
+      "draws": 4266,
+      "hits": 1054,
+      "misses": 3212,
+      "hit_rate": 0.24706985466479137,
+      "wilson_95": [
+        0.23435830185822393,
+        0.2602365327604654
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.6713490677004819,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 530,
+        "rate": 0.2484763244256915
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 524,
+        "rate": 0.24566338490389122
+      },
+      "paired_vs_one_random": {
+        "model_only": 786,
+        "control_only": 803,
+        "discordants": 1589,
+        "p_approx": 0.688138803512005
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 22,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 22,
+          "hit": true
+        }
+      ]
+    },
+    "recent_50_hot": {
+      "draws": 4266,
+      "hits": 1076,
+      "misses": 3190,
+      "hit_rate": 0.25222691045475853,
+      "wilson_95": [
+        0.23942133384853478,
+        0.26547833268710436
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.7503158528871919,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 553,
+        "rate": 0.25925925925925924
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 523,
+        "rate": 0.24519456165025785
+      },
+      "paired_vs_one_random": {
+        "model_only": 807,
+        "control_only": 802,
+        "discordants": 1609,
+        "p_approx": 0.9205666767716006
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 15,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 15,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 15,
+          "hit": true
+        },
+        {
+          "draw_id": 803079,
+          "number": 15,
+          "hit": false
+        }
+      ]
+    },
+    "recent_500_hot": {
+      "draws": 4266,
+      "hits": 1032,
+      "misses": 3234,
+      "hit_rate": 0.2419127988748242,
+      "wilson_95": [
+        0.2292977523257708,
+        0.2549922503759688
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.22929555820821157,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 521,
+        "rate": 0.24425691514299108
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 511,
+        "rate": 0.23956868260665728
+      },
+      "paired_vs_one_random": {
+        "model_only": 787,
+        "control_only": 826,
+        "discordants": 1613,
+        "p_approx": 0.34406495242627455
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 12,
+          "hit": true
+        },
+        {
+          "draw_id": 803077,
+          "number": 12,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 12,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 12,
+          "hit": false
+        }
+      ]
+    },
+    "recent_500_cold": {
+      "draws": 4266,
+      "hits": 1099,
+      "misses": 3167,
+      "hit_rate": 0.2576183778715424,
+      "wilson_95": [
+        0.24471710288075033,
+        0.2709557970226091
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.25786184618207775,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 531,
+        "rate": 0.2489451476793249
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 568,
+        "rate": 0.26629160806375995
+      },
+      "paired_vs_one_random": {
+        "model_only": 823,
+        "control_only": 795,
+        "discordants": 1618,
+        "p_approx": 0.5020709220889981
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 43,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 43,
+          "hit": true
+        },
+        {
+          "draw_id": 803078,
+          "number": 46,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 46,
+          "hit": false
+        }
+      ]
+    },
+    "last_draw_ball": {
+      "draws": 4266,
+      "hits": 1100,
+      "misses": 3166,
+      "hit_rate": 0.2578527894983591,
+      "wilson_95": [
+        0.244947413140049,
+        0.2711938882140808
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.24328413877877964,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 552,
+        "rate": 0.2587904360056259
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 548,
+        "rate": 0.25691514299109236
+      },
+      "paired_vs_one_random": {
+        "model_only": 783,
+        "control_only": 754,
+        "discordants": 1537,
+        "p_approx": 0.4751022441904511
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 47,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 25,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 38,
+          "hit": true
+        },
+        {
+          "draw_id": 803079,
+          "number": 38,
+          "hit": false
+        }
+      ]
+    },
+    "time_bucket_hot": {
+      "draws": 4266,
+      "hits": 1069,
+      "misses": 3197,
+      "hit_rate": 0.25058602906704175,
+      "wilson_95": [
+        0.23781010299169716,
+        0.2638107533885489
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.9436236249629776,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 522,
+        "rate": 0.24472573839662448
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 547,
+        "rate": 0.25644631973745896
+      },
+      "paired_vs_one_random": {
+        "model_only": 809,
+        "control_only": 811,
+        "discordants": 1620,
+        "p_approx": 0.9801784379857416
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 61,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 61,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 61,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 61,
+          "hit": false
+        }
+      ]
+    },
+    "lag_transition": {
+      "draws": 4266,
+      "hits": 1050,
+      "misses": 3216,
+      "hit_rate": 0.24613220815752462,
+      "wilson_95": [
+        0.2334380157653581,
+        0.2592832130502495
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.5715775936417116,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 534,
+        "rate": 0.25035161744022505
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 516,
+        "rate": 0.2419127988748242
+      },
+      "paired_vs_one_random": {
+        "model_only": 806,
+        "control_only": 827,
+        "discordants": 1633,
+        "p_approx": 0.6206550646807177
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 17,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 65,
+          "hit": true
+        },
+        {
+          "draw_id": 803078,
+          "number": 36,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 17,
+          "hit": false
+        }
+      ]
+    },
+    "original_ensemble_weighted": {
+      "draws": 4266,
+      "hits": 1112,
+      "misses": 3154,
+      "hit_rate": 0.2606657290201594,
+      "wilson_95": [
+        0.247711518435687,
+        0.2740506003276882
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.11158379448906315,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 560,
+        "rate": 0.26254102203469293
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 552,
+        "rate": 0.2587904360056259
+      },
+      "paired_vs_one_random": {
+        "model_only": 837,
+        "control_only": 796,
+        "discordants": 1633,
+        "p_approx": 0.32225021421360195
+      },
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 39,
+          "hit": false
+        },
+        {
+          "draw_id": 803077,
+          "number": 20,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 73,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 53,
+          "hit": false
+        }
+      ]
+    },
+    "random_control": {
+      "draws": 4266,
+      "hits": 1071,
+      "misses": 3195,
+      "hit_rate": 0.2510548523206751,
+      "wilson_95": [
+        0.23827042945327012,
+        0.2642872298285169
+      ],
+      "expected_random_hits": 1066.5,
+      "approximate_p_vs_25_percent": 0.8875283552186913,
+      "bonferroni_9": 1,
+      "first_half": {
+        "draws": 2133,
+        "hits": 510,
+        "rate": 0.2390998593530239
+      },
+      "second_half": {
+        "draws": 2133,
+        "hits": 561,
+        "rate": 0.2630098452883263
+      },
+      "paired_vs_one_random": null,
+      "sample_predeclared_picks": [
+        {
+          "draw_id": 803076,
+          "number": 27,
+          "hit": true
+        },
+        {
+          "draw_id": 803077,
+          "number": 78,
+          "hit": false
+        },
+        {
+          "draw_id": 803078,
+          "number": 34,
+          "hit": false
+        },
+        {
+          "draw_id": 803079,
+          "number": 14,
+          "hit": false
+        }
+      ]
+    }
+  },
+  "independent_random_controls": {
+    "count": 20,
+    "rates": [
+      0.24003750586029068,
+      0.2440225035161744,
+      0.24824191279887484,
+      0.24941397093295828,
+      0.2552742616033755,
+      0.2468354430379747,
+      0.2489451476793249,
+      0.2543366150961088,
+      0.24214721050164087,
+      0.2390998593530239,
+      0.2541022034692921,
+      0.24027191748710736,
+      0.26019690576652604,
+      0.24331926863572434,
+      0.2543366150961088,
+      0.2508204406938584,
+      0.25058602906704175,
+      0.25269573370839193,
+      0.246601031411158,
+      0.2468354430379747
+    ],
+    "mean_rate": 0.24840600093764653,
+    "min_rate": 0.2390998593530239,
+    "max_rate": 0.26019690576652604
+  },
+  "generated_utc": "2026-11-17T16:46:38.493039+00:00"
+}
