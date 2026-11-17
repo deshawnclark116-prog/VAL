@@ -1,20 +1,235 @@
 {
-  "generated_utc": "2026-11-17T14:36:24.289262+00:00",
+  "generated_utc": "2026-11-17T14:37:06.887495+00:00",
   "pages": {
     "https://www.comparethelotto.com/us/results-virginia-keno": {
       "url": "https://www.comparethelotto.com/us/results-virginia-keno",
       "http": 200,
       "final_url": "https://www.comparethelotto.com/us/results-virginia-keno",
-      "bytes": 7217,
-      "older_links": [],
-      "keno_links": [],
-      "scripts_of_interest": [],
-      "scripts_total": 0,
-      "page_api_strings": [],
+      "bytes": 255890,
+      "older_links": [
+        {
+          "href": "#historicalResults",
+          "text": "Older Results|"
+        }
+      ],
+      "keno_links": [
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "2028323341434748"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "55616269737678"
+        },
+        {
+          "href": "?lottery=virginia-keno&refresh=true",
+          "text": "Refresh ResultsResults DisclaimerPlease be aware that results displayed are for info purposes only and whilst we always try to ensure they are accurate a"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "Virginia Keno 20/80 Hot & Cold Balls"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "2028323341434748"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "55616269737678Tue 17th November 2026                                          \u00a0\u2022Draw #8076902311"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "12162123272937464854586166686971"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "75Tue 17th November 2026                                          \u00a0\u2022Draw #80768835"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "9101519263438394546505458596164"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "6574Tue 17th November 2026                                          \u00a0\u2022Draw #807687310"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "121518"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "202123242729313439454648667074Tue 17th November 2026                                          \u00a0\u2022Draw #807686"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "9131622263236454950"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "5658596062"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "6567707274Tue 17th November 2026                                          \u00a0\u2022Draw #80768524"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "20212327293439405052"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "5662666768777880Tue 17th November 2026                                          \u00a0\u2022Draw #807683210"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "12183538404344454950"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "5153596064697273Tue 17th November 2026                                          \u00a0\u2022Draw #8076825"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "91828313338414344464849"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "51525357666973Tue 17th November 2026                                          \u00a0\u2022Draw #807681178"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "9111314152134354344454761"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "636973"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "75Tue 17th November 2026                                          \u00a0\u2022Draw #807680358"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "911141719"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "202122313235394964717280Tue 17th November 2026                                          \u00a0\u2022Draw #807678"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "7980Tue 17th November 2026                                          \u00a0\u2022Draw #8076771581318233234363743"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "5660617177Tue 17th November 2026                                          \u00a0\u2022Draw #807676"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "9101314"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "20232732424753"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "5662"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "65687173"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "757880Tue 17th November 2026                                          \u00a0\u2022Draw #8076751521222628313334"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "55"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "63"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "657073Tue 17th November 2026                                          \u00a0\u2022Draw #80767326"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "911"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "1217192325303334456062"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "6364687680Tue 17th November 2026                                          \u00a0\u2022Draw #807672351018222528"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "55"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "56575859606162"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "65Tue 17th November 2026                                          \u00a0\u2022Draw #8076715"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "121415252838464950"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "51596162"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "636469707680Tue 17th November 2026                                          \u00a0\u2022Draw #8076702578101923"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "5158"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "6566677677Tue 17th November 2026                                          \u00a0\u2022Draw #8076681467"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "9132225373840474849576167687480Tue 17th November 2026                                          \u00a0\u2022Draw #807667"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "20222433444854"
+        },
+        {
+          "href": "hot-cold-virginia-keno",
+          "text": "56576264"
+        }
+      ],
+      "scripts_of_interest": [
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",
+        "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"
+      ],
+      "scripts_total": 12,
+      "page_api_strings": [
+        "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js",
+        "https://fonts.googleapis.com",
+        "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap",
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      ],
       "mentions_html": [
         {
           "term": "keno",
-          "excerpt": "+!+[]+!![]+!![]+!![]+!![]+!![])),q='wsidchk',J='pdata',D='https%3A%2F%2Fwww.comparethelotto.com%2Fus%2Fresults-virginia-keno',r='/z0f76a1d14fd21a8fb5fd0d03e0fdc3d3cedae52f',A='failedChecks',X=Object[l(0xca)](a0o)[l(a0c.Q)](([U,a])=>{try{return a()?U:null;}catch(G){return null;}})['filter'](U=>U!==null),K=X['length']>0x0;if(K){var P=new URLSearchParams();P[l(a0c.g)]('id',l(0x9c)"
+          "excerpt": "\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <title>Latest Results for Virginia Keno 20/80 | CompareTheLotto.com</title>\n    <meta name=\"description\" content=\"Check out the latest Virginia Keno 20/80 results - updated after every draw.\">\n\n\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"htt"
         }
       ]
     },
@@ -22,7 +237,7 @@
       "url": "https://www.theroanokestar.com/arts-events-etc/most-common-keno-numbers/",
       "http": 200,
       "final_url": "https://www.theroanokestar.com/arts-events-etc/most-common-keno-numbers/",
-      "bytes": 430661,
+      "bytes": 430836,
       "older_links": [],
       "keno_links": [
         {
@@ -76,6 +291,14 @@
         {
           "href": "/arts-events-etc/most-common-keno-numbers/#respond",
           "text": "Cancel reply"
+        },
+        {
+          "href": "https://www.theroanokestar.com/sports/doncic-banks-a-61-footer-and-scores-53-as-lakers-rally-past-portland/",
+          "text": ""
+        },
+        {
+          "href": "https://www.theroanokestar.com/sports/doncic-banks-a-61-footer-and-scores-53-as-lakers-rally-past-portland/",
+          "text": "Doncic Banks a 61-Footer and Scores 53 as Lakers Rally Past Portland"
         }
       ],
       "scripts_of_interest": [],
@@ -465,5 +688,274 @@
       ],
       "http_endpoints": []
     }
-  }
+  },
+  "official_api_probe": [
+    {
+      "url": "https://www.valottery.com/api/v1/drawnumbers",
+      "payload": {
+        "gameId": 30,
+        "page": 1,
+        "pageSize": 20
+      },
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "size": 69047,
+      "type": "dict",
+      "keys": [
+        "currentPage",
+        "totalPages",
+        "data",
+        "errors"
+      ],
+      "totalPages": 551,
+      "currentPage": 1,
+      "totalCount": null,
+      "sample_data": [
+        {
+          "DrawGameId": 30,
+          "DrawNumber": 807673,
+          "BonusIndicator": -1,
+          "DrawDate": "2026-11-17T08:14:00",
+          "Result_Draw_Desc_Values": "",
+          "DrawDateFormatted": "8:14 AM | November 17, 2026",
+          "CssClassName": "dark-blue-text",
+          "BonusBallCssClass": "bullseye",
+          "DayIconUrl": "https://cdnprodpaasmedia-valottery-com.azureedge.net/-/media/val/images/past-numbers/day-icon.png?rev=d76185e9d9be4c0f824b4813e406cedc",
+          "NightIconUrl": "https://cdnprodpaasmedia-valottery-com.azureedge.net/-/media/val/images/past-numbers/night-icon.png?rev=acb4b9df519a41b99835cae8d53ac0e3",
+          "DailyDraws": [
+            {
+              "DrawingTypeImageUrl": "",
+              "SelectedNumbers": {
+                "Value": [
+                  2,
+                  6,
+                  9,
+                  11,
+                  12,
+                  17,
+                  19,
+                  23,
+                  25,
+                  30,
+                  33,
+                  34,
+                  45,
+                  60,
+                  62,
+                  63,
+                  64,
+                  68,
+                  76,
+                  80
+                ],
+                "BonusFlags": [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  true,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "CssClasses": ""
+              },
+              "BonusBall": null,
+              "Multiplier": null,
+              "Coffee": null,
+              "Lunch": null,
+              "Rush": null,
+              "Prime": null,
+              "After": null,
+              "InlineBonusValue": 33
+            }
+          ],
+          "DailyDrawDetails": [
+            {
+              "Title": null,
+              "DrawData": {
+                "Headings": null,
+                "Values": null,
+                "TotalPrizes": null,
+                "WinnerLocation": null,
+                "TotalFireballPrizes": null,
+                "TotalEZMatchPrizes": null,
+                "TotalPrizesCoffee": null,
+                "TotalPrizesLunch": null,
+                "TotalPrizesRush": null,
+                "TotalPrizesPrime": null,
+                "TotalPrizesAfter": null
+              },
+              "KenoSpotData": {
+                "Spots": []
+              },
+              "DrawVideo": null,
+              "Prize1": null,
+              "Prize2": null,
+              "Prize3": null,
+              "Prize4": null,
+              "SelectedNumbers1": null,
+              "bIsFireBallPick3": false,
+              "bIsFireBallPick4": false,
+              "bIsFireBallPick5": false,
+              "Description": null,
+              "bIsC5EZMatch": false,
+              "bIsCashPop": false,
+              "bIsPrizesCoffee": false,
+              "bIsPrizesLunch": false,
+              "bIsPrizesRush": false,
+              "bIsPrizesPrime": false,
+              "bIsPrizesAfter": false
+            }
+          ],
+          "bIsCoffee": false,
+          "bIsLunch": false,
+          "bIsRush": false,
+          "bIsPrime": false,
+          "bIsAfter": false,
+          "bIsCWN": true,
+          "Result_Draw_Desc": false,
+          "BasePrizesWon": "$93",
+          "BullsEyePrizesWon": "$3",
+          "TotalPrizesWon": "$96",
+          "IsKenoBullsEye": true,
+          "LiabilityTotalCP": "0"
+        },
+        {
+          "DrawGameId": 30,
+          "DrawNumber": 807672,
+          "BonusIndicator": -1,
+          "DrawDate": "2026-11-17T08:10:00",
+          "Result_Draw_Desc_Values": "",
+          "DrawDateFormatted": "8:10 AM | November 17, 2026",
+          "CssClassName": "dark-blue-text",
+          "BonusBallCssClass": "bullseye",
+          "DayIconUrl": "https://cdnprodpaasmedia-valottery-com.azureedge.net/-/media/val/images/past-numbers/day-icon.png?rev=d76185e9d9be4c0f824b4813e406cedc",
+          "NightIconUrl": "https://cdnprodpaasmedia-valottery-com.azureedge.net/-/media/val/images/past-numbers/night-icon.png?rev=acb4b9df519a41b99835cae8d53ac0e3",
+          "DailyDraws": [
+            {
+              "DrawingTypeImageUrl": "",
+              "SelectedNumbers": {
+                "Value": [
+                  3,
+                  5,
+                  10,
+                  18,
+                  22,
+                  25,
+                  28,
+                  30,
+                  35,
+                  40,
+                  47,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  65
+                ],
+                "BonusFlags": [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  true,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "CssClasses": ""
+              },
+              "BonusBall": null,
+              "Multiplier": null,
+              "Coffee": null,
+              "Lunch": null,
+              "Rush": null,
+              "Prime": null,
+              "After": null,
+              "InlineBonusValue": 56
+            }
+          ],
+          "DailyDrawDetails": [
+            {
+              "Title": null,
+              "DrawData": {
+                "Headings": null,
+                "Values": null,
+                "TotalPrizes": null,
+                "WinnerLocation": null,
+                "TotalFireballPrizes": null,
+                "TotalEZMatchPrizes": null,
+                "TotalPrizesCoffee": null,
+                "TotalPrizesLunch": null,
+                "TotalPrizesRush": null,
+                "TotalPrizesPrime": null,
+                "TotalPrizesAfter": null
+              },
+              "KenoSpotData": {
+                "Spots": []
+              },
+              "DrawVideo": null,
+              "Prize1": null,
+              "Prize2": null,
+              "Prize3": null,
+              "Prize4": null,
+              "SelectedNumbers1": null,
+              "bIsFireBallPick3": false,
+              "bIsFireBallPick4": false,
+              "bIsFireBallPick5": false,
+              "Description": null,
+              "bIsC5EZMatch": false,
+              "bIsCashPop": false,
+              "bIsPrizesCoffee": false,
+              "bIsPrizesLunch": false,
+              "bIsPrizesRush": false,
+              "bIsPrizesPrime": false,
+              "bIsPrizesAfter": false
+            }
+          ],
+          "bIsCoffee": false,
+          "bIsLunch": false,
+          "bIsRush": false,
+          "bIsPrime": false,
+          "bIsAfter": false,
+          "bIsCWN": true,
+          "Result_Draw_Desc": false,
+          "BasePrizesWon": "$49",
+          "BullsEyePrizesWon": "$5",
+          "TotalPrizesWon": "$54",
+          "IsKenoBullsEye": true,
+          "LiabilityTotalCP": "0"
+        }
+      ]
+    }
+  ]
 }
