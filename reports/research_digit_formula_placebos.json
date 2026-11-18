@@ -1,0 +1,65 @@
+{
+  "version": "val_formula_placebo_null_audit_v1",
+  "created_at": "2026-11-18T21:54:53.104276+00:00",
+  "seed_count": 500,
+  "no_model_promotion": true,
+  "games": {
+    "pick3": {
+      "game": "pick3",
+      "targets": 220,
+      "tickets_per_target": 3,
+      "observed_original_control_straight_wins": 2,
+      "fair_expected_wins": 0.66,
+      "exact_binomial_tail_one_control": 0.1418520315831963,
+      "replicate_count": 500,
+      "mean_independent_control_wins": 0.7,
+      "max_independent_control_wins": 4,
+      "fraction_replications_at_least_original": 0.152,
+      "replicate_exact_win_histogram": {
+        "0": 248,
+        "1": 176,
+        "2": 57,
+        "3": 16,
+        "4": 3
+      },
+      "mean_control_position_hit_rate": 0.09968080808080808,
+      "original_control_position_hit_rate": 0.10505050505050505
+    },
+    "pick4": {
+      "game": "pick4",
+      "targets": 220,
+      "tickets_per_target": 3,
+      "observed_original_control_straight_wins": 3,
+      "fair_expected_wins": 0.06599999999999999,
+      "exact_binomial_tail_one_control": 4.501564517454943e-05,
+      "replicate_count": 500,
+      "mean_independent_control_wins": 0.064,
+      "max_independent_control_wins": 2,
+      "fraction_replications_at_least_original": 0.0,
+      "replicate_exact_win_histogram": {
+        "0": 469,
+        "1": 30,
+        "2": 1
+      },
+      "mean_control_position_hit_rate": 0.0998530303030303,
+      "original_control_position_hit_rate": 0.09318181818181819
+    },
+    "pick5": {
+      "game": "pick5",
+      "targets": 120,
+      "tickets_per_target": 3,
+      "observed_original_control_straight_wins": 0,
+      "fair_expected_wins": 0.0036,
+      "exact_binomial_tail_one_control": 1.0,
+      "replicate_count": 500,
+      "mean_independent_control_wins": 0.0,
+      "max_independent_control_wins": 0,
+      "fraction_replications_at_least_original": 1.0,
+      "replicate_exact_win_histogram": {
+        "0": 500
+      },
+      "mean_control_position_hit_rate": 0.10026333333333333,
+      "original_control_position_hit_rate": 0.10611111111111111
+    }
+  }
+}
