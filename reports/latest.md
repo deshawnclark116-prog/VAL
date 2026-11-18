@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-18T15:34:40.586701-05:00 · Eastern time
+Updated: 2026-11-18T16:48:25.193901-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -10,7 +10,7 @@ Only the next scheduled drawing for each game is shown, as of the update time ab
 
 Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.
 
-Three unique combinations per target, with three saved random controls. New batches label Primary, Alt 1, and Alt 2 using experimental model sampling weights, not calibrated winning chances. Previously saved batches remain unranked and unchanged. If the latest completed result is missing, the game waits rather than generating from outdated input.
+Three unique combinations per target, with three saved random controls. **Pick 3/4/5 now use the v2 conditional formula**: five digit-probability experts influence a pick only after passing prior-draw validation. Otherwise picks are fair-uniform paper candidates labeled Paper 1/2/3, not purported top predictions. Other games continue using experimental ensemble rankings. No method has validated winning probabilities. Old saved batches remain unchanged. If the latest completed result is missing, the game waits rather than generating from outdated input.
 
 | Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
