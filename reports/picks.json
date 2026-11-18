@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T11:46:55.816247+00:00",
+  "generated_at": "2026-11-18T15:08:45.384122+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -811,7 +811,7 @@
   "failures": [
     {
       "game": "cashpop",
-      "error": "Waiting for latest completed After Hours result (2026-11-17T23:59:00-05:00); new picks withheld"
+      "error": "Waiting for latest completed Coffee Break result (2026-11-18T09:00:00-05:00); new picks withheld"
     }
   ]
 }

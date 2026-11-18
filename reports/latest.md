@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-18T06:46:55.816247-05:00 · Eastern time
+Updated: 2026-11-18T10:08:45.384122-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -66,4 +66,4 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 ### Update / analysis failures
 
-- Cash Pop: Waiting for latest completed After Hours result (2026-11-17T23:59:00-05:00); new picks withheld
+- Cash Pop: Waiting for latest completed Coffee Break result (2026-11-18T09:00:00-05:00); new picks withheld
