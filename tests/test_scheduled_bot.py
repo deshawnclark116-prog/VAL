@@ -62,9 +62,15 @@ class DailyBotTests(unittest.TestCase):
         scheduled_bot.save_ledger(store,output/'ledger.json')
         with patch.object(scheduled_bot,'backtest',return_value=dict(results=[dict(method=m,exact=0,tickets=300) for m in ('ensemble','random')])),patch.object(scheduled_bot,'simulate',return_value=dict(p_value=.5)):
             scheduled_bot.run(Store(self.root/'restored.db'),output,syncer=self.fake_sync,now=self.now)
-        old=next(x for x in json.loads((output/'ledger.json').read_text())['predictions'] if x['game']=='pick3')
+        saved=[x for x in json.loads((output/'ledger.json').read_text())['predictions'] if x['game']=='pick3']
+        old=next(x for x in saved if x['method']=='ensemble')
+        challenger=next(x for x in saved if x['method']=='digit_conditional_v2')
         self.assertEqual(old['data']['picks'],original)
-        self.assertIn('legacy: unranked',(output/'latest.md').read_text())
+        self.assertEqual(old['data']['target'],challenger['data']['target'])
+        self.assertIsNone(old['result'])
+        self.assertIsNone(challenger['result'])
+        self.assertEqual(len(saved),2)
+        self.assertIn('**Paper 1:**',(output/'latest.md').read_text())
 
     def test_feed_failure_skips_new_picks_and_is_visible(self):
         def fail(store,game): raise OSError('feed unavailable')

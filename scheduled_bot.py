@@ -85,7 +85,10 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             if (datetime.fromisoformat(target["at"])-now).total_seconds()<15*60:
                 raise ValueError("Next draw is less than 15 minutes away; waiting for its result before preparing the following draw")
             stream=target["stream"]
-            existing=next((r for r in ledger if r.get("target")==target),None)
+            # Preserve old predictions and add one immutable v2 prediction for
+            # the identical future target, enabling real A/B comparison.
+            existing=next((r for r in ledger if r.get("target")==target and
+                           (not g.get("digits") or r["method"]==DIGIT_FORMULA_VERSION)),None)
             if existing is None:
                 if g.get("digits"):
                     # Actual replacement of the digit prediction formula;
