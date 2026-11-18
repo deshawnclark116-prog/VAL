@@ -18,6 +18,13 @@ The repository stores `reports/latest.md`, `reports/picks.json`, `reports/analys
 
 Actions must be enabled and allow the workflow's `contents: write` permission to save reports. The workflow's last run shows whether it executed successfully. GitHub can disable schedules after 60 days of inactivity in public repositories; re-enable the workflow if needed. There are no external API keys to configure.
 
+
+## Digit model falsification and prospective horizon monitoring
+
+- The [long-history digit/horizon report](reports/research_digit_horizons.md) reads the official history of Pick 3, Pick 4, and Pick 5. Each method sees only completed past drawings. On a frozen later period it compares the legacy ensemble, long-term frequency, same-session, multi-scale and lag-transition models against a 10%-per-digit fair null. It also generates three experimental ensemble tickets and three independent random controls before the first target and scores the SAME tickets against pre-specified subsequent draw offsets (0, 1, 2, 3, 5, 7).
+- The [prospective one-pick paper registry](reports/prospective_one_pick.md) permanently records each next-draw candidate and its probability distributions before the original wager-close time. Its later-draw horizon comparisons are additional diagnostics, never a reassignment of the original target. Models and controls are scored across all horizons without picking the most flattering after the fact.
+- The current retrospective results did not validate a predictive edge, and **no new model is automatically promoted**. Model weights and the displayed Primary rank are not fair-odds probabilities or verified claims of superiority. No gambling account is connected and no bets are placed.
+
 ## Optional local dashboard
 
 Requires **Python 3.11+** with IANA timezone data (normally included on Linux/macOS). No Python packages, API keys, or paid services are required. Windows systems missing timezone data can install `tzdata` using `python -m pip install tzdata`.
@@ -57,7 +64,7 @@ This refreshes the nine supported official downloads at startup and every six ho
 
 FIREBALL, EZ Match, multipliers, alternative Keno spot sizes, box wagers, prize-tier evaluation, and return-on-investment calculations are not implemented. Leading zeros and repeated Pick digits are preserved. Bank a Million's drawn bonus is not a separate player selection. Cash4Life is retired and is not mixed with Millionaire for Life.
 
-All automatic history is restricted to **April 8, 2025 onward**, a conservative common current-format cutoff, rather than combining incompatible historical matrices. Newer games naturally have shorter histories. The application displays data timestamps and update failures; a failed request retains previously imported data. Source downloads are external services and may change format or become unavailable. Scheduled times are used to timestamp date-only records; these are not verified actual drawing-event timestamps.
+Automatic **Pick 3**, **Pick 4**, and **Pick 5** downloads now retain the complete supported official digit-game archives, instead of being incorrectly limited to April 8, 2025. The other games retain the current-format cutoff where historical rule changes could invalidate their number matrices. Conflicting same-time drawing records are quarantined rather than silently treated as authoritative; the runner emits an audit warning. The application displays data timestamps and update failures; a failed request retains previously imported data. Source downloads are external services and may change format or become unavailable. Scheduled times are used to timestamp date-only records; these are not verified actual drawing-event timestamps.
 
 ## The methods
 
@@ -95,7 +102,7 @@ pick3,2026-11-10T13:59:00-05:00,Day,"0 7 7",
 powerball,2026-11-09T22:59:00-05:00,Main,"13 34 41 45 48",25
 ```
 
-Use the internal game IDs in the table's corresponding source (`pick3`, `pick4`, `pick5`, `cash5`, `powerball`, `megamillions`, `millionaireforlife`, `bankamillion`, `cashpop`, `keno`). Timestamps need an explicit timezone. Future timestamps and records before the current-format cutoff are rejected. Keno needs all 20 distinct winning numbers. Digit games need `Day` or `Night` as the session. Missing or duplicate main numbers, invalid ranges, and missing special balls are rejected. An invalid row prevents the whole import. Existing `(game, timestamp, session)` records are not overwritten. Import trustworthy records with timestamps matching the official draw schedule to avoid duplicate identifiers.
+Use the internal game IDs in the table's corresponding source (`pick3`, `pick4`, `pick5`, `cash5`, `powerball`, `megamillions`, `millionaireforlife`, `bankamillion`, `cashpop`, `keno`). Timestamps need an explicit timezone. Future timestamps and records before their game-specific supported cutoff are rejected. Keno needs all 20 distinct winning numbers. Digit games need `Day` or `Night` as the session. Missing or duplicate main numbers, invalid ranges, and missing special balls are rejected. An invalid row prevents the whole import. Existing `(game, timestamp, session)` records are not overwritten. Import trustworthy records with timestamps matching the official draw schedule to avoid duplicate identifiers.
 
 ## CLI analysis
 
