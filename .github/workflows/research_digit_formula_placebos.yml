@@ -1,0 +1,36 @@
+name: VAL formula v2 independent random-control anomaly audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research_digit_formula_placebos.py'
+      - 'tests/test_research_digit_formula_placebos.py'
+      - '.github/workflows/research_digit_formula_placebos.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-formula-v2-placebo-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run all VAL unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Analyze 500 independently seeded fair controls on the identical drawing targets
+        run: python -u research_digit_formula_placebos.py
+      - name: Preserve controls and source-linked report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_digit_formula_placebos.json reports/research_digit_formula_placebos.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish independent-seed null audit of VAL formula results'
+          git pull --rebase origin main
+          git push origin HEAD:main
