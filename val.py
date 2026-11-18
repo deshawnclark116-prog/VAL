@@ -221,8 +221,9 @@ class Store:
         with self.connect() as db:
             rows = db.execute("SELECT data FROM draws WHERE game=? ORDER BY at,stream", (game,)).fetchall()
         return [r for x in rows if (r := json.loads(x[0])) and (stream == "All" or r["stream"] == stream)]
-    def record(self, game, stream, method, picks, baseline, target=None, training_latest=None, created=None):
+    def record(self, game, stream, method, picks, baseline, target=None, training_latest=None, created=None, model_meta=None):
         data = dict(picks=picks, baseline=baseline)
+        if model_meta is not None: data["model_meta"] = model_meta
         created=created or datetime.now(timezone.utc)
         if target:
             if datetime.fromisoformat(target["at"])<=created: raise ValueError("Target draw has already occurred")

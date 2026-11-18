@@ -39,6 +39,10 @@ class DailyBotTests(unittest.TestCase):
             batches=json.loads((output/'picks.json').read_text())['batches']
             p3=next(b for b in batches if b['game']=='pick3')
             self.assertEqual([p['rank'] for p in p3['picks']], [1,2,3])
+            self.assertEqual(p3["method"],"digit_conditional_v2")
+            self.assertIn("model_meta",p3)
+            self.assertIn("signal_gate_passed",p3["model_meta"])
+            self.assertEqual(p3["model_meta"]["formula_version"],"digit_conditional_v2")
             self.assertEqual([p['role'] for p in p3['picks']], ['primary','alternative_1','alternative_2'])
             self.assertTrue(all('model_weight_score' in p for p in p3['picks']))
             self.assertIn('**Primary:**', (output/'latest.md').read_text())

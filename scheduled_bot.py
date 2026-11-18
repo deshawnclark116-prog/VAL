@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, simulate, sync_game, draw_schedule, next_draw
+from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_v2
 
 
 def restore(store, path):
@@ -46,7 +47,10 @@ def selection(pick):
 def ranked_selection(picks):
     """Never retroactively rank older saved combinations."""
     if all(p.get("rank") == i for i, p in enumerate(picks, 1)):
-        roles = ("Primary", "Alt 1", "Alt 2")
+        if picks and picks[0].get("formula_version") == DIGIT_FORMULA_VERSION and not picks[0].get("signal_gate_passed"):
+            roles = ("Paper 1", "Paper 2", "Paper 3")
+        else:
+            roles = ("Primary", "Alt 1", "Alt 2")
         return " / ".join(f"**{roles[i] if i < 3 else 'Alt'}:** `{selection(p)}`" for i, p in enumerate(picks))
     return " / ".join(f"`{selection(p)}`" for p in picks) + " (legacy: unranked)"
 
@@ -60,7 +64,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
               "## Picks", "",
               "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
-              "Three unique combinations per target, with three saved random controls. New batches label Primary, Alt 1, and Alt 2 using experimental model sampling weights, not calibrated winning chances. Previously saved batches remain unranked and unchanged. If the latest completed result is missing, the game waits rather than generating from outdated input.", "",
+              "Three unique combinations per target, with three saved random controls. **Pick 3/4/5 now use the v2 conditional formula**: five digit-probability experts influence a pick only after passing prior-draw validation. Otherwise picks are fair-uniform paper candidates labeled Paper 1/2/3, not purported top predictions. Other games continue using experimental ensemble rankings. No method has validated winning probabilities. Old saved batches remain unchanged. If the latest completed result is missing, the game waits rather than generating from outdated input.", "",
               "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
@@ -83,9 +87,19 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             stream=target["stream"]
             existing=next((r for r in ledger if r.get("target")==target),None)
             if existing is None:
-                picks=rank_ensemble_picks(game,history,generate(game,history,"ensemble",count))
+                if g.get("digits"):
+                    # Actual replacement of the digit prediction formula;
+                    # do not just rerank arbitrary sampled old candidates.
+                    picks,model_meta=generate_digit_v2(game,history,stream,count)
+                    method=DIGIT_FORMULA_VERSION
+                else:
+                    picks=rank_ensemble_picks(game,history,generate(game,history,"ensemble",count))
+                    model_meta=None
+                    method="ensemble"
                 baseline=generate(game,[],"random",len(picks))
-                pid=store.record(game,stream,"ensemble",picks,baseline,target=target,training_latest=history[-1],created=now)
+                pid=store.record(game,stream,method,picks,baseline,target=target,
+                                 training_latest=history[-1],created=now,
+                                 model_meta=model_meta)
                 existing=next(r for r in store.ledger(game) if r["id"]==pid)
             batches.append(dict(game=game,name=g["name"],**existing))
             used=existing["training_latest"]
