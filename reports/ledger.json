@@ -10042,6 +10042,342 @@
         }
       },
       "result": null
+    },
+    {
+      "id": 92,
+      "game": "pick3",
+      "created": "2026-11-18T21:50:47.809032+00:00",
+      "stream": "Night",
+      "method": "digit_conditional_v2",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              0,
+              9,
+              8
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 0.001,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          },
+          {
+            "numbers": [
+              5,
+              0,
+              3
+            ],
+            "bonus": null,
+            "rank": 2,
+            "role": "alternative_1",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 0.001,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          },
+          {
+            "numbers": [
+              7,
+              6,
+              3
+            ],
+            "bonus": null,
+            "rank": 3,
+            "role": "alternative_2",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 0.001,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              4,
+              2,
+              8
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              4,
+              5,
+              3
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              7,
+              6,
+              0
+            ],
+            "bonus": null
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_conditional_v2",
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140
+        },
+        "target": {
+          "at": "2026-11-19T04:00:00+00:00",
+          "stream": "Night"
+        },
+        "training_latest": {
+          "game": "pick3",
+          "at": "2026-11-18T18:59:00+00:00",
+          "stream": "Day",
+          "numbers": [
+            1,
+            8,
+            7
+          ],
+          "bonus": null,
+          "extra": 5,
+          "source": "Virginia Lottery latest-result page"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 93,
+      "game": "pick4",
+      "created": "2026-11-18T21:50:47.809032+00:00",
+      "stream": "Night",
+      "method": "digit_conditional_v2",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              1,
+              1,
+              5,
+              2
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 0.0001,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          },
+          {
+            "numbers": [
+              4,
+              9,
+              3,
+              7
+            ],
+            "bonus": null,
+            "rank": 2,
+            "role": "alternative_1",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 0.0001,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          },
+          {
+            "numbers": [
+              5,
+              4,
+              2,
+              5
+            ],
+            "bonus": null,
+            "rank": 3,
+            "role": "alternative_2",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 0.0001,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              9,
+              2,
+              5
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              7,
+              8,
+              4,
+              2
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              8,
+              7,
+              0,
+              5
+            ],
+            "bonus": null
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_conditional_v2",
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140
+        },
+        "target": {
+          "at": "2026-11-19T04:00:00+00:00",
+          "stream": "Night"
+        },
+        "training_latest": {
+          "game": "pick4",
+          "at": "2026-11-18T18:59:00+00:00",
+          "stream": "Day",
+          "numbers": [
+            5,
+            4,
+            2,
+            4
+          ],
+          "bonus": null,
+          "extra": 0,
+          "source": "Virginia Lottery latest-result page"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 94,
+      "game": "pick5",
+      "created": "2026-11-18T21:50:47.809032+00:00",
+      "stream": "Night",
+      "method": "digit_conditional_v2",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              0,
+              9,
+              8,
+              6,
+              4
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 1e-05,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          },
+          {
+            "numbers": [
+              7,
+              0,
+              8,
+              6,
+              8
+            ],
+            "bonus": null,
+            "rank": 2,
+            "role": "alternative_1",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 1e-05,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          },
+          {
+            "numbers": [
+              9,
+              2,
+              5,
+              8,
+              7
+            ],
+            "bonus": null,
+            "rank": 3,
+            "role": "alternative_2",
+            "ranking_version": "digit_conditional_v2",
+            "model_weight_score": 1e-05,
+            "signal_gate_passed": false,
+            "formula_version": "digit_conditional_v2"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              4,
+              0,
+              3,
+              6,
+              1
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              5,
+              3,
+              7,
+              7,
+              8
+            ],
+            "bonus": null
+          },
+          {
+            "numbers": [
+              7,
+              7,
+              0,
+              6,
+              6
+            ],
+            "bonus": null
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_conditional_v2",
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140
+        },
+        "target": {
+          "at": "2026-11-19T04:00:00+00:00",
+          "stream": "Night"
+        },
+        "training_latest": {
+          "game": "pick5",
+          "at": "2026-11-18T18:59:00+00:00",
+          "stream": "Day",
+          "numbers": [
+            5,
+            8,
+            5,
+            7,
+            0
+          ],
+          "bonus": null,
+          "extra": 4,
+          "source": "Virginia Lottery latest-result page"
+        }
+      },
+      "result": null
     }
   ]
 }
