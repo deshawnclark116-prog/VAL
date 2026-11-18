@@ -1,6 +1,6 @@
 # VAL frozen future-draw one-number test
 
-Latest run (UTC): 2026-11-17T21:52:09.134511+00:00
+Latest run (UTC): 2026-11-18T04:39:34.725323+00:00
 
 **Paper predictions only. No money wagered.**
 Each named method gets one number for the same exact future
@@ -15,51 +15,51 @@ A few hits cannot prove a persistent lottery advantage.
 
 ## Pick3
 
-Draws recorded: 4. Graded: 2. Pending: 2.
+Draws recorded: 5. Graded: 4. Pending: 1.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 2 | 0 | 0 | 0.012 | +0.00000 |
-| position_hot_top_500 | 2 | 0 | 0 | 0.012 | +0.11948 |
-| position_cold_top_30 | 2 | 0 | 0 | 0.009 | -0.01322 |
-| session_hier_sample_500 | 2 | 0 | 0 | 0.012 | +0.12762 |
-| position_cold_sample_1000 | 2 | 0 | 0 | 0.009 | -0.02070 |
+| random | 4 | 0 | 0 | 0.024 | +0.00000 |
+| position_hot_top_500 | 4 | 0 | 0 | 0.018 | +0.12291 |
+| position_cold_top_30 | 4 | 0 | 0 | 0.018 | -0.03375 |
+| session_hier_sample_500 | 4 | 0 | 0 | 0.021 | +0.13622 |
+| position_cold_sample_1000 | 4 | 0 | 0 | 0.018 | -0.04807 |
 
-Most recent future target: 2026-11-17 Night; created 2026-11-17T21:52:09.134511+00:00.
+Most recent future target: 2026-11-18 Day; created 2026-11-18T04:39:34.725323+00:00.
 
-Precommitted paper numbers: random: 150, position_hot_top_500: 242, position_cold_top_30: 114, session_hier_sample_500: 642, position_cold_sample_1000: 955.
+Precommitted paper numbers: random: 063, position_hot_top_500: 242, position_cold_top_30: 113, session_hier_sample_500: 628, position_cold_sample_1000: 195.
 
 ## Pick4
 
-Draws recorded: 4. Graded: 2. Pending: 2.
+Draws recorded: 5. Graded: 4. Pending: 1.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 2 | 0 | 1 | 0.004 | +0.00000 |
-| position_hot_top_500 | 2 | 0 | 0 | 0.005 | -0.04374 |
-| position_cold_top_30 | 2 | 0 | 0 | 0.005 | -0.02500 |
-| session_hier_sample_500 | 2 | 0 | 0 | 0.002 | +0.07336 |
-| position_cold_sample_1000 | 2 | 0 | 0 | 0.005 | -0.02274 |
+| random | 4 | 0 | 1 | 0.008 | +0.00000 |
+| position_hot_top_500 | 4 | 0 | 0 | 0.010 | +0.08395 |
+| position_cold_top_30 | 4 | 0 | 0 | 0.007 | -0.05756 |
+| session_hier_sample_500 | 4 | 0 | 0 | 0.005 | +0.11725 |
+| position_cold_sample_1000 | 4 | 0 | 0 | 0.008 | -0.04427 |
 
-Most recent future target: 2026-11-17 Night; created 2026-11-17T21:52:09.134511+00:00.
+Most recent future target: 2026-11-18 Day; created 2026-11-18T04:39:34.725323+00:00.
 
-Precommitted paper numbers: random: 1578, position_hot_top_500: 0928, position_cold_top_30: 7317, session_hier_sample_500: 9979, position_cold_sample_1000: 4151.
+Precommitted paper numbers: random: 1153, position_hot_top_500: 0928, position_cold_top_30: 7317, session_hier_sample_500: 2059, position_cold_sample_1000: 0657.
 
 ## Pick5
 
-Draws recorded: 4. Graded: 2. Pending: 2.
+Draws recorded: 5. Graded: 4. Pending: 1.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 2 | 0 | 0 | 0.002 | +0.00000 |
-| position_hot_top_500 | 2 | 0 | 0 | 0.001 | +0.28396 |
-| position_cold_top_30 | 2 | 0 | 0 | 0.002 | +0.00917 |
-| session_hier_sample_500 | 2 | 0 | 0 | 0.001 | +0.26437 |
-| position_cold_sample_1000 | 2 | 0 | 0 | 0.002 | -0.05320 |
+| random | 4 | 0 | 0 | 0.003 | +0.00000 |
+| position_hot_top_500 | 4 | 0 | 0 | 0.002 | +0.14517 |
+| position_cold_top_30 | 4 | 0 | 0 | 0.004 | +0.06145 |
+| session_hier_sample_500 | 4 | 0 | 0 | 0.003 | +0.05269 |
+| position_cold_sample_1000 | 4 | 0 | 0 | 0.004 | -0.03473 |
 
-Most recent future target: 2026-11-17 Night; created 2026-11-17T21:52:09.134511+00:00.
+Most recent future target: 2026-11-18 Day; created 2026-11-18T04:39:34.725323+00:00.
 
-Precommitted paper numbers: random: 01514, position_hot_top_500: 40461, position_cold_top_30: 72658, session_hier_sample_500: 14621, position_cold_sample_1000: 38946.
+Precommitted paper numbers: random: 57046, position_hot_top_500: 40431, position_cold_top_30: 72674, session_hier_sample_500: 89933, position_cold_sample_1000: 98778.
 
 ## Reliability
 
