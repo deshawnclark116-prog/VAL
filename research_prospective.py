@@ -20,6 +20,9 @@ from research_one_pick import Rolling, choose_one, fair_box_probability_digits, 
 from val import ET, next_draw
 
 MODEL_VERSION = "val_prospective_one_pick_v1"
+# Diagnostic look-ahead horizons for a FORECAST THAT WAS SAVED BEFORE THE
+# ORIGINAL target. They never change the original target or its grading.
+FROZEN_HORIZON_OFFSETS = (0,1,2,3,5,7)
 METHOD_SPECS = (
     "random", "position_hot_top_500", "position_cold_top_30",
     "session_hier_sample_500", "position_cold_sample_1000",
@@ -98,7 +101,15 @@ def update(game, history, entries, now):
     entries=[dict(x) for x in entries]
     lookup={(r["date"],r["stream"]):r for r in history}
     changes={"created":0,"settled":0,"pending":0,"correction_warnings":0,
+             "horizon_graded":0,
              "skipped_because_wager_window_closed":False}
+    # Official history may be returned in descending order and may once have
+    # been Night-only. Always use recorded chronological draw order.
+    ordered=sorted(history,key=lambda x:(x["date"],
+                  0 if x["stream"]=="Day" else 1))
+    index_by_target={(r["date"],r["stream"]):i for i,r in enumerate(ordered)}
+    if len(index_by_target)!=len(ordered):
+        raise ValueError("Ambiguous official dates/sessions in prospective source")
     for entry in entries:
         actual=lookup.get((entry["target"]["date"],entry["target"]["stream"]))
         if actual is None:
@@ -117,6 +128,37 @@ def update(game, history, entries, now):
              entry["result"]["official_fireball"] != actual["fireball"]):
             entry["source_revision_warning"]=True
             changes["correction_warnings"]+=1
+
+    # A fixed pre-target prediction is optionally evaluated at future horizons.
+    # These are explicitly labeled DIAGNOSTICS, not retargeted official picks.
+    # Every new horizon grade is immutable; corrections raise an audit warning.
+    for entry in entries:
+        key=(entry["target"]["date"],entry["target"]["stream"])
+        ix=index_by_target.get(key)
+        if ix is None:
+            continue
+        horizon_results=entry.setdefault("horizon_results",{})
+        for offset in FROZEN_HORIZON_OFFSETS:
+            if ix+offset>=len(ordered):
+                continue
+            future=ordered[ix+offset]
+            hkey=str(offset)
+            previous_grade=horizon_results.get(hkey)
+            if previous_grade is None:
+                horizon_results[hkey]={
+                    "offset_draws":offset,
+                    "actual_date":future["date"],
+                    "actual_stream":future["stream"],
+                    "actual_numbers":list(future["numbers"]),
+                    "methods":{name:score_saved_pick(pred,future)
+                               for name,pred in entry["predictions"].items()},
+                }
+                changes["horizon_graded"]+=1
+            elif (previous_grade["actual_date"]!=future["date"] or
+                  previous_grade["actual_stream"]!=future["stream"] or
+                  previous_grade["actual_numbers"]!=future["numbers"]):
+                entry["source_revision_warning"]=True
+                changes["correction_warnings"]+=1
 
     target=legal_target(game,now)
     if target is None:
@@ -191,6 +233,31 @@ def report_markdown(data, updates):
                         for x in settled)/n if n else 0.0
             lines.append(f"| {method} | {n} | {straight} | {box} | "
                          f"{expected:.3f} | {avg_log:+.5f} |")
+        # Full comparisons are reported without selecting a winning horizon.
+        # Observations across offsets reuse forecasts and overlapping draws.
+        lines += ["", "### Frozen forecast checked against later draws (diagnostic)",
+                  "",
+                  "Offset 0 is the originally named draw; later offsets are",
+                  "subsequent recorded draws. This does not retarget the ticket.",
+                  "Position matches alone do not constitute prize wins.",
+                  "",
+                  "| Offset | Matured forecasts | "+ " | ".join(METHOD_SPECS)+" |",
+                  "| ---: | ---: | "+" | ".join("---:" for _ in METHOD_SPECS)+" |"]
+        for offset in FROZEN_HORIZON_OFFSETS:
+            matured=[x for x in entries if str(offset) in x.get("horizon_results",{})]
+            cells=[]
+            for method in METHOD_SPECS:
+                n=0
+                for x in matured:
+                    actual=x["horizon_results"][str(offset)]["actual_numbers"]
+                    selected=x["predictions"][method]["numbers"]
+                    n+=sum(a==b for a,b in zip(selected,actual))
+                denominator=len(matured)*GAMES[game][1]
+                cells.append(format(100*n/denominator,".2f")+"%" if denominator else "—")
+            lines.append("| "+str(offset)+" | "+str(len(matured))+" | "+
+                         " | ".join(cells)+" |")
+        lines.append("")
+
         if pending:
             last=pending[-1]
             vals=", ".join(f"{name}: {''.join(map(str,pick['numbers']))}"

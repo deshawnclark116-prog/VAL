@@ -71,6 +71,40 @@ class ProspectiveTests(unittest.TestCase):
         self.assertEqual(len(settled),2)
         self.assertEqual(settled[1]["target"]["stream"],"Night")
 
+    def test_frozen_forecast_receives_only_available_later_horizon_grades(self):
+        past=synthetic("pick3")
+        target={"game":"pick3","date":"2026-11-15","stream":"Day"}
+        entries=[{"id":"fixed-prior-record","target":target,
+                  "created_at_utc":"2026-11-14T12:00:00+00:00",
+                  "version":"val_prospective_one_pick_v1",
+                  "predictions":{method:prepare_pick("pick3",target,past,method)
+                                 for method in METHOD_SPECS},
+                  "result":None}]
+        future=[
+            {"date":"2026-11-15","stream":"Day","numbers":[1,2,3],"fireball":6},
+            {"date":"2026-11-15","stream":"Night","numbers":[2,3,4],"fireball":7},
+            {"date":"2026-11-16","stream":"Day","numbers":[3,4,5],"fireball":8},
+        ]
+        now=datetime(2026,11,17,12,30,tzinfo=timezone.utc)
+        original=copy.deepcopy(entries[0]["predictions"])
+        updated,c=update("pick3",past+future,entries,now)
+        e=updated[0]
+        self.assertEqual(e["predictions"],original)
+        self.assertEqual(e["target"],target)
+        self.assertEqual(e["result"]["official_numbers"],[1,2,3])
+        self.assertEqual(sorted(e["horizon_results"]),["0","1","2"])
+        self.assertEqual(e["horizon_results"]["1"]["actual_numbers"],[2,3,4])
+        self.assertEqual(c["horizon_graded"],3)
+        replay,c2=update("pick3",past+future,updated,now)
+        self.assertEqual(replay[0],updated[0])
+        self.assertEqual(c2["horizon_graded"],0)
+        changed=copy.deepcopy(past+future)
+        changed[-1]["numbers"]=[9,9,9]
+        revised,c3=update("pick3",changed,updated,now)
+        self.assertTrue(revised[0]["source_revision_warning"])
+        self.assertEqual(revised[0]["horizon_results"]["2"]["actual_numbers"],[3,4,5])
+        self.assertGreater(c3["correction_warnings"],0)
+
     def test_score_counts_fireball_and_precommitted_distribution(self):
         pick={"numbers":[2,8,4],
               "forecast_by_position":[[.1]*10 for _ in range(3)]}
