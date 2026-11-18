@@ -1,6 +1,6 @@
 {
   "version": "VAL_digit_horizon_falsification_v1",
-  "created_utc": "2026-11-18T21:48:21.333525+00:00",
+  "created_utc": "2026-11-18T21:51:58.536208+00:00",
   "max_test_origins_per_game": 2400,
   "horizon_offsets": [
     0,
