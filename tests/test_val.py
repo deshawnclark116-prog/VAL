@@ -39,6 +39,24 @@ class CoreTests(unittest.TestCase):
         text="Results for Cash 5\n11/11/2026; 11,15,19,32,39\n\nAll information is entered manually, and is subject to human error. \nTherefore, we can not guarantee the accuracy of this information."
         self.assertEqual(len(val.parse_official("cash5",text)),1)
         with self.assertRaises(ValueError):val.parse_official("cash5",text+'\nunexpected source change')
+    def test_digit_games_preserve_official_pre_2025_history(self):
+        cases = [
+            ("pick3","05/22/1989; Night: 9,1,4",[9,1,4]),
+            ("pick4","09/30/1991; Night: 3,3,4,5",[3,3,4,5]),
+            ("pick5","06/05/2023; Day: 3,2,7,7,2; Fireball: 8",[3,2,7,7,2]),
+        ]
+        for game,line,numbers in cases:
+            with self.subTest(game=game):
+                rows=val.parse_official(game,"Results for "+game+"\n"+line)
+                self.assertEqual(len(rows),1)
+                self.assertEqual(rows[0]["numbers"],numbers)
+                self.assertLess(rows[0]["at"],"2025-01-01")
+                self.assertEqual(val.history_cutoff(game), {"pick3":"1989-05-22",
+                    "pick4":"1991-09-30","pick5":"2023-06-05"}[game])
+        self.assertEqual(val.history_cutoff("megamillions"),val.CUTOFF)
+        self.assertEqual(len(val.parse_official("pick5","05/31/2023; Night: 1,2,3,4,5"
+                                      "\n06/05/2023; Night: 1,2,3,4,5")),1)
+
     def test_obsolete_matrix_excluded(self):
         rows=val.parse_official("megamillions","04/04/2025; 1,2,3,4,5; Mega Ball: 25\n04/08/2025; 1,2,3,4,5; Mega Ball: 24")
         self.assertEqual(len(rows),1)

@@ -22,6 +22,17 @@ ET = ZoneInfo("America/New_York")
 METHODS = ("random", "frequency", "recent", "cold", "ensemble")
 # A conservative common cutoff avoids mixing obsolete matrices into current games.
 CUTOFF = "2025-04-08"
+# The 2025-04-08 rule-change floor applies to newer game matrices (e.g.
+# Mega Millions); it must not silently erase decades of stable digit results.
+# Pick 3/4/5 predate 2025 and the official bulk downloads include them.
+DIGIT_HISTORY_START = {
+    "pick3": "1989-05-22",
+    "pick4": "1991-09-30",
+    "pick5": "2023-06-05",
+}
+
+def history_cutoff(game):
+    return DIGIT_HISTORY_START.get(game, CUTOFF)
 GAMES = {
     "pick3": dict(name="Pick 3", size=3, pool=10, digits=True, id=1050),
     "pick4": dict(name="Pick 4", size=4, pool=10, digits=True, id=1040),
@@ -113,7 +124,7 @@ def parse_official(game, text):
             draws = [(parts[2], [int(parts[1])], None, None, dt)]
         else:
             day = datetime.strptime(parts[0], "%m/%d/%Y")
-            if day.strftime("%Y-%m-%d") < CUTOFF:
+            if day.strftime("%Y-%m-%d") < history_cutoff(game):
                 continue
             if g.get("digits"):
                 draws = []
@@ -134,7 +145,7 @@ def parse_official(game, text):
                 dt = day.replace(hour=hour, minute=minute, tzinfo=ET)
                 draws = [("Main", numbers, extra if g.get("bonus") else None, extra if game == "bankamillion" else None, dt)]
         for stream, numbers, bonus, extra, dt in draws:
-            if dt.date().isoformat() < CUTOFF: continue
+            if dt.date().isoformat() < history_cutoff(game): continue
             validate(game, numbers, bonus)
             rows.append(dict(game=game, at=dt.astimezone(timezone.utc).isoformat(), stream=stream,
                              numbers=numbers, bonus=bonus, extra=extra, source="Virginia Lottery official download"))
@@ -365,7 +376,7 @@ def import_csv(store,text):
         dt=datetime.fromisoformat(line["at"].replace("Z","+00:00"))
         if dt.tzinfo is None: raise ValueError("at must include a timezone offset")
         if dt > datetime.now(timezone.utc): raise ValueError("Future draw dates cannot be imported")
-        if dt.astimezone(ET).date().isoformat()<CUTOFF: raise ValueError("Draw predates supported current-format cutoff")
+        if dt.astimezone(ET).date().isoformat()<history_cutoff(game): raise ValueError("Draw predates supported game cutoff")
         numbers=[int(x) for x in re.split(r"[ ,|]+",line["numbers"].strip())]
         bonus=int(line["bonus"]) if line.get("bonus","").strip() else None
         validate(game,numbers,bonus)
