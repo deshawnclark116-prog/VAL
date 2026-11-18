@@ -11,6 +11,7 @@ import sqlite3
 import statistics
 import threading
 import urllib.request
+import warnings
 from collections import Counter
 from datetime import datetime, timezone, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -108,6 +109,40 @@ def validate(game, numbers, bonus=None, draw=True):
     if not g.get("bonus") and bonus is not None:
         raise ValueError("This game has no player-selected special ball")
 
+def quarantine_conflicted_draws(rows):
+    """Exclude *all* incompatible draw records sharing one official timestamp.
+
+    The Lottery bulk files sometimes repeat a date/session with DIFFERENT
+    numbers (for example Pick 3 Night 2008-10-30). We cannot determine from
+    those records which is authoritative or whether it was a redraw.
+    Never silently choose one or feed conflicting rows to models.
+    """
+    by_key = {}
+    conflicting = set()
+    identical_duplicates = 0
+    for row in rows:
+        key = (row["game"], row["at"], row["stream"])
+        prior = by_key.get(key)
+        if prior is None:
+            by_key[key] = row
+        elif (prior["numbers"], prior.get("bonus"), prior.get("extra")) != (
+              row["numbers"],row.get("bonus"),row.get("extra")):
+            conflicting.add(key)
+        else:
+            identical_duplicates += 1
+    if conflicting:
+        first = sorted(conflicting)[0]
+        warnings.warn("Official archive contains "+str(len(conflicting))+
+             " ambiguous draw time(s) (first: "+repr(first)+
+             "); quarantining ALL matching records, not guessing an outcome",
+             RuntimeWarning, stacklevel=2)
+    if identical_duplicates:
+        warnings.warn("Removed "+str(identical_duplicates)+
+            " identical repeated official draw rows",RuntimeWarning,stacklevel=2)
+    return [row for key,row in sorted(by_key.items(),key=lambda x:x[0][1:])
+            if key not in conflicting]
+
+
 def parse_official(game, text):
     """Parse the Lottery's plain-text download; fail closed on unexpected lines."""
     rows = []
@@ -151,7 +186,7 @@ def parse_official(game, text):
                              numbers=numbers, bonus=bonus, extra=extra, source="Virginia Lottery official download"))
     if not rows:
         raise ValueError("No current-format draw records found")
-    return sorted(rows, key=lambda r: r["at"])
+    return quarantine_conflicted_draws(rows)
 
 class Store:
     def __init__(self, path):
@@ -171,7 +206,16 @@ class Store:
             before = db.total_changes
             for r in rows:
                 validate(r["game"], r["numbers"], r.get("bonus"))
-                db.execute("INSERT OR IGNORE INTO draws VALUES(?,?,?,?)", (r["game"],r["at"],r["stream"],json.dumps(r)))
+                cur = db.execute("INSERT OR IGNORE INTO draws VALUES(?,?,?,?)",
+                                 (r["game"],r["at"],r["stream"],json.dumps(r)))
+                if cur.rowcount == 0:
+                    old = db.execute("SELECT data FROM draws WHERE game=? AND at=? AND stream=?",
+                                     (r["game"],r["at"],r["stream"])).fetchone()
+                    original=json.loads(old[0])
+                    if (original["numbers"]!=r["numbers"] or
+                        original.get("bonus")!=r.get("bonus")):
+                        raise ValueError("Conflicting previously stored official draw: "+
+                                         r["game"]+" "+r["at"]+" "+r["stream"])
             return db.total_changes - before
     def history(self, game, stream="All"):
         with self.connect() as db:

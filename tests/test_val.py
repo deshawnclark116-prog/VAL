@@ -57,6 +57,26 @@ class CoreTests(unittest.TestCase):
         self.assertEqual(len(val.parse_official("pick5","05/31/2023; Night: 1,2,3,4,5"
                                       "\n06/05/2023; Night: 1,2,3,4,5")),1)
 
+    def test_quarantine_disagreeing_official_historical_draws(self):
+        source=("10/30/2008; Day: 2,1,9; Night: 6,4,9\n"
+                "10/30/2008; Night: 8,6,7\n"
+                "10/31/2008; Night: 2,5,3")
+        with self.assertWarns(RuntimeWarning):
+            rows=val.parse_official("pick3",source)
+        self.assertEqual(len(rows),2)
+        self.assertEqual([x["numbers"] for x in rows],[[2,1,9],[2,5,3]])
+        self.assertFalse(any(x["stream"]=="Night" and
+                             x["at"].startswith("2008-10-31T03:00")
+                             for x in rows))
+    def test_store_rejects_disagreeing_duplicate_draw_atomically(self):
+        a=dict(game="pick3",at="2026-11-17T18:59:00+00:00",
+               stream="Day",numbers=[1,2,1],bonus=None)
+        b=dict(a,numbers=[9,9,9])
+        self.assertEqual(self.store.put([a]),1)
+        with self.assertRaisesRegex(ValueError,"Conflicting previously"):
+            self.store.put([b])
+        self.assertEqual(self.store.history("pick3")[0]["numbers"],[1,2,1])
+
     def test_obsolete_matrix_excluded(self):
         rows=val.parse_official("megamillions","04/04/2025; 1,2,3,4,5; Mega Ball: 25\n04/08/2025; 1,2,3,4,5; Mega Ball: 24")
         self.assertEqual(len(rows),1)
