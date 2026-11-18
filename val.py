@@ -475,15 +475,29 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=="/api/import": return self.send(200,import_csv(self.store,body["csv"]))
             if self.path=="/api/sync": return self.send(200,sync_game(self.store,game))
             if self.path=="/api/picks":
-                method=body.get("method","ensemble"); count=int(body.get("count",5))
+                method=body.get("method","digit_conditional_v2" if GAMES[game].get("digits") else "ensemble")
+                count=int(body.get("count",5))
                 created=datetime.now(timezone.utc)
                 history=[r for r in history if datetime.fromisoformat(r["at"])<=created]
-                picks=generate(game,history,method,count)
-                baseline=generate(game,[],"random",len(picks))
                 target=next_draw(game,created,stream) if game!="keno" else None
+                model_meta=None
+                if method=="digit_conditional_v2":
+                    if not GAMES[game].get("digits"):
+                        raise ValueError("Conditional v2 supports only Pick 3, Pick 4 and Pick 5")
+                    from val_digit_formula_v2 import generate_picks
+                    # Sequential transitions need ALL prior sessions.
+                    training=[r for r in self.store.history(game)
+                              if datetime.fromisoformat(r["at"])<=created]
+                    picks,model_meta=generate_picks(game,training,target["stream"],count)
+                    history=training
+                else:
+                    picks=generate(game,history,method,count)
+                baseline=generate(game,[],"random",len(picks))
                 pid=self.store.record(game,stream,method,picks,baseline,target=target,
-                                      training_latest=history[-1] if history else None,created=created)
-                return self.send(200,dict(id=pid,picks=picks,baseline=baseline,target=target))
+                                      training_latest=history[-1] if history else None,
+                                      created=created,model_meta=model_meta)
+                return self.send(200,dict(id=pid,picks=picks,baseline=baseline,
+                                          target=target,model_meta=model_meta))
             if self.path in ("/api/backtest","/api/simulate"):
                 if not self.gate.acquire(blocking=False): return self.send(429,dict(error="An analysis is already running"))
                 try:
