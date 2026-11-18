@@ -1,0 +1,36 @@
+name: VAL full-history digit forecast and horizon challenge
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_digit_horizons.py'
+      - 'tests/test_research_digit_horizons.py'
+      - '.github/workflows/research_digit_horizons.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: val-digit-horizon-research
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify all VAL tests and horizon leakage controls
+        run: python -m unittest discover -s tests -v
+      - name: Fetch full official Pick 3/4/5 history and challenge future horizons
+        run: python -u research_digit_horizons.py
+      - name: Save research without touching live picks
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_digit_horizons.json reports/research_digit_horizons.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish full-history Pick 3/4/5 horizon challenge'
+          git pull --rebase origin main
+          git push origin HEAD:main
