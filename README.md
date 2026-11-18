@@ -12,7 +12,7 @@ Each report shows **one next upcoming draw per game**, with its date, Eastern ti
 
 The full-history download can omit today's partially completed Day/Night pair. The bot supplements same-day Pick results from the official latest-result cards. Before generating picks it checks that the most recently scheduled completed result is present. Missing results cause that game to wait, rather than silently using old data. It avoids generating a new batch within 15 minutes of its draw. Once saved, a batch stays fixed for that exact target and is scored only against that date/time/session. Previous batches retain their original scoring rule and remain in the ledger.
 
-Each run downloads nine game feeds, settles previous batches, saves three ensemble combinations and three random controls per upcoming draw, and runs historical comparisons plus 1,000 frequency simulations per game. New batches **rank the same three sampled combinations** as **Primary**, **Alt 1**, and **Alt 2** using experimental ensemble sampling weights, not real-world winning probabilities. The ranking score and version are saved per pick for prospective research. Neither the number-generation process nor the random controls are changed; earlier batches stay unranked and untouched. The full report includes the exact source history timestamp and latest winning numbers used. No tickets are purchased.
+Each run downloads nine game feeds, settles previous batches, and saves three model-generated combinations plus three independent random controls per draw. **Pick 3/4/5 now use `digit_conditional_v2`** (details below); all other games retain the legacy weighted ensemble. The digit v2 formula does not rank imaginary winning odds: when no expert shows credible earlier-draw predictive power, it generates fair-random Paper 1/2/3 candidates, which cannot be said to outperform chance. Existing historical predictions are never overwritten. When an old Pick 3/4/5 ensemble record already targets an upcoming draw, v2 appends its own frozen record for that SAME target so both can be compared prospectively. The full report includes the exact source history timestamp and latest result used. No tickets are purchased.
 
 The repository stores `reports/latest.md`, `reports/picks.json`, `reports/analysis.json`, and the complete `reports/ledger.json`. These records are public because this repository is public. The interactive dashboard below is optional; GitHub Actions runs without a computer left on. GitHub displays reports rather than hosting the running Python dashboard.
 
@@ -23,7 +23,35 @@ Actions must be enabled and allow the workflow's `contents: write` permission to
 
 - The [long-history digit/horizon report](reports/research_digit_horizons.md) reads the official history of Pick 3, Pick 4, and Pick 5. Each method sees only completed past drawings. On a frozen later period it compares the legacy ensemble, long-term frequency, same-session, multi-scale and lag-transition models against a 10%-per-digit fair null. It also generates three experimental ensemble tickets and three independent random controls before the first target and scores the SAME tickets against pre-specified subsequent draw offsets (0, 1, 2, 3, 5, 7).
 - The [prospective one-pick paper registry](reports/prospective_one_pick.md) permanently records each next-draw candidate and its probability distributions before the original wager-close time. Its later-draw horizon comparisons are additional diagnostics, never a reassignment of the original target. Models and controls are scored across all horizons without picking the most flattering after the fact.
-- The current retrospective results did not validate a predictive edge, and **no new model is automatically promoted**. Model weights and the displayed Primary rank are not fair-odds probabilities or verified claims of superiority. No gambling account is connected and no bets are placed.
+- The [actual v2-versus-original digit formula head-to-head](reports/research_digit_formula_v2.md) compares exact wins, correct-position digits and next-draw probability scores with independently seeded fair controls. These are historical research, not an untouched validation period. The incumbent performed worse in probability scoring but no formula established better real-world winning frequency across all games.
+- No experimental signal is promoted as a claim of predictive advantage without disjoint future validation. No gambling account is connected and no bets are placed.
+
+## Pick 3/4/5 live prediction formula v2
+
+The live formula is [val_digit_formula_v2.py](val_digit_formula_v2.py).
+Instead of blindly sampling the old hot/cold weighted blend, it builds
+five normalized probabilistic experts from *past-only* drawing results:
+1,500-draw position history, heavily smoothed recent 100-draw trends,
+Day/Night-conditioned frequencies, lagged same-position transitions,
+and within-combination digit-to-digit conditional probabilities.
+It evaluates each expert on 140 earlier chronological forecast origins,
+with Eastern-date clustering and a conservative evidence threshold.
+Only an expert that has earned a positive lower bound can affect the
+future joint-combination probabilities; a beam search then ranks the
+highest-scoring **ordered** combinations.
+
+If no expert passes, every digit gets a 10% fair probability and the
+three distinct picks are fair-random paper candidates, explicitly
+labeled Paper 1/2/3. This is a live **formula replacement and
+overconfidence correction**, not proof of an improved winning rate.
+Prior original-ensemble batches remain in the permanent ledger and v2
+also records its own independent batch for the same future drawing,
+to support a non-cherry-picked head-to-head.
+
+The local dashboard defaults to v2 for Pick 3/4/5 and allows manually
+choosing Legacy Ensemble for controlled experiments. Other games retain
+their prior generator. [Head-to-head statistical result](reports/research_digit_formula_v2.md).
+
 
 ## Optional local dashboard
 
