@@ -297,6 +297,176 @@
               "log_score_gain_vs_fair": 0.0589210083
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-15",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              6,
+              4,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0447473271
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0219011497
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0819170067
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0589210083
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              0,
+              6,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0281265631
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0219011497
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0616871239
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0129537427
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              9,
+              2
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2837091764
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0051398037
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3371512985
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1079187459
+              }
+            }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              2,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0877625525
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0616258926
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3774202562
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0728878366
+              }
+            }
+          }
         }
       },
       {
@@ -584,6 +754,134 @@
               "any_order_including_straight": false,
               "fireball_any_order": false,
               "log_score_gain_vs_fair": -0.10031471
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              9,
+              2
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2837091764
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0045397392
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3371512985
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.10031471
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              2,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0877625525
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0622259571
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3774202562
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.072776154
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              7,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1779680708
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.129757586
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.4862677058
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0742930534
+              }
             }
           }
         }
@@ -875,6 +1173,92 @@
               "log_score_gain_vs_fair": -0.0726896427
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              2,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0607412331
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0617308201
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.224873087
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0726896427
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              7,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1919543128
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1702740769
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0442217841
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0782088818
+              }
+            }
+          }
         }
       },
       {
@@ -1162,6 +1546,50 @@
               "any_order_including_straight": false,
               "fireball_any_order": false,
               "log_score_gain_vs_fair": -0.0782088818
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              7,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1919543128
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1702740769
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.514514068
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0782088818
+              }
             }
           }
         }
@@ -1768,6 +2196,180 @@
               "log_score_gain_vs_fair": 0.0291707692
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-15",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              6,
+              5,
+              7,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": true,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2901879445
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0271409668
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.079223693
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0291707692
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              1,
+              4,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0600847402
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1105225758
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.005995968
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0822450008
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2023740487
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0433956061
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2259976602
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0703664084
+              }
+            }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              5,
+              5,
+              4,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1360771291
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0233458822
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.4266425919
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0665296659
+              }
+            }
+          }
         }
       },
       {
@@ -2121,6 +2723,137 @@
               "any_order_including_straight": false,
               "fireball_any_order": false,
               "log_score_gain_vs_fair": -0.0746521225
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2027071045
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0228556317
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2259480032
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0746521225
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              5,
+              5,
+              4,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1634863914
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0861369934
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": true,
+                "log_score_gain_vs_fair": 0.4295850408
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0787746141
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              5,
+              2,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2466575376
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1535380138
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3745303358
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0490395708
+              }
             }
           }
         }
@@ -2478,6 +3211,94 @@
               "log_score_gain_vs_fair": -0.0826942065
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              5,
+              5,
+              4,
+              9
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1770023537
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0888145793
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0524406497
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0826942065
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              5,
+              2,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2462769477
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0914301041
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2093723095
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0489105581
+              }
+            }
+          }
         }
       },
       {
@@ -2831,6 +3652,51 @@
               "any_order_including_straight": false,
               "fireball_any_order": false,
               "log_score_gain_vs_fair": -0.0489105581
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              5,
+              2,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2462769477
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0914301041
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3747214276
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0489105581
+              }
             }
           }
         }
@@ -3568,6 +4434,184 @@
               "log_score_gain_vs_fair": 0.0547480736
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-15",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              0,
+              8,
+              4,
+              0,
+              4
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0761229439
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0652466169
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2679609908
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0547480736
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              5,
+              3,
+              0,
+              9,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.406107396
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0121269918
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5148888702
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1557851976
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              5,
+              5,
+              0,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.4634198907
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.046764526
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2199671706
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.156687322
+              }
+            }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              7,
+              4,
+              9,
+              4,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1787029334
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1021526959
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.4232036874
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0077370813
+              }
+            }
+          }
         }
       },
       {
@@ -3987,6 +5031,140 @@
               "any_order_including_straight": false,
               "fireball_any_order": false,
               "log_score_gain_vs_fair": -0.1611448435
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-16",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              4,
+              5,
+              5,
+              0,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.4917948701
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0469013387
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2607815379
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1611448435
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              7,
+              4,
+              9,
+              4,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1787029334
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1033914
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.4232036874
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0038706497
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              1,
+              0,
+              8,
+              9,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2185895785
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0801313922
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0449013429
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0241621755
+              }
             }
           }
         }
@@ -4410,6 +5588,96 @@
               "log_score_gain_vs_fair": -0.0078954763
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              7,
+              4,
+              9,
+              4,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1659639076
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": true,
+                "log_score_gain_vs_fair": 0.1026174334
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1947875028
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0078954763
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              1,
+              0,
+              8,
+              9,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1787226618
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1248433147
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5132847099
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0246282682
+              }
+            }
+          }
         }
       },
       {
@@ -4831,6 +6099,52 @@
               "log_score_gain_vs_fair": -0.0246282682
             }
           }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-17",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              1,
+              0,
+              8,
+              9,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1787226618
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1248433147
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1231766663
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0246282682
+              }
+            }
+          }
         }
       },
       {
@@ -5212,5 +6526,5 @@
       }
     ]
   },
-  "last_run_utc": "2026-11-18T04:39:34.725323+00:00"
+  "last_run_utc": "2026-11-18T15:17:10.496213+00:00"
 }
