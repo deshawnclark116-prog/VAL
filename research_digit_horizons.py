@@ -138,7 +138,7 @@ def validate_rows(game,rows):
         if row["stream"] not in ("Day","Night"):
             raise ValueError("Invalid draw session")
         stamp=row["at"]
-        if prev is not None and stamp<=prev:raise ValueError("Duplicate or unordered drawing timestamps")
+        if prev is not None and stamp<=prev:raise ValueError("Duplicate or unordered drawing timestamps in "+game+": previous "+str(prev)+" next "+str(stamp)+" row="+repr(row))
         prev=stamp
 
 
