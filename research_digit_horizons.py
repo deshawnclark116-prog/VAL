@@ -161,7 +161,7 @@ def analyze(game,rows,max_origins=MAX_ORIGINS):
     start=max(START_HISTORY,len(rows)-max(HORIZONS)-max_origins)
     end=len(rows)-max(HORIZONS)
     usable=end-start
-    if usable<300:raise ValueError("Insufficient test origins")
+    if usable<min(300,max_origins):raise ValueError("Insufficient test origins")
     mid=start+int(usable*SPLIT_FRACTION)
     # The candidate set and offsets are fixed before this test is run.
     scores={part:{(model,h):[] for model in MODEL_NAMES for h in HORIZONS}
