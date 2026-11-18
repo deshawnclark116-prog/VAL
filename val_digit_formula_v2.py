@@ -29,7 +29,7 @@ import math
 import random
 from collections import defaultdict
 from datetime import datetime
-from val import GAMES
+from val import GAMES,ET
 
 VERSION = "digit_conditional_v2"
 EXPERT_NAMES = ("long_1500", "recent_100", "same_session",
@@ -143,7 +143,7 @@ def calibration(game,history):
     for i in range(first,len(history),VALIDATION_STRIDE):
         actual=history[i]
         models=expert_models(game,history[:i],actual["stream"])
-        day=datetime.fromisoformat(actual["at"]).date().isoformat()
+        day=datetime.fromisoformat(actual["at"]).astimezone(ET).date().isoformat()
         for name in EXPERT_NAMES:
             days[name][day].append(expert_log_gain(models[name],actual["numbers"]))
         observations+=1
@@ -234,7 +234,7 @@ def _top_candidates(ready,n):
     return ranked[:n]
 
 
-def generate_picks(game,history,stream,count=3,rng=None):
+def generate_picks(game,history,stream,count=3,rng=None,return_forecast=False):
     """Production-facing replacement for three arbitrarily weighted draws."""
     if game not in ("pick3","pick4","pick5"):raise ValueError(game)
     if not 1<=count<=5:raise ValueError("Only 1-5 independent ordered candidates")
@@ -266,4 +266,4 @@ def generate_picks(game,history,stream,count=3,rng=None):
               passed_experts=ready["calibration"]["passed"],
               calibration_observations=ready["calibration"]["observations"],
               calibration_cluster_days=ready["calibration"]["cluster_days"])
-    return picks,meta
+    return (picks,meta,ready) if return_forecast else (picks,meta)

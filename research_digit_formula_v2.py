@@ -63,9 +63,9 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
         previous=rows[:i]
         # Calling the production generator itself, not reconstructing picks
         # from approximate research-only probability code.
-        current,meta=generate_picks(game,previous,target["stream"],3,
-                                    rng=seeded("nextgen","uniform",game,target))
-        ready=forecast(game,previous,target["stream"])
+        current,meta,ready=generate_picks(game,previous,target["stream"],3,
+                                    rng=seeded("nextgen","uniform",game,target),
+                                    return_forecast=True)
         if meta["signal_gate_passed"]!=ready["gate_passed"]:
             raise AssertionError("Production/research gate mismatch")
         original=generate(game,previous[-500:],"ensemble",3,
