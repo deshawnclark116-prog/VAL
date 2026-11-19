@@ -1,6 +1,6 @@
 # VAL frozen future-draw one-number test
 
-Latest run (UTC): 2026-11-18T21:31:44.486254+00:00
+Latest run (UTC): 2026-11-19T04:26:08.653487+00:00
 
 **Paper predictions only. No money wagered.**
 Each named method gets one number for the same exact future
@@ -15,15 +15,15 @@ A few hits cannot prove a persistent lottery advantage.
 
 ## Pick3
 
-Draws recorded: 6. Graded: 4. Pending: 2.
+Draws recorded: 7. Graded: 6. Pending: 1.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 4 | 0 | 0 | 0.024 | +0.00000 |
-| position_hot_top_500 | 4 | 0 | 0 | 0.018 | +0.12291 |
-| position_cold_top_30 | 4 | 0 | 0 | 0.018 | -0.03375 |
-| session_hier_sample_500 | 4 | 0 | 0 | 0.021 | +0.13622 |
-| position_cold_sample_1000 | 4 | 0 | 0 | 0.018 | -0.04807 |
+| random | 6 | 0 | 0 | 0.033 | +0.00000 |
+| position_hot_top_500 | 6 | 0 | 0 | 0.027 | +0.04722 |
+| position_cold_top_30 | 6 | 0 | 0 | 0.024 | -0.03748 |
+| session_hier_sample_500 | 6 | 0 | 0 | 0.033 | +0.05201 |
+| position_cold_sample_1000 | 6 | 0 | 0 | 0.030 | -0.03231 |
 
 ### Frozen forecast checked against later draws (diagnostic)
 
@@ -33,29 +33,29 @@ Position matches alone do not constitute prize wins.
 
 | Offset | Matured forecasts | random | position_hot_top_500 | position_cold_top_30 | session_hier_sample_500 | position_cold_sample_1000 |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 4 | 16.67% | 8.33% | 0.00% | 8.33% | 16.67% |
-| 1 | 3 | 0.00% | 11.11% | 0.00% | 22.22% | 11.11% |
-| 2 | 2 | 0.00% | 0.00% | 0.00% | 50.00% | 0.00% |
-| 3 | 1 | 0.00% | 33.33% | 33.33% | 0.00% | 0.00% |
-| 5 | 0 | — | — | — | — | — |
+| 0 | 6 | 11.11% | 5.56% | 5.56% | 11.11% | 22.22% |
+| 1 | 5 | 6.67% | 6.67% | 6.67% | 13.33% | 6.67% |
+| 2 | 4 | 0.00% | 0.00% | 0.00% | 25.00% | 0.00% |
+| 3 | 3 | 11.11% | 11.11% | 11.11% | 0.00% | 0.00% |
+| 5 | 1 | 0.00% | 0.00% | 33.33% | 0.00% | 33.33% |
 | 7 | 0 | — | — | — | — | — |
 
 
-Most recent future target: 2026-11-18 Night; created 2026-11-18T21:31:44.486254+00:00.
+Most recent future target: 2026-11-19 Day; created 2026-11-19T04:26:08.653487+00:00.
 
-Precommitted paper numbers: random: 464, position_hot_top_500: 241, position_cold_top_30: 113, session_hier_sample_500: 105, position_cold_sample_1000: 796.
+Precommitted paper numbers: random: 198, position_hot_top_500: 242, position_cold_top_30: 863, session_hier_sample_500: 783, position_cold_sample_1000: 493.
 
 ## Pick4
 
-Draws recorded: 6. Graded: 4. Pending: 2.
+Draws recorded: 7. Graded: 6. Pending: 1.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 4 | 0 | 1 | 0.008 | +0.00000 |
-| position_hot_top_500 | 4 | 0 | 0 | 0.010 | +0.08395 |
-| position_cold_top_30 | 4 | 0 | 0 | 0.007 | -0.05756 |
-| session_hier_sample_500 | 4 | 0 | 0 | 0.005 | +0.11725 |
-| position_cold_sample_1000 | 4 | 0 | 0 | 0.008 | -0.04427 |
+| random | 6 | 0 | 1 | 0.012 | +0.00000 |
+| position_hot_top_500 | 6 | 0 | 0 | 0.014 | +0.07763 |
+| position_cold_top_30 | 6 | 0 | 0 | 0.010 | -0.05410 |
+| session_hier_sample_500 | 6 | 0 | 0 | 0.010 | +0.11287 |
+| position_cold_sample_1000 | 6 | 0 | 0 | 0.012 | -0.04854 |
 
 ### Frozen forecast checked against later draws (diagnostic)
 
@@ -65,29 +65,29 @@ Position matches alone do not constitute prize wins.
 
 | Offset | Matured forecasts | random | position_hot_top_500 | position_cold_top_30 | session_hier_sample_500 | position_cold_sample_1000 |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 4 | 18.75% | 6.25% | 6.25% | 6.25% | 12.50% |
-| 1 | 3 | 33.33% | 8.33% | 0.00% | 16.67% | 8.33% |
-| 2 | 2 | 12.50% | 25.00% | 0.00% | 25.00% | 25.00% |
-| 3 | 1 | 0.00% | 0.00% | 25.00% | 0.00% | 0.00% |
-| 5 | 0 | — | — | — | — | — |
+| 0 | 6 | 16.67% | 12.50% | 8.33% | 8.33% | 8.33% |
+| 1 | 5 | 25.00% | 15.00% | 5.00% | 10.00% | 10.00% |
+| 2 | 4 | 6.25% | 25.00% | 6.25% | 12.50% | 12.50% |
+| 3 | 3 | 25.00% | 16.67% | 16.67% | 8.33% | 0.00% |
+| 5 | 1 | 0.00% | 25.00% | 0.00% | 25.00% | 25.00% |
 | 7 | 0 | — | — | — | — | — |
 
 
-Most recent future target: 2026-11-18 Night; created 2026-11-18T21:31:44.486254+00:00.
+Most recent future target: 2026-11-19 Day; created 2026-11-19T04:26:08.653487+00:00.
 
-Precommitted paper numbers: random: 2716, position_hot_top_500: 0928, position_cold_top_30: 7317, session_hier_sample_500: 0579, position_cold_sample_1000: 5539.
+Precommitted paper numbers: random: 3464, position_hot_top_500: 0928, position_cold_top_30: 7715, session_hier_sample_500: 3432, position_cold_sample_1000: 3125.
 
 ## Pick5
 
-Draws recorded: 6. Graded: 4. Pending: 2.
+Draws recorded: 7. Graded: 6. Pending: 1.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 4 | 0 | 0 | 0.003 | +0.00000 |
-| position_hot_top_500 | 4 | 0 | 0 | 0.002 | +0.14517 |
-| position_cold_top_30 | 4 | 0 | 0 | 0.004 | +0.06145 |
-| session_hier_sample_500 | 4 | 0 | 0 | 0.003 | +0.05269 |
-| position_cold_sample_1000 | 4 | 0 | 0 | 0.004 | -0.03473 |
+| random | 6 | 0 | 0 | 0.005 | +0.00000 |
+| position_hot_top_500 | 6 | 0 | 0 | 0.003 | +0.09348 |
+| position_cold_top_30 | 6 | 0 | 0 | 0.005 | +0.04362 |
+| session_hier_sample_500 | 6 | 0 | 0 | 0.004 | +0.05657 |
+| position_cold_sample_1000 | 6 | 0 | 0 | 0.004 | -0.01828 |
 
 ### Frozen forecast checked against later draws (diagnostic)
 
@@ -97,17 +97,17 @@ Position matches alone do not constitute prize wins.
 
 | Offset | Matured forecasts | random | position_hot_top_500 | position_cold_top_30 | session_hier_sample_500 | position_cold_sample_1000 |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 4 | 5.00% | 20.00% | 25.00% | 10.00% | 0.00% |
-| 1 | 3 | 13.33% | 6.67% | 6.67% | 26.67% | 26.67% |
-| 2 | 2 | 0.00% | 20.00% | 0.00% | 10.00% | 0.00% |
-| 3 | 1 | 0.00% | 0.00% | 20.00% | 60.00% | 20.00% |
-| 5 | 0 | — | — | — | — | — |
+| 0 | 6 | 6.67% | 20.00% | 26.67% | 10.00% | 10.00% |
+| 1 | 5 | 12.00% | 12.00% | 12.00% | 20.00% | 20.00% |
+| 2 | 4 | 5.00% | 15.00% | 10.00% | 15.00% | 0.00% |
+| 3 | 3 | 13.33% | 6.67% | 20.00% | 20.00% | 13.33% |
+| 5 | 1 | 0.00% | 0.00% | 0.00% | 20.00% | 0.00% |
 | 7 | 0 | — | — | — | — | — |
 
 
-Most recent future target: 2026-11-18 Night; created 2026-11-18T21:31:44.486254+00:00.
+Most recent future target: 2026-11-19 Day; created 2026-11-19T04:26:08.653487+00:00.
 
-Precommitted paper numbers: random: 43248, position_hot_top_500: 40431, position_cold_top_30: 72688, session_hier_sample_500: 06720, position_cold_sample_1000: 74172.
+Precommitted paper numbers: random: 65084, position_hot_top_500: 40431, position_cold_top_30: 82184, session_hier_sample_500: 30522, position_cold_sample_1000: 01376.
 
 ## Reliability
 
