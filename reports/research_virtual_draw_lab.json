@@ -1,0 +1,1850 @@
+{
+  "version": "virtual_digit_draw_lab_v1",
+  "generated_utc": "2026-11-19T04:04:14.435292+00:00",
+  "scenarios": [
+    "fair_independent",
+    "fixed_position_small",
+    "fixed_position_strong",
+    "pooled_device_bias",
+    "day_only_bias",
+    "halfway_replacement",
+    "hidden_opposing_machines",
+    "within_draw_echo"
+  ],
+  "train_draws": 850,
+  "test_draws": 650,
+  "replicates": 8,
+  "games": {
+    "pick3": {
+      "fair_independent": {
+        "game": "pick3",
+        "scenario": "fair_independent",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1582,
+            "position_total": 15600,
+            "top1_rate": 0.10141025641025642,
+            "top3_rate": 0.30378205128205127,
+            "full_straight_hits": 6,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 1609,
+            "position_total": 15600,
+            "top1_rate": 0.10314102564102565,
+            "top3_rate": 0.3032051282051282,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.00015427152466486251
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 1651,
+            "position_total": 15600,
+            "top1_rate": 0.10583333333333333,
+            "top3_rate": 0.3082692307692308,
+            "full_straight_hits": 6,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.0016090234537327046
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 1604,
+            "position_total": 15600,
+            "top1_rate": 0.10282051282051283,
+            "top3_rate": 0.30115384615384616,
+            "full_straight_hits": 3,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.0046047954261200135
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 1591,
+            "position_total": 15600,
+            "top1_rate": 0.10198717948717949,
+            "top3_rate": 0.30814102564102563,
+            "full_straight_hits": 7,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.004445479596387797
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 1582,
+            "position_total": 15600,
+            "top1_rate": 0.10141025641025642,
+            "top3_rate": 0.30378205128205127,
+            "full_straight_hits": 6,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 6.661338147750938e-16
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "fixed_position_small": {
+        "game": "pick3",
+        "scenario": "fixed_position_small",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1550,
+            "position_total": 15600,
+            "top1_rate": 0.09935897435897435,
+            "top3_rate": 0.2976923076923077,
+            "full_straight_hits": 10,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 1546,
+            "position_total": 15600,
+            "top1_rate": 0.0991025641025641,
+            "top3_rate": 0.2973717948717949,
+            "full_straight_hits": 4,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.00019173327621574437
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 1580,
+            "position_total": 15600,
+            "top1_rate": 0.10128205128205128,
+            "top3_rate": 0.2994871794871795,
+            "full_straight_hits": 7,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.0036828030127421907
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 1616,
+            "position_total": 15600,
+            "top1_rate": 0.10358974358974359,
+            "top3_rate": 0.301474358974359,
+            "full_straight_hits": 7,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.005070493591544116
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 1571,
+            "position_total": 15600,
+            "top1_rate": 0.10070512820512821,
+            "top3_rate": 0.2982051282051282,
+            "full_straight_hits": 5,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.008108014557508411
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 1713,
+            "position_total": 15600,
+            "top1_rate": 0.10980769230769231,
+            "top3_rate": 0.3055128205128205,
+            "full_straight_hits": 8,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0033400859639101
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "fixed_position_strong": {
+        "game": "pick3",
+        "scenario": "fixed_position_strong",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1491,
+            "position_total": 15600,
+            "top1_rate": 0.09557692307692307,
+            "top3_rate": 0.2891666666666667,
+            "full_straight_hits": 6,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2169,
+            "position_total": 15600,
+            "top1_rate": 0.13903846153846153,
+            "top3_rate": 0.32782051282051283,
+            "full_straight_hits": 11,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.008908378135721732
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2192,
+            "position_total": 15600,
+            "top1_rate": 0.14051282051282052,
+            "top3_rate": 0.3308974358974359,
+            "full_straight_hits": 10,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.044648349914908105
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2209,
+            "position_total": 15600,
+            "top1_rate": 0.1416025641025641,
+            "top3_rate": 0.33147435897435895,
+            "full_straight_hits": 12,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.037394126352225575
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2208,
+            "position_total": 15600,
+            "top1_rate": 0.14153846153846153,
+            "top3_rate": 0.3276282051282051,
+            "full_straight_hits": 13,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.03836203033622098
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2246,
+            "position_total": 15600,
+            "top1_rate": 0.14397435897435898,
+            "top3_rate": 0.33615384615384614,
+            "full_straight_hits": 14,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0700826684296853
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "pooled_device_bias": {
+        "game": "pick3",
+        "scenario": "pooled_device_bias",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1491,
+            "position_total": 15600,
+            "top1_rate": 0.09557692307692307,
+            "top3_rate": 0.28878205128205126,
+            "full_straight_hits": 7,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2229,
+            "position_total": 15600,
+            "top1_rate": 0.1428846153846154,
+            "top3_rate": 0.33544871794871794,
+            "full_straight_hits": 14,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.012101994533257792
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2182,
+            "position_total": 15600,
+            "top1_rate": 0.13987179487179488,
+            "top3_rate": 0.3264102564102564,
+            "full_straight_hits": 11,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.014690053955593616
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2066,
+            "position_total": 15600,
+            "top1_rate": 0.13243589743589743,
+            "top3_rate": 0.33064102564102565,
+            "full_straight_hits": 12,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.010903815367515913
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2053,
+            "position_total": 15600,
+            "top1_rate": 0.1316025641025641,
+            "top3_rate": 0.32737179487179485,
+            "full_straight_hits": 10,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.009784181683127573
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2229,
+            "position_total": 15600,
+            "top1_rate": 0.1428846153846154,
+            "top3_rate": 0.3346153846153846,
+            "full_straight_hits": 14,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.027379332313860017
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "day_only_bias": {
+        "game": "pick3",
+        "scenario": "day_only_bias",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1524,
+            "position_total": 15600,
+            "top1_rate": 0.09769230769230769,
+            "top3_rate": 0.2885897435897436,
+            "full_straight_hits": 8,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2192,
+            "position_total": 15600,
+            "top1_rate": 0.14051282051282052,
+            "top3_rate": 0.32794871794871794,
+            "full_straight_hits": 19,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.009778371368951565
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2114,
+            "position_total": 15600,
+            "top1_rate": 0.13551282051282051,
+            "top3_rate": 0.3324358974358974,
+            "full_straight_hits": 16,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.012313670302820854
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2199,
+            "position_total": 15600,
+            "top1_rate": 0.14096153846153847,
+            "top3_rate": 0.32871794871794874,
+            "full_straight_hits": 13,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.01974499418713042
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 1992,
+            "position_total": 15600,
+            "top1_rate": 0.1276923076923077,
+            "top3_rate": 0.32282051282051283,
+            "full_straight_hits": 16,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.008029467461495713
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2209,
+            "position_total": 15600,
+            "top1_rate": 0.1416025641025641,
+            "top3_rate": 0.33455128205128204,
+            "full_straight_hits": 13,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.04332483626637994
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "halfway_replacement": {
+        "game": "pick3",
+        "scenario": "halfway_replacement",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1395,
+            "position_total": 15600,
+            "top1_rate": 0.08942307692307692,
+            "top3_rate": 0.3617948717948718,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2422,
+            "position_total": 15600,
+            "top1_rate": 0.15525641025641027,
+            "top3_rate": 0.3631410256410256,
+            "full_straight_hits": 19,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.027670748814435993
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2407,
+            "position_total": 15600,
+            "top1_rate": 0.1542948717948718,
+            "top3_rate": 0.3607051282051282,
+            "full_straight_hits": 19,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.04014904722670682
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2377,
+            "position_total": 15600,
+            "top1_rate": 0.15237179487179486,
+            "top3_rate": 0.3548717948717949,
+            "full_straight_hits": 17,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.033936240346526286
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2393,
+            "position_total": 15600,
+            "top1_rate": 0.1533974358974359,
+            "top3_rate": 0.35717948717948717,
+            "full_straight_hits": 15,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0375351790444935
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2817,
+            "position_total": 15600,
+            "top1_rate": 0.18057692307692308,
+            "top3_rate": 0.3617948717948718,
+            "full_straight_hits": 32,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.08958079941855038
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 4,
+            "mean_joint_log_gain": -0.0002967020610390462,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "hidden_opposing_machines": {
+        "game": "pick3",
+        "scenario": "hidden_opposing_machines",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1532,
+            "position_total": 15600,
+            "top1_rate": 0.09820512820512821,
+            "top3_rate": 0.29903846153846153,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 1547,
+            "position_total": 15600,
+            "top1_rate": 0.09916666666666667,
+            "top3_rate": 0.30025641025641026,
+            "full_straight_hits": 5,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.0005016717296688302
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 1564,
+            "position_total": 15600,
+            "top1_rate": 0.10025641025641026,
+            "top3_rate": 0.3016666666666667,
+            "full_straight_hits": 5,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.003057750618341026
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 1599,
+            "position_total": 15600,
+            "top1_rate": 0.1025,
+            "top3_rate": 0.30512820512820515,
+            "full_straight_hits": 5,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.0031265164336235743
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2205,
+            "position_total": 15600,
+            "top1_rate": 0.14134615384615384,
+            "top3_rate": 0.34262820512820513,
+            "full_straight_hits": 12,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.051234865630014254
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2201,
+            "position_total": 15600,
+            "top1_rate": 0.14108974358974358,
+            "top3_rate": 0.34282051282051285,
+            "full_straight_hits": 9,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0921481932462683
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "within_draw_echo": {
+        "game": "pick3",
+        "scenario": "within_draw_echo",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1601,
+            "position_total": 15600,
+            "top1_rate": 0.10262820512820513,
+            "top3_rate": 0.29993589743589744,
+            "full_straight_hits": 88,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 1566,
+            "position_total": 15600,
+            "top1_rate": 0.10038461538461538,
+            "top3_rate": 0.2998717948717949,
+            "full_straight_hits": 68,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.00023577855368078117
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 1598,
+            "position_total": 15600,
+            "top1_rate": 0.10243589743589744,
+            "top3_rate": 0.30615384615384617,
+            "full_straight_hits": 14,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.0029324816100021775
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 1588,
+            "position_total": 15600,
+            "top1_rate": 0.10179487179487179,
+            "top3_rate": 0.3042948717948718,
+            "full_straight_hits": 9,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.005582158024316816
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 1606,
+            "position_total": 15600,
+            "top1_rate": 0.10294871794871795,
+            "top3_rate": 0.3010897435897436,
+            "full_straight_hits": 6,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": -0.007379206378145121
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 4393,
+            "position_total": 15600,
+            "top1_rate": 0.2816025641025641,
+            "top3_rate": 0.44198717948717947,
+            "full_straight_hits": 88,
+            "expected_fair_full_straight_hits": 5.2,
+            "mean_log_gain_vs_uniform": 0.5149135315700409
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 13,
+            "mean_joint_log_gain": 0.1716814705708764,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      }
+    },
+    "pick4": {
+      "fair_independent": {
+        "game": "pick4",
+        "scenario": "fair_independent",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2105,
+            "position_total": 20800,
+            "top1_rate": 0.10120192307692308,
+            "top3_rate": 0.3029326923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2132,
+            "position_total": 20800,
+            "top1_rate": 0.1025,
+            "top3_rate": 0.3035096153846154,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 4.992384273043436e-05
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2036,
+            "position_total": 20800,
+            "top1_rate": 0.09788461538461539,
+            "top3_rate": 0.3049519230769231,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.0042129217290399045
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2091,
+            "position_total": 20800,
+            "top1_rate": 0.10052884615384615,
+            "top3_rate": 0.30317307692307693,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.005028892652856266
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2170,
+            "position_total": 20800,
+            "top1_rate": 0.10432692307692308,
+            "top3_rate": 0.3041346153846154,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.006888008807815025
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2105,
+            "position_total": 20800,
+            "top1_rate": 0.10120192307692308,
+            "top3_rate": 0.3029326923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 8.88178419700125e-16
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -1.1102230246251565e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "fixed_position_small": {
+        "game": "pick4",
+        "scenario": "fixed_position_small",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2028,
+            "position_total": 20800,
+            "top1_rate": 0.0975,
+            "top3_rate": 0.2971634615384615,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2221,
+            "position_total": 20800,
+            "top1_rate": 0.10677884615384615,
+            "top3_rate": 0.31009615384615385,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0012743154922907137
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2245,
+            "position_total": 20800,
+            "top1_rate": 0.10793269230769231,
+            "top3_rate": 0.30572115384615384,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.0015585414479181384
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2215,
+            "position_total": 20800,
+            "top1_rate": 0.10649038461538461,
+            "top3_rate": 0.30875,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.0020115452233795007
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2184,
+            "position_total": 20800,
+            "top1_rate": 0.105,
+            "top3_rate": 0.3066826923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.006940919526051523
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2251,
+            "position_total": 20800,
+            "top1_rate": 0.10822115384615384,
+            "top3_rate": 0.3066346153846154,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.006046549037705086
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -1.1102230246251565e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "fixed_position_strong": {
+        "game": "pick4",
+        "scenario": "fixed_position_strong",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1982,
+            "position_total": 20800,
+            "top1_rate": 0.09528846153846154,
+            "top3_rate": 0.2910576923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2719,
+            "position_total": 20800,
+            "top1_rate": 0.13072115384615385,
+            "top3_rate": 0.32346153846153847,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.007868341989002041
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2674,
+            "position_total": 20800,
+            "top1_rate": 0.12855769230769232,
+            "top3_rate": 0.32485576923076925,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.042156633858232866
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2702,
+            "position_total": 20800,
+            "top1_rate": 0.12990384615384615,
+            "top3_rate": 0.3208653846153846,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.03364769522380202
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2741,
+            "position_total": 20800,
+            "top1_rate": 0.13177884615384616,
+            "top3_rate": 0.3239903846153846,
+            "full_straight_hits": 3,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.03654568973753838
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2708,
+            "position_total": 20800,
+            "top1_rate": 0.1301923076923077,
+            "top3_rate": 0.32269230769230767,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0632751277081133
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 9,
+            "mean_joint_log_gain": 0.02156346862571603,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "pooled_device_bias": {
+        "game": "pick4",
+        "scenario": "pooled_device_bias",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1985,
+            "position_total": 20800,
+            "top1_rate": 0.0954326923076923,
+            "top3_rate": 0.2823076923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 3023,
+            "position_total": 20800,
+            "top1_rate": 0.14533653846153846,
+            "top3_rate": 0.33245192307692306,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.01679415370579629
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2987,
+            "position_total": 20800,
+            "top1_rate": 0.14360576923076923,
+            "top3_rate": 0.33658653846153846,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.02094338654681016
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2804,
+            "position_total": 20800,
+            "top1_rate": 0.1348076923076923,
+            "top3_rate": 0.3305769230769231,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.014205804286090888
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2834,
+            "position_total": 20800,
+            "top1_rate": 0.13625,
+            "top3_rate": 0.3322596153846154,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.016167456297725646
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 3023,
+            "position_total": 20800,
+            "top1_rate": 0.14533653846153846,
+            "top3_rate": 0.3346153846153846,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.04065302630152052
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -1.1102230246251565e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "day_only_bias": {
+        "game": "pick4",
+        "scenario": "day_only_bias",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1976,
+            "position_total": 20800,
+            "top1_rate": 0.095,
+            "top3_rate": 0.2940865384615385,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2721,
+            "position_total": 20800,
+            "top1_rate": 0.1308173076923077,
+            "top3_rate": 0.32966346153846154,
+            "full_straight_hits": 3,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.008997363673651611
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2623,
+            "position_total": 20800,
+            "top1_rate": 0.12610576923076924,
+            "top3_rate": 0.3233173076923077,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.010022284636090563
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2752,
+            "position_total": 20800,
+            "top1_rate": 0.13230769230769232,
+            "top3_rate": 0.3202884615384615,
+            "full_straight_hits": 5,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.017349741656604443
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2441,
+            "position_total": 20800,
+            "top1_rate": 0.11735576923076924,
+            "top3_rate": 0.3227884615384615,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.006102449523924986
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2721,
+            "position_total": 20800,
+            "top1_rate": 0.1308173076923077,
+            "top3_rate": 0.32860576923076923,
+            "full_straight_hits": 4,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.03788953566330379
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -1.1102230246251565e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "halfway_replacement": {
+        "game": "pick4",
+        "scenario": "halfway_replacement",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 1923,
+            "position_total": 20800,
+            "top1_rate": 0.09245192307692307,
+            "top3_rate": 0.36067307692307693,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 3171,
+            "position_total": 20800,
+            "top1_rate": 0.15245192307692307,
+            "top3_rate": 0.36649038461538463,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.03607130037868901
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 3165,
+            "position_total": 20800,
+            "top1_rate": 0.15216346153846153,
+            "top3_rate": 0.35980769230769233,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.05084805169706594
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 3172,
+            "position_total": 20800,
+            "top1_rate": 0.1525,
+            "top3_rate": 0.3565384615384615,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.04178386422580672
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 3154,
+            "position_total": 20800,
+            "top1_rate": 0.1516346153846154,
+            "top3_rate": 0.35591346153846154,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.04405047146945675
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 3733,
+            "position_total": 20800,
+            "top1_rate": 0.17947115384615384,
+            "top3_rate": 0.36067307692307693,
+            "full_straight_hits": 3,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.11642949415614903
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 1,
+            "mean_joint_log_gain": 3.4908619010369023e-05,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "hidden_opposing_machines": {
+        "game": "pick4",
+        "scenario": "hidden_opposing_machines",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2056,
+            "position_total": 20800,
+            "top1_rate": 0.09884615384615385,
+            "top3_rate": 0.3010576923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 1993,
+            "position_total": 20800,
+            "top1_rate": 0.09581730769230769,
+            "top3_rate": 0.29817307692307693,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.000504381138702035
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2106,
+            "position_total": 20800,
+            "top1_rate": 0.10125,
+            "top3_rate": 0.3008653846153846,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.0043819107222493716
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2105,
+            "position_total": 20800,
+            "top1_rate": 0.10120192307692308,
+            "top3_rate": 0.30254807692307695,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.006181408921062455
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2800,
+            "position_total": 20800,
+            "top1_rate": 0.1346153846153846,
+            "top3_rate": 0.3409615384615385,
+            "full_straight_hits": 2,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.061778102690606386
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2825,
+            "position_total": 20800,
+            "top1_rate": 0.13581730769230768,
+            "top3_rate": 0.33528846153846154,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.10868934560014883
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -1.1102230246251565e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "within_draw_echo": {
+        "game": "pick4",
+        "scenario": "within_draw_echo",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2113,
+            "position_total": 20800,
+            "top1_rate": 0.10158653846153846,
+            "top3_rate": 0.30822115384615384,
+            "full_straight_hits": 30,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2077,
+            "position_total": 20800,
+            "top1_rate": 0.09985576923076923,
+            "top3_rate": 0.30283653846153846,
+            "full_straight_hits": 27,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.0007285452850206762
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2049,
+            "position_total": 20800,
+            "top1_rate": 0.09850961538461539,
+            "top3_rate": 0.29860576923076926,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.005842626848419052
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2061,
+            "position_total": 20800,
+            "top1_rate": 0.09908653846153846,
+            "top3_rate": 0.29552884615384617,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.008636283326756885
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2032,
+            "position_total": 20800,
+            "top1_rate": 0.09769230769230769,
+            "top3_rate": 0.29865384615384616,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": -0.013070934612228725
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 6342,
+            "position_total": 20800,
+            "top1_rate": 0.30490384615384614,
+            "top3_rate": 0.4660096153846154,
+            "full_straight_hits": 30,
+            "expected_fair_full_straight_hits": 0.52,
+            "mean_log_gain_vs_uniform": 0.7963848324068326
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 13,
+            "mean_joint_log_gain": 0.21477745140870957,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      }
+    },
+    "pick5": {
+      "fair_independent": {
+        "game": "pick5",
+        "scenario": "fair_independent",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2614,
+            "position_total": 26000,
+            "top1_rate": 0.10053846153846153,
+            "top3_rate": 0.2992692307692308,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2605,
+            "position_total": 26000,
+            "top1_rate": 0.10019230769230769,
+            "top3_rate": 0.30223076923076925,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.00011021709679822001
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2570,
+            "position_total": 26000,
+            "top1_rate": 0.09884615384615385,
+            "top3_rate": 0.3006923076923077,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.0074620196412252164
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2532,
+            "position_total": 26000,
+            "top1_rate": 0.09738461538461539,
+            "top3_rate": 0.30073076923076925,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.00915896111936365
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2617,
+            "position_total": 26000,
+            "top1_rate": 0.10065384615384615,
+            "top3_rate": 0.30115384615384616,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.013228733587003239
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2614,
+            "position_total": 26000,
+            "top1_rate": 0.10053846153846153,
+            "top3_rate": 0.2992692307692308,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 1.1102230246251563e-15
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "fixed_position_small": {
+        "game": "pick5",
+        "scenario": "fixed_position_small",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2581,
+            "position_total": 26000,
+            "top1_rate": 0.09926923076923076,
+            "top3_rate": 0.2971923076923077,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2515,
+            "position_total": 26000,
+            "top1_rate": 0.09673076923076923,
+            "top3_rate": 0.3011923076923077,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.0005907637990152145
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2632,
+            "position_total": 26000,
+            "top1_rate": 0.10123076923076924,
+            "top3_rate": 0.29796153846153844,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.007898781496555611
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2565,
+            "position_total": 26000,
+            "top1_rate": 0.09865384615384615,
+            "top3_rate": 0.3019230769230769,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.010123358422186632
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2703,
+            "position_total": 26000,
+            "top1_rate": 0.10396153846153847,
+            "top3_rate": 0.3001923076923077,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.015446445022962624
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 2691,
+            "position_total": 26000,
+            "top1_rate": 0.1035,
+            "top3_rate": 0.30223076923076925,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0019868544270133046
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "fixed_position_strong": {
+        "game": "pick5",
+        "scenario": "fixed_position_strong",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2602,
+            "position_total": 26000,
+            "top1_rate": 0.10007692307692308,
+            "top3_rate": 0.2938846153846154,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 3254,
+            "position_total": 26000,
+            "top1_rate": 0.12515384615384614,
+            "top3_rate": 0.32403846153846155,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.006532647474690258
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 3177,
+            "position_total": 26000,
+            "top1_rate": 0.1221923076923077,
+            "top3_rate": 0.31484615384615383,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.03480404605664019
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 3201,
+            "position_total": 26000,
+            "top1_rate": 0.12311538461538461,
+            "top3_rate": 0.315,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.02699413793803193
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 3203,
+            "position_total": 26000,
+            "top1_rate": 0.1231923076923077,
+            "top3_rate": 0.31846153846153846,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.032222726407166793
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 3268,
+            "position_total": 26000,
+            "top1_rate": 0.1256923076923077,
+            "top3_rate": 0.3192307692307692,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.057721607645777495
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 1,
+            "mean_joint_log_gain": -0.0006789127387386748,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "pooled_device_bias": {
+        "game": "pick5",
+        "scenario": "pooled_device_bias",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2462,
+            "position_total": 26000,
+            "top1_rate": 0.09469230769230769,
+            "top3_rate": 0.2846153846153846,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 3770,
+            "position_total": 26000,
+            "top1_rate": 0.145,
+            "top3_rate": 0.3369615384615385,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.021093790285663334
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 3732,
+            "position_total": 26000,
+            "top1_rate": 0.14353846153846153,
+            "top3_rate": 0.333,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.027319756056512847
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 3513,
+            "position_total": 26000,
+            "top1_rate": 0.1351153846153846,
+            "top3_rate": 0.3319615384615385,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.020550465422540513
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 3594,
+            "position_total": 26000,
+            "top1_rate": 0.13823076923076924,
+            "top3_rate": 0.3292307692307692,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.019846434836338918
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 3770,
+            "position_total": 26000,
+            "top1_rate": 0.145,
+            "top3_rate": 0.3330769230769231,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.050104744906772254
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "day_only_bias": {
+        "game": "pick5",
+        "scenario": "day_only_bias",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2485,
+            "position_total": 26000,
+            "top1_rate": 0.09557692307692307,
+            "top3_rate": 0.2911923076923077,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 3513,
+            "position_total": 26000,
+            "top1_rate": 0.1351153846153846,
+            "top3_rate": 0.3243076923076923,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.013697475428373943
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 3431,
+            "position_total": 26000,
+            "top1_rate": 0.13196153846153846,
+            "top3_rate": 0.3213846153846154,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.013000478468614652
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 3505,
+            "position_total": 26000,
+            "top1_rate": 0.1348076923076923,
+            "top3_rate": 0.32715384615384613,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.026676818632881648
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 3241,
+            "position_total": 26000,
+            "top1_rate": 0.12465384615384616,
+            "top3_rate": 0.323,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.008793192163494095
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 3532,
+            "position_total": 26000,
+            "top1_rate": 0.13584615384615384,
+            "top3_rate": 0.3295,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.059976114172048414
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "halfway_replacement": {
+        "game": "pick5",
+        "scenario": "halfway_replacement",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2381,
+            "position_total": 26000,
+            "top1_rate": 0.09157692307692308,
+            "top3_rate": 0.3649230769230769,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 4044,
+            "position_total": 26000,
+            "top1_rate": 0.15553846153846154,
+            "top3_rate": 0.3646153846153846,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.04666130365783588
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 4050,
+            "position_total": 26000,
+            "top1_rate": 0.15576923076923077,
+            "top3_rate": 0.3595,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.06621518374506132
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 4010,
+            "position_total": 26000,
+            "top1_rate": 0.15423076923076923,
+            "top3_rate": 0.3558846153846154,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.05453965654693969
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 3994,
+            "position_total": 26000,
+            "top1_rate": 0.15361538461538463,
+            "top3_rate": 0.3552692307692308,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.05906493785230752
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 4770,
+            "position_total": 26000,
+            "top1_rate": 0.18346153846153845,
+            "top3_rate": 0.3649230769230769,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.159121674979163
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 4,
+            "mean_joint_log_gain": -5.521753844573551e-05,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "hidden_opposing_machines": {
+        "game": "pick5",
+        "scenario": "hidden_opposing_machines",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2668,
+            "position_total": 26000,
+            "top1_rate": 0.10261538461538462,
+            "top3_rate": 0.29996153846153845,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2552,
+            "position_total": 26000,
+            "top1_rate": 0.09815384615384615,
+            "top3_rate": 0.29996153846153845,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.0003113385744693918
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2571,
+            "position_total": 26000,
+            "top1_rate": 0.09888461538461539,
+            "top3_rate": 0.29830769230769233,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.006050471428491154
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2607,
+            "position_total": 26000,
+            "top1_rate": 0.10026923076923076,
+            "top3_rate": 0.29946153846153845,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.007054124404499314
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 3679,
+            "position_total": 26000,
+            "top1_rate": 0.1415,
+            "top3_rate": 0.34142307692307694,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.08641196021161028
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 3716,
+            "position_total": 26000,
+            "top1_rate": 0.14292307692307693,
+            "top3_rate": 0.3418846153846154,
+            "full_straight_hits": 1,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.15769643232687783
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      },
+      "within_draw_echo": {
+        "game": "pick5",
+        "scenario": "within_draw_echo",
+        "test_draws_per_replicate": 650,
+        "replicates": 8,
+        "synthetic_not_real": true,
+        "device_id_not_known_before_real_wager": true,
+        "methods": {
+          "fair": {
+            "target_draws": 5200,
+            "position_correct": 2506,
+            "position_total": 26000,
+            "top1_rate": 0.09638461538461539,
+            "top3_rate": 0.2972692307692308,
+            "full_straight_hits": 7,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 0.0
+          },
+          "pooled": {
+            "target_draws": 5200,
+            "position_correct": 2619,
+            "position_total": 26000,
+            "top1_rate": 0.10073076923076923,
+            "top3_rate": 0.29930769230769233,
+            "full_straight_hits": 6,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.0008025772481965979
+          },
+          "position": {
+            "target_draws": 5200,
+            "position_correct": 2577,
+            "position_total": 26000,
+            "top1_rate": 0.09911538461538462,
+            "top3_rate": 0.29880769230769233,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.007276706863851574
+          },
+          "day_night": {
+            "target_draws": 5200,
+            "position_correct": 2640,
+            "position_total": 26000,
+            "top1_rate": 0.10153846153846154,
+            "top3_rate": 0.3017692307692308,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.009597392894036397
+          },
+          "equipment_id_visible": {
+            "target_draws": 5200,
+            "position_correct": 2596,
+            "position_total": 26000,
+            "top1_rate": 0.09984615384615385,
+            "top3_rate": 0.29896153846153845,
+            "full_straight_hits": 0,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": -0.014740553837527018
+          },
+          "oracle": {
+            "target_draws": 5200,
+            "position_correct": 8186,
+            "position_total": 26000,
+            "top1_rate": 0.31484615384615383,
+            "top3_rate": 0.4664615384615385,
+            "full_straight_hits": 7,
+            "expected_fair_full_straight_hits": 0.052,
+            "mean_log_gain_vs_uniform": 1.032708807346286
+          },
+          "v2_production_probe": {
+            "targets_checked": 13,
+            "gate_triggered": 13,
+            "mean_joint_log_gain": 0.3755044915073504,
+            "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
+          }
+        }
+      }
+    }
+  },
+  "research_only": true
+}
