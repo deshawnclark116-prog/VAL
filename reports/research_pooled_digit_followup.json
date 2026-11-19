@@ -1,0 +1,1998 @@
+{
+  "version": "pooled_digit_postselection_audit_v1",
+  "generated_utc": "2026-11-19T03:55:43.473234+00:00",
+  "selected_after_prior_research": true,
+  "no_model_promotion": true,
+  "games": {
+    "pick3": {
+      "game": "pick3",
+      "history_draws": 23757,
+      "first_draw": "1989-05-23T03:00:00+00:00",
+      "latest_draw": "2026-11-18T04:00:00+00:00",
+      "formula": "rolling pooled digit probabilities with 5,000 draws; 200 pseudo observations per position per digit",
+      "exploratory_selected_after_v3_results": true,
+      "results": {
+        "all": {
+          "draws": 23257,
+          "calendar_days": 12268,
+          "positions": 69771,
+          "top1_hits": 6866,
+          "top1_rate": 0.09840764787662495,
+          "top1_95pct_normal_interval": [
+            0.09618157256926785,
+            0.10063372318398206
+          ],
+          "chance_expected_top1": 6977.1,
+          "top1_z_vs_fair": -1.4020236204499719,
+          "approx_one_sided_p": 0.9195459033283422,
+          "top3_hits": 20643,
+          "top3_rate": 0.29586791073655244,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 24,
+          "chance_expected_exact": 23.257,
+          "mean_log_gain_vs_fair": -0.0006603906354511065
+        },
+        "year_1990": {
+          "draws": 3,
+          "calendar_days": 3,
+          "positions": 9,
+          "top1_hits": 2,
+          "top1_rate": 0.2222222222222222,
+          "top1_95pct_normal_interval": [
+            0.026222222222222202,
+            0.4182222222222222
+          ],
+          "chance_expected_top1": 0.9,
+          "top1_z_vs_fair": 1.2222222222222223,
+          "approx_one_sided_p": 0.11081180122969676,
+          "top3_hits": 4,
+          "top3_rate": 0.4444444444444444,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.003,
+          "mean_log_gain_vs_fair": 0.004246613279345633
+        },
+        "stream_Night": {
+          "draws": 12266,
+          "calendar_days": 12266,
+          "positions": 36798,
+          "top1_hits": 3684,
+          "top1_rate": 0.10011413663786076,
+          "top1_95pct_normal_interval": [
+            0.09704889145538396,
+            0.10317938182033755
+          ],
+          "chance_expected_top1": 3679.8,
+          "top1_z_vs_fair": 0.07298202815420629,
+          "approx_one_sided_p": 0.47091020941160955,
+          "top3_hits": 10894,
+          "top3_rate": 0.2960486982988206,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 14,
+          "chance_expected_exact": 12.266,
+          "mean_log_gain_vs_fair": -0.0007631665434758933
+        },
+        "year_1991": {
+          "draws": 312,
+          "calendar_days": 312,
+          "positions": 936,
+          "top1_hits": 98,
+          "top1_rate": 0.1047008547008547,
+          "top1_95pct_normal_interval": [
+            0.08548147345731266,
+            0.12392023594439674
+          ],
+          "chance_expected_top1": 93.60000000000001,
+          "top1_z_vs_fair": 0.4793949970044489,
+          "approx_one_sided_p": 0.31582882598330303,
+          "top3_hits": 280,
+          "top3_rate": 0.29914529914529914,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.312,
+          "mean_log_gain_vs_fair": -0.0014049384994571463
+        },
+        "year_1992": {
+          "draws": 313,
+          "calendar_days": 313,
+          "positions": 939,
+          "top1_hits": 85,
+          "top1_rate": 0.09052183173588925,
+          "top1_95pct_normal_interval": [
+            0.07133317694084303,
+            0.10971048653093547
+          ],
+          "chance_expected_top1": 93.9,
+          "top1_z_vs_fair": -0.9681350775278431,
+          "approx_one_sided_p": 0.8335115433059213,
+          "top3_hits": 262,
+          "top3_rate": 0.2790202342917998,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.313,
+          "mean_log_gain_vs_fair": -0.002283991299722851
+        },
+        "year_1993": {
+          "draws": 312,
+          "calendar_days": 312,
+          "positions": 936,
+          "top1_hits": 79,
+          "top1_rate": 0.08440170940170941,
+          "top1_95pct_normal_interval": [
+            0.06518232815816738,
+            0.10362109064525143
+          ],
+          "chance_expected_top1": 93.60000000000001,
+          "top1_z_vs_fair": -1.5907197627874934,
+          "approx_one_sided_p": 0.9441636713671635,
+          "top3_hits": 279,
+          "top3_rate": 0.2980769230769231,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.312,
+          "mean_log_gain_vs_fair": -0.0019100436884195555
+        },
+        "year_1994": {
+          "draws": 313,
+          "calendar_days": 313,
+          "positions": 939,
+          "top1_hits": 109,
+          "top1_rate": 0.11608093716719915,
+          "top1_95pct_normal_interval": [
+            0.09689228237215293,
+            0.1352695919622454
+          ],
+          "chance_expected_top1": 93.9,
+          "top1_z_vs_fair": 1.6425662551315074,
+          "approx_one_sided_p": 0.050236353700325025,
+          "top3_hits": 291,
+          "top3_rate": 0.30990415335463256,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.313,
+          "mean_log_gain_vs_fair": 0.0021222309757769446
+        },
+        "year_1995": {
+          "draws": 598,
+          "calendar_days": 311,
+          "positions": 1794,
+          "top1_hits": 170,
+          "top1_rate": 0.0947603121516165,
+          "top1_95pct_normal_interval": [
+            0.08087786251090986,
+            0.10864276179232313
+          ],
+          "chance_expected_top1": 179.4,
+          "top1_z_vs_fair": -0.7397677246181545,
+          "approx_one_sided_p": 0.7702795269174506,
+          "top3_hits": 490,
+          "top3_rate": 0.2731326644370123,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 0.598,
+          "mean_log_gain_vs_fair": -0.0023677976695679935
+        },
+        "stream_Day": {
+          "draws": 10991,
+          "calendar_days": 10991,
+          "positions": 32973,
+          "top1_hits": 3182,
+          "top1_rate": 0.09650319958754132,
+          "top1_95pct_normal_interval": [
+            0.0932650411458166,
+            0.09974135802926604
+          ],
+          "chance_expected_top1": 3297.3,
+          "top1_z_vs_fair": -2.1165514077713166,
+          "approx_one_sided_p": 0.9828510310746695,
+          "top3_hits": 9749,
+          "top3_rate": 0.2956661510933188,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 10,
+          "chance_expected_exact": 10.991,
+          "mean_log_gain_vs_fair": -0.0005456923106551744
+        },
+        "year_1996": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 185,
+          "top1_rate": 0.09850905218317359,
+          "top1_95pct_normal_interval": [
+            0.08494062425574864,
+            0.11207748011059854
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": -0.21537187186388893,
+          "approx_one_sided_p": 0.5852613007881122,
+          "top3_hits": 580,
+          "top3_rate": 0.308839190628328,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": 0.0004399859782437513
+        },
+        "year_1997": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 208,
+          "top1_rate": 0.11075612353567625,
+          "top1_95pct_normal_interval": [
+            0.0971876956082513,
+            0.1243245514631012
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": 1.55375421844662,
+          "approx_one_sided_p": 0.06012152736749401,
+          "top3_hits": 545,
+          "top3_rate": 0.29020234291799785,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": -0.0005627851781050662
+        },
+        "year_1998": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 177,
+          "top1_rate": 0.09424920127795527,
+          "top1_95pct_normal_interval": [
+            0.08068077335053032,
+            0.10781762920538022
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": -0.8307200771892833,
+          "approx_one_sided_p": 0.7969341091837276,
+          "top3_hits": 552,
+          "top3_rate": 0.2939297124600639,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": -0.0017689762958252467
+        },
+        "year_1999": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 191,
+          "top1_rate": 0.10170394036208733,
+          "top1_95pct_normal_interval": [
+            0.08813551243466237,
+            0.11527236828951228
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": 0.2461392821301569,
+          "approx_one_sided_p": 0.4027872077639526,
+          "top3_hits": 562,
+          "top3_rate": 0.2992545260915868,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": 0.0003117081570200105
+        },
+        "year_2000": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 168,
+          "top1_rate": 0.08945686900958466,
+          "top1_95pct_normal_interval": [
+            0.07588844108215971,
+            0.10302529693700961
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": -1.5229868081803521,
+          "approx_one_sided_p": 0.9361189970745114,
+          "top3_hits": 577,
+          "top3_rate": 0.30724174653887115,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": 1.9283167738951172e-05
+        },
+        "year_2001": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 185,
+          "top1_rate": 0.09850905218317359,
+          "top1_95pct_normal_interval": [
+            0.08494062425574864,
+            0.11207748011059854
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": -0.21537187186388893,
+          "approx_one_sided_p": 0.5852613007881122,
+          "top3_hits": 545,
+          "top3_rate": 0.29020234291799785,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": -0.0019925772899876022
+        },
+        "year_2002": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 188,
+          "top1_rate": 0.10010649627263046,
+          "top1_95pct_normal_interval": [
+            0.08653806834520551,
+            0.11367492420005541
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": 0.015383705133133986,
+          "approx_one_sided_p": 0.4938630316549538,
+          "top3_hits": 569,
+          "top3_rate": 0.3029818956336528,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": -0.00047511836394640265
+        },
+        "year_2003": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 177,
+          "top1_rate": 0.09424920127795527,
+          "top1_95pct_normal_interval": [
+            0.08068077335053032,
+            0.10781762920538022
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": -0.8307200771892833,
+          "approx_one_sided_p": 0.7969341091837276,
+          "top3_hits": 553,
+          "top3_rate": 0.2944621938232162,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": 9.137390285228827e-05
+        },
+        "year_2004": {
+          "draws": 628,
+          "calendar_days": 314,
+          "positions": 1884,
+          "top1_hits": 207,
+          "top1_rate": 0.10987261146496816,
+          "top1_95pct_normal_interval": [
+            0.09632580654399586,
+            0.12341941638594045
+          ],
+          "chance_expected_top1": 188.4,
+          "top1_z_vs_fair": 1.4284046005106827,
+          "approx_one_sided_p": 0.07658771788719299,
+          "top3_hits": 556,
+          "top3_rate": 0.2951167728237792,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.628,
+          "mean_log_gain_vs_fair": 0.00024672260006423333
+        },
+        "year_2005": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 1878,
+          "top1_hits": 163,
+          "top1_rate": 0.08679446219382321,
+          "top1_95pct_normal_interval": [
+            0.07322603426639826,
+            0.10036289012124816
+          ],
+          "chance_expected_top1": 187.8,
+          "top1_z_vs_fair": -1.9075794365087235,
+          "approx_one_sided_p": 0.9717772024901294,
+          "top3_hits": 541,
+          "top3_rate": 0.2880724174653887,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.626,
+          "mean_log_gain_vs_fair": -0.0011220824021284375
+        },
+        "year_2006": {
+          "draws": 624,
+          "calendar_days": 312,
+          "positions": 1872,
+          "top1_hits": 195,
+          "top1_rate": 0.10416666666666667,
+          "top1_95pct_normal_interval": [
+            0.09057651185914856,
+            0.11775682147418479
+          ],
+          "chance_expected_top1": 187.20000000000002,
+          "top1_z_vs_fair": 0.6009252125773302,
+          "approx_one_sided_p": 0.27394489975844566,
+          "top3_hits": 584,
+          "top3_rate": 0.31196581196581197,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.624,
+          "mean_log_gain_vs_fair": -0.000490808546214872
+        },
+        "year_2007": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 203,
+          "top1_rate": 0.09269406392694064,
+          "top1_95pct_normal_interval": [
+            0.0801292729377224,
+            0.10525885491615888
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -1.139663581788502,
+          "approx_one_sided_p": 0.8727867574644909,
+          "top3_hits": 634,
+          "top3_rate": 0.28949771689497716,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0009127707363668191
+        },
+        "year_2008": {
+          "draws": 730,
+          "calendar_days": 366,
+          "positions": 2190,
+          "top1_hits": 207,
+          "top1_rate": 0.09452054794520548,
+          "top1_95pct_normal_interval": [
+            0.08195575695598724,
+            0.10708533893442372
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -0.8547476863413764,
+          "approx_one_sided_p": 0.8036545775415012,
+          "top3_hits": 667,
+          "top3_rate": 0.3045662100456621,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0014090609117404257
+        },
+        "year_2009": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 225,
+          "top1_rate": 0.10273972602739725,
+          "top1_95pct_normal_interval": [
+            0.09017493503817901,
+            0.1153045170166155
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": 0.4273738431706882,
+          "approx_one_sided_p": 0.3345535279662544,
+          "top3_hits": 653,
+          "top3_rate": 0.29817351598173514,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0008991394349449324
+        },
+        "year_2010": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 205,
+          "top1_rate": 0.09360730593607305,
+          "top1_95pct_normal_interval": [
+            0.08104251494685481,
+            0.1061720969252913
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -0.9972056340649391,
+          "approx_one_sided_p": 0.8406676466079949,
+          "top3_hits": 626,
+          "top3_rate": 0.28584474885844746,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0009219907740015027
+        },
+        "year_2011": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 207,
+          "top1_rate": 0.09452054794520548,
+          "top1_95pct_normal_interval": [
+            0.08195575695598724,
+            0.10708533893442372
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -0.8547476863413764,
+          "approx_one_sided_p": 0.8036545775415012,
+          "top3_hits": 657,
+          "top3_rate": 0.3,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 3,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0002375438649019921
+        },
+        "year_2012": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2196,
+          "top1_hits": 222,
+          "top1_rate": 0.10109289617486339,
+          "top1_95pct_normal_interval": [
+            0.08854528194143958,
+            0.1136405104082872
+          ],
+          "chance_expected_top1": 219.60000000000002,
+          "top1_z_vs_fair": 0.17071583991052636,
+          "approx_one_sided_p": 0.4322236036112101,
+          "top3_hits": 678,
+          "top3_rate": 0.3087431693989071,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.732,
+          "mean_log_gain_vs_fair": -0.0001643369581800583
+        },
+        "year_2013": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 192,
+          "top1_rate": 0.08767123287671233,
+          "top1_95pct_normal_interval": [
+            0.07510644188749409,
+            0.10023602386593057
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -1.923182294268097,
+          "approx_one_sided_p": 0.9727714199677051,
+          "top3_hits": 624,
+          "top3_rate": 0.28493150684931506,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0016546453276447479
+        },
+        "year_2014": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 244,
+          "top1_rate": 0.11141552511415526,
+          "top1_95pct_normal_interval": [
+            0.09885073412493701,
+            0.1239803161033735
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": 1.7807243465445342,
+          "approx_one_sided_p": 0.037478746881063306,
+          "top3_hits": 690,
+          "top3_rate": 0.3150684931506849,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": 0.0007934765121683402
+        },
+        "year_2015": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 221,
+          "top1_rate": 0.10091324200913242,
+          "top1_95pct_normal_interval": [
+            0.08834845101991418,
+            0.11347803299835066
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": 0.14245794772356274,
+          "approx_one_sided_p": 0.44335914669488874,
+          "top3_hits": 626,
+          "top3_rate": 0.28584474885844746,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0009444306703935048
+        },
+        "year_2016": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2196,
+          "top1_hits": 218,
+          "top1_rate": 0.09927140255009108,
+          "top1_95pct_normal_interval": [
+            0.08672378831666727,
+            0.11181901678351489
+          ],
+          "chance_expected_top1": 219.60000000000002,
+          "top1_z_vs_fair": -0.11381055994035359,
+          "approx_one_sided_p": 0.545306016316441,
+          "top3_hits": 633,
+          "top3_rate": 0.28825136612021857,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.732,
+          "mean_log_gain_vs_fair": -0.0015406383874429178
+        },
+        "year_2017": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 225,
+          "top1_rate": 0.10273972602739725,
+          "top1_95pct_normal_interval": [
+            0.09017493503817901,
+            0.1153045170166155
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": 0.4273738431706882,
+          "approx_one_sided_p": 0.3345535279662544,
+          "top3_hits": 658,
+          "top3_rate": 0.3004566210045662,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -8.943531982743331e-05
+        },
+        "year_2018": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 204,
+          "top1_rate": 0.09315068493150686,
+          "top1_95pct_normal_interval": [
+            0.08058589394228861,
+            0.1057154759207251
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -1.0684346079267204,
+          "approx_one_sided_p": 0.8573377435328398,
+          "top3_hits": 631,
+          "top3_rate": 0.28812785388127854,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0015336884908367548
+        },
+        "year_2019": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 188,
+          "top1_rate": 0.08584474885844749,
+          "top1_95pct_normal_interval": [
+            0.07327995786922925,
+            0.09840953984766573
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -2.2080981897152223,
+          "approx_one_sided_p": 0.9863812854087068,
+          "top3_hits": 606,
+          "top3_rate": 0.27671232876712326,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.000822564569676639
+        },
+        "year_2020": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2196,
+          "top1_hits": 227,
+          "top1_rate": 0.10336976320582877,
+          "top1_95pct_normal_interval": [
+            0.09082214897240497,
+            0.11591737743925258
+          ],
+          "chance_expected_top1": 219.60000000000002,
+          "top1_z_vs_fair": 0.5263738397241262,
+          "approx_one_sided_p": 0.29931424409227686,
+          "top3_hits": 638,
+          "top3_rate": 0.290528233151184,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.732,
+          "mean_log_gain_vs_fair": -0.0001523734848743275
+        },
+        "year_2021": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 201,
+          "top1_rate": 0.09178082191780822,
+          "top1_95pct_normal_interval": [
+            0.07921603092858998,
+            0.10434561290702646
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -1.2821215295120645,
+          "approx_one_sided_p": 0.9000999911969952,
+          "top3_hits": 636,
+          "top3_rate": 0.29041095890410956,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.0010303086725789278
+        },
+        "year_2022": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 210,
+          "top1_rate": 0.0958904109589041,
+          "top1_95pct_normal_interval": [
+            0.08332561996968586,
+            0.10845520194812235
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -0.6410607647560322,
+          "approx_one_sided_p": 0.7392583978167511,
+          "top3_hits": 648,
+          "top3_rate": 0.2958904109589041,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -0.000663307209995066
+        },
+        "year_2023": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 214,
+          "top1_rate": 0.09771689497716896,
+          "top1_95pct_normal_interval": [
+            0.08515210398795071,
+            0.1102816859663872
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": -0.3561448693089068,
+          "approx_one_sided_p": 0.6391339618059475,
+          "top3_hits": 664,
+          "top3_rate": 0.30319634703196346,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": -8.678284203559543e-05
+        },
+        "year_2024": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2196,
+          "top1_hits": 214,
+          "top1_rate": 0.09744990892531877,
+          "top1_95pct_normal_interval": [
+            0.08490229469189496,
+            0.10999752315874257
+          ],
+          "chance_expected_top1": 219.60000000000002,
+          "top1_z_vs_fair": -0.3983369597912335,
+          "approx_one_sided_p": 0.6548090900914368,
+          "top3_hits": 613,
+          "top3_rate": 0.279143897996357,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.732,
+          "mean_log_gain_vs_fair": -0.0019583545866657414
+        },
+        "year_2025": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2190,
+          "top1_hits": 234,
+          "top1_rate": 0.10684931506849316,
+          "top1_95pct_normal_interval": [
+            0.09428452407927491,
+            0.1194141060577114
+          ],
+          "chance_expected_top1": 219.0,
+          "top1_z_vs_fair": 1.0684346079267204,
+          "approx_one_sided_p": 0.14266225646716027,
+          "top3_hits": 682,
+          "top3_rate": 0.31141552511415527,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 0.73,
+          "mean_log_gain_vs_fair": 0.00015077539540314422
+        },
+        "recent_Day": {
+          "draws": 686,
+          "calendar_days": 686,
+          "positions": 2058,
+          "top1_hits": 221,
+          "top1_rate": 0.10738581146744412,
+          "top1_95pct_normal_interval": [
+            0.0944243300706284,
+            0.12034729286425984
+          ],
+          "chance_expected_top1": 205.8,
+          "top1_z_vs_fair": 1.1168623425827595,
+          "approx_one_sided_p": 0.1320265939890566,
+          "top3_hits": 634,
+          "top3_rate": 0.3080660835762877,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.686,
+          "mean_log_gain_vs_fair": 0.00041710717698857967
+        },
+        "recent": {
+          "draws": 1372,
+          "calendar_days": 686,
+          "positions": 4116,
+          "top1_hits": 452,
+          "top1_rate": 0.1098153547133139,
+          "top1_95pct_normal_interval": [
+            0.10065020332340222,
+            0.11898050610322558
+          ],
+          "chance_expected_top1": 411.6,
+          "top1_z_vs_fair": 2.099048277508116,
+          "approx_one_sided_p": 0.017906322593174553,
+          "top3_hits": 1291,
+          "top3_rate": 0.3136540330417881,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 1.372,
+          "mean_log_gain_vs_fair": 0.0006135375382563568
+        },
+        "recent_Night": {
+          "draws": 686,
+          "calendar_days": 686,
+          "positions": 2058,
+          "top1_hits": 231,
+          "top1_rate": 0.11224489795918367,
+          "top1_95pct_normal_interval": [
+            0.09928341656236796,
+            0.1252063793559994
+          ],
+          "chance_expected_top1": 205.8,
+          "top1_z_vs_fair": 1.851640199545102,
+          "approx_one_sided_p": 0.03203875322552985,
+          "top3_hits": 657,
+          "top3_rate": 0.31924198250728864,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.686,
+          "mean_log_gain_vs_fair": 0.0008099678995241345
+        },
+        "year_2026": {
+          "draws": 642,
+          "calendar_days": 321,
+          "positions": 1926,
+          "top1_hits": 218,
+          "top1_rate": 0.11318795430944964,
+          "top1_95pct_normal_interval": [
+            0.09978967013976624,
+            0.12658623847913303
+          ],
+          "chance_expected_top1": 192.60000000000002,
+          "top1_z_vs_fair": 1.929231394047381,
+          "approx_one_sided_p": 0.026851071209936343,
+          "top3_hits": 609,
+          "top3_rate": 0.3161993769470405,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.642,
+          "mean_log_gain_vs_fair": 0.0011397312520925649
+        },
+        "2026_Day": {
+          "draws": 321,
+          "calendar_days": 321,
+          "positions": 963,
+          "top1_hits": 105,
+          "top1_rate": 0.10903426791277258,
+          "top1_95pct_normal_interval": [
+            0.09008623272747758,
+            0.1279823030980676
+          ],
+          "chance_expected_top1": 96.30000000000001,
+          "top1_z_vs_fair": 0.9345119394108069,
+          "approx_one_sided_p": 0.17501994006676413,
+          "top3_hits": 295,
+          "top3_rate": 0.3063343717549325,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.321,
+          "mean_log_gain_vs_fair": 0.000922337571614842
+        },
+        "2026_Night": {
+          "draws": 321,
+          "calendar_days": 321,
+          "positions": 963,
+          "top1_hits": 113,
+          "top1_rate": 0.11734164070612668,
+          "top1_95pct_normal_interval": [
+            0.09839360552083168,
+            0.13628967589142169
+          ],
+          "chance_expected_top1": 96.30000000000001,
+          "top1_z_vs_fair": 1.7938332630069522,
+          "approx_one_sided_p": 0.03641989301974177,
+          "top3_hits": 314,
+          "top3_rate": 0.3260643821391485,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.321,
+          "mean_log_gain_vs_fair": 0.0013571249325702868
+        }
+      }
+    },
+    "pick4": {
+      "game": "pick4",
+      "history_draws": 23023,
+      "first_draw": "1991-10-01T03:00:00+00:00",
+      "latest_draw": "2026-11-18T04:00:00+00:00",
+      "formula": "rolling pooled digit probabilities with 5,000 draws; 200 pseudo observations per position per digit",
+      "exploratory_selected_after_v3_results": true,
+      "results": {
+        "all": {
+          "draws": 22523,
+          "calendar_days": 11532,
+          "positions": 90092,
+          "top1_hits": 9087,
+          "top1_rate": 0.10086356169249212,
+          "top1_95pct_normal_interval": [
+            0.09890456270289394,
+            0.10282256068209031
+          ],
+          "chance_expected_top1": 9009.2,
+          "top1_z_vs_fair": 0.8640029557298053,
+          "approx_one_sided_p": 0.19379313342863463,
+          "top3_hits": 26997,
+          "top3_rate": 0.29966034720063933,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 3,
+          "chance_expected_exact": 2.2523,
+          "mean_log_gain_vs_fair": -0.0006163832815633287
+        },
+        "year_1993": {
+          "draws": 204,
+          "calendar_days": 204,
+          "positions": 816,
+          "top1_hits": 92,
+          "top1_rate": 0.11274509803921569,
+          "top1_95pct_normal_interval": [
+            0.09216098080400395,
+            0.13332921527442743
+          ],
+          "chance_expected_top1": 81.60000000000001,
+          "top1_z_vs_fair": 1.2135760728242742,
+          "approx_one_sided_p": 0.11245482428412978,
+          "top3_hits": 243,
+          "top3_rate": 0.2977941176470588,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0204,
+          "mean_log_gain_vs_fair": 0.000541400659494811
+        },
+        "stream_Night": {
+          "draws": 11532,
+          "calendar_days": 11532,
+          "positions": 46128,
+          "top1_hits": 4559,
+          "top1_rate": 0.09883368019424212,
+          "top1_95pct_normal_interval": [
+            0.09609592246614937,
+            0.10157143792233486
+          ],
+          "chance_expected_top1": 4612.8,
+          "top1_z_vs_fair": -0.8349850667312357,
+          "approx_one_sided_p": 0.7981369417656585,
+          "top3_hits": 13735,
+          "top3_rate": 0.2977584113770378,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 2,
+          "chance_expected_exact": 1.1532,
+          "mean_log_gain_vs_fair": -0.0008828347066261766
+        },
+        "year_1994": {
+          "draws": 313,
+          "calendar_days": 313,
+          "positions": 1252,
+          "top1_hits": 146,
+          "top1_rate": 0.11661341853035144,
+          "top1_95pct_normal_interval": [
+            0.09999555601339133,
+            0.13323128104731155
+          ],
+          "chance_expected_top1": 125.2,
+          "top1_z_vs_fair": 1.9594758523399676,
+          "approx_one_sided_p": 0.025028542570843863,
+          "top3_hits": 398,
+          "top3_rate": 0.31789137380191695,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0313,
+          "mean_log_gain_vs_fair": 0.002583120087650836
+        },
+        "year_1995": {
+          "draws": 598,
+          "calendar_days": 311,
+          "positions": 2392,
+          "top1_hits": 258,
+          "top1_rate": 0.10785953177257525,
+          "top1_95pct_normal_interval": [
+            0.09583697771696514,
+            0.11988208582818535
+          ],
+          "chance_expected_top1": 239.20000000000002,
+          "top1_z_vs_fair": 1.2813152848382634,
+          "approx_one_sided_p": 0.10004147314828442,
+          "top3_hits": 728,
+          "top3_rate": 0.30434782608695654,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0598,
+          "mean_log_gain_vs_fair": -0.00024268450710849138
+        },
+        "stream_Day": {
+          "draws": 10991,
+          "calendar_days": 10991,
+          "positions": 43964,
+          "top1_hits": 4528,
+          "top1_rate": 0.1029933582021654,
+          "top1_95pct_normal_interval": [
+            0.10018903073015277,
+            0.10579768567417804
+          ],
+          "chance_expected_top1": 4396.400000000001,
+          "top1_z_vs_fair": 2.09211732039037,
+          "approx_one_sided_p": 0.0182140110651077,
+          "top3_hits": 13262,
+          "top3_rate": 0.30165590028204897,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 1.0991,
+          "mean_log_gain_vs_fair": -0.00033681656026183354
+        },
+        "year_1996": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 238,
+          "top1_rate": 0.0950479233226837,
+          "top1_95pct_normal_interval": [
+            0.08329732004811546,
+            0.10679852659725195
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": -0.8260061258766797,
+          "approx_one_sided_p": 0.7955996915884405,
+          "top3_hits": 731,
+          "top3_rate": 0.2919329073482428,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": -0.0002123017538107598
+        },
+        "year_1997": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 244,
+          "top1_rate": 0.09744408945686901,
+          "top1_95pct_normal_interval": [
+            0.08569348618230077,
+            0.10919469273143725
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": -0.42632574238796384,
+          "approx_one_sided_p": 0.6650647487020805,
+          "top3_hits": 728,
+          "top3_rate": 0.29073482428115016,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": -0.0029074525910236008
+        },
+        "year_1998": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 253,
+          "top1_rate": 0.10103833865814696,
+          "top1_95pct_normal_interval": [
+            0.08928773538357872,
+            0.1127889419327152
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": 0.17319483284510978,
+          "approx_one_sided_p": 0.43124914252959523,
+          "top3_hits": 690,
+          "top3_rate": 0.2755591054313099,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": -0.0026186865675094572
+        },
+        "year_1999": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 229,
+          "top1_rate": 0.09145367412140575,
+          "top1_95pct_normal_interval": [
+            0.0797030708468375,
+            0.10320427739597399
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": -1.4255267011097532,
+          "approx_one_sided_p": 0.9229974963003535,
+          "top3_hits": 746,
+          "top3_rate": 0.2979233226837061,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": -0.0010578166270817527
+        },
+        "year_2000": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 267,
+          "top1_rate": 0.106629392971246,
+          "top1_95pct_normal_interval": [
+            0.09487878969667776,
+            0.11837999624581425
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": 1.10578239431878,
+          "approx_one_sided_p": 0.1344103585294755,
+          "top3_hits": 781,
+          "top3_rate": 0.31190095846645366,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": 0.0006319557845342836
+        },
+        "year_2001": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 264,
+          "top1_rate": 0.10543130990415335,
+          "top1_95pct_normal_interval": [
+            0.09368070662958511,
+            0.11718191317872159
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": 0.905942202574422,
+          "approx_one_sided_p": 0.18248322256471244,
+          "top3_hits": 765,
+          "top3_rate": 0.3055111821086262,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": 0.0009089566711381839
+        },
+        "year_2002": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 256,
+          "top1_rate": 0.10223642172523961,
+          "top1_95pct_normal_interval": [
+            0.09048581845067137,
+            0.11398702499980785
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": 0.3730350245894677,
+          "approx_one_sided_p": 0.3545611882474724,
+          "top3_hits": 778,
+          "top3_rate": 0.31070287539936103,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": -0.00022650777913839725
+        },
+        "year_2003": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 254,
+          "top1_rate": 0.10143769968051118,
+          "top1_95pct_normal_interval": [
+            0.08968709640594294,
+            0.11318830295507942
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": 0.23980823009322907,
+          "approx_one_sided_p": 0.4052394632145047,
+          "top3_hits": 780,
+          "top3_rate": 0.31150159744408945,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": 0.0011999825134200877
+        },
+        "year_2004": {
+          "draws": 628,
+          "calendar_days": 314,
+          "positions": 2512,
+          "top1_hits": 235,
+          "top1_rate": 0.09355095541401273,
+          "top1_95pct_normal_interval": [
+            0.08181907821233869,
+            0.10528283261568677
+          ],
+          "chance_expected_top1": 251.20000000000002,
+          "top1_z_vs_fair": -1.077417294031291,
+          "approx_one_sided_p": 0.8593530592876172,
+          "top3_hits": 720,
+          "top3_rate": 0.28662420382165604,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0628,
+          "mean_log_gain_vs_fair": -0.003851343494923046
+        },
+        "year_2005": {
+          "draws": 626,
+          "calendar_days": 313,
+          "positions": 2504,
+          "top1_hits": 251,
+          "top1_rate": 0.10023961661341853,
+          "top1_95pct_normal_interval": [
+            0.08848901333885029,
+            0.11199021988798677
+          ],
+          "chance_expected_top1": 250.4,
+          "top1_z_vs_fair": 0.0399680383488712,
+          "approx_one_sided_p": 0.484059303812694,
+          "top3_hits": 733,
+          "top3_rate": 0.29273162939297126,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0626,
+          "mean_log_gain_vs_fair": -0.0012189107465839244
+        },
+        "year_2006": {
+          "draws": 624,
+          "calendar_days": 312,
+          "positions": 2496,
+          "top1_hits": 225,
+          "top1_rate": 0.09014423076923077,
+          "top1_95pct_normal_interval": [
+            0.07837481146455687,
+            0.10191365007390467
+          ],
+          "chance_expected_top1": 249.60000000000002,
+          "top1_z_vs_fair": -1.6413135765021447,
+          "approx_one_sided_p": 0.9496338303500548,
+          "top3_hits": 695,
+          "top3_rate": 0.27844551282051283,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0624,
+          "mean_log_gain_vs_fair": -0.0019019242358580151
+        },
+        "year_2007": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 289,
+          "top1_rate": 0.09897260273972602,
+          "top1_95pct_normal_interval": [
+            0.08809117454982122,
+            0.10985403092963082
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -0.1850583025494013,
+          "approx_one_sided_p": 0.5734083468026666,
+          "top3_hits": 889,
+          "top3_rate": 0.30445205479452053,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.001725186150856713
+        },
+        "year_2008": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2928,
+          "top1_hits": 306,
+          "top1_rate": 0.10450819672131148,
+          "top1_95pct_normal_interval": [
+            0.09364164403827926,
+            0.1153747494043437
+          ],
+          "chance_expected_top1": 292.8,
+          "top1_z_vs_fair": 0.8131433980500293,
+          "approx_one_sided_p": 0.20806792353913964,
+          "top3_hits": 903,
+          "top3_rate": 0.3084016393442623,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0732,
+          "mean_log_gain_vs_fair": 0.0004558005041427469
+        },
+        "year_2009": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 280,
+          "top1_rate": 0.0958904109589041,
+          "top1_95pct_normal_interval": [
+            0.0850089827689993,
+            0.1067718391488089
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -0.7402332101976052,
+          "approx_one_sided_p": 0.7704207502045757,
+          "top3_hits": 852,
+          "top3_rate": 0.29178082191780824,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0010150793055528542
+        },
+        "year_2010": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 302,
+          "top1_rate": 0.10342465753424658,
+          "top1_95pct_normal_interval": [
+            0.09254322934434178,
+            0.11430608572415138
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 0.6168610084980044,
+          "approx_one_sided_p": 0.26866320357433965,
+          "top3_hits": 894,
+          "top3_rate": 0.3061643835616438,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": 8.45428051563398e-05
+        },
+        "year_2011": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 289,
+          "top1_rate": 0.09897260273972602,
+          "top1_95pct_normal_interval": [
+            0.08809117454982122,
+            0.10985403092963082
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -0.1850583025494013,
+          "approx_one_sided_p": 0.5734083468026666,
+          "top3_hits": 837,
+          "top3_rate": 0.28664383561643836,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.00240639729459441
+        },
+        "year_2012": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2928,
+          "top1_hits": 287,
+          "top1_rate": 0.09801912568306011,
+          "top1_95pct_normal_interval": [
+            0.08715257300002789,
+            0.10888567836609232
+          ],
+          "chance_expected_top1": 292.8,
+          "top1_z_vs_fair": -0.35729028096137755,
+          "approx_one_sided_p": 0.6395627474277993,
+          "top3_hits": 898,
+          "top3_rate": 0.30669398907103823,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0732,
+          "mean_log_gain_vs_fair": 0.00027343048965721827
+        },
+        "year_2013": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 307,
+          "top1_rate": 0.10513698630136986,
+          "top1_95pct_normal_interval": [
+            0.09425555811146506,
+            0.11601841449127466
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 0.9252915127470066,
+          "approx_one_sided_p": 0.17740714617528272,
+          "top3_hits": 898,
+          "top3_rate": 0.30753424657534245,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.00046465472547433864
+        },
+        "year_2014": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 306,
+          "top1_rate": 0.1047945205479452,
+          "top1_95pct_normal_interval": [
+            0.0939130923580404,
+            0.11567594873785
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 0.8636054118972062,
+          "approx_one_sided_p": 0.19390234508816223,
+          "top3_hits": 881,
+          "top3_rate": 0.3017123287671233,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0007754426638622795
+        },
+        "year_2015": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 282,
+          "top1_rate": 0.09657534246575343,
+          "top1_95pct_normal_interval": [
+            0.08569391427584863,
+            0.10745677065565823
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -0.6168610084980044,
+          "approx_one_sided_p": 0.7313367964256604,
+          "top3_hits": 876,
+          "top3_rate": 0.3,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0002941701134335196
+        },
+        "year_2016": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2928,
+          "top1_hits": 273,
+          "top1_rate": 0.0932377049180328,
+          "top1_95pct_normal_interval": [
+            0.08237115223500058,
+            0.10410425760106501
+          ],
+          "chance_expected_top1": 292.8,
+          "top1_z_vs_fair": -1.2197150970750459,
+          "approx_one_sided_p": 0.8887135517667176,
+          "top3_hits": 846,
+          "top3_rate": 0.2889344262295082,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0732,
+          "mean_log_gain_vs_fair": -0.0007816167523829602
+        },
+        "year_2017": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 292,
+          "top1_rate": 0.1,
+          "top1_95pct_normal_interval": [
+            0.0891185718100952,
+            0.1108814281899048
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 0.0,
+          "approx_one_sided_p": 0.5,
+          "top3_hits": 870,
+          "top3_rate": 0.2979452054794521,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0011235547575611789
+        },
+        "year_2018": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 316,
+          "top1_rate": 0.10821917808219178,
+          "top1_95pct_normal_interval": [
+            0.09733774989228698,
+            0.11910060627209658
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 1.4804664203952105,
+          "approx_one_sided_p": 0.06937440786459163,
+          "top3_hits": 893,
+          "top3_rate": 0.30582191780821916,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -4.1827530833616875e-06
+        },
+        "year_2019": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 327,
+          "top1_rate": 0.11198630136986301,
+          "top1_95pct_normal_interval": [
+            0.10110487317995821,
+            0.12286772955976781
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 2.1590135297430155,
+          "approx_one_sided_p": 0.015424558648840478,
+          "top3_hits": 909,
+          "top3_rate": 0.3113013698630137,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": 0.001714539228899873
+        },
+        "year_2020": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2928,
+          "top1_hits": 320,
+          "top1_rate": 0.1092896174863388,
+          "top1_95pct_normal_interval": [
+            0.09842306480330658,
+            0.12015617016937101
+          ],
+          "chance_expected_top1": 292.8,
+          "top1_z_vs_fair": 1.6755682141636976,
+          "approx_one_sided_p": 0.04691139960180986,
+          "top3_hits": 915,
+          "top3_rate": 0.3125,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0732,
+          "mean_log_gain_vs_fair": 0.001292051137960391
+        },
+        "year_2021": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 274,
+          "top1_rate": 0.09383561643835617,
+          "top1_95pct_normal_interval": [
+            0.08295418824845137,
+            0.10471704462826097
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -1.110349815296408,
+          "approx_one_sided_p": 0.8665758426853278,
+          "top3_hits": 872,
+          "top3_rate": 0.29863013698630136,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0014494834498710541
+        },
+        "year_2022": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 285,
+          "top1_rate": 0.0976027397260274,
+          "top1_95pct_normal_interval": [
+            0.0867213115361226,
+            0.1084841679159322
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -0.4318027059486031,
+          "approx_one_sided_p": 0.6670575936610242,
+          "top3_hits": 861,
+          "top3_rate": 0.29486301369863016,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.001716158910900417
+        },
+        "year_2023": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 288,
+          "top1_rate": 0.09863013698630137,
+          "top1_95pct_normal_interval": [
+            0.08774870879639657,
+            0.10951156517620617
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": -0.24674440339920176,
+          "approx_one_sided_p": 0.5974469800797471,
+          "top3_hits": 877,
+          "top3_rate": 0.30034246575342466,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0006142743504794553
+        },
+        "year_2024": {
+          "draws": 732,
+          "calendar_days": 366,
+          "positions": 2928,
+          "top1_hits": 304,
+          "top1_rate": 0.10382513661202186,
+          "top1_95pct_normal_interval": [
+            0.09295858392898965,
+            0.11469168929505408
+          ],
+          "chance_expected_top1": 292.8,
+          "top1_z_vs_fair": 0.689939852890934,
+          "approx_one_sided_p": 0.245116006221914,
+          "top3_hits": 885,
+          "top3_rate": 0.30225409836065575,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0732,
+          "mean_log_gain_vs_fair": -0.00023023569969762378
+        },
+        "year_2025": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 2920,
+          "top1_hits": 299,
+          "top1_rate": 0.1023972602739726,
+          "top1_95pct_normal_interval": [
+            0.0915158320840678,
+            0.1132786884638774
+          ],
+          "chance_expected_top1": 292.0,
+          "top1_z_vs_fair": 0.4318027059486031,
+          "approx_one_sided_p": 0.33294240633897576,
+          "top3_hits": 842,
+          "top3_rate": 0.28835616438356165,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.073,
+          "mean_log_gain_vs_fair": -0.0012934832634812837
+        },
+        "recent_Day": {
+          "draws": 686,
+          "calendar_days": 686,
+          "positions": 2744,
+          "top1_hits": 304,
+          "top1_rate": 0.11078717201166181,
+          "top1_95pct_normal_interval": [
+            0.09956219985133999,
+            0.12201214417198364
+          ],
+          "chance_expected_top1": 274.40000000000003,
+          "top1_z_vs_fair": 1.883555419192322,
+          "approx_one_sided_p": 0.029812568444256178,
+          "top3_hits": 845,
+          "top3_rate": 0.3079446064139942,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0686,
+          "mean_log_gain_vs_fair": 0.00045491430755263245
+        },
+        "recent": {
+          "draws": 1372,
+          "calendar_days": 686,
+          "positions": 5488,
+          "top1_hits": 548,
+          "top1_rate": 0.09985422740524781,
+          "top1_95pct_normal_interval": [
+            0.09191697347205403,
+            0.10779148133844159
+          ],
+          "chance_expected_top1": 548.8000000000001,
+          "top1_z_vs_fair": -0.03599661647707233,
+          "approx_one_sided_p": 0.514357471566221,
+          "top3_hits": 1625,
+          "top3_rate": 0.296100583090379,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.1372,
+          "mean_log_gain_vs_fair": -0.0008748323443161616
+        },
+        "recent_Night": {
+          "draws": 686,
+          "calendar_days": 686,
+          "positions": 2744,
+          "top1_hits": 244,
+          "top1_rate": 0.08892128279883382,
+          "top1_95pct_normal_interval": [
+            0.077696310638512,
+            0.10014625495915565
+          ],
+          "chance_expected_top1": 274.40000000000003,
+          "top1_z_vs_fair": -1.9344623224137405,
+          "approx_one_sided_p": 0.9734718448745088,
+          "top3_hits": 780,
+          "top3_rate": 0.28425655976676384,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 1,
+          "chance_expected_exact": 0.0686,
+          "mean_log_gain_vs_fair": -0.002204578996184953
+        },
+        "year_2026": {
+          "draws": 642,
+          "calendar_days": 321,
+          "positions": 2568,
+          "top1_hits": 249,
+          "top1_rate": 0.0969626168224299,
+          "top1_95pct_normal_interval": [
+            0.08535936236436119,
+            0.10856587128049862
+          ],
+          "chance_expected_top1": 256.8,
+          "top1_z_vs_fair": -0.5130690746765086,
+          "approx_one_sided_p": 0.6960484984231191,
+          "top3_hits": 783,
+          "top3_rate": 0.30490654205607476,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0642,
+          "mean_log_gain_vs_fair": -0.00039879625243058445
+        },
+        "2026_Day": {
+          "draws": 321,
+          "calendar_days": 321,
+          "positions": 1284,
+          "top1_hits": 140,
+          "top1_rate": 0.10903426791277258,
+          "top1_95pct_normal_interval": [
+            0.09262478809050573,
+            0.12544374773503944
+          ],
+          "chance_expected_top1": 128.4,
+          "top1_z_vs_fair": 1.079081439559498,
+          "approx_one_sided_p": 0.1402757122363296,
+          "top3_hits": 405,
+          "top3_rate": 0.31542056074766356,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0321,
+          "mean_log_gain_vs_fair": 0.0011534964189350836
+        },
+        "2026_Night": {
+          "draws": 321,
+          "calendar_days": 321,
+          "positions": 1284,
+          "top1_hits": 109,
+          "top1_rate": 0.08489096573208722,
+          "top1_95pct_normal_interval": [
+            0.06848148590982037,
+            0.10130044555435408
+          ],
+          "chance_expected_top1": 128.4,
+          "top1_z_vs_fair": -1.8046706834012307,
+          "approx_one_sided_p": 0.9644368849954643,
+          "top3_hits": 378,
+          "top3_rate": 0.29439252336448596,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0321,
+          "mean_log_gain_vs_fair": -0.001951088923796252
+        }
+      }
+    },
+    "pick5": {
+      "game": "pick5",
+      "history_draws": 2524,
+      "first_draw": "2023-06-05T17:59:00+00:00",
+      "latest_draw": "2026-11-18T04:00:00+00:00",
+      "formula": "rolling pooled digit probabilities with 5,000 draws; 200 pseudo observations per position per digit",
+      "exploratory_selected_after_v3_results": true,
+      "results": {
+        "all": {
+          "draws": 2024,
+          "calendar_days": 1012,
+          "positions": 10120,
+          "top1_hits": 1031,
+          "top1_rate": 0.10187747035573122,
+          "top1_95pct_normal_interval": [
+            0.09603243597794776,
+            0.10772250473351468
+          ],
+          "chance_expected_top1": 1012.0,
+          "top1_z_vs_fair": 0.6295671948859723,
+          "approx_one_sided_p": 0.26448889624120125,
+          "top3_hits": 3015,
+          "top3_rate": 0.29792490118577075,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.02024,
+          "mean_log_gain_vs_fair": -0.0003921249069826638
+        },
+        "year_2024": {
+          "draws": 652,
+          "calendar_days": 326,
+          "positions": 3260,
+          "top1_hits": 296,
+          "top1_rate": 0.09079754601226994,
+          "top1_95pct_normal_interval": [
+            0.08049917518394027,
+            0.10109591684059961
+          ],
+          "chance_expected_top1": 326.0,
+          "top1_z_vs_fair": -1.751423610260147,
+          "approx_one_sided_p": 0.9600635154996409,
+          "top3_hits": 989,
+          "top3_rate": 0.3033742331288344,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.00652,
+          "mean_log_gain_vs_fair": -0.00027233295087705013
+        },
+        "stream_Day": {
+          "draws": 1012,
+          "calendar_days": 1012,
+          "positions": 5060,
+          "top1_hits": 530,
+          "top1_rate": 0.10474308300395258,
+          "top1_95pct_normal_interval": [
+            0.09647695611435424,
+            0.11300920989355091
+          ],
+          "chance_expected_top1": 506.0,
+          "top1_z_vs_fair": 1.1246431142310664,
+          "approx_one_sided_p": 0.13037014807661274,
+          "top3_hits": 1508,
+          "top3_rate": 0.29802371541501976,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.01012,
+          "mean_log_gain_vs_fair": -3.830990573781019e-06
+        },
+        "stream_Night": {
+          "draws": 1012,
+          "calendar_days": 1012,
+          "positions": 5060,
+          "top1_hits": 501,
+          "top1_rate": 0.09901185770750988,
+          "top1_95pct_normal_interval": [
+            0.09074573081791154,
+            0.10727798459710822
+          ],
+          "chance_expected_top1": 506.0,
+          "top1_z_vs_fair": -0.23430064879813886,
+          "approx_one_sided_p": 0.5926242088638625,
+          "top3_hits": 1507,
+          "top3_rate": 0.29782608695652174,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.01012,
+          "mean_log_gain_vs_fair": -0.0007804188233915455
+        },
+        "year_2025": {
+          "draws": 730,
+          "calendar_days": 365,
+          "positions": 3650,
+          "top1_hits": 375,
+          "top1_rate": 0.10273972602739725,
+          "top1_95pct_normal_interval": [
+            0.09300708077743342,
+            0.1124723712773611
+          ],
+          "chance_expected_top1": 365.0,
+          "top1_z_vs_fair": 0.5517372590682453,
+          "approx_one_sided_p": 0.2905641893079188,
+          "top3_hits": 1066,
+          "top3_rate": 0.29205479452054794,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.0073,
+          "mean_log_gain_vs_fair": -0.0015632982624900716
+        },
+        "recent_Day": {
+          "draws": 686,
+          "calendar_days": 686,
+          "positions": 3430,
+          "top1_hits": 392,
+          "top1_rate": 0.11428571428571428,
+          "top1_95pct_normal_interval": [
+            0.10424579396730538,
+            0.12432563460412319
+          ],
+          "chance_expected_top1": 343.0,
+          "top1_z_vs_fair": 2.788866755113585,
+          "approx_one_sided_p": 0.0026446410711469426,
+          "top3_hits": 1029,
+          "top3_rate": 0.3,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.00686,
+          "mean_log_gain_vs_fair": 0.00042138508074140215
+        },
+        "recent": {
+          "draws": 1372,
+          "calendar_days": 686,
+          "positions": 6860,
+          "top1_hits": 735,
+          "top1_rate": 0.10714285714285714,
+          "top1_95pct_normal_interval": [
+            0.1000435614031376,
+            0.11424215288257668
+          ],
+          "chance_expected_top1": 686.0,
+          "top1_z_vs_fair": 1.9720265943665385,
+          "approx_one_sided_p": 0.024303285336717904,
+          "top3_hits": 2026,
+          "top3_rate": 0.29533527696793005,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.01372,
+          "mean_log_gain_vs_fair": -0.00044905227970923876
+        },
+        "recent_Night": {
+          "draws": 686,
+          "calendar_days": 686,
+          "positions": 3430,
+          "top1_hits": 343,
+          "top1_rate": 0.1,
+          "top1_95pct_normal_interval": [
+            0.0899600796815911,
+            0.11003992031840891
+          ],
+          "chance_expected_top1": 343.0,
+          "top1_z_vs_fair": 0.0,
+          "approx_one_sided_p": 0.5,
+          "top3_hits": 997,
+          "top3_rate": 0.29067055393586005,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.00686,
+          "mean_log_gain_vs_fair": -0.0013194896401598785
+        },
+        "year_2026": {
+          "draws": 642,
+          "calendar_days": 321,
+          "positions": 3210,
+          "top1_hits": 360,
+          "top1_rate": 0.11214953271028037,
+          "top1_95pct_normal_interval": [
+            0.10177126641889273,
+            0.12252779900166802
+          ],
+          "chance_expected_top1": 321.0,
+          "top1_z_vs_fair": 2.2945146562591754,
+          "approx_one_sided_p": 0.010880477091282008,
+          "top3_hits": 960,
+          "top3_rate": 0.29906542056074764,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.00642,
+          "mean_log_gain_vs_fair": 0.000817925239652144
+        },
+        "2026_Day": {
+          "draws": 321,
+          "calendar_days": 321,
+          "positions": 1605,
+          "top1_hits": 201,
+          "top1_rate": 0.1252336448598131,
+          "top1_95pct_normal_interval": [
+            0.11055655991661315,
+            0.13991072980301303
+          ],
+          "chance_expected_top1": 160.5,
+          "top1_z_vs_fair": 3.369738890020395,
+          "approx_one_sided_p": 0.0003761972096212245,
+          "top3_hits": 499,
+          "top3_rate": 0.31090342679127725,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.00321,
+          "mean_log_gain_vs_fair": 0.0036906246504391435
+        },
+        "2026_Night": {
+          "draws": 321,
+          "calendar_days": 321,
+          "positions": 1605,
+          "top1_hits": 159,
+          "top1_rate": 0.09906542056074766,
+          "top1_95pct_normal_interval": [
+            0.08438833561754772,
+            0.1137425055039476
+          ],
+          "chance_expected_top1": 160.5,
+          "top1_z_vs_fair": -0.12480514407482945,
+          "approx_one_sided_p": 0.549661092572543,
+          "top3_hits": 461,
+          "top3_rate": 0.2872274143302181,
+          "chance_expected_top3_rate": 0.3,
+          "full_exact_hits": 0,
+          "chance_expected_exact": 0.00321,
+          "mean_log_gain_vs_fair": -0.0020547741711348525
+        }
+      }
+    }
+  }
+}
