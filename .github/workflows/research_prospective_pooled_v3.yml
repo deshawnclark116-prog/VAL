@@ -1,0 +1,39 @@
+name: VAL frozen pooled-digit v3 future prediction trial
+on:
+  schedule:
+    - cron: '30 13 * * *'
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research_prospective_pooled_v3.py'
+      - 'tests/test_research_prospective_pooled_v3.py'
+      - '.github/workflows/research_prospective_pooled_v3.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-pooled-digit-future-v3
+  cancel-in-progress: false
+jobs:
+  prospective:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify all VAL tests and exact time boundaries
+        run: python -m unittest discover -s tests -v
+      - name: Create and settle immutable future-only v3 predictions
+        run: python -u research_prospective_pooled_v3.py
+      - name: Persist pre-draw predictions and controls
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/prospective_pooled_digit_v3.json reports/prospective_pooled_digit_v3.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record and grade frozen pooled digit future predictions'
+          git pull --rebase origin main
+          git push origin HEAD:main
