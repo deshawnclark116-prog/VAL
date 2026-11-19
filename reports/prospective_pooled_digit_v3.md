@@ -13,8 +13,17 @@ Top-1 successes and partial matches are not prize claims.
 | Game | Settled draws | Top-1 digit hit rate | Top-3 coverage | Model exact | Uniform exact | Mean log gain | Anytime e-value trigger |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | pick3 | 0 | — | — | 0 | 0 | — | No |
+
+Latest frozen target for pick3: 2026-11-19 Night (saved 2026-11-19T21:41:52.356955+00:00).
+Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 609, 914, 063.
 | pick4 | 0 | — | — | 0 | 0 | — | No |
+
+Latest frozen target for pick4: 2026-11-19 Night (saved 2026-11-19T21:41:52.356955+00:00).
+Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 2891, 9179, 0310.
 | pick5 | 0 | — | — | 0 | 0 | — | No |
+
+Latest frozen target for pick5: 2026-11-19 Night (saved 2026-11-19T21:41:52.356955+00:00).
+Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 26872, 85597, 77211.
 
 Fair e-value evidence threshold is log(60) with a
 three-game union-bound allocation; it begins at the first
