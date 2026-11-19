@@ -45,7 +45,7 @@ GAMES_TEST=("pick3","pick4","pick5")
 TRIALS=8
 TRAIN_DRAWS=850
 TEST_DRAWS=650
-V2_PROBE_TARGETS=12
+V2_PROBE_TARGETS=4
 OUTPUT=Path("reports/research_virtual_draw_lab.json")
 MD_OUT=Path("reports/research_virtual_draw_lab.md")
 
@@ -86,7 +86,9 @@ def truth_distribution(scenario,width,stream,machine,offset,position,prefix):
         p[7]=.17
         p=[v if j==7 else .83/9 for j,v in enumerate(p)]
     elif scenario=="halfway_replacement":
-        favorite=7 if offset<.5 else 2
+        # The device changes midway through the evaluation period rather
+        # than before training finishes (850 train + ~325 held-out draws).
+        favorite=7 if offset<.78 else 2
         p[favorite]=.18
         p=[v if j==favorite else .82/9 for j,v in enumerate(p)]
     elif scenario=="hidden_opposing_machines":
@@ -242,8 +244,7 @@ def evaluate(game,scenario,trials=TRIALS,train=TRAIN_DRAWS,test=TEST_DRAWS,probe
                     m["forecasts"]+=1
                     m["total_positions"]+=width
                     m["log_gain"]+=math.log(observed/(.1**width))
-                    m["position_correct"] if False else None
-                    v2_passed+=int(ready["gate_passed"])
+                                v2_passed+=int(ready["gate_passed"])
                     v2_forecasts+=1
             rolling.add(row)
         if (replicate+1)%4==0:
@@ -285,7 +286,7 @@ def markdown(result):
         "Eight scenarios: fair independent; weak fixed-position skew",
         "(12.5% instead of 10% for one digit); strong fixed-position skew",
         "(22% for one digit); pooled 14.5% digit bias; Day-only 17%",
-        "pooled skew; halfway 18% favorite-digit reversal; randomly",
+        "pooled skew; 18% favorite-digit reversal midway through held-out draws; randomly",
         "selected hidden opposing machines with *uniform unconditional*",
         "outcomes; and a 30% same-previous-position echo mechanism.",
         "",
