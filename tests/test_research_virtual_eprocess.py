@@ -1,4 +1,5 @@
 import unittest
+import math
 from research_virtual_eprocess import (LOG_GATE,EXPERTS,START_EVIDENCE,
                                        evaluate)
 
