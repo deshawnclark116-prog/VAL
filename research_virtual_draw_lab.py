@@ -244,7 +244,7 @@ def evaluate(game,scenario,trials=TRIALS,train=TRAIN_DRAWS,test=TEST_DRAWS,probe
                     m["forecasts"]+=1
                     m["total_positions"]+=width
                     m["log_gain"]+=math.log(observed/(.1**width))
-                                v2_passed+=int(ready["gate_passed"])
+                    v2_passed+=int(ready["gate_passed"])
                     v2_forecasts+=1
             rolling.add(row)
         if (replicate+1)%4==0:
