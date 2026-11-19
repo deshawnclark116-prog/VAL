@@ -1,6 +1,6 @@
 {
   "version": "virtual_digit_draw_lab_v1",
-  "generated_utc": "2026-11-19T04:04:14.435292+00:00",
+  "generated_utc": "2026-11-19T04:07:37.481211+00:00",
   "scenarios": [
     "fair_independent",
     "fixed_position_small",
@@ -85,7 +85,7 @@
             "mean_log_gain_vs_uniform": 6.661338147750938e-16
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -161,7 +161,7 @@
             "mean_log_gain_vs_uniform": 0.0033400859639101
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -237,7 +237,7 @@
             "mean_log_gain_vs_uniform": 0.0700826684296853
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -313,7 +313,7 @@
             "mean_log_gain_vs_uniform": 0.027379332313860017
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -389,7 +389,7 @@
             "mean_log_gain_vs_uniform": 0.04332483626637994
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -409,65 +409,65 @@
             "position_correct": 1395,
             "position_total": 15600,
             "top1_rate": 0.08942307692307692,
-            "top3_rate": 0.3617948717948718,
+            "top3_rate": 0.31884615384615383,
             "full_straight_hits": 2,
             "expected_fair_full_straight_hits": 5.2,
             "mean_log_gain_vs_uniform": 0.0
           },
           "pooled": {
             "target_draws": 5200,
-            "position_correct": 2422,
+            "position_correct": 2187,
             "position_total": 15600,
-            "top1_rate": 0.15525641025641027,
-            "top3_rate": 0.3631410256410256,
-            "full_straight_hits": 19,
+            "top1_rate": 0.1401923076923077,
+            "top3_rate": 0.35365384615384615,
+            "full_straight_hits": 15,
             "expected_fair_full_straight_hits": 5.2,
-            "mean_log_gain_vs_uniform": 0.027670748814435993
+            "mean_log_gain_vs_uniform": 0.022009217931706352
           },
           "position": {
             "target_draws": 5200,
-            "position_correct": 2407,
+            "position_correct": 2208,
             "position_total": 15600,
-            "top1_rate": 0.1542948717948718,
-            "top3_rate": 0.3607051282051282,
-            "full_straight_hits": 19,
+            "top1_rate": 0.14153846153846153,
+            "top3_rate": 0.3503205128205128,
+            "full_straight_hits": 15,
             "expected_fair_full_straight_hits": 5.2,
-            "mean_log_gain_vs_uniform": 0.04014904722670682
+            "mean_log_gain_vs_uniform": 0.030413825101788042
           },
           "day_night": {
             "target_draws": 5200,
-            "position_correct": 2377,
+            "position_correct": 2221,
             "position_total": 15600,
-            "top1_rate": 0.15237179487179486,
-            "top3_rate": 0.3548717948717949,
+            "top1_rate": 0.14237179487179488,
+            "top3_rate": 0.3503205128205128,
             "full_straight_hits": 17,
             "expected_fair_full_straight_hits": 5.2,
-            "mean_log_gain_vs_uniform": 0.033936240346526286
+            "mean_log_gain_vs_uniform": 0.02589205685411109
           },
           "equipment_id_visible": {
             "target_draws": 5200,
-            "position_correct": 2393,
+            "position_correct": 2226,
             "position_total": 15600,
-            "top1_rate": 0.1533974358974359,
-            "top3_rate": 0.35717948717948717,
+            "top1_rate": 0.1426923076923077,
+            "top3_rate": 0.3487179487179487,
             "full_straight_hits": 15,
             "expected_fair_full_straight_hits": 5.2,
-            "mean_log_gain_vs_uniform": 0.0375351790444935
+            "mean_log_gain_vs_uniform": 0.02834469453962645
           },
           "oracle": {
             "target_draws": 5200,
-            "position_correct": 2817,
+            "position_correct": 2822,
             "position_total": 15600,
-            "top1_rate": 0.18057692307692308,
-            "top3_rate": 0.3617948717948718,
-            "full_straight_hits": 32,
+            "top1_rate": 0.1808974358974359,
+            "top3_rate": 0.3621153846153846,
+            "full_straight_hits": 28,
             "expected_fair_full_straight_hits": 5.2,
-            "mean_log_gain_vs_uniform": 0.08958079941855038
+            "mean_log_gain_vs_uniform": 0.09023548892621211
           },
           "v2_production_probe": {
-            "targets_checked": 13,
-            "gate_triggered": 4,
-            "mean_joint_log_gain": -0.0002967020610390462,
+            "targets_checked": 5,
+            "gate_triggered": 0,
+            "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -541,7 +541,7 @@
             "mean_log_gain_vs_uniform": 0.0921481932462683
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -617,9 +617,9 @@
             "mean_log_gain_vs_uniform": 0.5149135315700409
           },
           "v2_production_probe": {
-            "targets_checked": 13,
-            "gate_triggered": 13,
-            "mean_joint_log_gain": 0.1716814705708764,
+            "targets_checked": 5,
+            "gate_triggered": 5,
+            "mean_joint_log_gain": 0.13953649659569894,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -695,7 +695,7 @@
             "mean_log_gain_vs_uniform": 8.88178419700125e-16
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -1.1102230246251565e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -771,7 +771,7 @@
             "mean_log_gain_vs_uniform": 0.006046549037705086
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -1.1102230246251565e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -847,9 +847,9 @@
             "mean_log_gain_vs_uniform": 0.0632751277081133
           },
           "v2_production_probe": {
-            "targets_checked": 13,
-            "gate_triggered": 9,
-            "mean_joint_log_gain": 0.02156346862571603,
+            "targets_checked": 5,
+            "gate_triggered": 2,
+            "mean_joint_log_gain": 0.03231661836346519,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -923,7 +923,7 @@
             "mean_log_gain_vs_uniform": 0.04065302630152052
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -1.1102230246251565e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -999,7 +999,7 @@
             "mean_log_gain_vs_uniform": 0.03788953566330379
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -1.1102230246251565e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1019,65 +1019,65 @@
             "position_correct": 1923,
             "position_total": 20800,
             "top1_rate": 0.09245192307692307,
-            "top3_rate": 0.36067307692307693,
+            "top3_rate": 0.3170673076923077,
             "full_straight_hits": 1,
             "expected_fair_full_straight_hits": 0.52,
             "mean_log_gain_vs_uniform": 0.0
           },
           "pooled": {
             "target_draws": 5200,
-            "position_correct": 3171,
+            "position_correct": 2974,
             "position_total": 20800,
-            "top1_rate": 0.15245192307692307,
-            "top3_rate": 0.36649038461538463,
-            "full_straight_hits": 2,
+            "top1_rate": 0.14298076923076924,
+            "top3_rate": 0.3633173076923077,
+            "full_straight_hits": 3,
             "expected_fair_full_straight_hits": 0.52,
-            "mean_log_gain_vs_uniform": 0.03607130037868901
+            "mean_log_gain_vs_uniform": 0.03511185226509115
           },
           "position": {
             "target_draws": 5200,
-            "position_correct": 3165,
+            "position_correct": 3007,
             "position_total": 20800,
-            "top1_rate": 0.15216346153846153,
-            "top3_rate": 0.35980769230769233,
-            "full_straight_hits": 1,
+            "top1_rate": 0.1445673076923077,
+            "top3_rate": 0.35620192307692305,
+            "full_straight_hits": 3,
             "expected_fair_full_straight_hits": 0.52,
-            "mean_log_gain_vs_uniform": 0.05084805169706594
+            "mean_log_gain_vs_uniform": 0.0479016148869311
           },
           "day_night": {
             "target_draws": 5200,
-            "position_correct": 3172,
+            "position_correct": 2994,
             "position_total": 20800,
-            "top1_rate": 0.1525,
-            "top3_rate": 0.3565384615384615,
-            "full_straight_hits": 1,
+            "top1_rate": 0.1439423076923077,
+            "top3_rate": 0.3477403846153846,
+            "full_straight_hits": 3,
             "expected_fair_full_straight_hits": 0.52,
-            "mean_log_gain_vs_uniform": 0.04178386422580672
+            "mean_log_gain_vs_uniform": 0.03891737150993373
           },
           "equipment_id_visible": {
             "target_draws": 5200,
-            "position_correct": 3154,
+            "position_correct": 3002,
             "position_total": 20800,
-            "top1_rate": 0.1516346153846154,
-            "top3_rate": 0.35591346153846154,
-            "full_straight_hits": 1,
+            "top1_rate": 0.14432692307692307,
+            "top3_rate": 0.3502403846153846,
+            "full_straight_hits": 3,
             "expected_fair_full_straight_hits": 0.52,
-            "mean_log_gain_vs_uniform": 0.04405047146945675
+            "mean_log_gain_vs_uniform": 0.042561695375614876
           },
           "oracle": {
             "target_draws": 5200,
-            "position_correct": 3733,
+            "position_correct": 3790,
             "position_total": 20800,
-            "top1_rate": 0.17947115384615384,
-            "top3_rate": 0.36067307692307693,
-            "full_straight_hits": 3,
+            "top1_rate": 0.18221153846153845,
+            "top3_rate": 0.36341346153846155,
+            "full_straight_hits": 4,
             "expected_fair_full_straight_hits": 0.52,
-            "mean_log_gain_vs_uniform": 0.11642949415614903
+            "mean_log_gain_vs_uniform": 0.12389295454349128
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 1,
-            "mean_joint_log_gain": 3.4908619010369023e-05,
+            "mean_joint_log_gain": -0.003081619480534895,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -1151,7 +1151,7 @@
             "mean_log_gain_vs_uniform": 0.10868934560014883
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -1.1102230246251565e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1227,9 +1227,9 @@
             "mean_log_gain_vs_uniform": 0.7963848324068326
           },
           "v2_production_probe": {
-            "targets_checked": 13,
-            "gate_triggered": 13,
-            "mean_joint_log_gain": 0.21477745140870957,
+            "targets_checked": 5,
+            "gate_triggered": 5,
+            "mean_joint_log_gain": 0.22343595939985236,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -1305,7 +1305,7 @@
             "mean_log_gain_vs_uniform": 1.1102230246251563e-15
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1381,7 +1381,7 @@
             "mean_log_gain_vs_uniform": 0.0019868544270133046
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1457,9 +1457,9 @@
             "mean_log_gain_vs_uniform": 0.057721607645777495
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 1,
-            "mean_joint_log_gain": -0.0006789127387386748,
+            "mean_joint_log_gain": -0.0017651731207201991,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -1533,7 +1533,7 @@
             "mean_log_gain_vs_uniform": 0.050104744906772254
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1609,7 +1609,7 @@
             "mean_log_gain_vs_uniform": 0.059976114172048414
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1629,65 +1629,65 @@
             "position_correct": 2381,
             "position_total": 26000,
             "top1_rate": 0.09157692307692308,
-            "top3_rate": 0.3649230769230769,
+            "top3_rate": 0.32026923076923075,
             "full_straight_hits": 0,
             "expected_fair_full_straight_hits": 0.052,
             "mean_log_gain_vs_uniform": 0.0
           },
           "pooled": {
             "target_draws": 5200,
-            "position_correct": 4044,
+            "position_correct": 3661,
             "position_total": 26000,
-            "top1_rate": 0.15553846153846154,
-            "top3_rate": 0.3646153846153846,
+            "top1_rate": 0.1408076923076923,
+            "top3_rate": 0.35146153846153844,
             "full_straight_hits": 0,
             "expected_fair_full_straight_hits": 0.052,
-            "mean_log_gain_vs_uniform": 0.04666130365783588
+            "mean_log_gain_vs_uniform": 0.03617970534631056
           },
           "position": {
             "target_draws": 5200,
-            "position_correct": 4050,
+            "position_correct": 3676,
             "position_total": 26000,
-            "top1_rate": 0.15576923076923077,
-            "top3_rate": 0.3595,
+            "top1_rate": 0.1413846153846154,
+            "top3_rate": 0.3462692307692308,
             "full_straight_hits": 0,
             "expected_fair_full_straight_hits": 0.052,
-            "mean_log_gain_vs_uniform": 0.06621518374506132
+            "mean_log_gain_vs_uniform": 0.045935165585755035
           },
           "day_night": {
             "target_draws": 5200,
-            "position_correct": 4010,
+            "position_correct": 3675,
             "position_total": 26000,
-            "top1_rate": 0.15423076923076923,
-            "top3_rate": 0.3558846153846154,
+            "top1_rate": 0.14134615384615384,
+            "top3_rate": 0.34565384615384614,
             "full_straight_hits": 0,
             "expected_fair_full_straight_hits": 0.052,
-            "mean_log_gain_vs_uniform": 0.05453965654693969
+            "mean_log_gain_vs_uniform": 0.03914086110731925
           },
           "equipment_id_visible": {
             "target_draws": 5200,
-            "position_correct": 3994,
+            "position_correct": 3723,
             "position_total": 26000,
-            "top1_rate": 0.15361538461538463,
-            "top3_rate": 0.3552692307692308,
+            "top1_rate": 0.1431923076923077,
+            "top3_rate": 0.34465384615384614,
             "full_straight_hits": 0,
             "expected_fair_full_straight_hits": 0.052,
-            "mean_log_gain_vs_uniform": 0.05906493785230752
+            "mean_log_gain_vs_uniform": 0.038959599184622246
           },
           "oracle": {
             "target_draws": 5200,
-            "position_correct": 4770,
+            "position_correct": 4731,
             "position_total": 26000,
-            "top1_rate": 0.18346153846153845,
-            "top3_rate": 0.3649230769230769,
-            "full_straight_hits": 1,
+            "top1_rate": 0.18196153846153845,
+            "top3_rate": 0.3634230769230769,
+            "full_straight_hits": 0,
             "expected_fair_full_straight_hits": 0.052,
-            "mean_log_gain_vs_uniform": 0.159121674979163
+            "mean_log_gain_vs_uniform": 0.1540150968194033
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 4,
-            "mean_joint_log_gain": -5.521753844573551e-05,
+            "mean_joint_log_gain": -0.012204646001983111,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
@@ -1761,7 +1761,7 @@
             "mean_log_gain_vs_uniform": 0.15769643232687783
           },
           "v2_production_probe": {
-            "targets_checked": 13,
+            "targets_checked": 5,
             "gate_triggered": 0,
             "mean_joint_log_gain": -2.2204460492503136e-16,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
@@ -1837,9 +1837,9 @@
             "mean_log_gain_vs_uniform": 1.032708807346286
           },
           "v2_production_probe": {
-            "targets_checked": 13,
-            "gate_triggered": 13,
-            "mean_joint_log_gain": 0.3755044915073504,
+            "targets_checked": 5,
+            "gate_triggered": 5,
+            "mean_joint_log_gain": 0.40663114659122235,
             "note": "Live v2 genuine joint probability evaluated on preselected sparse target origins; per-position tickets not approximated here."
           }
         }
