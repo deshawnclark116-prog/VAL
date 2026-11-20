@@ -18,7 +18,7 @@ from pathlib import Path
 
 from research_10k import load_official_history
 from val import generate,score_batch,model_selection_weights
-from val_digit_formula_v2 import (VERSION,forecast,generate_picks,joint_probability,
+from research.val_box_v3_frozen import (VERSION,forecast,generate_picks,joint_probability,
                                   log_gain,stable_rng)
 from val import GAMES
 from val_box import random_box_picks
