@@ -48,7 +48,8 @@ def initial():
             "v3_fair_expected_box_wins": 0.}
 
 
-def evaluate_sequence(game, rows, train, stride, real=False):
+def evaluate_sequence(game, rows, train, stride, real=False,
+                      archive=None, archive_offset=0):
     """All updates are next-draw: score/select first, observe outcome second."""
     machine = BoxEvidence(game)
     metrics = initial()
@@ -79,7 +80,8 @@ def evaluate_sequence(game, rows, train, stride, real=False):
                     # Use the exact existing production generator for a
                     # same-target comparison. Rows preceding target ONLY.
                     v3, meta = generate_picks(
-                        game, rows[:i], row["stream"], 3,
+                        game, archive[:archive_offset + i] if archive is not None else rows[:i],
+                        row["stream"], 3,
                         rng=rng_for("live_v3", *label))
                     metrics["v3_box_wins"] += grade_box(v3, row["numbers"])
                     metrics["v3_fair_expected_box_wins"] += sum(
@@ -133,7 +135,8 @@ def run_real():
         history = load_official_history(game)
         subset = history[-(REAL_TRAIN + REAL_TEST):]
         stats = evaluate_sequence(
-            game, subset, REAL_TRAIN, REAL_STRIDE, real=True)
+            game, subset, REAL_TRAIN, REAL_STRIDE, real=True,
+            archive=history, archive_offset=len(history) - len(subset))
         stats["first_evaluated"] = subset[REAL_TRAIN]["at"]
         stats["last_evaluated"] = subset[-1]["at"]
         stats["official_history_draws"] = len(history)
