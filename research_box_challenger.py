@@ -22,7 +22,8 @@ from pathlib import Path
 from val_box import box_ways, random_box_picks
 from val_box_challenger import (BoxEvidence, EXPERTS, GAMES, LOG_GATE,
                                 VERSION, grade_box)
-from research_virtual_draw_lab import SCENARIOS, simulate
+from research_virtual_draw_lab import SCENARIOS, simulate, truth_distribution
+from val_box import distinct_permutations
 
 VIRTUAL_REPLICATES = 2
 VIRTUAL_TRAIN = 850
@@ -45,11 +46,33 @@ def initial():
             "mean_log_gain_sum": 0., "ticket_trials": 0,
             "candidate_box_wins": 0, "control_box_wins": 0,
             "v3_box_wins": 0, "fair_expected_box_wins": 0.,
-            "v3_fair_expected_box_wins": 0.}
+            "v3_fair_expected_box_wins": 0.,
+            "candidate_truth_expected_wins": 0.,
+            "control_truth_expected_wins": 0.}
+
+
+def virtual_truth_mass(game, scenario, row, offset, picks):
+    """Probability of each ticket under the simulator's hidden generating law.
+
+    Used ONLY for post-prediction scoring. Neither machine ID nor the
+    scenario's secret probabilities enter the candidate model.
+    """
+    width = int(game[-1])
+    total = 0.
+    for pick in picks:
+        for ordered in distinct_permutations(pick["numbers"]):
+            p = 1.
+            for pos, digit in enumerate(ordered):
+                conditional = truth_distribution(
+                    scenario, width, row["stream"], row["machine"],
+                    offset, pos, ordered[:pos])
+                p *= conditional[digit]
+            total += p
+    return total
 
 
 def evaluate_sequence(game, rows, train, stride, real=False,
-                      archive=None, archive_offset=0):
+                      archive=None, archive_offset=0, scenario=None):
     """All updates are next-draw: score/select first, observe outcome second."""
     machine = BoxEvidence(game)
     metrics = initial()
@@ -75,6 +98,11 @@ def evaluate_sequence(game, rows, train, stride, real=False,
                 metrics["fair_expected_box_wins"] += sum(
                     box_ways(p["numbers"]) / (10 ** int(game[-1]))
                     for p in picks)
+                if scenario is not None:
+                    metrics["candidate_truth_expected_wins"] += virtual_truth_mass(
+                        game, scenario, row, i / len(rows), picks)
+                    metrics["control_truth_expected_wins"] += virtual_truth_mass(
+                        game, scenario, row, i / len(rows), control)
                 if real:
                     from val_digit_formula_v2 import generate_picks
                     # Use the exact existing production generator for a
@@ -108,12 +136,14 @@ def run_virtual():
                 rows = simulate(
                     game, scenario, VIRTUAL_TRAIN + VIRTUAL_TEST, rep)
                 m = evaluate_sequence(
-                    game, rows, VIRTUAL_TRAIN, VIRTUAL_STRIDE)
+                    game, rows, VIRTUAL_TRAIN, VIRTUAL_STRIDE, scenario=scenario)
                 for key in ("draws", "active_draws", "ticket_trials",
                             "candidate_box_wins", "control_box_wins"):
                     total[key] += m[key]
                 total["mean_log_gain_sum"] += m["mean_log_gain_vs_fair"] * m["draws"]
                 total["fair_expected_box_wins"] += m["fair_expected_box_wins"]
+                total["candidate_truth_expected_wins"] += m["candidate_truth_expected_wins"]
+                total["control_truth_expected_wins"] += m["control_truth_expected_wins"]
                 total["active_experts"].update(m["active_experts"])
             total["mean_log_gain_vs_fair"] = (
                 total.pop("mean_log_gain_sum") / total["draws"])
@@ -177,15 +207,16 @@ def render(result):
         lines += ["**These are simulated devices with injected distributions,",
                   "not evidence of exploitable Virginia Lottery machinery.**",
                   "", "| Game | Scenario | Signal-active draws | Box trial draws |",
-                  "Challenger Box | Random Box | Challenger fair-expected Box |",
-                  "Mean log gain |",
-                  "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+                  "Challenger Box | Random Box | Candidate true-expected Box |",
+                  "Control true-expected Box | Mean log gain |",
+                  "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
         for game, cases in result["games"].items():
             for scenario, m in cases.items():
                 lines.append(f'| {game} | {scenario} | {m["active_draws"]} | '
                              f'{m["ticket_trials"]} | {m["candidate_box_wins"]} | '
                              f'{m["control_box_wins"]} | '
-                             f'{m["fair_expected_box_wins"]:.3f} | '
+                             f'{m["candidate_truth_expected_wins"]:.3f} | '
+                             f'{m["control_truth_expected_wins"]:.3f} | '
                              f'{m["mean_log_gain_vs_fair"]:+.6f} |')
     lines += ["", "## Decision", "",
               "Only future, immutable predictions that demonstrate an actual",
