@@ -1,0 +1,143 @@
+{
+  "registry_version": "val_formula_evidence_registry_v1",
+  "updated_date": "2026-11-20",
+  "objective": "Maximize the probability of at least one COMPLETE Any Order (Box) winning digit multiset across exactly three distinct eligible tickets per drawing. No partial digits or positional matches count.",
+  "game_scope": [
+    "pick3",
+    "pick4",
+    "pick5"
+  ],
+  "live_champion": {
+    "module": "val_digit_formula_v2.py",
+    "formula": "digit_box_v4",
+    "revision": "fixed_epoch_evidence_v1",
+    "status": "deployed, no verified real predictive edge",
+    "promotion_locked": true
+  },
+  "experiments": [
+    {
+      "name": "pooled_full_box_v2",
+      "hypothesis": "Individual-digit pooled probabilities improve ranking of complete multisets",
+      "status": "research_only_not_promoted",
+      "real_test": "2025/2026 1,376 targets per game, already inspected",
+      "wins": {
+        "pick3": {
+          "candidate": 22,
+          "random": 29
+        },
+        "pick4": {
+          "candidate": 9,
+          "random": 7
+        },
+        "pick5": {
+          "candidate": 6,
+          "random": 6
+        }
+      },
+      "decision": "Fixes duplicate permutation tickets but does not beat fair controls reliably",
+      "report": "reports/research_pooled_box_v2_real.md"
+    },
+    {
+      "name": "day_night_conditional_box_v1",
+      "hypothesis": "Earlier same-day Day numbers help infer later Night outcomes",
+      "status": "research_only_not_promoted",
+      "real_test": "804 previously inspected Night draws per game",
+      "wins": {
+        "pick3": {
+          "candidate": 19,
+          "random": 11
+        },
+        "pick4": {
+          "candidate": 4,
+          "random": 5
+        },
+        "pick5": {
+          "candidate": 3,
+          "random": 5
+        }
+      },
+      "note": "No active confirmed conditional expert; Pick3 favorable count was fair-fallback luck, not a model-driven win",
+      "report": "reports/research_day_night_real.md"
+    },
+    {
+      "name": "bayesian_exact_bag_v1",
+      "hypothesis": "Anomalies occur at the complete unordered multiset level, beyond marginal digit frequencies",
+      "status": "rejected_for_live_from_real_history;synthetic_mechanism_detector_only",
+      "real_test": "2025/2026 1,376 targets per game, previously inspected",
+      "wins": {
+        "pick3": {
+          "candidate": 24,
+          "random": 29
+        },
+        "pick4": {
+          "candidate": 13,
+          "random": 15
+        },
+        "pick5": {
+          "candidate": 4,
+          "random": 7
+        }
+      },
+      "mean_log_gain_vs_fair": {
+        "pick3": -0.0129,
+        "pick4": -0.03157,
+        "pick5": -0.06216
+      },
+      "virtual_favored_exact_box": {
+        "test_draws_per_game": 1400,
+        "pick3": {
+          "candidate": 112,
+          "random": 19
+        },
+        "pick4": {
+          "candidate": 76,
+          "random": 13
+        },
+        "pick5": {
+          "candidate": 69,
+          "random": 10
+        }
+      },
+      "decision": "Strongly detects artificial 5% favored exact combination but overfits actual fair-like historical draws; do not retune these same inspected years",
+      "report": "reports/research_bayesian_full_box.md"
+    },
+    {
+      "name": "bayesian_pair_shape_v1",
+      "hypothesis": "Digit pair co-occurrence creates predictive full-ticket dependency beyond marginal frequencies",
+      "status": "rejected_for_live_from_real_history;synthetic_mechanism_detector_only",
+      "real_test": "2025/2026 1,376 targets per game, previously inspected",
+      "wins": {
+        "pick3": {
+          "candidate": 15,
+          "random": 29
+        },
+        "pick4": {
+          "candidate": 7,
+          "random": 15
+        },
+        "pick5": {
+          "candidate": 3,
+          "random": 7
+        }
+      },
+      "mean_log_gain_vs_fair": {
+        "pick3": -0.00047,
+        "pick4": -0.00061,
+        "pick5": -0.00013
+      },
+      "decision": "No credible real full Box lift; do not rescue with posterior-strength tuning on inspected 2025/2026 archive",
+      "report": "reports/research_bayesian_full_box.md"
+    }
+  ],
+  "permanent_validation_rules": [
+    "Every evaluated target and ticket selection must be fixed using only information available before the exact original drawing.",
+    "Primary metric is at least one correct full unordered digit MULTISET across three distinct, equally priced Any Order Box tickets; repeated permutations of one set do not increase coverage.",
+    "Use an independent random baseline with the same ticket count, and report fair expected hit count, proper joint Box probability log score, and uncertainty.",
+    "Archived 2025/2026 draws and the synthetic patterns have been inspected and cannot be promoted as untouched evidence; no repeated rescue tuning on a burned holdout.",
+    "A new version is not superior merely because its unit tests pass or because it learns deliberately injected simulator patterns.",
+    "No production promotion until future-only immutable real predictions demonstrate repeatable calibrated probability improvement AND incremental full Box wins versus equal-cost fair controls, after model-selection multiplicity.",
+    "If fair-null behavior survives all justified tests, maintain maximal distinct-coverage fair fallback and do not invent predictive precision."
+  ],
+  "open_data_dependency": "Pre-draw and draw-by-draw machine/ball-set IDs and pretest results are not present in ordinary historical digit downloads; availability before wager cutoff has NOT been established. Do not assume access or use simulator secrets.",
+  "follow_up_trigger": "Reopen model research for genuinely new legally available pre-wager explanatory variables, a distinct structural prediction mechanism not chosen from inspected real data, or a statistically meaningful prospective anomaly; do not cycle variants of frozen failures."
+}
