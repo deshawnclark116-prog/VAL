@@ -21,6 +21,7 @@ from val import generate,score_batch,model_selection_weights
 from val_digit_formula_v2 import (VERSION,forecast,generate_picks,joint_probability,
                                   log_gain,stable_rng)
 from val import GAMES
+from val_box import random_box_picks
 
 OUTPUT=Path("reports/research_digit_formula_v2.json")
 MARKDOWN=Path("reports/research_digit_formula_v2.md")
@@ -53,7 +54,9 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
     if n<20:raise ValueError("Not enough eligible held-out observations")
     indices=list(range(end-n*step,end,step))
     if len(indices)!=n:raise AssertionError("Range changed")
-    output={name:{"digits":0,"exact":0,"tickets":0,"log_gains":[]}
+    output={name:{"digits":0,"exact":0,"tickets":0,"box_wins":0,
+                  "box_tickets":0,"box_payout_usd":0,"box_spend_usd":0,
+                  "box_fair_expected_wins":0.,"log_gains":[]}
             for name in ("new_v2","original_ensemble","uniform_control")}
     signal_count=0
     experts=defaultdict(int)
@@ -70,7 +73,7 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
             raise AssertionError("Production/research gate mismatch")
         original=generate(game,previous[-500:],"ensemble",3,
                           seeded("original","draws",game,target))
-        fair=generate(game,[],"random",3,
+        fair=random_box_picks(game,3,
                       seeded("independent","control",game,target))
         candidate_sets={"new_v2":current,"original_ensemble":original,
                         "uniform_control":fair}
@@ -91,11 +94,17 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
             record["digits"]+=grade["total_matches"]
             record["exact"]+=grade["exact"]
             record["tickets"]+=grade["tickets"]
+            for k in ("box_wins","box_tickets","box_payout_usd",
+                      "box_spend_usd","box_fair_expected_wins"):
+                record[k]+=grade[k]
             record["log_gains"].append((target["at"],log_probs[name]))
             event[name]={
                 "tickets":["".join(map(str,x["numbers"])) for x in picks],
                 "position_matches":grade["total_matches"],
                 "exact":grade["exact"],
+                "box_wins":grade["box_wins"],
+                "box_payout_usd":grade["box_payout_usd"],
+                "box_net_usd":grade["box_net_usd"],
                 "log_gain":log_probs[name]
             }
         chronological.append(event)
@@ -108,6 +117,12 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
         out[method]={
             "tickets":record["tickets"],
             "exact":record["exact"],
+            "box_wins":record["box_wins"],
+            "box_tickets":record["box_tickets"],
+            "box_payout_usd":record["box_payout_usd"],
+            "box_spend_usd":record["box_spend_usd"],
+            "box_net_usd":record["box_payout_usd"]-record["box_spend_usd"],
+            "box_fair_expected_wins":record["box_fair_expected_wins"],
             "position_matches":record["digits"],
             "position_hit_rate":record["digits"]/(record["tickets"]*width),
             "mean_log_gain_vs_fair":sum(v)/n,
@@ -148,21 +163,25 @@ def render(data):
         "Direct live-generator replay on real subsequent drawing outcomes.",
         "Each candidate uses strictly earlier history. This is exploratory",
         "because the historical period has been previously inspected.",
-        "All groups have three tickets per target. Exact = full Straight match.",
-        "Position matches are diagnostics; a single position match on its own",
-        "does NOT constitute a prize.",
+        "PRIMARY METRIC: complete Any Order (Box) matches, with all digit",
+        "multiplicities preserved. All groups have three $1 paper Box tickets",
+        "per target (where legal). Payout/net use published non-FIREBALL",
+        "Any Order prizes; NO real wagers were made. Old legacy ensembles",
+        "may select repeated digits and thereby cover fewer permutations;",
+        "the v2 and fair controls both select nonoverlapping all-distinct",
+        "sets when no signal has passed its gate.",
         "",
-        "| Game | Test draws | v2 matched positions | Old ensemble | Uniform controls | v2 exact | Old exact | Uniform exact |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"
+        "| Game | Draws | v2 full Box wins | Old Box wins | Fair Box wins | v2 Box net | Old Box net | Fair Box net | v2 exact order |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"
     ]
     for game,g in data["games"].items():
         comp=g["comparison"]
         a,b,c=(comp[x] for x in ("new_v2","original_ensemble","uniform_control"))
         lines.append("| "+game+" | "+str(g["draws_evaluated"])+" | "+
-                     format(a["position_hit_rate"]*100,".2f")+"% | "+
-                     format(b["position_hit_rate"]*100,".2f")+"% | "+
-                     format(c["position_hit_rate"]*100,".2f")+"% | "+
-                     str(a["exact"])+" | "+str(b["exact"])+" | "+str(c["exact"])+" |")
+                     str(a["box_wins"])+" | "+str(b["box_wins"])+" | "+
+                     str(c["box_wins"])+" | $"+
+                     str(a["box_net_usd"])+" | $"+str(b["box_net_usd"])+
+                     " | $"+str(c["box_net_usd"])+" | "+str(a["exact"])+" |")
     for game,g in data["games"].items():
         comp=g["comparison"]
         lines += [
@@ -175,6 +194,9 @@ def render(data):
             "Conditionally active signal gates: "+
               str(g["signal_gate_active_targets"])+"/"+str(g["draws_evaluated"])+".",
             "Active expert counts: "+json.dumps(g["passed_expert_counts"])+".",
+            "Fair-expected complete Box matches at the actual selected permutation classes: "+
+              ", ".join(k+": "+f"{v['box_fair_expected_wins']:.3f}"
+                        for k,v in comp.items())+".",
             "",
             "| Formula | Mean next-draw log gain vs 10%-per-digit fair | First half | Second half |",
             "| --- | ---: | ---: | ---: |"
@@ -195,10 +217,12 @@ def render(data):
     lines += [
         "## Interpretation and promotion rule",
         "",
-        "The v2 formula is a genuine conditional joint model. It only exposes",
+        "The v2 formula is a genuine conditional joint model. Box likelihood",
+        "is computed by summing every distinct complete permutation, not",
+        "by separately matching individual digit positions. It only exposes"
         "a nonuniform advantage if a model passes the past-only statistical gate.",
         "Otherwise it uses fair 10%-per-position distributions and diverse",
-        "independent random candidates. It is designed to reduce overconfidence,",
+        "independent nonoverlapping Box candidates. It is designed to reduce overconfidence,",
         "not to fake a winning edge. A lower log loss can be a valid improvement",
         "in forecasting honesty even when hit rates remain indistinguishable.",
         "",
