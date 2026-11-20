@@ -8,6 +8,7 @@ from pathlib import Path
 
 from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, simulate, sync_game, draw_schedule, next_draw
 from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_v2
+from val_box import random_box_picks, box_score_batch
 
 
 def restore(store, path):
@@ -64,7 +65,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
               "## Picks", "",
               "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
-              "Three unique combinations per target, with three saved random controls. **Pick 3/4/5 now use the v2 conditional formula**: five digit-probability experts influence a pick only after passing prior-draw validation. Otherwise picks are fair-uniform paper candidates labeled Paper 1/2/3, not purported top predictions. Other games continue using experimental ensemble rankings. No method has validated winning probabilities. Old saved batches remain unchanged. If the latest completed result is missing, the game waits rather than generating from outdated input.", "",
+              "**Pick 3/4/5 target complete Any Order (Box) digit sets.** Model v2 ranks complete unordered digit-multisets by summed probabilities of all permutations, not partial-position matches. Without a proven signal it uses three nonoverlapping, all-distinct random Box candidates and three independent same-type Box controls (Paper 1/2/3, not purported ranked predictions). Each Box ticket represents a hypothetical $1 Any Order play; no purchases are made. Other games retain their existing methods. Old saved predictions remain unchanged. Missing latest results withhold new picks.", "",
               "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
@@ -99,7 +100,9 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
                     picks=rank_ensemble_picks(game,history,generate(game,history,"ensemble",count))
                     model_meta=None
                     method="ensemble"
-                baseline=generate(game,[],"random",len(picks))
+                baseline=(random_box_picks(game,len(picks))
+                          if g.get("digits") else
+                          generate(game,[],"random",len(picks)))
                 pid=store.record(game,stream,method,picks,baseline,target=target,
                                  training_latest=history[-1],created=now,
                                  model_meta=model_meta)
@@ -116,28 +119,44 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
         except Exception as exc:
             failures.append(dict(game=game,error=safe(exc)))
         all_records.extend(dict(game=game,**r) for r in store.ledger(game))
-    report += ["", "## Prospective results", "",
-               "Every saved batch is retained in [ledger.json](ledger.json), including losses. New batches settle only against their explicit target date/time/session. Older batches retain their original later-date scoring rule and are not retargeted or replaced. Exact hits require all selected main numbers and the special ball where applicable. Partial matches are not prize wins. Repeated batches on one drawing are correlated.", "",
+    report += ["", "## Complete Any Order (Box) results — PRIMARY METRIC", "",
+               "A Box match requires ALL selected digits, including repeated digits, regardless of their order. A one-way all-identical pattern is Straight-only. Every settled batch is rescored from its original immutable picks and actual drawing; historical picks were not necessarily purchased as Box tickets.", "",
+               "Payout and net are **hypothetical** $1 Any Order paper-wagers using published no-FIREBALL prize tables. No tickets were bought. Equal-cost random controls are compared where possible; historical legacy picks may have different digit multiplicities.", "",
+               "| Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |",
+               "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
+    for game in ("pick3","pick4","pick5"):
+        entries=[r for r in all_records if r["game"]==game and r["result"] is not None]
+        model=[box_score_batch(game,r["picks"],r["result"]["draw"]) for r in entries]
+        control=[box_score_batch(game,r["baseline"],r["result"]["draw"]) for r in entries]
+        exact=lambda side:sum(r["result"][side]["exact"] for r in entries)
+        report.append(f"| {GAMES[game]['name']} | {len(entries)} | "
+                      f"{sum(z['box_wins'] for z in model)} | {sum(z['box_wins'] for z in control)} | "
+                      f"{exact('model')} | {exact('random')} | "
+                      f"${sum(z['box_net_usd'] for z in model):,} | "
+                      f"${sum(z['box_net_usd'] for z in control):,} |")
+    report += ["", "## Other game results", "",
                "| Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |",
-               "| --- | --- | --- | --- | --- | --- |"]
+               "| --- | ---: | ---: | ---: | ---: | ---: |"]
     for game,g in GAMES.items():
+        if g.get("digits") or "id" not in g: continue
         settled=[r["result"] for r in all_records if r["game"]==game and r["result"] is not None]
-        if "id" not in g: continue
         total=lambda group,key:sum(r[group][key] for r in settled)
         report.append(f"| {g['name']} | {len(settled)} | {total('model','tickets')} | {total('model','exact')} | {total('random','tickets')} | {total('random','exact')} |")
     pending=sum(r["result"] is None for r in all_records)
     report += ["",f"Pending batches: {pending}. This report retains the original saved picks and controls; no retrospective replacement.","",
                "## Historical checks", "",
                "100 rolling test draws per game, with only earlier data used for training. These are historical tests, separate from the prospective ledger. Frequency p-values test dispersion only; they are not win probabilities. Multiple comparisons can produce chance findings.", "",
-               "| Game (all sessions) | Ensemble exact hits / tickets | Random exact hits / tickets | Frequency-check p-value |",
-               "| --- | --- | --- | --- |"]
+               "| Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |",
+               "| --- | ---: | ---: | ---: | ---: | ---: |"]
     for row in summaries:
         result={r["method"]:r for r in row["backtest"]["results"]}
         e,r=result["ensemble"],result["random"]
-        report.append(f"| {GAMES[row['game']]['name']} | {e['exact']} / {e['tickets']} | {r['exact']} / {r['tickets']} | {row['frequency_check']['p_value']:.4f} |")
+        box_e=e.get("box_wins","—")
+        box_r=r.get("box_wins","—")
+        report.append(f"| {GAMES[row['game']]['name']} | {box_e} | {box_r} | {e['exact']} | {r['exact']} | {row['frequency_check']['p_value']:.4f} |")
     report += ["", "Full five-method statistics and simulation details: [analysis.json](analysis.json).", "",
                "## Coverage and update status", "",
-               "Nine recurring games update from Virginia Lottery official downloads. Same-day Pick 3/4/5 results are supplemented from the official latest-result cards. Each game shows only its next upcoming session; completed sessions are used as input. Keno needs a CSV import in the local dashboard and is not automatically picked here. Seasonal raffle ticket numbers are assigned. FIREBALL, EZ Match, multipliers, payouts, and ROI are not modeled.", "",
+               "Nine recurring games update from Virginia Lottery official downloads. Same-day Pick 3/4/5 results are supplemented from the official latest-result cards. Box scoring uses published no-FIREBALL $1 Any Order prize tables for paper-only payout and net estimates; no actual wagering occurs. Fireball, 50/50, and Combo are excluded. Other games have no payout/ROI calculation. Keno requires CSV import, and seasonal raffle ticket numbers are assigned.", "",
                "[Official Virginia game rules and results](https://www.valottery.com/alldrawgames)", ""]
     if failures:
         report += ["### Update / analysis failures", ""]

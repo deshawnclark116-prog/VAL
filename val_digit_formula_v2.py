@@ -24,6 +24,8 @@ returned. All code is standard-library Python 3.11+.
 from __future__ import annotations
 
 import hashlib
+from itertools import combinations_with_replacement
+from val_box import any_order_prize, box_ways, distinct_permutations, random_box_picks
 import heapq
 import math
 import random
@@ -234,6 +236,26 @@ def _top_candidates(ready,n):
     return ranked[:n]
 
 
+def _top_box_candidates(ready,n):
+    """Rank COMPLETE unordered digit multisets by total predictive mass.
+
+    Each Box candidate's likelihood is the sum over its DISTINCT full
+    permutations. That handles repeated digits correctly. Excludes
+    single-way all-identical Straight-only patterns. Under a fair
+    distribution, all-distinct sets naturally have the most coverage.
+    """
+    width=GAMES[ready["game"]]["size"]
+    ranked=[]
+    for numbers in combinations_with_replacement(range(10),width):
+        if not any_order_prize(ready["game"],numbers):
+            continue
+        p=sum(joint_probability(ready,arrangement)
+              for arrangement in distinct_permutations(numbers))
+        ranked.append((p,numbers))
+    ranked.sort(key=lambda item:(-item[0],item[1]))
+    return [combo for _,combo in ranked[:n]]
+
+
 def generate_picks(game,history,stream,count=3,rng=None,return_forecast=False):
     """Production-facing replacement for three arbitrarily weighted draws."""
     if game not in ("pick3","pick4","pick5"):raise ValueError(game)
@@ -242,25 +264,29 @@ def generate_picks(game,history,stream,count=3,rng=None,return_forecast=False):
     width=GAMES[game]["size"]
     rng=rng or random.SystemRandom()
     if ready["gate_passed"]:
-        combos=_top_candidates(ready,count)
+        combos=_top_box_candidates(ready,count)
     else:
-        seen=set()
-        while len(seen)<count:
-            seen.add(tuple(rng.randrange(10) for _ in range(width)))
-        combos=list(seen)
-        # Arbitrary reproducible presentation order only, never a ranking
-        # on supposed skill absent evidence of model advantage.
-        combos.sort()
+        # Maximize any-order outcome coverage under the fair null.
+        # Three different digit sets cover nonoverlapping Box outcomes.
+        combos=[tuple(p["numbers"]) for p in random_box_picks(game,count,rng)]
     picks=[]
     for rank,combo in enumerate(combos,1):
+        box_probability=sum(joint_probability(ready,arrangement)
+                            for arrangement in distinct_permutations(combo))
         picks.append(dict(numbers=list(combo),bonus=None,
                           rank=rank,
                           role="primary" if rank==1 else f"alternative_{rank-1}",
                           ranking_version=VERSION,
-                          model_weight_score=joint_probability(ready,combo),
+                          model_weight_score=box_probability,
+                          box_probability=box_probability,
+                          box_ways=box_ways(combo),
+                          box_payout_usd_1_dollar=any_order_prize(game,combo),
+                          play_type="any_order",
                           signal_gate_passed=ready["gate_passed"],
                           formula_version=VERSION))
-    meta=dict(formula_version=VERSION,
+    meta=dict(formula_version=VERSION,play_type="any_order",
+              ticket_stake_usd=1,
+              complete_multiset_match_required=True,
               signal_gate_passed=ready["gate_passed"],
               signal_strength=ready["signal_strength"],
               passed_experts=ready["calibration"]["passed"],

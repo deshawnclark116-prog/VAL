@@ -13,6 +13,7 @@ import threading
 import urllib.request
 import warnings
 from collections import Counter
+from val_box import box_score_batch, is_any_order_win
 from datetime import datetime, timezone, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -344,13 +345,19 @@ def score(game, pick, draw):
     matches = sum(a == b for a,b in zip(pick["numbers"],draw["numbers"])) if g.get("digits") else len(set(pick["numbers"]) & set(draw["numbers"]))
     special = bool(g.get("bonus") and pick.get("bonus") == draw.get("bonus"))
     exact = matches == g["size"] and (not g.get("bonus") or special)
-    return dict(matches=matches,bonus=special,exact=exact)
+    result=dict(matches=matches,bonus=special,exact=exact)
+    if g.get("digits"):
+        result["box"]=is_any_order_win(game,pick["numbers"],draw["numbers"])
+    return result
 
 def score_batch(game,picks,draw):
     scores = [score(game,p,draw) for p in picks]
-    return dict(best=max(s["matches"] for s in scores), exact=sum(s["exact"] for s in scores),
+    result=dict(best=max(s["matches"] for s in scores), exact=sum(s["exact"] for s in scores),
                 total_matches=sum(s["matches"] for s in scores), tickets=len(scores),
                 bonus_matches=sum(s["bonus"] for s in scores))
+    if GAMES[game].get("digits"):
+        result.update(box_score_batch(game,picks,draw))
+    return result
 
 def backtest(game, history, count=5, tests=200, seed=42):
     if len(history) < 80: raise ValueError("At least 80 draws are needed: 30 training draws and 50 test draws")
@@ -366,12 +373,19 @@ def backtest(game, history, count=5, tests=200, seed=42):
         n = len(by_draw)
         avg = statistics.mean(by_draw)
         se = statistics.stdev(by_draw)/math.sqrt(n)
-        results.append(dict(method=method,draws=n,tickets=aggregates["tickets"],exact=aggregates["exact"],
-            average_matches=avg,ci95=[max(0,avg-1.96*se),avg+1.96*se],bonus_matches=aggregates["bonus_matches"]))
+        row=dict(method=method,draws=n,tickets=aggregates["tickets"],exact=aggregates["exact"],
+            average_matches=avg,ci95=[max(0,avg-1.96*se),avg+1.96*se],bonus_matches=aggregates["bonus_matches"])
+        if GAMES[game].get("digits"):
+            row.update(box_wins=aggregates["box_wins"],box_tickets=aggregates["box_tickets"],
+                       box_spend_usd=aggregates["box_spend_usd"],
+                       box_payout_usd=aggregates["box_payout_usd"],
+                       box_net_usd=aggregates["box_net_usd"],
+                       box_fair_expected_wins=aggregates["box_fair_expected_wins"])
+        results.append(row)
     g = GAMES[game]
     chance = g["size"]/10 if g.get("digits") else g["size"]*g.get("drawn",g["size"])/g["pool"]
     return dict(results=results,from_draw=history[start]["at"],to_draw=history[-1]["at"],expected_matches=chance,
-        note="Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation.")
+        note="Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win.")
 
 def frequency(game, history):
     g=GAMES[game]; low=0 if g.get("digits") else 1
