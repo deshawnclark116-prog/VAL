@@ -5,22 +5,25 @@ Never retargets or replaces saved forecasts and controls.
 **This candidate was selected after historical exploration.**
 Its credibility depends entirely on subsequent real-world draws.
 
-Top-1 forecast checks one digit in each position (chance 10%).
-Top-three digit coverage checks three guesses per position (chance 30%).
-Ticket metrics check complete ordered tickets independently.
-Top-1 successes and partial matches are not prize claims.
+PRIMARY METRIC: full Any Order (Box) digit-multiset wins, not
+partial digit matches. Repeated digits must match exactly.
+Box payout/net are hypothetical $1 per eligible ticket using
+published Virginia non-FIREBALL prizes. No wagers were purchased.
+The prospective frozen model/control ticket structures are
+unchanged; they can have different Box permutation counts.
+Exact-order overlaps are diagnostic, not Straight wagers.
 
-| Game | Settled draws | Top-1 digit hit rate | Top-3 coverage | Model exact | Uniform exact | Mean log gain | Anytime e-value trigger |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| pick3 | 0 | — | — | 0 | 0 | — | No |
+| Game | Settled draws | Model BOX wins | Control BOX wins | Model $1 paper net | Control $1 paper net | Exact model | Exact control | Anytime evidence gate |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| pick3 | 1 | 0 | 0 | $-3 | $-3 | 0 | 0 | No |
 
 Latest frozen target for pick3: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
 Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 252, 674, 366.
-| pick4 | 0 | — | — | 0 | 0 | — | No |
+| pick4 | 1 | 0 | 0 | $-3 | $-3 | 0 | 0 | No |
 
 Latest frozen target for pick4: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
 Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 9420, 8091, 1803.
-| pick5 | 0 | — | — | 0 | 0 | — | No |
+| pick5 | 1 | 0 | 0 | $-3 | $-3 | 0 | 0 | No |
 
 Latest frozen target for pick5: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
 Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 49339, 77788, 00647.
