@@ -1,0 +1,43 @@
+name: VAL optimized distinct Box portfolio prospective trial
+on:
+  schedule:
+    - cron: '30 13 * * *'
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - formula/pooled-full-box-v2-20261120
+    paths:
+      - 'val_pooled_box_formula.py'
+      - 'research_prospective_pooled_box_v2.py'
+      - 'tests/test_val_pooled_box_formula.py'
+      - '.github/workflows/research_prospective_pooled_box_v2.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-pooled-fullbox-v2-trial
+  cancel-in-progress: false
+jobs:
+  prospective:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test mathematical Box coverage, past-only forecasts, and saved predictions
+        run: python -m unittest discover -s tests -v
+      - name: Freeze new distinct Box predictions and settle only previously frozen targets
+        run: python -u research_prospective_pooled_box_v2.py
+      - name: Preserve independent v2 prospective ledger
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/prospective_pooled_full_box_v2.json reports/prospective_pooled_full_box_v2.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze and grade future pooled v2 full Any Order predictions'
+          git pull --rebase origin main
+          git push origin HEAD:main
