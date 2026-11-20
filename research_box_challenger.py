@@ -193,9 +193,7 @@ def render(result):
     if real:
         lines += ["**Exploratory only: these historical outcomes were already",
                   "available during development. No genuine future edge is proven.**",
-                  "", "| Game | Evaluated draws | Signal-active | Sampled targets |",
-                  "Challenger Box | Live v3 Box | Independent random Box |",
-                  "Candidate fair-expected Box | Challenger mean log gain |",
+                  "", "| Game | Evaluated draws | Signal-active | Sampled targets | Challenger Box | Live v3 Box | Independent random Box | Candidate fair-expected Box | Challenger mean log gain |",
                   "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
         for game, m in result["games"].items():
             lines.append(f'| {game} | {m["draws"]} | {m["active_draws"]} | '
@@ -206,9 +204,7 @@ def render(result):
     else:
         lines += ["**These are simulated devices with injected distributions,",
                   "not evidence of exploitable Virginia Lottery machinery.**",
-                  "", "| Game | Scenario | Signal-active draws | Box trial draws |",
-                  "Challenger Box | Random Box | Candidate true-expected Box |",
-                  "Control true-expected Box | Mean log gain |",
+                  "", "| Game | Scenario | Signal-active draws | Box trial draws | Challenger Box | Random Box | Candidate true-expected Box | Control true-expected Box | Mean log gain |",
                   "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
         for game, cases in result["games"].items():
             for scenario, m in cases.items():
