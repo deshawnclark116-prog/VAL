@@ -12552,6 +12552,405 @@
         }
       },
       "result": null
+    },
+    {
+      "id": 110,
+      "game": "pick3",
+      "created": "2026-11-20T13:55:37.453230+00:00",
+      "stream": "Day",
+      "method": "digit_box_v3",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              1,
+              3,
+              7
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.006,
+            "box_probability": 0.006,
+            "box_ways": 6,
+            "box_payout_usd_1_dollar": 80,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          },
+          {
+            "numbers": [
+              1,
+              4,
+              8
+            ],
+            "bonus": null,
+            "rank": 2,
+            "role": "alternative_1",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.006,
+            "box_probability": 0.006,
+            "box_ways": 6,
+            "box_payout_usd_1_dollar": 80,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          },
+          {
+            "numbers": [
+              4,
+              8,
+              9
+            ],
+            "bonus": null,
+            "rank": 3,
+            "role": "alternative_2",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.006,
+            "box_probability": 0.006,
+            "box_ways": 6,
+            "box_payout_usd_1_dollar": 80,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              2,
+              7
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 6
+          },
+          {
+            "numbers": [
+              0,
+              4,
+              7
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 6
+          },
+          {
+            "numbers": [
+              1,
+              8,
+              9
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 6
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_box_v3",
+          "play_type": "any_order",
+          "ticket_stake_usd": 1,
+          "complete_multiset_match_required": true,
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140
+        },
+        "target": {
+          "at": "2026-11-20T18:59:00+00:00",
+          "stream": "Day"
+        },
+        "training_latest": {
+          "game": "pick3",
+          "at": "2026-11-20T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            7,
+            6,
+            6
+          ],
+          "bonus": null,
+          "extra": 6,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 111,
+      "game": "pick4",
+      "created": "2026-11-20T13:55:37.453230+00:00",
+      "stream": "Day",
+      "method": "digit_box_v3",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              0,
+              3,
+              4,
+              9
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.0024,
+            "box_probability": 0.0024,
+            "box_ways": 24,
+            "box_payout_usd_1_dollar": 200,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          },
+          {
+            "numbers": [
+              2,
+              3,
+              6,
+              9
+            ],
+            "bonus": null,
+            "rank": 2,
+            "role": "alternative_1",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.0024,
+            "box_probability": 0.0024,
+            "box_ways": 24,
+            "box_payout_usd_1_dollar": 200,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          },
+          {
+            "numbers": [
+              2,
+              5,
+              6,
+              8
+            ],
+            "bonus": null,
+            "rank": 3,
+            "role": "alternative_2",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.0024,
+            "box_probability": 0.0024,
+            "box_ways": 24,
+            "box_payout_usd_1_dollar": 200,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              1,
+              5,
+              8
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 24
+          },
+          {
+            "numbers": [
+              0,
+              3,
+              5,
+              7
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 24
+          },
+          {
+            "numbers": [
+              0,
+              5,
+              7,
+              9
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 24
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_box_v3",
+          "play_type": "any_order",
+          "ticket_stake_usd": 1,
+          "complete_multiset_match_required": true,
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140
+        },
+        "target": {
+          "at": "2026-11-20T18:59:00+00:00",
+          "stream": "Day"
+        },
+        "training_latest": {
+          "game": "pick4",
+          "at": "2026-11-20T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            4,
+            4,
+            9,
+            8
+          ],
+          "bonus": null,
+          "extra": 8,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 112,
+      "game": "pick5",
+      "created": "2026-11-20T13:55:37.453230+00:00",
+      "stream": "Day",
+      "method": "digit_box_v3",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              0,
+              1,
+              2,
+              8,
+              9
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.0012000000000000025,
+            "box_probability": 0.0012000000000000025,
+            "box_ways": 120,
+            "box_payout_usd_1_dollar": 400,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          },
+          {
+            "numbers": [
+              0,
+              1,
+              3,
+              6,
+              7
+            ],
+            "bonus": null,
+            "rank": 2,
+            "role": "alternative_1",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.0012000000000000025,
+            "box_probability": 0.0012000000000000025,
+            "box_ways": 120,
+            "box_payout_usd_1_dollar": 400,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          },
+          {
+            "numbers": [
+              2,
+              6,
+              7,
+              8,
+              9
+            ],
+            "bonus": null,
+            "rank": 3,
+            "role": "alternative_2",
+            "ranking_version": "digit_box_v3",
+            "model_weight_score": 0.0012000000000000025,
+            "box_probability": 0.0012000000000000025,
+            "box_ways": 120,
+            "box_payout_usd_1_dollar": 400,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v3"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 120
+          },
+          {
+            "numbers": [
+              1,
+              2,
+              3,
+              7,
+              8
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 120
+          },
+          {
+            "numbers": [
+              1,
+              2,
+              3,
+              8,
+              9
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 120
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_box_v3",
+          "play_type": "any_order",
+          "ticket_stake_usd": 1,
+          "complete_multiset_match_required": true,
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140
+        },
+        "target": {
+          "at": "2026-11-20T18:59:00+00:00",
+          "stream": "Day"
+        },
+        "training_latest": {
+          "game": "pick5",
+          "at": "2026-11-20T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            3,
+            0,
+            0,
+            7,
+            2
+          ],
+          "bonus": null,
+          "extra": 3,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
     }
   ]
 }

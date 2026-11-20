@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T11:44:35.505472+00:00",
+  "generated_at": "2026-11-20T13:55:37.453230+00:00",
   "games": [
     {
       "game": "pick3",
@@ -15,7 +15,13 @@
               0.23439783662577934,
               0.3522688300408873
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 2,
+            "box_tickets": 297,
+            "box_spend_usd": 297,
+            "box_payout_usd": 160,
+            "box_net_usd": -137,
+            "box_fair_expected_wins": 1.5779999999999994
           },
           {
             "method": "frequency",
@@ -27,7 +33,13 @@
               0.23107317789835136,
               0.3622601554349819
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 2,
+            "box_tickets": 298,
+            "box_spend_usd": 298,
+            "box_payout_usd": 160,
+            "box_net_usd": -138,
+            "box_fair_expected_wins": 1.5629999999999995
           },
           {
             "method": "recent",
@@ -39,7 +51,13 @@
               0.24457873760896665,
               0.38208792905769995
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 3,
+            "box_tickets": 299,
+            "box_spend_usd": 299,
+            "box_payout_usd": 240,
+            "box_net_usd": -59,
+            "box_fair_expected_wins": 1.5569999999999993
           },
           {
             "method": "cold",
@@ -51,7 +69,13 @@
               0.24527122177078223,
               0.3613954448958845
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 2,
+            "box_tickets": 297,
+            "box_spend_usd": 297,
+            "box_payout_usd": 160,
+            "box_net_usd": -137,
+            "box_fair_expected_wins": 1.5659999999999996
           },
           {
             "method": "ensemble",
@@ -63,13 +87,19 @@
               0.25010746034531733,
               0.38322587298801597
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 4,
+            "box_tickets": 298,
+            "box_spend_usd": 298,
+            "box_payout_usd": 320,
+            "box_net_usd": 22,
+            "box_fair_expected_wins": 1.5569999999999995
           }
         ],
         "from_draw": "2026-10-01T17:59:00+00:00",
         "to_draw": "2026-11-20T04:00:00+00:00",
         "expected_matches": 0.3,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -93,7 +123,13 @@
               0.34971226208035944,
               0.49695440458630724
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 0,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 0,
+            "box_net_usd": -300,
+            "box_fair_expected_wins": 0.5290000000000005
           },
           {
             "method": "frequency",
@@ -105,7 +141,13 @@
               0.330738570909842,
               0.48926142909015796
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 0,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 0,
+            "box_net_usd": -300,
+            "box_fair_expected_wins": 0.5268000000000005
           },
           {
             "method": "recent",
@@ -117,7 +159,13 @@
               0.3305093729321674,
               0.4694906270678325
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 299,
+            "box_spend_usd": 299,
+            "box_payout_usd": 200,
+            "box_net_usd": -99,
+            "box_fair_expected_wins": 0.5240000000000004
           },
           {
             "method": "cold",
@@ -129,7 +177,13 @@
               0.33876595573802726,
               0.494567377595306
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 0,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 0,
+            "box_net_usd": -300,
+            "box_fair_expected_wins": 0.5158000000000006
           },
           {
             "method": "ensemble",
@@ -141,13 +195,19 @@
               0.326592471562567,
               0.48007419510409965
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 200,
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.5274000000000004
           }
         ],
         "from_draw": "2026-10-01T17:59:00+00:00",
         "to_draw": "2026-11-20T04:00:00+00:00",
         "expected_matches": 0.4,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -171,7 +231,13 @@
               0.37380858977875436,
               0.5128580768879123
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 400,
+            "box_net_usd": 100,
+            "box_fair_expected_wins": 0.21770000000000006
           },
           {
             "method": "frequency",
@@ -183,7 +249,13 @@
               0.36901281413767034,
               0.5176538525289962
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 400,
+            "box_net_usd": 100,
+            "box_fair_expected_wins": 0.21780000000000002
           },
           {
             "method": "recent",
@@ -195,7 +267,13 @@
               0.3855478148152453,
               0.5277855185180881
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 400,
+            "box_net_usd": 100,
+            "box_fair_expected_wins": 0.21140000000000012
           },
           {
             "method": "cold",
@@ -207,7 +285,13 @@
               0.37966142486860316,
               0.5203385751313967
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 400,
+            "box_net_usd": 100,
+            "box_fair_expected_wins": 0.21560000000000012
           },
           {
             "method": "ensemble",
@@ -219,13 +303,19 @@
               0.3617040344855635,
               0.5049626321811032
             ],
-            "bonus_matches": 0
+            "bonus_matches": 0,
+            "box_wins": 1,
+            "box_tickets": 300,
+            "box_spend_usd": 300,
+            "box_payout_usd": 400,
+            "box_net_usd": 100,
+            "box_fair_expected_wins": 0.2139000000000001
           }
         ],
         "from_draw": "2026-10-01T17:59:00+00:00",
         "to_draw": "2026-11-20T04:00:00+00:00",
         "expected_matches": 0.5,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -303,7 +393,7 @@
         "from_draw": "2026-08-13T03:00:00+00:00",
         "to_draw": "2026-11-20T04:00:00+00:00",
         "expected_matches": 0.5555555555555556,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -381,7 +471,7 @@
         "from_draw": "2026-04-02T02:59:00+00:00",
         "to_draw": "2026-11-19T03:59:00+00:00",
         "expected_matches": 0.36231884057971014,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -459,7 +549,7 @@
         "from_draw": "2025-12-06T04:00:00+00:00",
         "to_draw": "2026-11-18T04:00:00+00:00",
         "expected_matches": 0.35714285714285715,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -537,7 +627,7 @@
         "from_draw": "2026-08-13T03:15:00+00:00",
         "to_draw": "2026-11-20T04:15:00+00:00",
         "expected_matches": 0.43103448275862066,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
@@ -615,7 +705,7 @@
         "from_draw": "2025-12-07T04:00:00+00:00",
         "to_draw": "2026-11-19T04:00:00+00:00",
         "expected_matches": 0.9,
-        "note": "Chronological rolling test; training uses only earlier draws (last 500). Fixed methods; no automatic winner selection. Confidence intervals are approximate and do not prove predictive ability. Exact means all selected main numbers plus the special ball where applicable; Keno means all five spots. Partial matches are not prize wins. No payout or ROI calculation."
+        "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
