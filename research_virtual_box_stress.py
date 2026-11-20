@@ -28,7 +28,7 @@ from val_digit_formula_v2 import generate_picks
 VERSION = "virtual_box_stress_v1"
 TRAIN = 850
 TEST = 650
-BLOCK = 130
+BLOCK = 260
 TRIALS = 8
 FIRST_REPLICATE = 100
 OUTPUT = Path("reports/research_virtual_box_stress.json")
@@ -61,32 +61,41 @@ def run_single(game, scenario, replicate, train=TRAIN, test=TEST, block=BLOCK):
     for i, draw in enumerate(rows):
         if i >= train:
             if (i - train) % block == 0:
-                rng_token = (game, scenario, replicate, i)
-                signal, contender = machine.picks(
-                    draw["stream"], seeded("challenger", *rng_token), 3)
-                incumbent, _ = generate_picks(
-                    game, rows[:i], draw["stream"], 3,
-                    rng=seeded("production", *rng_token))
-                controls = random_box_picks(
-                    game, 3, seeded("fair", *rng_token))
-                chosen = {"challenger": contender,
-                          "production_v3": incumbent,
-                          "random": controls}
-                coverages = {name: fair_coverage(picks, width)
-                             for name, picks in chosen.items()}
-                assert len({tuple(sorted(p["numbers"]))
-                            for p in chosen["random"]}) == 3
-                assert all(len(x) == 3 for x in chosen.values())
-                active_blocks += signal is not None
+                selected_by_stream = {}
+                cover_by_stream = {}
+                active_by_stream = {}
+                for stream in ("Day", "Night"):
+                    rng_token = (game, scenario, replicate, i, stream)
+                    signal, contender = machine.picks(
+                        stream, seeded("challenger", *rng_token), 3)
+                    incumbent, _ = generate_picks(
+                        game, rows[:i], stream, 3,
+                        rng=seeded("production", *rng_token))
+                    controls = random_box_picks(
+                        game, 3, seeded("fair", *rng_token))
+                    selected_by_stream[stream] = {
+                        "challenger": contender,
+                        "production_v3": incumbent,
+                        "random": controls}
+                    cover_by_stream[stream] = {
+                        name: fair_coverage(picks, width)
+                        for name, picks in selected_by_stream[stream].items()}
+                    active_by_stream[stream] = signal is not None
+                    assert len({tuple(sorted(p["numbers"]))
+                                for p in controls}) == 3
+                    assert all(len(x) == 3
+                               for x in selected_by_stream[stream].values())
+                active_blocks += int(any(active_by_stream.values()))
                 blocks += 1
 
-            # All three portfolios were selected before the first result
-            # in the current block. This test measures a frozen 130-draw
-            # deployment policy, not daily production refreshes.
+            # Same three frozen tickets for every same-stream draw in a
+            # block; both session portfolios were fixed BEFORE the block.
+            chosen = selected_by_stream[draw["stream"]]
+            coverages = cover_by_stream[draw["stream"]]
             for name, picks in chosen.items():
                 wins[name] += grade_box(picks, draw["numbers"])
                 expected[name] += coverages[name]
-            active_draws += signal is not None
+            active_draws += active_by_stream[draw["stream"]]
         machine.observe(draw)
 
     return {"replicate": replicate, "draws": test, "blocks": blocks,
@@ -163,7 +172,7 @@ def report(data):
         "Real-world validation requires prospectively saved real outcomes.",
         "", "[Raw results](research_virtual_box_stress.json).", "",
     ]
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def main():
