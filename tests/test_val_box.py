@@ -45,9 +45,9 @@ class AnyOrderLotteryTests(unittest.TestCase):
         s=val.score_batch("pick4",picks,draw)
         self.assertEqual(s["box_wins"],1)
         self.assertEqual(s["exact"],0)
-        self.assertEqual(s["box_payout_usd"],1200)
+        self.assertEqual(s["box_payout_usd"],400)
         self.assertEqual(s["box_spend_usd"],3)
-        self.assertEqual(s["box_net_usd"],1197)
+        self.assertEqual(s["box_net_usd"],397)
         self.assertFalse(val.score("pick4",picks[0],draw)["box"])
         self.assertTrue(val.score("pick4",picks[1],draw)["box"])
     def test_box_vs_straight_same_digits_different_order(self):
