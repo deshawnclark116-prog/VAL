@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import scheduled_bot
+from val_digit_formula_v2 import VERSION as LIVE_BOX_VERSION
 from val import GAMES, Store, draw_schedule, next_draw, parse_latest_digits, ET
 
 
@@ -39,10 +40,10 @@ class DailyBotTests(unittest.TestCase):
             batches=json.loads((output/'picks.json').read_text())['batches']
             p3=next(b for b in batches if b['game']=='pick3')
             self.assertEqual([p['rank'] for p in p3['picks']], [1,2,3])
-            self.assertEqual(p3["method"],"digit_box_v3")
+            self.assertEqual(p3["method"],LIVE_BOX_VERSION)
             self.assertIn("model_meta",p3)
             self.assertIn("signal_gate_passed",p3["model_meta"])
-            self.assertEqual(p3["model_meta"]["formula_version"],"digit_box_v3")
+            self.assertEqual(p3["model_meta"]["formula_version"],LIVE_BOX_VERSION)
             self.assertEqual([p['role'] for p in p3['picks']], ['primary','alternative_1','alternative_2'])
             self.assertTrue(all('model_weight_score' in p for p in p3['picks']))
             self.assertIn('**Paper 1:**' if not p3["model_meta"]["signal_gate_passed"] else '**Primary:**',
@@ -70,7 +71,7 @@ class DailyBotTests(unittest.TestCase):
             scheduled_bot.run(Store(self.root/'restored.db'),output,syncer=self.fake_sync,now=self.now)
         saved=[x for x in json.loads((output/'ledger.json').read_text())['predictions'] if x['game']=='pick3']
         old=next(x for x in saved if x['method']=='ensemble')
-        challenger=next(x for x in saved if x['method']=='digit_box_v3')
+        challenger=next(x for x in saved if x['method']==LIVE_BOX_VERSION)
         self.assertEqual(old['data']['picks'],original)
         self.assertEqual(old['data']['target'],challenger['data']['target'])
         self.assertIsNone(old['result'])
