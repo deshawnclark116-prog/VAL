@@ -1,0 +1,39 @@
+name: VAL 40k fair mock-draw Box stress test
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - research/box-mock-draw-stress-20261120
+    paths:
+      - 'research_mock_box_stress.py'
+      - 'tests/test_research_mock_box_stress.py'
+      - '.github/workflows/research_mock_box_stress.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-mock-box-stress
+  cancel-in-progress: false
+jobs:
+  stress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate probability and no lookahead
+        run: python -m unittest discover -s tests -p 'test_research_mock_box_stress.py' -v
+      - name: Recreate 40k fair and 6k biased draw tests per game and scenario
+        run: python -u research_mock_box_stress.py
+      - name: Preserve results in GitHub only on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+users.noreply.github.com'
+          git add reports/research_mock_box_stress.json reports/research_mock_box_stress.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish VAL mock-machine full Box stress test'
+          git pull --rebase origin main
+          git push origin HEAD:main
