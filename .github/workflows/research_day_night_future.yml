@@ -1,0 +1,42 @@
+name: VAL future Night conditional formula trial
+on:
+  schedule:
+    - cron: '30 21 * * *'
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - research/day-night-conditional-box-20261120
+    paths:
+      - 'research_day_night_future.py'
+      - 'tests/test_research_day_night_future.py'
+      - '.github/workflows/research_day_night_future.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-night-conditional-prospective
+  cancel-in-progress: false
+jobs:
+  pre_night:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify immutable future-only Night predictions
+        run: python -m unittest discover -s tests -p 'test_research_day_night_future.py' -v
+      - name: Freeze next Night Box tickets and grade older saved forecasts
+        run: python -u research_day_night_future.py
+      - name: Persist new evidence records without rewriting earlier picks
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/prospective_night_conditional.json reports/prospective_night_conditional.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze and settle real Night conditional Box predictions'
+          git pull --rebase origin main
+          git push origin HEAD:main
