@@ -174,6 +174,7 @@ def render(data):
         "| Game | Settled draws | Model Box wins | Random Box wins | Model paper net | Random paper net | Prospectively active | Mean log gain |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
+    details = []
     for game, rows in data["games"].items():
         finished = [r for r in rows if r["result"] is not None]
         model = [r["result"]["accuracy"] for r in finished]
@@ -190,12 +191,13 @@ def render(data):
         for row in rows[-1:]:
             if row["result"] is None:
                 f = row["forecast"]
-                lines += ["",
-                          f'Latest frozen {game}: {row["target"]["date"]} '
-                          f'{row["target"]["stream"]}; saved {row["created_utc"]}.',
-                          f'Model active: {f["selected_expert"] or "No — fair baseline"}; '
-                          f'Box tickets: {f["candidate_tickets"]}; '
-                          f'controls: {f["random_control_tickets"]}.']
+                details += ["",
+                            f'Latest frozen {game}: {row["target"]["date"]} '
+                            f'{row["target"]["stream"]}; saved {row["created_utc"]}.',
+                            f'Model active: {f["selected_expert"] or "No — fair baseline"}; '
+                            f'Box tickets: {f["candidate_tickets"]}; '
+                            f'controls: {f["random_control_tickets"]}.']
+    lines += details
     lines += [
         "", "## Promotion rule", "",
         "Only new subsequent drawings that were unknown when the model was",
