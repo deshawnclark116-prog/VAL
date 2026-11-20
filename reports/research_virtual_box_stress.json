@@ -1,0 +1,4013 @@
+{
+  "version": "virtual_box_stress_v1",
+  "generated_utc": "2026-11-20T19:03:35.546581+00:00",
+  "trials": 8,
+  "train_draws": 850,
+  "test_draws": 650,
+  "block_draws": 260,
+  "reference_simulation": "research_virtual_draw_lab.simulate",
+  "trials_preselected": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "synthetic_only": true,
+  "production_changes": false,
+  "games": {
+    "pick3": {
+      "fair_independent": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 113,
+          "production_v3": 81,
+          "random": 96
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.02173076923076923,
+          "production_v3": 0.015576923076923077,
+          "random": 0.018461538461538463
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": 17,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -5.063218260262939,
+          39.06321826026294
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 16,
+              "production_v3": 10,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 13,
+              "production_v3": 16,
+              "random": 11
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 9,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 10,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 6,
+              "random": 15
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 17,
+              "production_v3": 4,
+              "random": 15
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 12,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 18,
+              "production_v3": 14,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "fixed_position_small": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 91,
+          "production_v3": 79,
+          "random": 104
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.0175,
+          "production_v3": 0.015192307692307692,
+          "random": 0.02
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 2,
+        "total_blocks": 24,
+        "active_draws": 520,
+        "paired_win_difference_challenger_minus_random": -13,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -50.003459297746744,
+          24.003459297746744
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 9,
+              "random": 18
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 15,
+              "production_v3": 13,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 11,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 15,
+              "production_v3": 7,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 8,
+              "production_v3": 9,
+              "random": 15
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 2,
+            "active_draws": 520,
+            "box_wins": {
+              "challenger": 17,
+              "production_v3": 12,
+              "random": 14
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 11,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 12,
+              "production_v3": 7,
+              "random": 15
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "fixed_position_strong": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 107,
+          "production_v3": 93,
+          "random": 87
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.020576923076923076,
+          "production_v3": 0.017884615384615384,
+          "random": 0.01673076923076923
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 20,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -22.530516103146454,
+          62.530516103146454
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 19,
+              "production_v3": 14,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 17,
+              "production_v3": 9,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 12,
+              "production_v3": 11,
+              "random": 11
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 13,
+              "random": 15
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 8,
+              "production_v3": 18,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 18,
+              "production_v3": 8,
+              "random": 11
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 9,
+              "random": 16
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 11,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "pooled_device_bias": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 109,
+          "production_v3": 87,
+          "random": 101
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.020961538461538462,
+          "production_v3": 0.01673076923076923,
+          "random": 0.01942307692307692
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 8,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -12.09768145831752,
+          28.09768145831752
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 15,
+              "random": 11
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 16,
+              "production_v3": 12,
+              "random": 12
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 12,
+              "production_v3": 10,
+              "random": 16
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 11,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 8,
+              "random": 17
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 15,
+              "production_v3": 13,
+              "random": 17
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 13,
+              "production_v3": 11,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 16,
+              "production_v3": 7,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "day_only_bias": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 125,
+          "production_v3": 113,
+          "random": 102
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.02403846153846154,
+          "production_v3": 0.02173076923076923,
+          "random": 0.019615384615384614
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 22,
+        "total_blocks": 24,
+        "active_draws": 4680,
+        "paired_win_difference_challenger_minus_random": 23,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          2.3767121922812713,
+          43.623287807718725
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 16,
+              "production_v3": 12,
+              "random": 19
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 19,
+              "production_v3": 18,
+              "random": 17
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 22,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 22,
+              "production_v3": 13,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 21,
+              "production_v3": 15,
+              "random": 15
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 14,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 7,
+              "random": 12
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 1,
+            "active_draws": 130,
+            "box_wins": {
+              "challenger": 13,
+              "production_v3": 12,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "halfway_replacement": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 124,
+          "production_v3": 101,
+          "random": 111
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.023846153846153847,
+          "production_v3": 0.01942307692307692,
+          "random": 0.021346153846153845
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 13,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -16.17514010249137,
+          42.17514010249137
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 22,
+              "production_v3": 12,
+              "random": 12
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 15,
+              "production_v3": 15,
+              "random": 10
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 15,
+              "production_v3": 9,
+              "random": 18
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 17,
+              "production_v3": 14,
+              "random": 17
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 14,
+              "production_v3": 4,
+              "random": 21
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 13,
+              "production_v3": 10,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 17,
+              "production_v3": 16,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 21,
+              "random": 11
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "hidden_opposing_machines": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 81,
+          "production_v3": 104,
+          "random": 88
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.015576923076923077,
+          "production_v3": 0.02,
+          "random": 0.016923076923076923
+        },
+        "fair_expected_box_wins": {
+          "challenger": 93.60000000000059,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": -7,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -25.37149966660316,
+          11.37149966660316
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 10,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 13,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 12,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 14,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 10,
+              "random": 14
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 13,
+              "production_v3": 11,
+              "random": 20
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 16,
+              "random": 13
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 18,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 11.700000000000074,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      },
+      "within_draw_echo": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 92,
+          "production_v3": 53,
+          "random": 31
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.01769230769230769,
+          "production_v3": 0.010192307692307691,
+          "random": 0.005961538461538462
+        },
+        "fair_expected_box_wins": {
+          "challenger": 58.889999999999816,
+          "production_v3": 93.60000000000059,
+          "random": 93.60000000000059
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 61,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          38.05878817498953,
+          83.94121182501047
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 19,
+              "production_v3": 4,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 5.850000000000037,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 11,
+              "production_v3": 12,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 7.409999999999966,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 3,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 8.969999999999962,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 13,
+              "production_v3": 3,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 6.629999999999979,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 15,
+              "production_v3": 7,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 7.799999999999866,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 8,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 6.630000000000092,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 7,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 6.239999999999936,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 9,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 9.359999999999975,
+              "production_v3": 11.700000000000074,
+              "random": 11.700000000000074
+            }
+          }
+        ]
+      }
+    },
+    "pick4": {
+      "fair_independent": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 41,
+          "production_v3": 35,
+          "random": 32
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.007884615384615384,
+          "production_v3": 0.006730769230769231,
+          "random": 0.006153846153846154
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": 9,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -11.623287807718729,
+          29.62328780771873
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 5,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 2,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 3,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 5,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 5,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 4,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 7,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 4,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "fixed_position_small": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 39,
+          "production_v3": 33,
+          "random": 32
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.0075,
+          "production_v3": 0.006346153846153846,
+          "random": 0.006153846153846154
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": 7,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -7.036352802633596,
+          21.036352802633594
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 5,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 7,
+              "production_v3": 3,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 4,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 3,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 7,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 7,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "fixed_position_strong": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 46,
+          "production_v3": 38,
+          "random": 41
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.008846153846153846,
+          "production_v3": 0.007307692307692308,
+          "random": 0.007884615384615384
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 5,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -10.379622882242593,
+          20.379622882242593
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 7,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 6,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 4,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 9,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 2,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 5,
+              "random": 9
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 3,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "pooled_device_bias": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 46,
+          "production_v3": 36,
+          "random": 32
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.008846153846153846,
+          "production_v3": 0.006923076923076923,
+          "random": 0.006153846153846154
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 14,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -2.4319688412557525,
+          30.431968841255753
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 4,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 3,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 2,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 9,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 7,
+              "production_v3": 3,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 6,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 8,
+              "production_v3": 7,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "day_only_bias": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 46,
+          "production_v3": 38,
+          "random": 36
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.008846153846153846,
+          "production_v3": 0.007307692307692308,
+          "random": 0.006923076923076923
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 22,
+        "total_blocks": 24,
+        "active_draws": 4680,
+        "paired_win_difference_challenger_minus_random": 10,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -5.036808171949257,
+          25.036808171949257
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 4,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 4,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 4,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 7,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 9,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 9,
+              "production_v3": 3,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 1,
+            "active_draws": 130,
+            "box_wins": {
+              "challenger": 8,
+              "production_v3": 5,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "halfway_replacement": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 45,
+          "production_v3": 24,
+          "random": 33
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.008653846153846154,
+          "production_v3": 0.004615384615384616,
+          "random": 0.006346153846153846
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 12,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -1.8988344835097593,
+          25.89883448350976
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 10,
+              "production_v3": 1,
+              "random": 7
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 6,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 7,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 8,
+              "production_v3": 6,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 2,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 0,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 4,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 3,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "hidden_opposing_machines": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 37,
+          "production_v3": 35,
+          "random": 26
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.007115384615384615,
+          "production_v3": 0.006730769230769231,
+          "random": 0.005
+        },
+        "fair_expected_box_wins": {
+          "challenger": 37.440000000000374,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": 11,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -10.963496989322987,
+          32.96349698932299
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 7,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 6,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 3,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 4,
+              "random": 8
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 3,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 6,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 2,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 12,
+              "production_v3": 4,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 4.680000000000047,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      },
+      "within_draw_echo": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 22,
+          "production_v3": 8,
+          "random": 16
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.004230769230769231,
+          "production_v3": 0.0015384615384615385,
+          "random": 0.003076923076923077
+        },
+        "fair_expected_box_wins": {
+          "challenger": 10.24400000000002,
+          "production_v3": 37.440000000000374,
+          "random": 37.440000000000374
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 6,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -7.168933138261428,
+          19.16893313826143
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 0,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.8840000000000025,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 1,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.3000000000000096,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 2,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.0920000000000025,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 2,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.4299999999999868,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 0,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.9499999999999886,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 1,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.534000000000007,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 1,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.092000000000018,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 1,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.9620000000000036,
+              "production_v3": 4.680000000000047,
+              "random": 4.680000000000047
+            }
+          }
+        ]
+      }
+    },
+    "pick5": {
+      "fair_independent": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 20,
+          "production_v3": 21,
+          "random": 22
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.0038461538461538464,
+          "production_v3": 0.0040384615384615385,
+          "random": 0.004230769230769231
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": -2,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -18.957924401293926,
+          14.957924401293926
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 7,
+              "production_v3": 3,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 0,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 3,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 0,
+              "production_v3": 2,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 3,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 1,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 3,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 4,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "fixed_position_small": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 20,
+          "production_v3": 10,
+          "random": 19
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.0038461538461538464,
+          "production_v3": 0.0019230769230769232,
+          "random": 0.003653846153846154
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": 1,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -12.39617855957437,
+          14.39617855957437
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 0,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 0,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 3,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 5,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 2,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 0,
+              "production_v3": 0,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 0,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 0,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "fixed_position_strong": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 17,
+          "production_v3": 20,
+          "random": 16
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.003269230769230769,
+          "production_v3": 0.0038461538461538464,
+          "random": 0.003076923076923077
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 1,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -11.723835899601976,
+          13.723835899601976
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 3,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 0,
+              "production_v3": 2,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 0,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 4,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 3,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 2,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 5,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "pooled_device_bias": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 32,
+          "production_v3": 15,
+          "random": 28
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.006153846153846154,
+          "production_v3": 0.0028846153846153848,
+          "random": 0.005384615384615384
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 4,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -3.84,
+          11.84
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 4,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 3,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 3,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 1,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 6,
+              "production_v3": 2,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 0,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 1,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "day_only_bias": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 20,
+          "production_v3": 21,
+          "random": 23
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.0038461538461538464,
+          "production_v3": 0.0040384615384615385,
+          "random": 0.004423076923076923
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": -3,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -16.231296232795938,
+          10.231296232795938
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 0,
+              "production_v3": 7,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 1,
+              "random": 6
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 0,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 4,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 7,
+              "production_v3": 5,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 2,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "halfway_replacement": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 22,
+          "production_v3": 22,
+          "random": 11
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.004230769230769231,
+          "production_v3": 0.004230769230769231,
+          "random": 0.0021153846153846153
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 11,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          2.141196469048431,
+          19.85880353095157
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 3,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 3,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 1,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 2,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 1,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 4,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 7,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "hidden_opposing_machines": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 19,
+          "production_v3": 17,
+          "random": 19
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.003653846153846154,
+          "production_v3": 0.003269230769230769,
+          "random": 0.003653846153846154
+        },
+        "fair_expected_box_wins": {
+          "challenger": 18.720000000000187,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 0,
+        "total_blocks": 24,
+        "active_draws": 0,
+        "paired_win_difference_challenger_minus_random": 0,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -10.26496955670108,
+          10.26496955670108
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 1,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 3,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 4,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 5,
+              "production_v3": 1,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 5
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 5,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 1,
+              "random": 4
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 0,
+            "active_draws": 0,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 1,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 2.3400000000000234,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      },
+      "within_draw_echo": {
+        "draws": 5200,
+        "trials": 8,
+        "ticket_budget_each_method": 15600,
+        "box_wins": {
+          "challenger": 13,
+          "production_v3": 4,
+          "random": 7
+        },
+        "box_rate_per_draw": {
+          "challenger": 0.0025,
+          "production_v3": 0.0007692307692307692,
+          "random": 0.001346153846153846
+        },
+        "fair_expected_box_wins": {
+          "challenger": 4.8749999999999964,
+          "production_v3": 18.720000000000187,
+          "random": 18.720000000000187
+        },
+        "active_blocks": 24,
+        "total_blocks": 24,
+        "active_draws": 5200,
+        "paired_win_difference_challenger_minus_random": 6,
+        "paired_replication_95pct_approx_interval_for_total_difference": [
+          -2.765386471799175,
+          14.765386471799175
+        ],
+        "per_replicate": [
+          {
+            "replicate": 100,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 3,
+              "production_v3": 0,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.23399999999999946,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 101,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 2,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.7540000000000101,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 102,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 4,
+              "production_v3": 1,
+              "random": 2
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.5070000000000017,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 103,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 1,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.7929999999999956,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 104,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 0,
+              "production_v3": 0,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.48749999999999677,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 105,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 2,
+              "production_v3": 0,
+              "random": 1
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.2924999999999966,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 106,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 0,
+              "random": 0
+            },
+            "fair_expected_box_wins": {
+              "challenger": 1.0920000000000027,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          },
+          {
+            "replicate": 107,
+            "draws": 650,
+            "blocks": 3,
+            "active_blocks": 3,
+            "active_draws": 650,
+            "box_wins": {
+              "challenger": 1,
+              "production_v3": 0,
+              "random": 3
+            },
+            "fair_expected_box_wins": {
+              "challenger": 0.7149999999999932,
+              "production_v3": 2.3400000000000234,
+              "random": 2.3400000000000234
+            }
+          }
+        ]
+      }
+    }
+  }
+}
