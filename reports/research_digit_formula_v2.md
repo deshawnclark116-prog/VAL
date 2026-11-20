@@ -4,69 +4,77 @@ Precommitted challenger: **digit_conditional_v2**.
 Direct live-generator replay on real subsequent drawing outcomes.
 Each candidate uses strictly earlier history. This is exploratory
 because the historical period has been previously inspected.
-All groups have three tickets per target. Exact = full Straight match.
-Position matches are diagnostics; a single position match on its own
-does NOT constitute a prize.
+PRIMARY METRIC: complete Any Order (Box) matches, with all digit
+multiplicities preserved. All groups have three $1 paper Box tickets
+per target (where legal). Payout/net use published non-FIREBALL
+Any Order prizes; NO real wagers were made. Old legacy ensembles
+may select repeated digits and thereby cover fewer permutations;
+the v2 and fair controls both select nonoverlapping all-distinct
+sets when no signal has passed its gate.
 
-| Game | Test draws | v2 matched positions | Old ensemble | Uniform controls | v2 exact | Old exact | Uniform exact |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| pick3 | 220 | 9.80% | 8.74% | 10.51% | 1 | 0 | 2 |
-| pick4 | 220 | 10.49% | 9.58% | 9.32% | 0 | 0 | 3 |
-| pick5 | 120 | 9.78% | 11.94% | 10.61% | 0 | 0 | 0 |
+| Game | Draws | v2 full Box wins | Old Box wins | Fair Box wins | v2 Box net | Old Box net | Fair Box net | v2 exact order |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| pick3 | 220 | 4 | 5 | 2 | $-340 | $-251 | $-500 | 0 |
+| pick4 | 220 | 3 | 1 | 3 | $-60 | $-460 | $-60 | 0 |
+| pick5 | 121 | 1 | 0 | 0 | $37 | $-363 | $-363 | 0 |
 
 ## PICK3
 
-Official history draws: 23,757; evaluated 220 independent target origins.
-Test dates: 2025-01-27T18:59:00+00:00 through 2026-11-15T18:59:00+00:00.
+Official history draws: 23,761; evaluated 220 independent target origins.
+Test dates: 2025-01-29T18:59:00+00:00 through 2026-11-17T18:59:00+00:00.
 Conditionally active signal gates: 0/220.
 Active expert counts: {}.
+Fair-expected complete Box matches at the actual selected permutation classes: new_v2: 3.960, original_ensemble: 3.369, uniform_control: 3.960.
 
 | Formula | Mean next-draw log gain vs 10%-per-digit fair | First half | Second half |
 | --- | ---: | ---: | ---: |
 | new_v2 | +0.000000 | +0.000000 | +0.000000 |
-| original_ensemble | -0.024709 | -0.024597 | -0.024820 |
+| original_ensemble | -0.021192 | -0.026935 | -0.015449 |
 | uniform_control | +0.000000 | +0.000000 | +0.000000 |
 
-v2 minus old ensemble: +0.024709 log units per drawing; day-cluster 95% interval: [-0.006900, +0.056318].
+v2 minus old ensemble: +0.021192 log units per drawing; day-cluster 95% interval: [-0.010931, +0.053315].
 
 
 ## PICK4
 
-Official history draws: 23,023; evaluated 220 independent target origins.
-Test dates: 2025-01-27T18:59:00+00:00 through 2026-11-15T18:59:00+00:00.
+Official history draws: 23,027; evaluated 220 independent target origins.
+Test dates: 2025-01-29T18:59:00+00:00 through 2026-11-17T18:59:00+00:00.
 Conditionally active signal gates: 0/220.
 Active expert counts: {}.
+Fair-expected complete Box matches at the actual selected permutation classes: new_v2: 1.584, original_ensemble: 1.159, uniform_control: 1.584.
 
 | Formula | Mean next-draw log gain vs 10%-per-digit fair | First half | Second half |
 | --- | ---: | ---: | ---: |
 | new_v2 | +0.000000 | +0.000000 | +0.000000 |
-| original_ensemble | -0.029966 | -0.043242 | -0.016690 |
+| original_ensemble | -0.031137 | -0.008357 | -0.053916 |
 | uniform_control | +0.000000 | +0.000000 | +0.000000 |
 
-v2 minus old ensemble: +0.029966 log units per drawing; day-cluster 95% interval: [-0.006523, +0.066456].
+v2 minus old ensemble: +0.031137 log units per drawing; day-cluster 95% interval: [-0.006839, +0.069112].
 
 
 ## PICK5
 
-Official history draws: 2,524; evaluated 120 independent target origins.
-Test dates: 2025-11-23T18:59:00+00:00 through 2026-11-15T18:59:00+00:00.
-Conditionally active signal gates: 0/120.
+Official history draws: 2,528; evaluated 121 independent target origins.
+Test dates: 2025-11-22T18:59:00+00:00 through 2026-11-17T18:59:00+00:00.
+Conditionally active signal gates: 0/121.
 Active expert counts: {}.
+Fair-expected complete Box matches at the actual selected permutation classes: new_v2: 0.436, original_ensemble: 0.253, uniform_control: 0.436.
 
 | Formula | Mean next-draw log gain vs 10%-per-digit fair | First half | Second half |
 | --- | ---: | ---: | ---: |
 | new_v2 | +0.000000 | +0.000000 | +0.000000 |
-| original_ensemble | -0.030042 | -0.006561 | -0.053522 |
+| original_ensemble | -0.022477 | -0.029304 | -0.015762 |
 | uniform_control | +0.000000 | +0.000000 | +0.000000 |
 
-v2 minus old ensemble: +0.030042 log units per drawing; day-cluster 95% interval: [-0.023239, +0.083323].
+v2 minus old ensemble: +0.022477 log units per drawing; day-cluster 95% interval: [-0.033446, +0.078399].
 
 ## Interpretation and promotion rule
 
-The v2 formula is a genuine conditional joint model. It only exposes
-a nonuniform advantage if a model passes the past-only statistical gate.
+The v2 formula is a genuine conditional joint model. Box likelihood
+is computed by summing every distinct complete permutation, not
+by separately matching individual digit positions. It only exposesa nonuniform advantage if a model passes the past-only statistical gate.
 Otherwise it uses fair 10%-per-position distributions and diverse
-independent random candidates. It is designed to reduce overconfidence,
+independent nonoverlapping Box candidates. It is designed to reduce overconfidence,
 not to fake a winning edge. A lower log loss can be a valid improvement
 in forecasting honesty even when hit rates remain indistinguishable.
 
