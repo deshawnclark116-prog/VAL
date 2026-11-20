@@ -77,7 +77,7 @@ def full_box_probability(game, probability, combo):
     """Exact unordered outcome probability; multiplicity is preserved."""
     if game not in GAMES or len(combo) != int(game[-1]):
         raise ValueError("Invalid Box candidate")
-    return box_ways(combo) * math.prod(prob[d] for d in combo)
+    return box_ways(combo) * math.prod(probability[d] for d in combo)
 
 
 def optimal_boxes(game, probability, count=3):
