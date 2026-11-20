@@ -15,13 +15,14 @@ import hashlib
 import json
 import math
 import random
+import urllib.request
 from datetime import datetime,timezone
 from pathlib import Path
 
 from research_decades import GAMES,fetch_full
 from research_prospective import legal_target,earlier
 from research_pooled_digit_followup import probabilities,WINDOW
-from val import ET
+from val import ET, parse_latest_digits, draw_schedule
 from val_box import box_score_batch
 from val_pooled_box_formula import generate as generate_box_portfolio
 
@@ -224,6 +225,55 @@ def summary(registry,updates):
     return "\n".join(lines)
 
 
+def load_fresh_official_history(game, now):
+    """Merge official bulk archive with the official latest Day/Night card.
+
+    Bulk archive can lag one calendar day behind even though Day's result is
+    already known when Night tickets are frozen. Do NOT silently train on
+    stale data. Reject contradictory sources, future results or missing
+    latest completed draws.
+    """
+    archive,metadata=fetch_full(game)
+    url=f"https://www.valottery.com/data/draw-games/{game}"
+    request=urllib.request.Request(
+        url,headers={"User-Agent":"VAL/1.1 (latest digit results)"})
+    with urllib.request.urlopen(request,timeout=35) as response:
+        html=response.read(3_000_000).decode("utf-8-sig")
+    recent=parse_latest_digits(game,html)
+    by_target={(r["date"],r["stream"]):r for r in archive}
+    if len(by_target)!=len(archive):
+        raise ValueError("Duplicate official archive Day/Night results")
+    added=0
+    for row in recent:
+        draw_at=datetime.fromisoformat(row["at"])
+        if draw_at>now:
+            # The site must never feed information from a future draw.
+            continue
+        date=draw_at.astimezone(ET).date().isoformat()
+        key=(date,row["stream"])
+        existing=by_target.get(key)
+        if existing is not None:
+            if existing["numbers"]!=row["numbers"]:
+                raise ValueError("Conflict between official latest and bulk results")
+        else:
+            by_target[key]={
+                "date":date,"stream":row["stream"],
+                "numbers":list(row["numbers"]),
+                "fireball":row.get("extra")}
+            added+=1
+    finished=[d for d in draw_schedule(game,now)
+              if datetime.fromisoformat(d["at"])<=now]
+    if finished:
+        previous=max(finished,key=lambda d:d["at"])
+        date=datetime.fromisoformat(previous["at"]).astimezone(ET).date().isoformat()
+        if (date,previous["stream"]) not in by_target:
+            raise ValueError("Latest completed official result is missing; withhold picks")
+    ordered=sorted(by_target.values(),key=lambda r:(
+        r["date"],0 if r["stream"]=="Day" else 1))
+    return ordered,dict(source="official bulk plus latest drawing card",
+                        supplemented=added,original_meta=metadata)
+
+
 def cycle(now,ledger=LEDGER,report=REPORT):
     data=json.loads(ledger.read_text()) if ledger.exists() else {
         "created_utc":now.astimezone(timezone.utc).isoformat(),
@@ -235,7 +285,7 @@ def cycle(now,ledger=LEDGER,report=REPORT):
         raise ValueError("Frozen candidate registry mismatch")
     updates={}
     for game in GAMES_TEST:
-        source,metadata=fetch_full(game)
+        source,metadata=load_fresh_official_history(game,now)
         old=data["games"][game]
         new,change=update(game,source,old,now)
         data["games"][game]=new
