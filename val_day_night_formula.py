@@ -163,12 +163,10 @@ class NightConditionalEvidence:
         self.game = game
         self.width=int(game[-1])
         self.window=window
-        self.last_day=None
         self.paired=0
         self.accumulator=_NightCounts(self.width, window)
         self.log_e={m:0. for m in EXPERTS}
         self.recent={m:deque(maxlen=RECENT) for m in EXPERTS}
-        self._pairs=[] if False else None  # no source/history stored
 
     def predict(self, day_numbers, epoch_index=0):
         p=self.accumulator.distributions(day_numbers)
