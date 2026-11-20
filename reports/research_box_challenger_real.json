@@ -1,0 +1,86 @@
+{
+  "version": "box_evidence_challenger_v1",
+  "source": "Virginia Lottery official archive",
+  "previously_inspected_historical_data": true,
+  "pristine_future_validation": false,
+  "games": {
+    "pick3": {
+      "draws": 1200,
+      "active_draws": 493,
+      "active_experts": {
+        "echo": 493
+      },
+      "ticket_trials": 40,
+      "candidate_box_wins": 1,
+      "control_box_wins": 2,
+      "v3_box_wins": 0,
+      "fair_expected_box_wins": 0.7200000000000005,
+      "v3_fair_expected_box_wins": 0.7200000000000005,
+      "candidate_truth_expected_wins": 0.0,
+      "control_truth_expected_wins": 0.0,
+      "mean_log_gain_vs_fair": -0.0037248693152347784,
+      "final_log_evidence": {
+        "pooled": -0.95672,
+        "position": -6.71396,
+        "session": -8.60478,
+        "echo": -3.51497
+      },
+      "first_evaluated": "2025-03-30T17:59:00+00:00",
+      "last_evaluated": "2026-11-20T04:00:00+00:00",
+      "official_history_draws": 23761,
+      "initial_training_draws": 800,
+      "evaluation_stride": 30
+    },
+    "pick4": {
+      "draws": 1200,
+      "active_draws": 0,
+      "active_experts": {},
+      "ticket_trials": 40,
+      "candidate_box_wins": 1,
+      "control_box_wins": 0,
+      "v3_box_wins": 0,
+      "fair_expected_box_wins": 0.2880000000000001,
+      "v3_fair_expected_box_wins": 0.2880000000000001,
+      "candidate_truth_expected_wins": 0.0,
+      "control_truth_expected_wins": 0.0,
+      "mean_log_gain_vs_fair": 0.0,
+      "final_log_evidence": {
+        "pooled": -3.45538,
+        "position": -12.93427,
+        "session": -17.82015,
+        "echo": -26.338
+      },
+      "first_evaluated": "2025-03-30T17:59:00+00:00",
+      "last_evaluated": "2026-11-20T04:00:00+00:00",
+      "official_history_draws": 23027,
+      "initial_training_draws": 800,
+      "evaluation_stride": 30
+    },
+    "pick5": {
+      "draws": 1200,
+      "active_draws": 0,
+      "active_experts": {},
+      "ticket_trials": 40,
+      "candidate_box_wins": 1,
+      "control_box_wins": 0,
+      "v3_box_wins": 0,
+      "fair_expected_box_wins": 0.14400000000000004,
+      "v3_fair_expected_box_wins": 0.14400000000000004,
+      "candidate_truth_expected_wins": 0.0,
+      "control_truth_expected_wins": 0.0,
+      "mean_log_gain_vs_fair": 0.0,
+      "final_log_evidence": {
+        "pooled": -5.678,
+        "position": -15.94446,
+        "session": -24.22036,
+        "echo": -57.59257
+      },
+      "first_evaluated": "2025-03-30T17:59:00+00:00",
+      "last_evaluated": "2026-11-20T04:00:00+00:00",
+      "official_history_draws": 2528,
+      "initial_training_draws": 800,
+      "evaluation_stride": 30
+    }
+  },
+  "generated_at_utc": "2026-11-20T17:10:19.546702+00:00"
+}

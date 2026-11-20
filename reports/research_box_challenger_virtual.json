@@ -1,0 +1,339 @@
+{
+  "version": "box_evidence_challenger_v1",
+  "source": "injected synthetic virtual draws",
+  "synthetic_only": true,
+  "gate_log_threshold": 5.480638923341991,
+  "games": {
+    "pick3": {
+      "fair_independent": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 0.9360000000000007,
+        "control_truth_expected_wins": 0.9360000000000007,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "fixed_position_small": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 4,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 0.9455555555555559,
+        "control_truth_expected_wins": 0.9400000000000004,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "fixed_position_strong": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "position": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 3,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 1.2272000000000012,
+        "control_truth_expected_wins": 0.9552000000000002,
+        "mean_log_gain_vs_fair": 0.05315247955943106
+      },
+      "pooled_device_bias": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 1297,
+          "position": 3
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 3,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 1.2248730000000012,
+        "control_truth_expected_wins": 0.9487080000000008,
+        "mean_log_gain_vs_fair": 0.017689133461445915
+      },
+      "day_only_bias": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "session": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 2,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 1.1446528888888894,
+        "control_truth_expected_wins": 0.9382663868312762,
+        "mean_log_gain_vs_fair": 0.031043728929139352
+      },
+      "halfway_replacement": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 1126,
+          "position": 174
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 3,
+        "control_box_wins": 1,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 1.358746074074074,
+        "control_truth_expected_wins": 0.9027315884773659,
+        "mean_log_gain_vs_fair": 0.03208070720793486
+      },
+      "hidden_opposing_machines": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.9360000000000006,
+        "candidate_truth_expected_wins": 0.9207814814814816,
+        "control_truth_expected_wins": 0.8810917695473254,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "within_draw_echo": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "echo": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 1,
+        "fair_expected_box_wins": 0.5520000000000003,
+        "candidate_truth_expected_wins": 0.8080799999999998,
+        "control_truth_expected_wins": 0.45863999999999977,
+        "mean_log_gain_vs_fair": 0.39226821312612187
+      }
+    },
+    "pick4": {
+      "fair_independent": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.3744000000000007,
+        "control_truth_expected_wins": 0.3744000000000007,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "fixed_position_small": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 1,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.37400000000000083,
+        "control_truth_expected_wins": 0.37266666666666737,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "fixed_position_strong": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "position": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 1,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.4492799999999997,
+        "control_truth_expected_wins": 0.3660799999999996,
+        "mean_log_gain_vs_fair": 0.051998850953648604
+      },
+      "pooled_device_bias": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.4654517399999998,
+        "control_truth_expected_wins": 0.35845134000000006,
+        "mean_log_gain_vs_fair": 0.020901859947862172
+      },
+      "day_only_bias": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 403,
+          "session": 897
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.4368097323456792,
+        "control_truth_expected_wins": 0.3636042636671242,
+        "mean_log_gain_vs_fair": 0.01926206121110909
+      },
+      "halfway_replacement": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 1,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.48873340195701864,
+        "control_truth_expected_wins": 0.37094687721993586,
+        "mean_log_gain_vs_fair": 0.04773918011010193
+      },
+      "hidden_opposing_machines": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.3744000000000002,
+        "candidate_truth_expected_wins": 0.38391750803840907,
+        "control_truth_expected_wins": 0.3493981145313217,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "within_draw_echo": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "echo": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 2,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.12220000000000002,
+        "candidate_truth_expected_wins": 0.30853059999999993,
+        "control_truth_expected_wins": 0.12841920000000004,
+        "mean_log_gain_vs_fair": 0.5954274783698614
+      }
+    },
+    "pick5": {
+      "fair_independent": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.18720000000000037,
+        "control_truth_expected_wins": 0.18720000000000037,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "fixed_position_small": {
+        "draws": 1300,
+        "active_draws": 31,
+        "active_experts": {
+          "position": 31
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 1,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.18819999999999928,
+        "control_truth_expected_wins": 0.18733333333333266,
+        "mean_log_gain_vs_fair": -0.0018323319662667107
+      },
+      "fixed_position_strong": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "position": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.21216000000000013,
+        "control_truth_expected_wins": 0.18784000000000067,
+        "mean_log_gain_vs_fair": 0.04001744720582711
+      },
+      "pooled_device_bias": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.22108957650000105,
+        "control_truth_expected_wins": 0.18394809150000108,
+        "mean_log_gain_vs_fair": 0.030940619074945094
+      },
+      "day_only_bias": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 989,
+          "session": 311
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.20869782102606407,
+        "control_truth_expected_wins": 0.18574383962485436,
+        "mean_log_gain_vs_fair": 0.02236769976133319
+      },
+      "halfway_replacement": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "pooled": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 1,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.2174998994608532,
+        "control_truth_expected_wins": 0.16457663903104136,
+        "mean_log_gain_vs_fair": 0.05230972188105146
+      },
+      "hidden_opposing_machines": {
+        "draws": 1300,
+        "active_draws": 0,
+        "active_experts": {},
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.1872000000000001,
+        "candidate_truth_expected_wins": 0.1743374317077689,
+        "control_truth_expected_wins": 0.17532421296265882,
+        "mean_log_gain_vs_fair": 0.0
+      },
+      "within_draw_echo": {
+        "draws": 1300,
+        "active_draws": 1300,
+        "active_experts": {
+          "echo": 1300
+        },
+        "ticket_trials": 52,
+        "candidate_box_wins": 0,
+        "control_box_wins": 0,
+        "fair_expected_box_wins": 0.024999999999999998,
+        "candidate_truth_expected_wins": 0.12920907999999987,
+        "control_truth_expected_wins": 0.04494671999999978,
+        "mean_log_gain_vs_fair": 0.8948579168185079
+      }
+    }
+  },
+  "generated_at_utc": "2026-11-20T17:09:39.906109+00:00"
+}
