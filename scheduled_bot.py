@@ -156,7 +156,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
         report.append(f"| {GAMES[row['game']]['name']} | {box_e} | {box_r} | {e['exact']} | {r['exact']} | {row['frequency_check']['p_value']:.4f} |")
     report += ["", "Full five-method statistics and simulation details: [analysis.json](analysis.json).", "",
                "## Coverage and update status", "",
-               "Nine recurring games update from Virginia Lottery official downloads. Same-day Pick 3/4/5 results are supplemented from the official latest-result cards. Box scoring uses published no-FIREBALL $1 Any Order prize tables for paper-only payout and net estimates; no actual wagering occurs. Fireball, 50/50, and Combo are excluded. Other games have no payout/ROI calculation. Keno requires CSV import, and seasonal raffle ticket numbers are assigned.", "",
+               "Nine recurring games update from Virginia Lottery official downloads. Same-day Pick 3/4/5 results are supplemented from the official latest-result cards. Box scoring uses published no-FIREBALL $1 Any Order prize tables for paper-only payout and net estimates; no actual wagering occurs. Fireball, 50/50, and Combo are excluded. Other games have no payout/ROI calculation. Keno needs a CSV import, and seasonal raffle ticket numbers are assigned.", "",
                "[Official Virginia game rules and results](https://www.valottery.com/alldrawgames)", ""]
     if failures:
         report += ["### Update / analysis failures", ""]

@@ -4,7 +4,9 @@ import unittest
 from datetime import datetime,timedelta,timezone
 
 from val_digit_formula_v2 import (EXPERT_NAMES,BEAM_WIDTH,calibration,expert_models,
-    forecast,generate_picks,joint_probability,log_gain,path_probability,_top_candidates)
+    forecast,generate_picks,joint_probability,log_gain,path_probability,_top_candidates,
+    _top_box_candidates)
+from val_box import distinct_permutations,box_ways,random_box_picks
 
 def fixtures(game="pick3",n=810,seed=19):
     w=int(game[-1])
@@ -60,8 +62,12 @@ class DigitFormulaTests(unittest.TestCase):
         self.assertEqual(meta["signal_gate_passed"],ready["gate_passed"])
         for pick in picks:
             self.assertEqual(pick["signal_gate_passed"],ready["gate_passed"])
+            self.assertEqual(pick["play_type"],"any_order")
+            self.assertEqual(len(set(pick["numbers"])),3 if not ready["gate_passed"] else len(set(pick["numbers"])))
             self.assertAlmostEqual(pick["model_weight_score"],
-                joint_probability(ready,pick["numbers"]))
+                sum(joint_probability(ready,p)
+                    for p in distinct_permutations(pick["numbers"])))
+            self.assertEqual(pick["box_ways"],box_ways(pick["numbers"]))
         if not ready["gate_passed"]:
             self.assertAlmostEqual(log_gain(ready,[0,1,2]),0,places=10)
             self.assertEqual(meta["signal_strength"],0)
@@ -77,6 +83,23 @@ class DigitFormulaTests(unittest.TestCase):
                         for a in range(10) for b in range(10) for c in range(10)],
                        reverse=True)
         self.assertEqual(selected,[z[1] for z in ordered[:3]])
+
+    def test_box_candidate_selection_ranks_complete_multisets(self):
+        h=fixtures(n=90)
+        fake=dict(version="digit_conditional_v2",game="pick3",stream="Day",
+                  experts=expert_models("pick3",h,"Day"),
+                  weights={"long_1500":1.},signal_strength=.5,
+                  gate_passed=True)
+        chosen=_top_box_candidates(fake,3)
+        from itertools import combinations_with_replacement
+        from val_box import any_order_prize
+        all_scores=sorted([
+            (sum(joint_probability(fake,p) for p in distinct_permutations(key)),key)
+            for key in combinations_with_replacement(range(10),3)
+            if any_order_prize("pick3",key)>0
+        ],key=lambda z:(-z[0],z[1]))
+        self.assertEqual(chosen,[x[1] for x in all_scores[:3]])
+        self.assertEqual(len({tuple(sorted(x)) for x in chosen}),3)
 
     def test_no_future_data_in_calibration(self):
         h=fixtures(n=650)

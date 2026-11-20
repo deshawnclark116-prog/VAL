@@ -45,7 +45,13 @@ class DailyBotTests(unittest.TestCase):
             self.assertEqual(p3["model_meta"]["formula_version"],"digit_conditional_v2")
             self.assertEqual([p['role'] for p in p3['picks']], ['primary','alternative_1','alternative_2'])
             self.assertTrue(all('model_weight_score' in p for p in p3['picks']))
-            self.assertIn('**Primary:**', (output/'latest.md').read_text())
+            self.assertIn('**Paper 1:**' if not p3["model_meta"]["signal_gate_passed"] else '**Primary:**',
+                          (output/'latest.md').read_text())
+            self.assertTrue(all(p["play_type"]=="any_order" for p in p3["picks"]))
+            self.assertTrue(all(len(set(p["numbers"]))==3
+                                for p in p3["picks"] if not p3["model_meta"]["signal_gate_passed"]))
+            self.assertEqual(len({tuple(sorted(p["numbers"])) for p in p3["picks"]}),3)
+            self.assertIn('## Complete Any Order (Box) results',(output/'latest.md').read_text())
             self.assertEqual(p3['target']['stream'],'Night')
             self.assertEqual(p3['training_latest']['stream'],'Day')
             self.assertEqual(datetime.fromisoformat(p3['target']['at']).astimezone(ET).date(),self.now.astimezone(ET).date())

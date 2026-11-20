@@ -30,10 +30,7 @@ def digits_key(numbers):
 
 def box_ways(numbers):
     counts=Counter(numbers)
-    ways=math.factorial(len(numbers))
-    for n in counts.values():
-        ways//=math.factorial(n) if ways % math.factorial(n)==0 else 1
-    # Use exact integer factorial ratio, not sequential rounded division.
+    # Exact integer factorial ratio; repeated digits must be preserved.
     return math.factorial(len(numbers)) // math.prod(
         math.factorial(n) for n in counts.values())
 
