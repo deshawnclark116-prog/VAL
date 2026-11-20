@@ -156,8 +156,8 @@ def summary(registry,updates):
     lines=[
         "# VAL pooled v2 distinct full-Box future formula trial",
         "",
-        "Corrected formula chooses three different complete Box sets, not three
-        rotations of the SAME Box ticket. Frozen before every drawing.",
+        "Corrected formula chooses three different complete Box sets, not",
+        "three rotations of one Box ticket. Frozen before every drawing.",
         "Never retargets or replaces saved forecasts and controls.",
         "**This candidate was selected after historical exploration.**",
         "Its credibility depends entirely on subsequent real-world draws.",
