@@ -114,14 +114,15 @@ def evaluate(game,rows,target_indices,scenario):
     for idx,row in enumerate(rows):
         if idx in interesting:
             prediction=machine.predict(N_TICKETS)
-            rng=stable_rng(game,scenario,row["at"],"control")
+            stamp=row.get("at") or (row["date"]+" "+row["stream"])
+            rng=stable_rng(game,scenario,stamp,"control")
             control=random_box_picks(game,N_TICKETS,rng)
             scored=outcome(game,prediction,row,control)
             local_day=row.get("date") or datetime.fromisoformat(
                 row["at"]).date().isoformat()
             events.append(dict(date=local_day,
                                stream=row["stream"],
-                               target=row["at"],
+                               target=stamp,
                                period=local_day[:4],
                                scenario=scenario,
                                actual=list(row["numbers"]),
