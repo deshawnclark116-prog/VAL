@@ -21,6 +21,8 @@ from pathlib import Path
 
 from research_decades import fetch_full
 from research_prospective import earlier, legal_target
+import urllib.request
+from val import parse_latest_digits, ET
 from val import ET, draw_schedule
 from val_box import box_score_batch, random_box_picks
 from val_day_night_formula import fit_before, optimal_boxes, GAMES, VERSION
@@ -28,6 +30,38 @@ from val_day_night_formula import fit_before, optimal_boxes, GAMES, VERSION
 START_DATE = "2024-01-01"  # immutable evidence-origin date, NOT a sliding reset
 LEDGER = Path("reports/prospective_night_conditional.json")
 SUMMARY = Path("reports/prospective_night_conditional.md")
+
+
+def fetch_with_latest(game):
+    """Safely merge Virginia's lagging bulk archive with official Day/Night cards.
+
+    A contradictory source result quarantines the update instead of choosing.
+    Full history remains the source of record; current cards supplement only
+    sessions missing from the downloaded results.
+    """
+    rows, metadata = fetch_full(game)
+    request = urllib.request.Request(
+        f"https://www.valottery.com/data/draw-games/{game}",
+        headers={"User-Agent":"VAL/1.1 (prospective research)"})
+    with urllib.request.urlopen(request,timeout=35) as response:
+        html=response.read(3_000_000).decode("utf-8-sig")
+    latest=parse_latest_digits(game,html)
+    merged={(r["date"],r["stream"]):dict(r) for r in rows}
+    if len(merged)!=len(rows):
+        raise ValueError("Ambiguous bulk archive results")
+    for draw in latest:
+        date=datetime.fromisoformat(draw["at"]).astimezone(ET).date().isoformat()
+        record={"date":date,"stream":draw["stream"],
+                "numbers":list(draw["numbers"]),
+                "fireball":draw.get("extra")}
+        key=(date,draw["stream"])
+        previous=merged.get(key)
+        if previous is not None and previous["numbers"]!=record["numbers"]:
+            raise ValueError("Contradiction between official historical and latest card")
+        if previous is None:
+            merged[key]=record
+    return sorted(merged.values(),
+                  key=lambda r:(r["date"], 0 if r["stream"]=="Day" else 1)),metadata
 
 
 def seeded_rng(game, target, label):
@@ -222,7 +256,7 @@ def cycle(now, ledger=LEDGER, summary=SUMMARY):
         raise ValueError("Unexpected frozen study parameters")
     status = {}
     for game in GAMES:
-        history, metadata = fetch_full(game)
+        history, metadata = fetch_with_latest(game)
         revised, change = update(game, history, data["games"][game], now)
         data["games"][game] = revised
         status[game] = change
