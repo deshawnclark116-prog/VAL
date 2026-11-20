@@ -1,4 +1,4 @@
-"""VAL digit Box v3: conditional joint experts and evidence-gated Box ranking.
+"""VAL digit Box v4: online cumulative-evidence experts plus calibrated Box ranking.
 
 This replaces the *formula*, not just the scoring infrastructure. The
 candidate experts model history-dependent digit probabilities; live probability
@@ -29,11 +29,12 @@ from val_box import any_order_prize, box_ways, distinct_permutations, random_box
 import heapq
 import math
 import random
-from collections import defaultdict
+from collections import defaultdict, deque
+from val_box_challenger import BoxEvidence, EXPERTS as ONLINE_EXPERT_NAMES, LOG_GATE as ONLINE_LOG_GATE
 from datetime import datetime
 from val import GAMES,ET
 
-VERSION = "digit_box_v3"
+VERSION = "digit_box_v4"
 EXPERT_NAMES = ("long_1500", "recent_100", "same_session",
                 "markov", "internal_chain")
 LONG_WINDOW = 1500
@@ -47,6 +48,11 @@ MIN_VALIDATION = 70
 EVIDENCE_Z = 3.20
 MIN_LOG_GAIN = .002
 BEAM_WIDTH = 450
+# Before a cumulative online expert can generate production numbers, its
+# prequential likelihood must show improvement in BOTH recent subperiods.
+ONLINE_CONFIRM_DRAWS = 400
+ONLINE_CONFIRM_MIN = 240
+ONLINE_MIN_MEAN_GAIN = .002
 
 
 def stable_rng(*parts):
@@ -175,23 +181,86 @@ def calibration(game,history):
                 experts=stats,passed=passed)
 
 
+def _online_evidence(game, history, stream):
+    """Fit a conditional digit formula and verify strictly past-only evidence.
+
+    For each historical drawing, score experts BEFORE observing that draw.
+    The fixed anytime threshold limits false positives under iid-fair draws;
+    recent-half checks protect against an obsolete or reversed pattern.
+    """
+    machine = BoxEvidence(game)
+    recent = {name: deque(maxlen=ONLINE_CONFIRM_DRAWS)
+              for name in ONLINE_EXPERT_NAMES}
+    for row in history:
+        previous = dict(machine.log_e)
+        scored = machine.seen >= machine.warmup
+        machine.observe(row)
+        if scored:
+            for name in ONLINE_EXPERT_NAMES:
+                recent[name].append(machine.log_e[name] - previous[name])
+    active = machine.active()
+    gains = list(recent[active]) if active else []
+    n = len(gains)
+    half = n // 2
+    first = sum(gains[:half]) / half if half else 0.
+    second = sum(gains[half:]) / (n - half) if n > half else 0.
+    mean = sum(gains) / n if n else 0.
+    confirmed = (active is not None and n >= ONLINE_CONFIRM_MIN and
+                 first > 0. and second > 0. and mean > ONLINE_MIN_MEAN_GAIN)
+    forecasts = machine.forecasts(stream)
+    model = None
+    if confirmed:
+        marginals, conditional = forecasts[active]
+        width = GAMES[game]["size"]
+        model = {
+            "marginal": ([list(row) for row in marginals] if conditional is None
+                         else [list(marginals[0])] + [[.1]*10
+                                                        for _ in range(width-1)]),
+            "within": (None if conditional is None else
+                       [None] + [[list(row) for row in conditional]
+                                 for _ in range(width-1)]),
+        }
+    return dict(active=active, confirmed=confirmed, model=model,
+                log_evidence={name:machine.log_e[name] for name in ONLINE_EXPERT_NAMES},
+                threshold=ONLINE_LOG_GATE, recent_n=n,
+                recent_mean=mean, recent_first_half=first,
+                recent_second_half=second)
+
+
 def forecast(game,history,stream):
     """Produce one joint probability model with an independent calibration gate."""
     e=expert_models(game,history,stream)
     check=calibration(game,history)
-    qualified=check["passed"]
+    online=_online_evidence(game,history,stream)
+    qualified=list(check["passed"])
+    if online["confirmed"]:
+        # Change the ACTUAL production probability formula, not just a report.
+        # A qualified normalized conditional distribution participates in the
+        # joint model used for ranking complete Any Order combinations.
+        key="online_"+online["active"]
+        e[key]=online["model"]
+        qualified=[key]
+        check["passed"]=qualified
+        check["experts"][key]=dict(
+            mean_gain=online["recent_mean"],
+            lower_bound=online["recent_mean"],
+            passed=True,observations=online["recent_n"])
     if qualified:
         evidences=[max(0,check["experts"][name]["lower_bound"]) for name in qualified]
         total=sum(evidences)
         weights={name:evidence/total for name,evidence in zip(qualified,evidences)}
         # Most predictive weight remains at fair uniform: false positives are costly.
-        strength=min(.50,max(.05,6*total))
+        strength=(min(.50,max(.10,.10+10*online["recent_mean"]))
+                  if online["confirmed"] else
+                  min(.50,max(.05,6*total)))
     else:
         weights={}
         strength=0.
     return dict(version=VERSION,game=game,stream=stream,
                 experts=e,weights=weights,signal_strength=strength,
-                gate_passed=bool(qualified),calibration=check)
+                gate_passed=bool(qualified),calibration=check,
+                online_evidence={name:value for name,value in online.items()
+                                 if name!="model"})
 
 
 def joint_probability(ready,numbers):
@@ -291,5 +360,6 @@ def generate_picks(game,history,stream,count=3,rng=None,return_forecast=False):
               signal_strength=ready["signal_strength"],
               passed_experts=ready["calibration"]["passed"],
               calibration_observations=ready["calibration"]["observations"],
-              calibration_cluster_days=ready["calibration"]["cluster_days"])
+              calibration_cluster_days=ready["calibration"]["cluster_days"],
+              online_evidence=ready["online_evidence"])
     return (picks,meta,ready) if return_forecast else (picks,meta)
