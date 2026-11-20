@@ -23,8 +23,8 @@ from val_digit_formula_v2 import (VERSION,forecast,generate_picks,joint_probabil
 from val import GAMES
 from val_box import random_box_picks
 
-OUTPUT=Path("reports/research_digit_formula_v2.json")
-MARKDOWN=Path("reports/research_digit_formula_v2.md")
+OUTPUT=Path("reports/research_digit_box_v3.json")
+MARKDOWN=Path("reports/research_digit_box_v3.md")
 GAMES_TEST=("pick3","pick4","pick5")
 STEP=6
 MAX_TARGETS=220
@@ -157,7 +157,7 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
 
 def render(data):
     lines=[
-        "# VAL v2 — actual formula vs original ensemble",
+        "# VAL Box v3 — complete Any Order formula vs original ensemble",
         "",
         "Precommitted challenger: **"+VERSION+"**.",
         "Direct live-generator replay on real subsequent drawing outcomes.",
@@ -217,7 +217,7 @@ def render(data):
     lines += [
         "## Interpretation and promotion rule",
         "",
-        "The v2 formula is a genuine conditional joint model. Box likelihood",
+        "The Box v3 formula is a genuine conditional joint model. Box likelihood",
         "is computed by summing every distinct complete permutation, not",
         "by separately matching individual digit positions. It only exposes"
         "a nonuniform advantage if a model passes the past-only statistical gate.",
@@ -231,7 +231,7 @@ def render(data):
         "retrospectively finding a lucky ticket.",
         "",
         "Machine readable target-level comparison:",
-        "[research_digit_formula_v2.json](research_digit_formula_v2.json).",
+        "[research_digit_box_v3.json](research_digit_box_v3.json).",
         ""
     ]
     return "\n".join(lines)

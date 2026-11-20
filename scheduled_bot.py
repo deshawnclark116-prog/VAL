@@ -65,7 +65,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
               "## Picks", "",
               "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
-              "**Pick 3/4/5 target complete Any Order (Box) digit sets.** Model v2 ranks complete unordered digit-multisets by summed probabilities of all permutations, not partial-position matches. Without a proven signal it uses three nonoverlapping, all-distinct random Box candidates and three independent same-type Box controls (Paper 1/2/3, not purported ranked predictions). Each Box ticket represents a hypothetical $1 Any Order play; no purchases are made. Other games retain their existing methods. Old saved predictions remain unchanged. Missing latest results withhold new picks.", "",
+              "**Pick 3/4/5 target complete Any Order (Box) digit sets.** Box v3 ranks complete unordered digit-multisets by summed probabilities of all permutations, not partial-position matches. Without a proven signal it uses three nonoverlapping, all-distinct random Box candidates and three independent same-type Box controls (Paper 1/2/3, not purported ranked predictions). Each Box ticket represents a hypothetical $1 Any Order play; no purchases are made. Other games retain their existing methods. Old saved predictions remain unchanged. Missing latest results withhold new picks.", "",
               "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
@@ -86,7 +86,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             if (datetime.fromisoformat(target["at"])-now).total_seconds()<15*60:
                 raise ValueError("Next draw is less than 15 minutes away; waiting for its result before preparing the following draw")
             stream=target["stream"]
-            # Preserve old predictions and add one immutable v2 prediction for
+            # Preserve old predictions and add one immutable Box v3 prediction for
             # the identical future target, enabling real A/B comparison.
             existing=next((r for r in ledger if r.get("target")==target and
                            (not g.get("digits") or r["method"]==DIGIT_FORMULA_VERSION)),None)

@@ -489,15 +489,15 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=="/api/import": return self.send(200,import_csv(self.store,body["csv"]))
             if self.path=="/api/sync": return self.send(200,sync_game(self.store,game))
             if self.path=="/api/picks":
-                method=body.get("method","digit_conditional_v2" if GAMES[game].get("digits") else "ensemble")
+                method=body.get("method","digit_box_v3" if GAMES[game].get("digits") else "ensemble")
                 count=int(body.get("count",5))
                 created=datetime.now(timezone.utc)
                 history=[r for r in history if datetime.fromisoformat(r["at"])<=created]
                 target=next_draw(game,created,stream) if game!="keno" else None
                 model_meta=None
-                if method=="digit_conditional_v2":
+                if method=="digit_box_v3":
                     if not GAMES[game].get("digits"):
-                        raise ValueError("Conditional v2 supports only Pick 3, Pick 4 and Pick 5")
+                        raise ValueError("Box v3 supports only Pick 3, Pick 4 and Pick 5")
                     from val_digit_formula_v2 import generate_picks
                     # Sequential transitions need ALL prior sessions.
                     training=[r for r in self.store.history(game)

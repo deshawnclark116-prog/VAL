@@ -1,4 +1,4 @@
-"""VAL digit forecasting formula v2: conditional experts plus evidence-gated odds.
+"""VAL digit Box v3: conditional joint experts and evidence-gated Box ranking.
 
 This replaces the *formula*, not just the scoring infrastructure. The
 candidate experts model history-dependent digit probabilities; live probability
@@ -33,7 +33,7 @@ from collections import defaultdict
 from datetime import datetime
 from val import GAMES,ET
 
-VERSION = "digit_conditional_v2"
+VERSION = "digit_box_v3"
 EXPERT_NAMES = ("long_1500", "recent_100", "same_session",
                 "markov", "internal_chain")
 LONG_WINDOW = 1500

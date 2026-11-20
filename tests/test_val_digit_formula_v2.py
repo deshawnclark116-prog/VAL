@@ -74,7 +74,7 @@ class DigitFormulaTests(unittest.TestCase):
 
     def test_best_candidate_selection_when_gate_active(self):
         h=fixtures(n=90)
-        fake=dict(version="digit_conditional_v2",game="pick3",stream="Day",
+        fake=dict(version="digit_box_v3",game="pick3",stream="Day",
                   experts=expert_models("pick3",h,"Day"),
                   weights={"long_1500":1.},signal_strength=.5,
                   gate_passed=True)
@@ -86,7 +86,7 @@ class DigitFormulaTests(unittest.TestCase):
 
     def test_box_candidate_selection_ranks_complete_multisets(self):
         h=fixtures(n=90)
-        fake=dict(version="digit_conditional_v2",game="pick3",stream="Day",
+        fake=dict(version="digit_box_v3",game="pick3",stream="Day",
                   experts=expert_models("pick3",h,"Day"),
                   weights={"long_1500":1.},signal_strength=.5,
                   gate_passed=True)
