@@ -2,6 +2,7 @@
 import math
 import random
 import unittest
+from datetime import datetime,timedelta,timezone
 
 from research_virtual_draw_lab import simulate
 from val_digit_formula_v2 import (
@@ -19,8 +20,9 @@ class BoxRegimeFormulaTests(unittest.TestCase):
 
     def test_ancient_drawings_do_not_accumulate_negative_evidence_debt(self):
         recent = self.echo[:1500]
-        pre = [dict(row, at=row["at"].replace("2026-", "2023-"))
-               for row in self.fair[:1500]]
+        pre = [dict(row, at=(datetime(2020,1,1,tzinfo=timezone.utc)
+                             +timedelta(hours=12*i)).isoformat())
+               for i,row in enumerate(self.fair[:1500])]
         a = _online_evidence("pick3", recent, "Day")
         b = _online_evidence("pick3", pre + recent, "Day")
         self.assertEqual(a, b)
