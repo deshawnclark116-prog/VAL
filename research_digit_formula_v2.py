@@ -94,9 +94,9 @@ def evaluate(game,rows,step=STEP,max_targets=MAX_TARGETS):
             record["digits"]+=grade["total_matches"]
             record["exact"]+=grade["exact"]
             record["tickets"]+=grade["tickets"]
-            for k in ("box_wins","box_tickets","box_payout_usd",
-                      "box_spend_usd","box_fair_expected_wins"):
-                record[k]+=grade[k]
+            for field in ("box_wins","box_tickets","box_payout_usd",
+                          "box_spend_usd","box_fair_expected_wins"):
+                record[field]+=grade[field]
             record["log_gains"].append((target["at"],log_probs[name]))
             event[name]={
                 "tickets":["".join(map(str,x["numbers"])) for x in picks],
