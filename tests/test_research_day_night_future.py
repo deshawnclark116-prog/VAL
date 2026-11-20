@@ -2,9 +2,10 @@
 import json
 import random
 import unittest
+from unittest.mock import patch, MagicMock
 from datetime import datetime,timedelta,timezone
 
-from research_day_night_future import forecast_for,update,grade
+from research_day_night_future import forecast_for,update,grade,fetch_with_latest
 
 
 def prior_nights(game="pick3",days=500):
@@ -67,6 +68,38 @@ class FutureConditionalTests(unittest.TestCase):
         self.assertEqual(settled[0]["forecast"],frozen["forecast"])
         self.assertEqual(
             settled[0]["result"]["accuracy"]["model_box_wins"],1)
+
+    def test_lagging_bulk_history_supplemented_with_official_day_card(self):
+        bulk=[dict(date="2026-11-19",stream="Night",
+                   numbers=[4,2,0],fireball=None)]
+        card=[dict(at="2026-11-20T18:59:00+00:00",
+                   stream="Day",numbers=[1,6,3],extra=8)]
+        response=MagicMock()
+        response.__enter__.return_value.read.return_value=b"<html>sample</html>"
+        with patch("research_day_night_future.fetch_full",return_value=(bulk,{})),\
+             patch("research_day_night_future.urllib.request.urlopen",
+                   return_value=response),\
+             patch("research_day_night_future.parse_latest_digits",
+                   return_value=card):
+            merged,_=fetch_with_latest("pick3")
+        self.assertEqual(len(merged),2)
+        self.assertEqual(merged[-1]["date"],"2026-11-20")
+        self.assertEqual(merged[-1]["numbers"],[1,6,3])
+
+    def test_conflicting_official_sources_never_create_fake_training(self):
+        bulk=[dict(date="2026-11-20",stream="Day",
+                   numbers=[1,6,3],fireball=None)]
+        card=[dict(at="2026-11-20T18:59:00+00:00",
+                   stream="Day",numbers=[9,9,9],extra=5)]
+        response=MagicMock()
+        response.__enter__.return_value.read.return_value=b"<html>sample</html>"
+        with patch("research_day_night_future.fetch_full",return_value=(bulk,{})),\
+             patch("research_day_night_future.urllib.request.urlopen",
+                   return_value=response),\
+             patch("research_day_night_future.parse_latest_digits",
+                   return_value=card):
+            with self.assertRaises(ValueError):
+                fetch_with_latest("pick3")
 
     def test_fair_fallback_log_score_is_zero(self):
         f=dict(candidate_tickets=[[0,1,2],[1,3,4],[2,3,9]],
