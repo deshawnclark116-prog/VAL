@@ -53,6 +53,14 @@ BEAM_WIDTH = 450
 ONLINE_CONFIRM_DRAWS = 400
 ONLINE_CONFIRM_MIN = 240
 ONLINE_MIN_MEAN_GAIN = .002
+# Fixed regimes reset obsolete evidence debt without repeatedly searching
+# arbitrary sliding-window origins. Epoch index is deterministic from the
+# official draw count after a fixed 2024-01-01 anchor. Fair-null alpha is
+# allocated across ALL future epochs as 1/((epoch+1)*(epoch+2)).
+ONLINE_EPOCH_ANCHOR = "2024-01-01"
+ONLINE_EPOCH_DRAWS = 1600
+ONLINE_PREWARM_DRAWS = 700
+FORMULA_REVISION = "fixed_epoch_evidence_v1"
 
 
 def stable_rng(*parts):
@@ -188,17 +196,39 @@ def _online_evidence(game, history, stream):
     The fixed anytime threshold limits false positives under iid-fair draws;
     recent-half checks protect against an obsolete or reversed pattern.
     """
+    # The old lifetime process could carry negative evidence from decades
+    # earlier into a genuinely new drawing regime, preventing detection.
+    # Count evidence only inside predeclared nonoverlapping epochs.
+    eligible_rows = [
+        row for row in history if
+        datetime.fromisoformat(row["at"]).astimezone(ET).date().isoformat()
+        >= ONLINE_EPOCH_ANCHOR
+    ]
+    epoch = len(eligible_rows) // ONLINE_EPOCH_DRAWS
+    offset = epoch * ONLINE_EPOCH_DRAWS
+    prewarm = eligible_rows[max(0,offset-ONLINE_PREWARM_DRAWS):offset]
+    current = eligible_rows[offset:]
+    # Bonferroni over four experts and three games, plus alpha spending
+    # across infinitely many epochs: sum 1/((k+1)*(k+2)) = 1.
+    threshold = ONLINE_LOG_GATE + math.log((epoch+1)*(epoch+2))
     machine = BoxEvidence(game)
+    for row in prewarm:
+        machine.observe(row)
+    # Prewarming provides past-only model parameters, NEVER counted evidence.
+    machine.log_e = {name:0. for name in ONLINE_EXPERT_NAMES}
     recent = {name: deque(maxlen=ONLINE_CONFIRM_DRAWS)
               for name in ONLINE_EXPERT_NAMES}
-    for row in history:
+    for row in current:
         previous = dict(machine.log_e)
         scored = machine.seen >= machine.warmup
         machine.observe(row)
         if scored:
             for name in ONLINE_EXPERT_NAMES:
                 recent[name].append(machine.log_e[name] - previous[name])
-    active = machine.active()
+    candidates = [name for name in ONLINE_EXPERT_NAMES
+                  if machine.log_e[name] >= threshold and
+                  len(recent[name]) >= ONLINE_CONFIRM_MIN]
+    active = max(candidates,key=lambda name: machine.log_e[name]) if candidates else None
     gains = list(recent[active]) if active else []
     n = len(gains)
     half = n // 2
@@ -222,7 +252,10 @@ def _online_evidence(game, history, stream):
         }
     return dict(active=active, confirmed=confirmed, model=model,
                 log_evidence={name:machine.log_e[name] for name in ONLINE_EXPERT_NAMES},
-                threshold=ONLINE_LOG_GATE, recent_n=n,
+                threshold=threshold, epoch=epoch,
+                epoch_draws=len(current), prewarm_draws=len(prewarm),
+                anchor=ONLINE_EPOCH_ANCHOR, formula_revision=FORMULA_REVISION,
+                recent_n=n,
                 recent_mean=mean, recent_first_half=first,
                 recent_second_half=second)
 
@@ -256,7 +289,8 @@ def forecast(game,history,stream):
     else:
         weights={}
         strength=0.
-    return dict(version=VERSION,game=game,stream=stream,
+    return dict(version=VERSION,formula_revision=FORMULA_REVISION,
+                game=game,stream=stream,
                 experts=e,weights=weights,signal_strength=strength,
                 gate_passed=bool(qualified),calibration=check,
                 online_evidence={name:value for name,value in online.items()
@@ -345,7 +379,8 @@ def generate_picks(game,history,stream,count=3,rng=None,return_forecast=False):
         picks.append(dict(numbers=list(combo),bonus=None,
                           rank=rank,
                           role="primary" if rank==1 else f"alternative_{rank-1}",
-                          ranking_version=VERSION,
+                          ranking_version=VERSION+"_"+FORMULA_REVISION,
+                          formula_revision=FORMULA_REVISION,
                           model_weight_score=box_probability,
                           box_probability=box_probability,
                           box_ways=box_ways(combo),
@@ -353,7 +388,8 @@ def generate_picks(game,history,stream,count=3,rng=None,return_forecast=False):
                           play_type="any_order",
                           signal_gate_passed=ready["gate_passed"],
                           formula_version=VERSION))
-    meta=dict(formula_version=VERSION,play_type="any_order",
+    meta=dict(formula_version=VERSION,formula_revision=FORMULA_REVISION,
+              play_type="any_order",
               ticket_stake_usd=1,
               complete_multiset_match_required=True,
               signal_gate_passed=ready["gate_passed"],
