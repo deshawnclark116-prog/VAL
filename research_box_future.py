@@ -171,8 +171,7 @@ def render(data):
         "A full Any Order hit requires all digits including repetitions.",
         "**No real wagers or validated live edge are claimed.**",
         "",
-        "| Game | Settled draws | Model Box wins | Random Box wins |",
-        "Model paper net | Random paper net | Prospectively active | Mean log gain |",
+        "| Game | Settled draws | Model Box wins | Random Box wins | Model paper net | Random paper net | Prospectively active | Mean log gain |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for game, rows in data["games"].items():
