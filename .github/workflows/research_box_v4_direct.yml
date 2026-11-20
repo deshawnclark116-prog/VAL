@@ -1,0 +1,41 @@
+name: VAL Box v4 actual formula direct challenge
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - formula/box-v4-cumulative-evidence-20261120
+    paths:
+      - 'val_digit_formula_v2.py'
+      - 'research_box_v4_direct.py'
+      - 'research/val_box_v3_frozen.py'
+      - 'tests/test_val_digit_formula_v4.py'
+      - '.github/workflows/research_box_v4_direct.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-box-v4-direct-challenge
+  cancel-in-progress: false
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test actual v4 predictor and its normalization
+        run: python -m unittest discover -s tests -p 'test_val_digit_formula_v4.py' -v
+      - name: Compare real and synthetic future Box predictions directly against v3
+        run: python -u research_box_v4_direct.py
+      - name: Preserve outcome data when running main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_box_v4_direct.json reports/research_box_v4_direct.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish v4 actual formula comparisons against frozen v3'
+          git pull --rebase origin main
+          git push origin HEAD:main
