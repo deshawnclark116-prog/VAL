@@ -1,5 +1,6 @@
 """Tests for genuinely conditional Day-to-Night full-Box formula."""
 import math
+from collections import deque
 import random
 import unittest
 
@@ -64,6 +65,22 @@ class NightFormulaTests(unittest.TestCase):
             machine.observe(d["numbers"],n["numbers"])
         self.assertEqual(machine.paired,1500)
         self.assertTrue(all(abs(v)<250 for v in machine.log_e.values()))
+
+    def test_cannot_call_a_generic_digit_bias_day_night_information(self):
+        machine=NightConditionalEvidence("pick3")
+        for name in EXPERTS:
+            machine.log_e[name]=100.
+            machine.recent[name]=deque([.02]*320,maxlen=320)
+            machine.relative_to_pooled[name]=deque([-.01]*320,maxlen=320)
+        expert,distribution,diagnostics=machine.predict([7,0,1])
+        self.assertIsNone(expert)
+        self.assertIsNone(distribution)
+        self.assertFalse(any(x["passed"] for x in
+                             diagnostics["experts"].values()))
+        machine.relative_to_pooled["presence"]=deque([.01]*320,maxlen=320)
+        expert,distribution,diagnostics=machine.predict([7,0,1])
+        self.assertEqual(expert,"presence")
+        self.assertAlmostEqual(sum(distribution),1.)
 
     def test_mock_hidden_equipment_is_unavailable_to_formula(self):
         rows=simulate("pick3","hidden_opposing_machines",1002,7)
