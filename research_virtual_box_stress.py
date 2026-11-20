@@ -133,7 +133,7 @@ def report(data):
         f'{data["test_draws"]} scored future virtual results per trial.',
         f'Tickets are frozen every {data["block_draws"]} results, then',
         "graded against each subsequent drawing in the block.",
-        "Every method has **exactly three distinct Box tickets** per drawing.",
+        "Each model has three distinct Box tickets for each drawing.",
         "The random, incumbent Box v3 and challenger portfolios are",
         "selected before the block and compared on identical outcomes.",
         "",
@@ -141,13 +141,9 @@ def report(data):
         "Correct-position or partial-digit matches are never credited.",
         "No actual Virginia Lottery edge is established by this synthetic test.",
         "",
-        "| Game | Simulated mechanism | Target draws | Challenger Box wins |",
-        "Live v3 Box wins | Random Box wins | Fair expected (candidate) |",
-        "Challenger active blocks |", 
-        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| Game | Simulated mechanism | Target draws | Challenger Box wins | Live v3 Box wins | Random Box wins | Fair expected (candidate) | Challenger active blocks |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
-    # Avoid a split Markdown table header.
-    lines[15:17] = ["| Game | Simulated mechanism | Target draws | Challenger Box wins | Live v3 Box wins | Random Box wins | Fair expected (candidate) | Challenger active blocks |"]
     for game, scenarios in data["games"].items():
         for name, x in scenarios.items():
             lines.append(
@@ -160,15 +156,14 @@ def report(data):
             )
     lines += [
         "", "## Interpretation", "",
-        "If fair drawings are genuinely iid, no method can have a dependable",
-        "advantage over chance. Synthetic bias scenarios are detection stress",
-        "tests, not real-world evidence. The frozen 130-draw policy is not the",
-        "same as refreshing the production predictor for every drawing.",
-        "Validation of real-world predictability requires prospectively",
-        "frozen predictions on real drawing outcomes and equal-cost controls.",
+        "A fair iid drawing gives no predictor a dependable edge.",
+        "Synthetic biases test detection capability, not real-world advantage.",
+        "The frozen deployment blocks differ from refresh-on-every-draw;",
+        "forecasts for both Day and Night are frozen before each block.",
+        "Real-world validation requires prospectively saved real outcomes.",
         "", "[Raw results](research_virtual_box_stress.json).", "",
     ]
-    return "\n".join(lines)
+    return "\\n".join(lines)
 
 
 def main():
