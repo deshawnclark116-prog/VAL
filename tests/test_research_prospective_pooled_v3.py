@@ -43,6 +43,22 @@ class ProspectivePooledTests(unittest.TestCase):
         self.assertEqual(settled[0]["forecast"],initial)
         self.assertEqual(settled[0]["result"]["official_numbers"],[8,9,9])
         self.assertIn("accuracy",settled[0]["result"])
+    def test_full_multiset_box_grading_not_partial_positions(self):
+        from research_prospective_pooled_v3 import grade
+        forecast={
+            "probability_by_digit":[.1]*10,
+            "best_position_digit":1,
+            "top_three_digits":[1,2,3],
+            "model_tickets":[[1,2,3],[4,5,6],[7,8,9]],
+            "uniform_coverage_controls":[[1,1,2],[3,4,5],[5,6,7]],
+        }
+        result=grade(forecast,{"numbers":[3,2,1],"fireball":None})
+        self.assertEqual(result["model_box_wins"],1)
+        self.assertEqual(result["control_box_wins"],0)
+        self.assertEqual(result["model_exact"],0)
+        self.assertEqual(result["model_box_paper_net_usd"],77)
+        self.assertEqual(result["control_box_paper_net_usd"],-3)
+
     def test_no_future_leakage_in_predictor(self):
         h=fixture()
         target={"date":"2026-11-20","stream":"Night","game":"pick3"}

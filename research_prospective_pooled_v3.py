@@ -22,6 +22,7 @@ from research_decades import GAMES,fetch_full
 from research_prospective import legal_target,earlier
 from research_pooled_digit_followup import probabilities,WINDOW
 from val import ET
+from val_box import box_score_batch
 
 VERSION="val_pooled_digit_future_accuracy_v1"
 GAMES_TEST=("pick3","pick4","pick5")
@@ -79,7 +80,16 @@ def grade(pick,actual):
     model=pick["model_tickets"]
     baseline=pick["uniform_coverage_controls"]
     def matched(ticket):return sum(a==b for a,b in zip(ticket,digits))
+    game="pick"+str(n)
+    model_box=box_score_batch(game,[{"numbers":ticket} for ticket in model],actual)
+    control_box=box_score_batch(game,[{"numbers":ticket} for ticket in baseline],actual)
     return {
+        "model_box_wins":model_box["box_wins"],
+        "control_box_wins":control_box["box_wins"],
+        "model_box_paper_net_usd":model_box["box_net_usd"],
+        "control_box_paper_net_usd":control_box["box_net_usd"],
+        "model_box_fair_expected_wins":model_box["box_fair_expected_wins"],
+        "control_box_fair_expected_wins":control_box["box_fair_expected_wins"],
         "top1_position_matches":sum(d==best for d in digits),
         "top3_position_matches":sum(d in top3 for d in digits),
         "total_positions":n,
@@ -156,20 +166,30 @@ def summary(registry,updates):
         "**This candidate was selected after historical exploration.**",
         "Its credibility depends entirely on subsequent real-world draws.",
         "",
-        "Top-1 forecast checks one digit in each position (chance 10%).",
-        "Top-three digit coverage checks three guesses per position (chance 30%).",
-        "Ticket metrics check complete ordered tickets independently.",
-        "Top-1 successes and partial matches are not prize claims.",
+        "PRIMARY METRIC: full Any Order (Box) digit-multiset wins, not",
+        "partial digit matches. Repeated digits must match exactly.",
+        "Box payout/net are hypothetical $1 per eligible ticket using",
+        "published Virginia non-FIREBALL prizes. No wagers were purchased.",
+        "The prospective frozen model/control ticket structures are",
+        "unchanged; they can have different Box permutation counts.",
+        "Exact-order overlaps are diagnostic, not Straight wagers.",
         "",
-        "| Game | Settled draws | Top-1 digit hit rate | Top-3 coverage | Model exact | Uniform exact | Mean log gain | Anytime e-value trigger |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+        "| Game | Settled draws | Model BOX wins | Control BOX wins | Model $1 paper net | Control $1 paper net | Exact model | Exact control | Anytime evidence gate |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
     ]
     for game,records in registry["games"].items():
         settled=[r for r in records if r["result"] is not None]
         n=len(settled)
-        total=sum(r["result"]["accuracy"]["total_positions"] for r in settled)
-        first=sum(r["result"]["accuracy"]["top1_position_matches"] for r in settled)
-        top3=sum(r["result"]["accuracy"]["top3_position_matches"] for r in settled)
+        # Recompute derived Box results from frozen selections so that
+        # older settled records remain immutable; no retroactive picks.
+        model_box=[box_score_batch(game,
+                     [{"numbers":x} for x in r["forecast"]["model_tickets"]],
+                     {"numbers":r["result"]["official_numbers"]})
+                   for r in settled]
+        control_box=[box_score_batch(game,
+                     [{"numbers":x} for x in r["forecast"]["uniform_coverage_controls"]],
+                     {"numbers":r["result"]["official_numbers"]})
+                   for r in settled]
         wins=sum(r["result"]["accuracy"]["model_exact"] for r in settled)
         random_wins=sum(r["result"]["accuracy"]["control_exact"] for r in settled)
         vals=[r["result"]["accuracy"]["mean_log_gain_vs_fair"] for r in settled]
@@ -178,10 +198,11 @@ def summary(registry,updates):
             running+=val
             max_running=max(max_running,running)
         lines.append("| "+game+" | "+str(n)+" | "+
-             (f"{100*first/total:.2f}%" if total else "—")+" | "+
-             (f"{100*top3/total:.2f}%" if total else "—")+" | "+
+             str(sum(x["box_wins"] for x in model_box))+" | "+
+             str(sum(x["box_wins"] for x in control_box))+" | $"+
+             str(sum(x["box_net_usd"] for x in model_box))+" | $"+
+             str(sum(x["box_net_usd"] for x in control_box))+" | "+
              str(wins)+" | "+str(random_wins)+" | "+
-             (f"{sum(vals)/n:+.6f}" if n else "—")+" | "+
              ("TRIGGER" if max_running>=LOG_E_GATE else "No")+" |")
         if records:
             last=records[-1]
