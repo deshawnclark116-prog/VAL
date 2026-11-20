@@ -1,0 +1,251 @@
+{
+  "created_utc": "2026-11-20T23:16:04.334752+00:00",
+  "version": "val_pooled_full_box_future_v2",
+  "signal_model": "pooled_5000_pr200_complete_box_v2",
+  "games": {
+    "pick3": [
+      {
+        "id": "fbf2b6c36b427fd3",
+        "created_utc": "2026-11-20T23:16:04.334752+00:00",
+        "version": "val_pooled_full_box_future_v2",
+        "target": {
+          "game": "pick3",
+          "date": "2026-11-20",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-21T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-21T03:45:00+00:00"
+        },
+        "forecast": {
+          "training_size": 23762,
+          "training_latest_date": "2026-11-20",
+          "probability_by_digit": [
+            0.10138029509757258,
+            0.0991432651118515,
+            0.10328415040456926,
+            0.09966682532127558,
+            0.10023798191337459,
+            0.09752498810090433,
+            0.10047596382674917,
+            0.1,
+            0.09819133745835316,
+            0.10009519276534984
+          ],
+          "best_position_digit": 2,
+          "top_three_digits": [
+            2,
+            0,
+            6
+          ],
+          "model_tickets": [
+            [
+              0,
+              2,
+              6
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              2,
+              9
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              4,
+              8
+            ],
+            [
+              1,
+              6,
+              9
+            ]
+          ],
+          "model_predicted_full_box_coverage": 0.018898594591675588,
+          "control_predicted_full_box_coverage": 0.017914484147884557,
+          "model_fair_full_box_coverage": 0.018000000000000006,
+          "control_fair_full_box_coverage": 0.018000000000000006
+        },
+        "result": null
+      }
+    ],
+    "pick4": [
+      {
+        "id": "44adbdd16ef6c1cc",
+        "created_utc": "2026-11-20T23:16:04.334752+00:00",
+        "version": "val_pooled_full_box_future_v2",
+        "target": {
+          "game": "pick4",
+          "date": "2026-11-20",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-21T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-21T03:45:00+00:00"
+        },
+        "forecast": {
+          "training_size": 23028,
+          "training_latest_date": "2026-11-20",
+          "probability_by_digit": [
+            0.09942877543734381,
+            0.09821492324169939,
+            0.0996786861835059,
+            0.10039271688682613,
+            0.10142806140664049,
+            0.09796501249553731,
+            0.10010710460549804,
+            0.10099964298464834,
+            0.10035701535166013,
+            0.10142806140664049
+          ],
+          "best_position_digit": 4,
+          "top_three_digits": [
+            4,
+            9,
+            7
+          ],
+          "model_tickets": [
+            [
+              3,
+              4,
+              7,
+              9
+            ],
+            [
+              4,
+              7,
+              8,
+              9
+            ],
+            [
+              4,
+              6,
+              7,
+              9
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              1,
+              2,
+              9
+            ],
+            [
+              0,
+              1,
+              8,
+              9
+            ],
+            [
+              0,
+              2,
+              3,
+              6
+            ]
+          ],
+          "model_predicted_full_box_coverage": 0.007502520922726411,
+          "control_predicted_full_box_coverage": 0.007145696434564223,
+          "model_fair_full_box_coverage": 0.0072000000000000015,
+          "control_fair_full_box_coverage": 0.0072000000000000015
+        },
+        "result": null
+      }
+    ],
+    "pick5": [
+      {
+        "id": "ddcd2f01098c4c3d",
+        "created_utc": "2026-11-20T23:16:04.334752+00:00",
+        "version": "val_pooled_full_box_future_v2",
+        "target": {
+          "game": "pick5",
+          "date": "2026-11-20",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-21T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-21T03:45:00+00:00"
+        },
+        "forecast": {
+          "training_size": 2529,
+          "training_latest_date": "2026-11-20",
+          "probability_by_digit": [
+            0.09993378945045243,
+            0.0991392628558817,
+            0.09847715736040609,
+            0.09905098212315162,
+            0.1006400353122931,
+            0.10408298388876627,
+            0.09935996468770691,
+            0.09962480688589716,
+            0.09971308761862724,
+            0.09997792981681748
+          ],
+          "best_position_digit": 5,
+          "top_three_digits": [
+            5,
+            4,
+            9
+          ],
+          "model_tickets": [
+            [
+              0,
+              4,
+              5,
+              8,
+              9
+            ],
+            [
+              0,
+              4,
+              5,
+              7,
+              9
+            ],
+            [
+              4,
+              5,
+              7,
+              8,
+              9
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              2,
+              6,
+              8,
+              9
+            ],
+            [
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              6,
+              7,
+              8
+            ]
+          ],
+          "model_predicted_full_box_coverage": 0.0037518505640744145,
+          "control_predicted_full_box_coverage": 0.003492202643442692,
+          "model_fair_full_box_coverage": 0.0036000000000000016,
+          "control_fair_full_box_coverage": 0.0036000000000000016
+        },
+        "result": null
+      }
+    ]
+  },
+  "last_run_utc": "2026-11-20T23:16:04.334752+00:00"
+}
