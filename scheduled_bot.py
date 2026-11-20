@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, simulate, sync_game, draw_schedule, next_draw
-from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_v2
+from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_formula
 from val_box import random_box_picks, box_score_batch
 
 
@@ -65,7 +65,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
               "## Picks", "",
               "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
-              "**Pick 3/4/5 target complete Any Order (Box) digit sets.** Box v3 ranks complete unordered digit-multisets by summed probabilities of all permutations, not partial-position matches. Without a proven signal it uses three nonoverlapping, all-distinct random Box candidates and three independent same-type Box controls (Paper 1/2/3, not purported ranked predictions). Each Box ticket represents a hypothetical $1 Any Order play; no purchases are made. Other games retain their existing methods. Old saved predictions remain unchanged. Missing latest results withhold new picks.", "",
+              "**Pick 3/4/5 target complete Any Order (Box) digit sets.** Box v4 uses cumulative evidence plus recent confirmation to rank complete unordered digit-multisets by summed probabilities of all permutations, not partial-position matches. Without a proven signal it uses three nonoverlapping, all-distinct random Box candidates and three independent same-type Box controls (Paper 1/2/3, not purported ranked predictions). Each Box ticket represents a hypothetical $1 Any Order play; no purchases are made. Other games retain their existing methods. Old saved predictions remain unchanged. Missing latest results withhold new picks.", "",
               "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
@@ -86,7 +86,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             if (datetime.fromisoformat(target["at"])-now).total_seconds()<15*60:
                 raise ValueError("Next draw is less than 15 minutes away; waiting for its result before preparing the following draw")
             stream=target["stream"]
-            # Preserve old predictions and add one immutable Box v3 prediction for
+            # Preserve old predictions and add one immutable versioned Box prediction for
             # the identical future target, enabling real A/B comparison.
             existing=next((r for r in ledger if r.get("target")==target and
                            (not g.get("digits") or r["method"]==DIGIT_FORMULA_VERSION)),None)
@@ -94,7 +94,7 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
                 if g.get("digits"):
                     # Actual replacement of the digit prediction formula;
                     # do not just rerank arbitrary sampled old candidates.
-                    picks,model_meta=generate_digit_v2(game,history,stream,count)
+                    picks,model_meta=generate_digit_formula(game,history,stream,count)
                     method=DIGIT_FORMULA_VERSION
                 else:
                     picks=rank_ensemble_picks(game,history,generate(game,history,"ensemble",count))
