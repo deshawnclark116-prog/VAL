@@ -1,10 +1,10 @@
-name: VAL Box v3 full Any Order head-to-head
+name: VAL archived Box v3 full Any Order head-to-head
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - 'val_digit_formula_v2.py'
+      - 'research/val_box_v3_frozen.py'
       - 'research_digit_formula_v2.py'
       - 'tests/test_val_digit_formula_v2.py'
       - '.github/workflows/research_digit_formula_v2.yml'
