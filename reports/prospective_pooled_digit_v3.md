@@ -14,16 +14,16 @@ Top-1 successes and partial matches are not prize claims.
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | pick3 | 0 | — | — | 0 | 0 | — | No |
 
-Latest frozen target for pick3: 2026-11-19 Night (saved 2026-11-19T21:41:52.356955+00:00).
-Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 609, 914, 063.
+Latest frozen target for pick3: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
+Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 252, 674, 366.
 | pick4 | 0 | — | — | 0 | 0 | — | No |
 
-Latest frozen target for pick4: 2026-11-19 Night (saved 2026-11-19T21:41:52.356955+00:00).
-Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 2891, 9179, 0310.
+Latest frozen target for pick4: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
+Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 9420, 8091, 1803.
 | pick5 | 0 | — | — | 0 | 0 | — | No |
 
-Latest frozen target for pick5: 2026-11-19 Night (saved 2026-11-19T21:41:52.356955+00:00).
-Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 26872, 85597, 77211.
+Latest frozen target for pick5: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
+Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 49339, 77788, 00647.
 
 Fair e-value evidence threshold is log(60) with a
 three-game union-bound allocation; it begins at the first
