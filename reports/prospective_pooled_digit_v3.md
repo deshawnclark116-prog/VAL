@@ -17,16 +17,16 @@ Exact-order overlaps are diagnostic, not Straight wagers.
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | pick3 | 1 | 0 | 0 | $-3 | $-3 | 0 | 0 | No |
 
-Latest frozen target for pick3: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
-Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 252, 674, 366.
+Latest frozen target for pick3: 2026-11-20 Night (saved 2026-11-20T21:22:29.295351+00:00).
+Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 029, 272, 517.
 | pick4 | 1 | 0 | 0 | $-3 | $-3 | 0 | 0 | No |
 
-Latest frozen target for pick4: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
-Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 9420, 8091, 1803.
+Latest frozen target for pick4: 2026-11-20 Night (saved 2026-11-20T21:22:29.295351+00:00).
+Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 7489, 0715, 1004.
 | pick5 | 1 | 0 | 0 | $-3 | $-3 | 0 | 0 | No |
 
-Latest frozen target for pick5: 2026-11-20 Day (saved 2026-11-20T04:09:22.325305+00:00).
-Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 49339, 77788, 00647.
+Latest frozen target for pick5: 2026-11-20 Night (saved 2026-11-20T21:22:29.295351+00:00).
+Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 25801, 72658, 37537.
 
 Fair e-value evidence threshold is log(60) with a
 three-game union-bound allocation; it begins at the first
