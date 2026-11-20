@@ -1,0 +1,39 @@
+name: VAL real complete Box formula v2 challenge
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - research/pooled-box-v2-real-outcomes-20261120
+    paths:
+      - 'research_pooled_box_v2_real.py'
+      - 'tests/test_research_pooled_box_v2_real.py'
+      - '.github/workflows/research_pooled_box_v2_real.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-pooled-box-v2-real-evaluation
+  cancel-in-progress: false
+jobs:
+  real_box:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test exact full-Box scoring and past-only predictions
+        run: python -m unittest discover -s tests -p 'test_research_pooled_box_v2_real.py' -v
+      - name: Evaluate complete winning number on actual historical draws
+        run: python -u research_pooled_box_v2_real.py
+      - name: Publish reproducible target-by-target results after merge
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_pooled_box_v2_real.json reports/research_pooled_box_v2_real.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish real full Any Order formula accuracy versus fair controls'
+          git pull --rebase origin main
+          git push origin HEAD:main
