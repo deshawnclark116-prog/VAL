@@ -9,9 +9,7 @@ No production forecast or previously saved pick was modified.
 **These are simulated devices with injected distributions,
 not evidence of exploitable Virginia Lottery machinery.**
 
-| Game | Scenario | Signal-active draws | Box trial draws |
-Challenger Box | Random Box | Candidate true-expected Box |
-Control true-expected Box | Mean log gain |
+| Game | Scenario | Signal-active draws | Box trial draws | Challenger Box | Random Box | Candidate true-expected Box | Control true-expected Box | Mean log gain |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | pick3 | fair_independent | 0 | 52 | 1 | 0 | 0.936 | 0.936 | +0.000000 |
 | pick3 | fixed_position_small | 0 | 52 | 4 | 0 | 0.946 | 0.940 | +0.000000 |
