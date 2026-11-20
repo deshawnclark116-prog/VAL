@@ -1,25 +1,23 @@
-"""VAL digit Box v4: online cumulative-evidence experts plus calibrated Box ranking.
+"""VAL Box v4 live prediction formula — fixed-regime conditional evidence.
 
-This replaces the *formula*, not just the scoring infrastructure. The
-candidate experts model history-dependent digit probabilities; live probability
-mass is moved away from uniform ONLY if chronological calibration establishes
-an improvement with conservative, family-adjusted uncertainty bounds.
-An unsuccessful search returns mathematically fair 10% digit probabilities,
-not an invented winning advantage.
+The live Pick 3/4/5 Box generator combines five calibrated legacy experts
+with four online conditional models: pooled digit bias, positional bias,
+Day/Night-specific distributions and within-ticket transition dependence.
 
-Models:
-* long_1500: position-specific persistent bias with a Dirichlet prior.
-* recent_100: recent position changes, strongly smoothed.
-* same_session: Day/Night-specific position distributions.
-* markov: previous completed draw -> next drawing, same digit position.
-* internal_chain: digit at current position conditioned on previous position
-  *within the target combination*. Joint ticket odds use the full chain.
+Online models are updated strictly AFTER each historical outcome is scored.
+Evidence is measured inside nonoverlapping, fixed-length drawing epochs after
+the frozen 2024-01-01 anchor. Seven hundred earlier draws may warm the
+conditional model but may NOT contribute to the epoch's evidence score.
+The per-epoch gate allocates a fixed iid-fair error budget across 3 games,
+4 models, and all future epochs; recent two-half confirmation is also required.
+Historical study periods already inspected are exploratory, not proof of a
+lottery advantage. Never use a future draw to select its own forecast.
 
-A true joint mixture, not a product of separately averaged marginals, is
-used for all ordered combination likelihoods. Up to 3 candidate tickets are
-chosen by a beam-search approximation to the largest joint probabilities
-ONLY when the signal gate passes; otherwise unique fair random picks are
-returned. All code is standard-library Python 3.11+.
+Qualified nonuniform joint probabilities rank COMPLETE Any Order digit sets
+by summing the probabilities of their distinct full permutations, preserving
+repeated digits. Without qualified evidence, the model returns the
+mathematically fair distribution and three nonoverlapping all-distinct
+paper Box candidates rather than pretending to predict fair randomness.
 """
 from __future__ import annotations
 
