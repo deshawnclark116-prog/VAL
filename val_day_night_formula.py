@@ -15,7 +15,10 @@ distinct permutations. For these exchangeable product distributions, this is
 exactly box_ways(combo) * product(prob[d] for d in combo).
 
 Evidence is a predictable likelihood-ratio e-process against the independent
-fair-null Night drawing, with fixed nonoverlapping 1600-pair epochs and
+fair-null Night drawing. A second prequential screen requires positive recent
+log score beyond the simpler unconditional pooled Night predictor, so an
+ordinary digit bias is not mislabeled a same-day conditional signal.
+The evidence uses fixed nonoverlapping 1600-pair epochs and
 summable alpha allocation. Recent positive validation and a strict family
 threshold are required. Failure to detect a signal means random Box
 coverage, NOT a forced conditional forecast.
@@ -44,6 +47,7 @@ PREWARM = 450
 RECENT = 320
 RECENT_MIN = 200
 MIN_MEAN_LOG_GAIN = .002
+MIN_CONDITIONAL_LOG_GAIN = .001
 # 0.005 fair-null family budget across 2 experts * 3 digit games * all
 # predefined future epochs. Sum 1/((k+1)(k+2)) across k>=0 equals 1.
 GATE_0 = math.log(6 / .005)
@@ -167,6 +171,9 @@ class NightConditionalEvidence:
         self.accumulator=_NightCounts(self.width, window)
         self.log_e={m:0. for m in EXPERTS}
         self.recent={m:deque(maxlen=RECENT) for m in EXPERTS}
+        # Tests incremental Day->Night information beyond a prior-only
+        # unconditional Night-digit frequency forecast.
+        self.relative_to_pooled={m:deque(maxlen=RECENT) for m in EXPERTS}
 
     def predict(self, day_numbers, epoch_index=0):
         p=self.accumulator.distributions(day_numbers)
@@ -180,11 +187,25 @@ class NightConditionalEvidence:
             first=sum(gains[:half])/half if half else 0.
             second=sum(gains[half:])/(n-half) if n>half else 0.
             avg=sum(gains)/n if n else 0.
+            relative=list(self.relative_to_pooled[name])
+            rn=len(relative)
+            rh=rn//2
+            rfirst=sum(relative[:rh])/rh if rh else 0.
+            rsecond=sum(relative[rh:])/(rn-rh) if rn>rh else 0.
+            ravg=sum(relative)/rn if rn else 0.
+            # A biased digit alone can make both pooled and conditional
+            # forecasts beat uniform. This challenger must additionally
+            # beat the pooled forecast BEFORE claiming Day->Night insight.
             selected=(self.log_e[name]>=threshold and
                       n>=RECENT_MIN and first>0 and second>0 and
-                      avg>MIN_MEAN_LOG_GAIN)
+                      avg>MIN_MEAN_LOG_GAIN and
+                      rn>=RECENT_MIN and rfirst>0 and rsecond>0 and
+                      ravg>MIN_CONDITIONAL_LOG_GAIN)
             details[name]=dict(log_e=self.log_e[name],avg=avg,
-                               first=first,second=second,passed=selected)
+                               first=first,second=second,
+                               improvement_vs_pooled=ravg,
+                               pooled_first=rfirst,pooled_second=rsecond,
+                               passed=selected)
             if selected:
                 valid.append(name)
         expert=max(valid,key=lambda x:self.log_e[x]) if valid else None
@@ -196,11 +217,16 @@ class NightConditionalEvidence:
         # Called only AFTER the forecast for this Night has been frozen/scored.
         if include_evidence and self.paired >= WARMUP:
             forecasts=self.accumulator.distributions(day_numbers)
+            pooled=self.accumulator.base()
             fair=self.width * math.log(.1)
+            pooled_log=sum(math.log(pooled[d]) for d in night_numbers)
             for name in EXPERTS:
-                inc=sum(math.log(forecasts[name][d]) for d in night_numbers)-fair
+                model_log=sum(math.log(forecasts[name][d])
+                              for d in night_numbers)
+                inc=model_log-fair
                 self.log_e[name]+=inc
                 self.recent[name].append(inc)
+                self.relative_to_pooled[name].append(model_log-pooled_log)
         self.accumulator.add(day_numbers,night_numbers)
         self.paired+=1
 
@@ -238,6 +264,8 @@ def fit_before(game,history,stream):
     # must never enter this epoch's log evidence.
     model.log_e={name:0. for name in EXPERTS}
     model.recent={name:deque(maxlen=RECENT) for name in EXPERTS}
+    model.relative_to_pooled={name:deque(maxlen=RECENT)
+                              for name in EXPERTS}
     for d,n in current:
         model.observe(d,n)
     selected, probs, data=model.predict(tuple(now_day["numbers"]),epoch)
