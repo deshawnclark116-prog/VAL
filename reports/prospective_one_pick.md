@@ -1,6 +1,6 @@
 # VAL frozen future-draw one-number test
 
-Latest run (UTC): 2026-11-20T04:12:23.338192+00:00
+Latest run (UTC): 2026-11-20T21:26:50.903487+00:00
 
 **Paper predictions only. No money wagered.**
 Each named method gets one number for the same exact future
@@ -15,7 +15,7 @@ A few hits cannot prove a persistent lottery advantage.
 
 ## Pick3
 
-Draws recorded: 9. Graded: 8. Pending: 1.
+Draws recorded: 10. Graded: 8. Pending: 2.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -41,13 +41,13 @@ Position matches alone do not constitute prize wins.
 | 7 | 1 | 33.33% | 33.33% | 0.00% | 0.00% | 0.00% |
 
 
-Most recent future target: 2026-11-20 Day; created 2026-11-20T04:12:23.338192+00:00.
+Most recent future target: 2026-11-20 Night; created 2026-11-20T21:26:50.903487+00:00.
 
-Precommitted paper numbers: random: 304, position_hot_top_500: 242, position_cold_top_30: 813, session_hier_sample_500: 752, position_cold_sample_1000: 948.
+Precommitted paper numbers: random: 068, position_hot_top_500: 242, position_cold_top_30: 813, session_hier_sample_500: 442, position_cold_sample_1000: 248.
 
 ## Pick4
 
-Draws recorded: 9. Graded: 8. Pending: 1.
+Draws recorded: 10. Graded: 8. Pending: 2.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -73,21 +73,21 @@ Position matches alone do not constitute prize wins.
 | 7 | 1 | 25.00% | 0.00% | 25.00% | 0.00% | 0.00% |
 
 
-Most recent future target: 2026-11-20 Day; created 2026-11-20T04:12:23.338192+00:00.
+Most recent future target: 2026-11-20 Night; created 2026-11-20T21:26:50.903487+00:00.
 
-Precommitted paper numbers: random: 5207, position_hot_top_500: 4928, position_cold_top_30: 3787, session_hier_sample_500: 2777, position_cold_sample_1000: 0477.
+Precommitted paper numbers: random: 6405, position_hot_top_500: 7928, position_cold_top_30: 7707, session_hier_sample_500: 2505, position_cold_sample_1000: 8332.
 
 ## Pick5
 
-Draws recorded: 9. Graded: 6. Pending: 3.
+Draws recorded: 10. Graded: 8. Pending: 2.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| random | 6 | 0 | 0 | 0.005 | +0.00000 |
-| position_hot_top_500 | 6 | 0 | 0 | 0.003 | +0.09348 |
-| position_cold_top_30 | 6 | 0 | 0 | 0.005 | +0.04362 |
-| session_hier_sample_500 | 6 | 0 | 0 | 0.004 | +0.05657 |
-| position_cold_sample_1000 | 6 | 0 | 0 | 0.004 | -0.01828 |
+| random | 8 | 0 | 0 | 0.007 | +0.00000 |
+| position_hot_top_500 | 8 | 0 | 0 | 0.004 | +0.09647 |
+| position_cold_top_30 | 8 | 0 | 0 | 0.007 | +0.02897 |
+| session_hier_sample_500 | 8 | 0 | 0 | 0.005 | +0.13352 |
+| position_cold_sample_1000 | 8 | 0 | 0 | 0.007 | -0.03100 |
 
 ### Frozen forecast checked against later draws (diagnostic)
 
@@ -97,17 +97,17 @@ Position matches alone do not constitute prize wins.
 
 | Offset | Matured forecasts | random | position_hot_top_500 | position_cold_top_30 | session_hier_sample_500 | position_cold_sample_1000 |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 6 | 6.67% | 20.00% | 26.67% | 10.00% | 10.00% |
-| 1 | 5 | 12.00% | 12.00% | 12.00% | 20.00% | 20.00% |
-| 2 | 4 | 5.00% | 15.00% | 10.00% | 15.00% | 0.00% |
-| 3 | 3 | 13.33% | 6.67% | 20.00% | 20.00% | 13.33% |
-| 5 | 1 | 0.00% | 0.00% | 0.00% | 20.00% | 0.00% |
-| 7 | 0 | — | — | — | — | — |
+| 0 | 8 | 7.50% | 17.50% | 20.00% | 10.00% | 10.00% |
+| 1 | 7 | 11.43% | 11.43% | 8.57% | 22.86% | 17.14% |
+| 2 | 6 | 3.33% | 13.33% | 6.67% | 10.00% | 6.67% |
+| 3 | 5 | 12.00% | 8.00% | 20.00% | 12.00% | 12.00% |
+| 5 | 3 | 13.33% | 6.67% | 6.67% | 20.00% | 6.67% |
+| 7 | 1 | 0.00% | 0.00% | 20.00% | 0.00% | 20.00% |
 
 
-Most recent future target: 2026-11-20 Day; created 2026-11-20T04:12:23.338192+00:00.
+Most recent future target: 2026-11-20 Night; created 2026-11-20T21:26:50.903487+00:00.
 
-Precommitted paper numbers: random: 50577, position_hot_top_500: 40431, position_cold_top_30: 82854, session_hier_sample_500: 04435, position_cold_sample_1000: 36655.
+Precommitted paper numbers: random: 16859, position_hot_top_500: 40431, position_cold_top_30: 82889, session_hier_sample_500: 02282, position_cold_sample_1000: 08784.
 
 ## Reliability
 
