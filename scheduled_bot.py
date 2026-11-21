@@ -56,6 +56,36 @@ def ranked_selection(picks):
         return f"**{label}:** `{selection(pick)}`"
     return f"`{selection(pick)}` (legacy first saved pick)"
 
+
+def fallback_scorecard(records):
+    """Audit the original first ticket and first control for settled fallback batches.
+
+    Rows are grouped by frozen formula version rather than conflating old and
+    current fallbacks. Each row is a paper-only, complete Any Order comparison.
+    """
+    grouped = {}
+    for entry in records:
+        game = entry.get("game")
+        if game not in ("pick3", "pick4", "pick5") or entry.get("result") is None:
+            continue
+        meta = entry.get("model_meta") or {}
+        if meta.get("signal_gate_passed") is not False:
+            continue
+        if not entry.get("picks") or not entry.get("baseline"):
+            continue
+        key = (game, meta.get("formula_version") or entry.get("method") or "unknown")
+        item = grouped.setdefault(key, dict(game=game, version=key[1], settled=0,
+                                            wins=0, controls=0, fair_expected=0.0))
+        actual = entry["result"]["draw"]
+        model = box_score_batch(game, entry["picks"][:1], actual)
+        control = box_score_batch(game, entry["baseline"][:1], actual)
+        item["settled"] += 1
+        item["wins"] += model["box_wins"]
+        item["controls"] += control["box_wins"]
+        item["fair_expected"] += model["box_fair_expected_wins"]
+    return [grouped[k] for k in sorted(grouped)]
+
+
 def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
     if count != 1:
         raise ValueError("Live VAL supports exactly one prediction and one random control per draw")
@@ -139,6 +169,12 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                       f"{exact('model')} | {exact('random')} | "
                       f"${sum(z['box_net_usd'] for z in model):,} | "
                       f"${sum(z['box_net_usd'] for z in control):,} |")
+    report += ["", "## Fallback watch — one original ticket per drawing", "",
+               "Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are included. Each row uses the first saved ticket and its original first random control; alternatives are never counted. Grouping by formula version avoids combining distinct experiments. Fair-expected wins come from the exact digit-multiplicity odds of those tickets, not estimated predictive probabilities. **These results do not demonstrate an edge**, especially when examining a version after its early wins.", "",
+               "| Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |",
+               "| --- | --- | ---: | ---: | ---: | ---: |"]
+    for row in fallback_scorecard(all_records):
+        report.append(f"| {GAMES[row['game']]['name']} | `{safe(row['version'])}` | {row['settled']} | {row['wins']} | {row['controls']} | {row['fair_expected']:.4f} |")
     report += ["", "## Other game results", "",
                "| Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |",
                "| --- | ---: | ---: | ---: | ---: | ---: |"]

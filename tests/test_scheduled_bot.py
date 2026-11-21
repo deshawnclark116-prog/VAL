@@ -85,6 +85,23 @@ class DailyBotTests(unittest.TestCase):
         self.assertEqual(len(challenger['data']['picks']),1)
         self.assertEqual(len(old['data']['picks']),3)
 
+    def test_fallback_scorecard_uses_only_original_first_ticket(self):
+        original = dict(game="pick4",method="digit_box_v4",
+                        model_meta=dict(signal_gate_passed=False,formula_version="digit_box_v4"),
+                        picks=[dict(numbers=[0,1,4,8],bonus=None),
+                               dict(numbers=[3,4,5,6],bonus=None)],
+                        baseline=[dict(numbers=[3,4,5,6],bonus=None),
+                                  dict(numbers=[0,1,4,8],bonus=None)],
+                        result=dict(draw=dict(numbers=[0,1,4,8],bonus=None)))
+        signal = dict(original, model_meta=dict(signal_gate_passed=True))
+        open_batch = dict(original, result=None)
+        rows = scheduled_bot.fallback_scorecard([original,signal,open_batch])
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]["settled"],1)
+        self.assertEqual(rows[0]["wins"],1)
+        self.assertEqual(rows[0]["controls"],0)
+        self.assertAlmostEqual(rows[0]["fair_expected"],.0024)
+
     def test_live_runner_disallows_multiple_predictions(self):
         with self.assertRaisesRegex(ValueError,'exactly one prediction'):
             scheduled_bot.run(Store(self.root/'invalid.db'),self.root/'invalid',count=3,syncer=self.fake_sync,now=self.now)
