@@ -1,0 +1,135 @@
+{
+  "schema_version": "val_exogenous_source_feasibility_v1",
+  "researched_on": "2026-11-20",
+  "goal": "Complete Any Order Pick3/4/5 digit-multiset prediction before each official wager cutoff; any lawful, accessible pre-draw variable is eligible, not only historical winners.",
+  "scope": "Virginia Lottery official Pick3/4/5 day/night drawings",
+  "reference_urls": [
+    "https://www.valottery.com/playingmatters/security",
+    "https://www.valottery.com/data/draw-games/pick3",
+    "https://www.youtube.com/watch?v=DXOq_PMiqYI"
+  ],
+  "verified_procedural_facts": [
+    "Lottery's published Drawing Security page says officials randomly select ball sets and drawing machines approximately two hours before a draw.",
+    "The same page says officials conduct equipment tests and pretest drawings.",
+    "Drawing master control forms include equipment used, pretest numbers drawn, official numbers drawn and time betting was closed.",
+    "Public lottery site publishes historical official winning numbers. The published security page does not provide an authenticated, timestamped, pre-cutoff machine/pretest feed."
+  ],
+  "candidate_sources": [
+    {
+      "name": "Selected drawing machine identifier",
+      "availability": "not_verified_before_cutoff",
+      "physical_hypothesis": "Some equipment may have stable, measurable differential digit frequencies or mechanical effects.",
+      "prerequisites": [
+        "identification before wager cutoff",
+        "archive of machine IDs joined by draw/position",
+        "enough draws per machine after selection",
+        "exact first-public timestamp"
+      ],
+      "priority": "high_if_real_public_feed",
+      "approval": "blocked"
+    },
+    {
+      "name": "Selected ball set identifier and position",
+      "availability": "not_verified_before_cutoff",
+      "physical_hypothesis": "Ball-set tolerances might create small systematic differences; this remains hypothetical.",
+      "prerequisites": [
+        "ball-set ID before cutoff",
+        "correct mapping to positions and games",
+        "usable archive across replacements",
+        "pre-specified uncertainty model"
+      ],
+      "priority": "high_if_real_public_feed",
+      "approval": "blocked"
+    },
+    {
+      "name": "Pretest digits and pretest failure records",
+      "availability": "recorded_by_lottery_release_timing_unknown",
+      "physical_hypothesis": "Equipment-specific pretest evidence might update a mechanical-bias prior if shared equipment actually persists.",
+      "prerequisites": [
+        "provably public before cutoff",
+        "number of pretests and ordered results",
+        "matching equipment identity",
+        "whether each pretest changes ball state",
+        "recorded change/replacement events"
+      ],
+      "priority": "high_if_timely_public",
+      "approval": "blocked"
+    },
+    {
+      "name": "Official draw video (machine/ball configuration)",
+      "availability": "videos_visible_after_draw; prior-to-cutoff details_not_verified",
+      "physical_hypothesis": "Archived recordings could classify prior equipment regimes for research, but cannot alone provide this draw's future outcome.",
+      "prerequisites": [
+        "timestamped archive",
+        "machine and ball IDs observable",
+        "manual calibration samples",
+        "must not infer future setup from post-draw video"
+      ],
+      "priority": "medium_for_historical_research_only",
+      "approval": "blocked_for_live"
+    },
+    {
+      "name": "Draw schedule, weekday, day/night, rule/equipment changes",
+      "availability": "available_before_cutoff",
+      "physical_hypothesis": "Observable structural regime markers might change equipment allocation, not automatically winning-digit probabilities.",
+      "prerequisites": [
+        "published change dates",
+        "pre-specified model family",
+        "forward time validation across regimes",
+        "avoid data-mined calendar effects"
+      ],
+      "priority": "low_signal_high_accessibility",
+      "approval": "eligible_for_hypothesis_tests_only"
+    },
+    {
+      "name": "Ambient weather",
+      "availability": "public_but_studio_conditions_unknown",
+      "physical_hypothesis": "Outdoor weather should not be assumed to affect controlled indoor equipment without documented mechanism and on-site conditions.",
+      "prerequisites": [
+        "verified physical coupling",
+        "timestamped ambient measurements",
+        "pre-registered interaction",
+        "out-of-sample correction for many features"
+      ],
+      "priority": "very_low_until_mechanism",
+      "approval": "blocked_for_now"
+    },
+    {
+      "name": "Sales volume, number popularity, retailer patterns",
+      "availability": "no verified draw-level pre-cutoff feed",
+      "physical_hypothesis": "Purchasers' choices do not change randomly drawn digits; could affect payout sharing or decision economics, not primary winner probability.",
+      "prerequisites": [
+        "defined payout-relevant objective",
+        "timely aggregate availability",
+        "rules allow different payouts"
+      ],
+      "priority": "separate_secondary_economics",
+      "approval": "not_a_draw_predictor"
+    }
+  ],
+  "pre_draw_feature_contract": {
+    "required_fields": [
+      "game",
+      "target_draw_timestamp_utc",
+      "session",
+      "feature_name",
+      "feature_value",
+      "source_url",
+      "source_observed_at_utc",
+      "source_published_at_utc",
+      "wager_close_utc",
+      "source_hash",
+      "retrieval_method"
+    ],
+    "invariant": "Both source_published_at_utc and source_observed_at_utc must be strictly earlier than wager_close_utc; features missing proof of public availability are excluded, never backfilled into pre-draw forecasts.",
+    "validations": [
+      "no result field from target or later",
+      "reject machine/pretest identifiers published only after ticket cutoff",
+      "no hindsight labels smuggled via timestamps",
+      "audit time of first availability, not merely data's event date",
+      "missing source = missing feature; no fabricated values"
+    ]
+  },
+  "next_action": "Find a public, timestamp-verifiable machine/ball-set/pretest source available before cutoff. Do not build a prediction formula assuming such access. Independently distinguish a record that existed internally from information publicly available at wagering time.",
+  "current_status": "No confirmed exogenous equipment or pretest variable is presently connected to VAL's live prediction inputs; no claim of real predictive advantage."
+}
