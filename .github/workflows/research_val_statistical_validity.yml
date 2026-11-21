@@ -1,0 +1,39 @@
+name: VAL complete Box evidence audit and power design
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - research/validation-power-gate-20261120
+    paths:
+      - 'research_val_statistical_validity.py'
+      - 'tests/test_val_statistical_validity.py'
+      - '.github/workflows/research_val_statistical_validity.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-statistical-validity
+  cancel-in-progress: false
+jobs:
+  evidence_audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Confirm exact significance and power math
+        run: python -m unittest discover -s tests -p 'test_val_statistical_validity.py' -v
+      - name: Audit historical paired results and prospective evidence
+        run: python -u research_val_statistical_validity.py
+      - name: Preserve audit only from main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/val_statistical_validity.json reports/val_statistical_validity.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish VAL full Box statistical power and validity assessment'
+          git pull --rebase origin main
+          git push origin HEAD:main
