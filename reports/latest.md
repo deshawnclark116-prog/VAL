@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-21T12:59:12.768820-05:00 · Eastern time
+Updated: 2026-11-21T16:04:12.099439-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,9 +14,9 @@ Picks use previous completed results from ALL sessions of the same game: today's
 
 | Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-21T13:59:00-05:00 | Day | #116 | **Paper:** `1 2 8` | 2026-11-20T23:00:00-05:00 | `5 6 8` (Night) |
-| Pick 4 | 2026-11-21T13:59:00-05:00 | Day | #117 | **Paper:** `0 1 4 8` | 2026-11-20T23:00:00-05:00 | `8 6 0 1` (Night) |
-| Pick 5 | 2026-11-21T13:59:00-05:00 | Day | #118 | **Paper:** `0 3 4 7 8` | 2026-11-20T23:00:00-05:00 | `2 0 7 2 5` (Night) |
+| Pick 3 | 2026-11-21T23:00:00-05:00 | Night | #122 | **Paper:** `3 5 8` | 2026-11-21T13:59:00-05:00 | `7 2 7` (Day) |
+| Pick 4 | 2026-11-21T23:00:00-05:00 | Night | #123 | **Paper:** `0 1 5 8` | 2026-11-21T13:59:00-05:00 | `0 1 4 8` (Day) |
+| Pick 5 | 2026-11-21T23:00:00-05:00 | Night | #124 | **Paper:** `1 3 4 6 7` | 2026-11-21T13:59:00-05:00 | `4 0 6 8 5` (Day) |
 | Cash 5 | 2026-11-21T23:00:00-05:00 | Main | #119 | **Primary:** `2 7 26 30 41` | 2026-11-20T23:00:00-05:00 | `17 18 33 34 38` (Main) |
 | Powerball | 2026-11-21T22:59:00-05:00 | Main | #99 | **Primary:** `15 33 55 58 69 + 3` | 2026-11-18T22:59:00-05:00 | `18 31 43 51 62 + 12` (Main) |
 | Mega Millions | 2026-11-24T23:00:00-05:00 | Main | #120 | **Primary:** `5 25 28 34 38 + 14` | 2026-11-20T23:00:00-05:00 | `32 35 48 58 61 + 21` (Main) |
@@ -31,9 +31,9 @@ Payout and net are **hypothetical** $1 Any Order paper-wagers using published no
 
 | Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 21 | 0 | 0 | 0 | 0 | $-21 | $-21 |
-| Pick 4 | 21 | 1 | 0 | 0 | 0 | $179 | $-21 |
-| Pick 5 | 21 | 0 | 0 | 0 | 0 | $-21 | $-21 |
+| Pick 3 | 22 | 0 | 0 | 0 | 0 | $-22 | $-22 |
+| Pick 4 | 22 | 2 | 0 | 1 | 0 | $378 | $-22 |
+| Pick 5 | 22 | 0 | 0 | 0 | 0 | $-22 | $-22 |
 
 ## Other game results
 
@@ -54,9 +54,9 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 0 | 0 | 0 | 0 | 0.4136 |
-| Pick 4 | 0 | 0 | 0 | 0 | 0.9860 |
-| Pick 5 | 0 | 0 | 0 | 0 | 0.7602 |
+| Pick 3 | 1 | 1 | 0 | 0 | 0.3836 |
+| Pick 4 | 0 | 0 | 0 | 0 | 0.9750 |
+| Pick 5 | 0 | 0 | 0 | 0 | 0.8551 |
 | Cash 5 | — | — | 0 | 0 | 0.4705 |
 | Powerball | — | — | 0 | 0 | 0.6943 |
 | Mega Millions | — | — | 0 | 0 | 0.3367 |
