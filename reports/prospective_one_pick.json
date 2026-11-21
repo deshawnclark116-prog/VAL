@@ -1051,6 +1051,48 @@
                 "log_score_gain_vs_fair": -0.113291579
               }
             }
+          },
+          "7": {
+            "offset_draws": 7,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              6,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0384354756
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.130971854
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0732379909
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0042773537
+              }
+            }
           }
         }
       },
@@ -1552,6 +1594,48 @@
                 "log_score_gain_vs_fair": -0.0580393035
               }
             }
+          },
+          "7": {
+            "offset_draws": 7,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0338688981
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0032199922
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0546004593
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0474983349
+              }
+            }
           }
         }
       },
@@ -2009,6 +2093,48 @@
                 "any_order_including_straight": false,
                 "fireball_any_order": false,
                 "log_score_gain_vs_fair": -0.113386335
+              }
+            }
+          },
+          "5": {
+            "offset_draws": 5,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              6,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0515075571
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1072167092
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.075119459
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0041908424
               }
             }
           }
@@ -2470,6 +2596,48 @@
                 "log_score_gain_vs_fair": -0.0543728763
               }
             }
+          },
+          "5": {
+            "offset_draws": 5,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0338688981
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0159516767
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": true,
+                "log_score_gain_vs_fair": 0.0546004593
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.051164762
+              }
+            }
           }
         }
       },
@@ -2887,6 +3055,48 @@
                 "log_score_gain_vs_fair": -0.0543728763
               }
             }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              6,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0515075571
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1303724629
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.075119459
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0039599198
+              }
+            }
           }
         }
       },
@@ -3262,6 +3472,90 @@
                 "log_score_gain_vs_fair": -0.058383516
               }
             }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              6,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0663226429
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1308840883
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0886239185
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0083352209
+              }
+            }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0493730846
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0193123126
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0571193523
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0502383986
+              }
+            }
           }
         }
       },
@@ -3595,6 +3889,90 @@
                 "log_score_gain_vs_fair": -0.058383516
               }
             }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              6,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0663226429
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1308840883
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0770996576
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0083352209
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0493730846
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0193123126
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0404608847
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0502383986
+              }
+            }
           }
         }
       },
@@ -3843,7 +4221,135 @@
             "fair_box_probability": 0.006
           }
         },
-        "result": null
+        "result": {
+          "date": "2026-11-20",
+          "stream": "Day",
+          "official_numbers": [
+            1,
+            6,
+            3
+          ],
+          "official_fireball": 7,
+          "graded_at_utc": "2026-11-21T20:12:45.840151+00:00",
+          "methods": {
+            "random": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0
+            },
+            "position_hot_top_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0792260478
+            },
+            "position_cold_top_30": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.1084542367
+            },
+            "session_hier_sample_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.090236822
+            },
+            "position_cold_sample_1000": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.008264014
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              1,
+              6,
+              3
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0792260478
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1084542367
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.090236822
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.008264014
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0622764895
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.003117539
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0587322559
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0502019151
+              }
+            }
+          }
+        }
       },
       {
         "id": "7147acdbd5e7f28b",
@@ -4090,7 +4596,93 @@
             "fair_box_probability": 0.006
           }
         },
-        "result": null
+        "result": {
+          "date": "2026-11-20",
+          "stream": "Night",
+          "official_numbers": [
+            5,
+            6,
+            8
+          ],
+          "official_fireball": 2,
+          "graded_at_utc": "2026-11-21T20:12:45.840151+00:00",
+          "methods": {
+            "random": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0
+            },
+            "position_hot_top_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0622764895
+            },
+            "position_cold_top_30": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.003117539
+            },
+            "session_hier_sample_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0746443515
+            },
+            "position_cold_sample_1000": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0502019151
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              5,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0622764895
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.003117539
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0746443515
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0502019151
+              }
+            }
+          }
+        }
       },
       {
         "id": "66dcf8b377db0fc0",
@@ -4332,6 +4924,253 @@
                 0.09555867967448134,
                 0.09987765473578317,
                 0.09904878019978555
+              ]
+            ],
+            "fair_box_probability": 0.006
+          }
+        },
+        "result": null
+      },
+      {
+        "id": "6f09f8862295126e",
+        "version": "val_prospective_one_pick_v1",
+        "created_at_utc": "2026-11-21T20:12:45.840151+00:00",
+        "target": {
+          "game": "pick3",
+          "date": "2026-11-21",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-22T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-22T03:45:00+00:00"
+        },
+        "training_draws_available": 23763,
+        "training_latest_date": "2026-11-20",
+        "predictions": {
+          "random": {
+            "numbers": [
+              6,
+              4,
+              5
+            ],
+            "forecast_by_position": [
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ]
+            ],
+            "fair_box_probability": 0.006
+          },
+          "position_hot_top_500": {
+            "numbers": [
+              2,
+              4,
+              2
+            ],
+            "forecast_by_position": [
+              [
+                0.08857142857142856,
+                0.09857142857142857,
+                0.11857142857142858,
+                0.09285714285714286,
+                0.11,
+                0.09428571428571429,
+                0.09285714285714286,
+                0.09714285714285714,
+                0.09857142857142857,
+                0.10857142857142857
+              ],
+              [
+                0.1,
+                0.08428571428571428,
+                0.09714285714285714,
+                0.09,
+                0.12428571428571429,
+                0.09285714285714286,
+                0.11428571428571428,
+                0.10714285714285714,
+                0.08428571428571428,
+                0.10571428571428572
+              ],
+              [
+                0.09571428571428571,
+                0.11428571428571428,
+                0.11714285714285715,
+                0.10142857142857142,
+                0.07285714285714286,
+                0.08285714285714285,
+                0.1,
+                0.11,
+                0.10428571428571429,
+                0.10142857142857142
+              ]
+            ],
+            "fair_box_probability": 0.003
+          },
+          "position_cold_top_30": {
+            "numbers": [
+              8,
+              1,
+              4
+            ],
+            "forecast_by_position": [
+              [
+                0.0978109509724824,
+                0.09991465295405928,
+                0.09991465295405928,
+                0.10216020643252449,
+                0.0978109509724824,
+                0.09583476845558557,
+                0.09991465295405928,
+                0.09991465295405928,
+                0.10456430491816358,
+                0.10216020643252449
+              ],
+              [
+                0.09206185011432469,
+                0.10438832598814558,
+                0.1019882735359927,
+                0.09974649926400476,
+                0.10438832598814558,
+                0.1019882735359927,
+                0.09764633775662779,
+                0.09381556674478068,
+                0.1019882735359927,
+                0.1019882735359927
+              ],
+              [
+                0.09985775725278581,
+                0.10210203201650672,
+                0.09578019601604391,
+                0.10450476150505453,
+                0.10450476150505453,
+                0.10210203201650672,
+                0.09775525320960908,
+                0.09578019601604391,
+                0.09985775725278581,
+                0.09775525320960908
+              ]
+            ],
+            "fair_box_probability": 0.006
+          },
+          "session_hier_sample_500": {
+            "numbers": [
+              7,
+              4,
+              9
+            ],
+            "forecast_by_position": [
+              [
+                0.09497536945812808,
+                0.09980295566502463,
+                0.13014778325123152,
+                0.09211822660098523,
+                0.13241379310344828,
+                0.10610837438423645,
+                0.08177339901477833,
+                0.0858128078817734,
+                0.08600985221674877,
+                0.09083743842364532
+              ],
+              [
+                0.1103448275862069,
+                0.07024630541871921,
+                0.10650246305418719,
+                0.09172413793103448,
+                0.134384236453202,
+                0.08177339901477833,
+                0.11231527093596058,
+                0.12512315270935961,
+                0.07024630541871921,
+                0.09733990147783252
+              ],
+              [
+                0.08561576354679803,
+                0.12610837438423644,
+                0.11960591133004925,
+                0.10364532019704434,
+                0.061773399014778324,
+                0.08729064039408867,
+                0.09310344827586207,
+                0.11517241379310345,
+                0.1005911330049261,
+                0.1070935960591133
+              ]
+            ],
+            "fair_box_probability": 0.006
+          },
+          "position_cold_sample_1000": {
+            "numbers": [
+              1,
+              3,
+              0
+            ],
+            "forecast_by_position": [
+              [
+                0.1041320426642705,
+                0.09969884043281209,
+                0.09132984308552013,
+                0.10140321757620702,
+                0.0954212458153811,
+                0.10761235059399929,
+                0.10366191817450963,
+                0.10096894055890158,
+                0.0972961056512655,
+                0.09847549544713328
+              ],
+              [
+                0.09735578058656978,
+                0.10564650321807675,
+                0.10017827175624748,
+                0.10326139896070968,
+                0.09203170320683016,
+                0.10419591030694231,
+                0.0965921940474876,
+                0.09735578058656978,
+                0.10235158916464228,
+                0.10103086816592413
+              ],
+              [
+                0.09864944829985473,
+                0.09343403875287447,
+                0.09309241406696207,
+                0.10389107343242715,
+                0.11120875009055871,
+                0.11006811737318722,
+                0.09556588807581987,
+                0.09556588807581987,
+                0.09946812995811005,
+                0.09905625187438595
               ]
             ],
             "fair_box_probability": 0.006
@@ -5525,6 +6364,49 @@
                 "log_score_gain_vs_fair": -0.0107565689
               }
             }
+          },
+          "7": {
+            "offset_draws": 7,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2316946414
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0228556317
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0019049384
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0705704672
+              }
+            }
           }
         }
       },
@@ -6097,6 +6979,49 @@
                 "log_score_gain_vs_fair": -0.0357865916
               }
             }
+          },
+          "7": {
+            "offset_draws": 7,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              8,
+              6,
+              0,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.3641463507
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0383834681
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2375977968
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": true,
+                "log_score_gain_vs_fair": 0.0629198539
+              }
+            }
           }
         }
       },
@@ -6624,6 +7549,49 @@
                 "any_order_including_straight": false,
                 "fireball_any_order": false,
                 "log_score_gain_vs_fair": -0.0103531863
+              }
+            }
+          },
+          "5": {
+            "offset_draws": 5,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2711303942
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1076847433
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0533059131
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0869946613
               }
             }
           }
@@ -7155,6 +8123,49 @@
                 "log_score_gain_vs_fair": -0.0359488667
               }
             }
+          },
+          "5": {
+            "offset_draws": 5,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              8,
+              6,
+              0,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.3641463507
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0588893438
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2375977968
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0673324917
+              }
+            }
           }
         }
       },
@@ -7641,6 +8652,49 @@
                 "log_score_gain_vs_fair": -0.0359488667
               }
             }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2307661703
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1104388754
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0168330265
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0831515646
+              }
+            }
           }
         }
       },
@@ -8084,6 +9138,92 @@
                 "log_score_gain_vs_fair": -0.0279287108
               }
             }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2307661703
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1116569042
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5377543843
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0753917576
+              }
+            }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              8,
+              6,
+              0,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.3641463507
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0584115076
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2375977968
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0671628379
+              }
+            }
           }
         }
       },
@@ -8484,6 +9624,92 @@
                 "log_score_gain_vs_fair": -0.0279287108
               }
             }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2307661703
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1116569042
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0168330265
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0753917576
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              8,
+              6,
+              0,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.3641463507
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0584115076
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.8348235242
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0671628379
+              }
+            }
           }
         }
       },
@@ -8797,7 +10023,138 @@
             "fair_box_probability": 0.0012
           }
         },
-        "result": null
+        "result": {
+          "date": "2026-11-20",
+          "stream": "Day",
+          "official_numbers": [
+            9,
+            8,
+            6,
+            8
+          ],
+          "official_fireball": 6,
+          "graded_at_utc": "2026-11-21T20:12:45.840151+00:00",
+          "methods": {
+            "random": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0
+            },
+            "position_hot_top_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.2433449525
+            },
+            "position_cold_top_30": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.1119311692
+            },
+            "session_hier_sample_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.5393621017
+            },
+            "position_cold_sample_1000": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.0713518382
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              9,
+              8,
+              6,
+              8
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2433449525
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1119311692
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5393621017
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0713518382
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              8,
+              6,
+              0,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.3772184323
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0377262453
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1954836654
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0620652881
+              }
+            }
+          }
+        }
       },
       {
         "id": "1f9ff1a3c06515d1",
@@ -9109,7 +10466,95 @@
             "fair_box_probability": 0.0012
           }
         },
-        "result": null
+        "result": {
+          "date": "2026-11-20",
+          "stream": "Night",
+          "official_numbers": [
+            8,
+            6,
+            0,
+            1
+          ],
+          "official_fireball": 2,
+          "graded_at_utc": "2026-11-21T20:12:45.840151+00:00",
+          "methods": {
+            "random": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0
+            },
+            "position_hot_top_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.3772184323
+            },
+            "position_cold_top_30": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0377262453
+            },
+            "session_hier_sample_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.9139466248
+            },
+            "position_cold_sample_1000": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0620652881
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              8,
+              6,
+              0,
+              1
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.3772184323
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0377262453
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.9139466248
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0620652881
+              }
+            }
+          }
+        }
       },
       {
         "id": "332936c9b357f0e7",
@@ -9416,6 +10861,318 @@
                 0.10287643870936851,
                 0.09482641305418067,
                 0.09628536662193103
+              ]
+            ],
+            "fair_box_probability": 0.0024
+          }
+        },
+        "result": null
+      },
+      {
+        "id": "3c8d29acbfa66f22",
+        "version": "val_prospective_one_pick_v1",
+        "created_at_utc": "2026-11-21T20:12:45.840151+00:00",
+        "target": {
+          "game": "pick4",
+          "date": "2026-11-21",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-22T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-22T03:45:00+00:00"
+        },
+        "training_draws_available": 23029,
+        "training_latest_date": "2026-11-20",
+        "predictions": {
+          "random": {
+            "numbers": [
+              4,
+              1,
+              0,
+              1
+            ],
+            "forecast_by_position": [
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ]
+            ],
+            "fair_box_probability": 0.0012
+          },
+          "position_hot_top_500": {
+            "numbers": [
+              4,
+              9,
+              2,
+              8
+            ],
+            "forecast_by_position": [
+              [
+                0.10857142857142857,
+                0.10428571428571429,
+                0.08571428571428572,
+                0.10571428571428572,
+                0.10857142857142857,
+                0.10142857142857142,
+                0.09857142857142857,
+                0.10857142857142857,
+                0.07857142857142857,
+                0.1
+              ],
+              [
+                0.08857142857142856,
+                0.08857142857142856,
+                0.09571428571428571,
+                0.10142857142857142,
+                0.10428571428571429,
+                0.10285714285714286,
+                0.09857142857142857,
+                0.09,
+                0.11,
+                0.12
+              ],
+              [
+                0.11,
+                0.08285714285714285,
+                0.11428571428571428,
+                0.10571428571428572,
+                0.11142857142857143,
+                0.09142857142857143,
+                0.10428571428571429,
+                0.09285714285714286,
+                0.08571428571428572,
+                0.10142857142857142
+              ],
+              [
+                0.1,
+                0.08571428571428572,
+                0.09285714285714286,
+                0.10857142857142857,
+                0.09285714285714286,
+                0.10857142857142857,
+                0.09571428571428571,
+                0.09142857142857143,
+                0.11571428571428571,
+                0.10857142857142857
+              ]
+            ],
+            "fair_box_probability": 0.0024
+          },
+          "position_cold_top_30": {
+            "numbers": [
+              7,
+              7,
+              5,
+              7
+            ],
+            "forecast_by_position": [
+              [
+                0.09775222212090354,
+                0.09775222212090354,
+                0.10450152113492736,
+                0.10450152113492736,
+                0.09775222212090354,
+                0.09577722616776643,
+                0.09985466097191872,
+                0.10450152113492736,
+                0.09775222212090354,
+                0.09985466097191872
+              ],
+              [
+                0.10679777091497629,
+                0.09552283024453477,
+                0.09958943488756293,
+                0.10679777091497629,
+                0.09958943488756293,
+                0.09366784142509496,
+                0.1018276791822509,
+                0.10679777091497629,
+                0.09191688625906179,
+                0.09749258036900278
+              ],
+              [
+                0.10194472317866271,
+                0.10434375077630755,
+                0.0956326272456073,
+                0.10194472317866271,
+                0.09377550624259551,
+                0.10434375077630755,
+                0.09202253847260419,
+                0.09970390617428225,
+                0.10434375077630755,
+                0.10194472317866271
+              ],
+              [
+                0.10432305596190287,
+                0.09375690746036892,
+                0.09758528323767131,
+                0.09375690746036892,
+                0.09758528323767131,
+                0.10689932181960667,
+                0.10192450417072,
+                0.10689932181960667,
+                0.09758528323767131,
+                0.09968413159441192
+              ]
+            ],
+            "fair_box_probability": 0.0004
+          },
+          "session_hier_sample_500": {
+            "numbers": [
+              7,
+              3,
+              0,
+              0
+            ],
+            "forecast_by_position": [
+              [
+                0.12876847290640395,
+                0.110935960591133,
+                0.07733990147783253,
+                0.11458128078817734,
+                0.10118226600985221,
+                0.10364532019704434,
+                0.09980295566502463,
+                0.121871921182266,
+                0.06600985221674877,
+                0.07586206896551724
+              ],
+              [
+                0.08118226600985222,
+                0.08463054187192119,
+                0.0994088669950739,
+                0.09674876847290641,
+                0.110935960591133,
+                0.12798029556650245,
+                0.08600985221674877,
+                0.07793103448275862,
+                0.11172413793103447,
+                0.12344827586206895
+              ],
+              [
+                0.10482758620689653,
+                0.07349753694581279,
+                0.11231527093596057,
+                0.0869950738916256,
+                0.11536945812807879,
+                0.10226600985221673,
+                0.10748768472906402,
+                0.1024630541871921,
+                0.07389162561576354,
+                0.12088669950738914
+              ],
+              [
+                0.11724137931034483,
+                0.08078817733990148,
+                0.08866995073891626,
+                0.11842364532019704,
+                0.0852216748768473,
+                0.10807881773399014,
+                0.09596059113300492,
+                0.08502463054187193,
+                0.11596059113300491,
+                0.10463054187192118
+              ]
+            ],
+            "fair_box_probability": 0.0012
+          },
+          "position_cold_sample_1000": {
+            "numbers": [
+              3,
+              7,
+              6,
+              8
+            ],
+            "forecast_by_position": [
+              [
+                0.0962566269310696,
+                0.10194749848439584,
+                0.10720346540354296,
+                0.09588569442634759,
+                0.10107239647139021,
+                0.09739579826303325,
+                0.09857639649831654,
+                0.09739579826303325,
+                0.10568992876055411,
+                0.09857639649831654
+              ],
+              [
+                0.10287448916400621,
+                0.10110065809407077,
+                0.1024222914181532,
+                0.09482461605968794,
+                0.09742303184408287,
+                0.10153550164102368,
+                0.10067135399724436,
+                0.10571948152661138,
+                0.09860396019543174,
+                0.09482461605968794
+              ],
+              [
+                0.0951335780475189,
+                0.10517412778253715,
+                0.09586258164365702,
+                0.10061895282262213,
+                0.09477525821291888,
+                0.10061895282262213,
+                0.0997769384143235,
+                0.09855263513491071,
+                0.10666603389932634,
+                0.10282094121956313
+              ],
+              [
+                0.09820864715470658,
+                0.10380041306913024,
+                0.10067451997077181,
+                0.09554873096727189,
+                0.10110383756861269,
+                0.10333597936113319,
+                0.10333597936113319,
+                0.10287772442305869,
+                0.09482759816147038,
+                0.09628656996271132
               ]
             ],
             "fair_box_probability": 0.0024
@@ -10752,6 +12509,50 @@
                 "log_score_gain_vs_fair": -0.1396794658
               }
             }
+          },
+          "7": {
+            "offset_draws": 7,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              4,
+              8,
+              4,
+              3,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5216377087
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.132537199
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5710835867
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1113716187
+              }
+            }
           }
         }
       },
@@ -11395,6 +13196,50 @@
                 "log_score_gain_vs_fair": -0.0030442813
               }
             }
+          },
+          "7": {
+            "offset_draws": 7,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              2,
+              0,
+              7,
+              2,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1974276248
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1110852842
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3190092904
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2339029251
+              }
+            }
           }
         }
       },
@@ -11992,6 +13837,50 @@
                 "any_order_including_straight": false,
                 "fireball_any_order": false,
                 "log_score_gain_vs_fair": -0.1349992068
+              }
+            }
+          },
+          "5": {
+            "offset_draws": 5,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              4,
+              8,
+              4,
+              3,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5187013029
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1333111655
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5547277415
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1118377114
               }
             }
           }
@@ -12593,6 +14482,50 @@
                 "log_score_gain_vs_fair": -0.0066621495
               }
             }
+          },
+          "5": {
+            "offset_draws": 5,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              2,
+              0,
+              7,
+              2,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2064349747
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0887312247
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3000289563
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2410543769
+              }
+            }
           }
         }
       },
@@ -13148,6 +15081,50 @@
                 "log_score_gain_vs_fair": -0.0066621495
               }
             }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              4,
+              8,
+              4,
+              3,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5326875448
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1535167204
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5977326249
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1158615415
+              }
+            }
           }
         }
       },
@@ -13659,6 +15636,94 @@
                 "log_score_gain_vs_fair": -0.006619333
               }
             }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              4,
+              8,
+              4,
+              3,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5340231043
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1743253753
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.7672883669
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1244398326
+              }
+            }
+          },
+          "3": {
+            "offset_draws": 3,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              2,
+              0,
+              7,
+              2,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2064349747
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.048032837
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3000289563
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2331877957
+              }
+            }
           }
         }
       },
@@ -14126,6 +16191,94 @@
                 "log_score_gain_vs_fair": -0.006619333
               }
             }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              4,
+              8,
+              4,
+              3,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5340231043
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1743253753
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5968845815
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1244398326
+              }
+            }
+          },
+          "2": {
+            "offset_draws": 2,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              2,
+              0,
+              7,
+              2,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2064349747
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.048032837
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1176127643
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2331877957
+              }
+            }
           }
         }
       },
@@ -14504,7 +16657,141 @@
             "fair_box_probability": 0.0003
           }
         },
-        "result": null
+        "result": {
+          "date": "2026-11-20",
+          "stream": "Day",
+          "official_numbers": [
+            4,
+            8,
+            4,
+            3,
+            7
+          ],
+          "official_fireball": 6,
+          "graded_at_utc": "2026-11-21T20:12:45.840151+00:00",
+          "methods": {
+            "random": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0
+            },
+            "position_hot_top_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.5340231043
+            },
+            "position_cold_top_30": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.1743253753
+            },
+            "session_hier_sample_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.7672883669
+            },
+            "position_cold_sample_1000": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.1244398326
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Day",
+            "actual_numbers": [
+              4,
+              8,
+              4,
+              3,
+              7
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.5340231043
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1743253753
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.7672883669
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.1244398326
+              }
+            }
+          },
+          "1": {
+            "offset_draws": 1,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              2,
+              0,
+              7,
+              2,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.2064349747
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.048032837
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.3000289563
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2331877957
+              }
+            }
+          }
+        }
       },
       {
         "id": "2c13c73a2af57420",
@@ -14881,7 +17168,97 @@
             "fair_box_probability": 0.0006
           }
         },
-        "result": null
+        "result": {
+          "date": "2026-11-20",
+          "stream": "Night",
+          "official_numbers": [
+            2,
+            0,
+            7,
+            2,
+            5
+          ],
+          "official_fireball": 8,
+          "graded_at_utc": "2026-11-21T20:12:45.840151+00:00",
+          "methods": {
+            "random": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.0
+            },
+            "position_hot_top_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.232180432
+            },
+            "position_cold_top_30": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.0697292773
+            },
+            "session_hier_sample_500": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": 0.1503465695
+            },
+            "position_cold_sample_1000": {
+              "straight": false,
+              "any_order_including_straight": false,
+              "fireball_any_order": false,
+              "log_score_gain_vs_fair": -0.2290783559
+            }
+          }
+        },
+        "horizon_results": {
+          "0": {
+            "offset_draws": 0,
+            "actual_date": "2026-11-20",
+            "actual_stream": "Night",
+            "actual_numbers": [
+              2,
+              0,
+              7,
+              2,
+              5
+            ],
+            "methods": {
+              "random": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.0
+              },
+              "position_hot_top_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.232180432
+              },
+              "position_cold_top_30": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.0697292773
+              },
+              "session_hier_sample_500": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": 0.1503465695
+              },
+              "position_cold_sample_1000": {
+                "straight": false,
+                "any_order_including_straight": false,
+                "fireball_any_order": false,
+                "log_score_gain_vs_fair": -0.2290783559
+              }
+            }
+          }
+        }
       },
       {
         "id": "bb1a0c31074b3ba7",
@@ -15259,8 +17636,385 @@
           }
         },
         "result": null
+      },
+      {
+        "id": "9eb96cebc6153ce3",
+        "version": "val_prospective_one_pick_v1",
+        "created_at_utc": "2026-11-21T20:12:45.840151+00:00",
+        "target": {
+          "game": "pick5",
+          "date": "2026-11-21",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-22T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-22T03:45:00+00:00"
+        },
+        "training_draws_available": 2530,
+        "training_latest_date": "2026-11-20",
+        "predictions": {
+          "random": {
+            "numbers": [
+              5,
+              8,
+              6,
+              4,
+              1
+            ],
+            "forecast_by_position": [
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ],
+              [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.1
+              ]
+            ],
+            "fair_box_probability": 0.0012
+          },
+          "position_hot_top_500": {
+            "numbers": [
+              4,
+              0,
+              4,
+              3,
+              1
+            ],
+            "forecast_by_position": [
+              [
+                0.10428571428571429,
+                0.10285714285714286,
+                0.10285714285714286,
+                0.09285714285714286,
+                0.12857142857142856,
+                0.11428571428571428,
+                0.08285714285714285,
+                0.08428571428571428,
+                0.1,
+                0.08714285714285715
+              ],
+              [
+                0.12428571428571429,
+                0.08714285714285715,
+                0.08285714285714285,
+                0.10571428571428572,
+                0.08857142857142856,
+                0.11857142857142858,
+                0.10142857142857142,
+                0.09571428571428571,
+                0.10571428571428572,
+                0.09
+              ],
+              [
+                0.11285714285714285,
+                0.08285714285714285,
+                0.10142857142857142,
+                0.10142857142857142,
+                0.11571428571428571,
+                0.10285714285714286,
+                0.09,
+                0.09571428571428571,
+                0.09428571428571429,
+                0.10285714285714286
+              ],
+              [
+                0.10142857142857142,
+                0.1,
+                0.09428571428571429,
+                0.10714285714285714,
+                0.10428571428571429,
+                0.08428571428571428,
+                0.10285714285714286,
+                0.10142857142857142,
+                0.10428571428571429,
+                0.1
+              ],
+              [
+                0.09142857142857143,
+                0.11714285714285715,
+                0.09857142857142857,
+                0.09428571428571429,
+                0.08714285714285715,
+                0.11428571428571428,
+                0.09571428571428571,
+                0.10428571428571429,
+                0.10285714285714286,
+                0.09428571428571429
+              ]
+            ],
+            "fair_box_probability": 0.0006
+          },
+          "position_cold_top_30": {
+            "numbers": [
+              8,
+              7,
+              1,
+              8,
+              9
+            ],
+            "forecast_by_position": [
+              [
+                0.10195128826939681,
+                0.10435047036090225,
+                0.09202846458918794,
+                0.0976109270598013,
+                0.09563878584661609,
+                0.09563878584661609,
+                0.10195128826939681,
+                0.10195128826939681,
+                0.10692741321928917,
+                0.10195128826939681
+              ],
+              [
+                0.097744005757531,
+                0.09984626789234279,
+                0.10449273747301158,
+                0.10209028443594736,
+                0.10209028443594736,
+                0.09390940312480348,
+                0.097744005757531,
+                0.10449273747301158,
+                0.097744005757531,
+                0.09984626789234279
+              ],
+              [
+                0.09971227533605907,
+                0.10435250940737985,
+                0.10435250940737985,
+                0.10195328043497606,
+                0.09203026285915175,
+                0.0956406546635819,
+                0.10435250940737985,
+                0.0956406546635819,
+                0.10435250940737985,
+                0.09761283441313001
+              ],
+              [
+                0.09982515635483252,
+                0.09388954688051428,
+                0.09982515635483252,
+                0.09388954688051428,
+                0.09982515635483252,
+                0.10206869842262109,
+                0.10206869842262109,
+                0.10206869842262109,
+                0.10447064348398948,
+                0.10206869842262109
+              ],
+              [
+                0.09383636231514272,
+                0.09766798247250888,
+                0.09766798247250888,
+                0.10201088070441915,
+                0.10441146516273447,
+                0.09766798247250888,
+                0.09766798247250888,
+                0.09766798247250888,
+                0.10441146516273447,
+                0.10698991429242459
+              ]
+            ],
+            "fair_box_probability": 0.0006
+          },
+          "session_hier_sample_500": {
+            "numbers": [
+              7,
+              0,
+              5,
+              4,
+              5
+            ],
+            "forecast_by_position": [
+              [
+                0.12472906403940887,
+                0.11073891625615763,
+                0.10039408866995074,
+                0.10246305418719212,
+                0.13497536945812807,
+                0.10886699507389162,
+                0.05970443349753694,
+                0.090935960591133,
+                0.0896551724137931,
+                0.07753694581280789
+              ],
+              [
+                0.12059113300492612,
+                0.07408866995073893,
+                0.0734975369458128,
+                0.11458128078817734,
+                0.09497536945812808,
+                0.11635467980295566,
+                0.11054187192118227,
+                0.10285714285714286,
+                0.1076847290640394,
+                0.08482758620689655
+              ],
+              [
+                0.13280788177339903,
+                0.09418719211822661,
+                0.09674876847290642,
+                0.09674876847290642,
+                0.1194088669950739,
+                0.08315270935960592,
+                0.08482758620689658,
+                0.10975369458128081,
+                0.08197044334975372,
+                0.10039408866995075
+              ],
+              [
+                0.09674876847290642,
+                0.10000000000000002,
+                0.10610837438423648,
+                0.11477832512315272,
+                0.0833497536945813,
+                0.08403940886699508,
+                0.10039408866995075,
+                0.12433497536945814,
+                0.0833497536945813,
+                0.10689655172413795
+              ],
+              [
+                0.08847290640394088,
+                0.13684729064039408,
+                0.09635467980295566,
+                0.1026600985221675,
+                0.09133004926108375,
+                0.09507389162561576,
+                0.10630541871921183,
+                0.08679802955665024,
+                0.1038423645320197,
+                0.09231527093596059
+              ]
+            ],
+            "fair_box_probability": 0.0006
+          },
+          "position_cold_sample_1000": {
+            "numbers": [
+              4,
+              9,
+              4,
+              3,
+              0
+            ],
+            "forecast_by_position": [
+              [
+                0.09925784302747938,
+                0.10363251288574633,
+                0.09467421176684628,
+                0.10316883041276306,
+                0.09162486468673967,
+                0.09432028824102544,
+                0.10316883041276306,
+                0.1045789481726822,
+                0.10051167601027695,
+                0.10506199438367754
+              ],
+              [
+                0.09217972703142976,
+                0.10260303651695464,
+                0.10852723756226135,
+                0.09834377609904078,
+                0.10593671529268883,
+                0.0908904365837138,
+                0.10083388601596557,
+                0.0979464258837801,
+                0.1039927572033241,
+                0.09874600181084099
+              ],
+              [
+                0.09945979827192677,
+                0.10479173001840918,
+                0.1024678994726905,
+                0.0986478679691392,
+                0.09486684091329009,
+                0.0986478679691392,
+                0.1024678994726905,
+                0.09708192936398855,
+                0.10292029857958679,
+                0.0986478679691392
+              ],
+              [
+                0.09914033111761472,
+                0.10038222083873433,
+                0.10080667186864503,
+                0.09873649916978276,
+                0.09954915895977626,
+                0.10393666821681896,
+                0.10038222083873433,
+                0.09954915895977626,
+                0.09755398346806622,
+                0.0999630865620511
+              ],
+              [
+                0.10186823148309392,
+                0.09618178473988595,
+                0.10368745080017594,
+                0.10056495949923296,
+                0.10560775191614684,
+                0.09167343707812164,
+                0.09655676388026398,
+                0.09693616323524178,
+                0.10276576628308536,
+                0.10415769108475156
+              ]
+            ],
+            "fair_box_probability": 0.0006
+          }
+        },
+        "result": null
       }
     ]
   },
-  "last_run_utc": "2026-11-21T04:12:39.728469+00:00"
+  "last_run_utc": "2026-11-21T20:12:45.840151+00:00"
 }
