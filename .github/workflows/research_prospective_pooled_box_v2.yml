@@ -31,6 +31,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Freeze new distinct Box predictions and settle only previously frozen targets
         run: python -u research_prospective_pooled_box_v2.py
+      - name: Reject invalid freeze timestamps, repeated Box tickets, and mistaken grades
+        run: python -u research_val_statistical_validity.py
       - name: Preserve independent v2 prospective ledger
         if: github.ref == 'refs/heads/main'
         run: |
