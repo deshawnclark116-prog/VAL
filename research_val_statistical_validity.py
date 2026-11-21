@@ -337,6 +337,15 @@ def main():
         print("FUTURE",game,"frozen",metrics["frozen"],
               "settled",metrics["settled"],
               "errors",len(metrics["invalid_records"]),flush=True)
+    # A prospective experiment is not auditable if the frozen target,
+    # prediction time, ticket identity, or grade is internally inconsistent.
+    # Fail the workflow rather than publishing a misleading success.
+    invalid={game:info["invalid_records"]
+             for game,info in result["prospective"].items()
+             if info["invalid_records"]}
+    if invalid:
+        raise RuntimeError("Prospective full Box evidence failed integrity checks: "
+                           +json.dumps(invalid))
     JSON_OUT.parent.mkdir(parents=True,exist_ok=True)
     JSON_OUT.write_text(json.dumps(result,indent=2)+"\n")
     MD_OUT.write_text(markdown(result)+"\n")
