@@ -71,7 +71,23 @@
             ]
           ]
         },
-        "result": null
+        "result": {
+          "official_numbers": [
+            1,
+            6,
+            3
+          ],
+          "graded_utc": "2026-11-21T20:11:59.212848+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "random_box_wins": 0,
+            "model_paper_net_usd": -3,
+            "random_paper_net_usd": -3,
+            "model_fair_expected_box_wins": 0.018000000000000002,
+            "random_fair_expected_box_wins": 0.018000000000000002,
+            "model_log_gain_vs_fair": 0.0
+          }
+        }
       }
     ],
     "pick4": [
@@ -149,7 +165,24 @@
             ]
           ]
         },
-        "result": null
+        "result": {
+          "official_numbers": [
+            9,
+            8,
+            6,
+            8
+          ],
+          "graded_utc": "2026-11-21T20:11:59.212848+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "random_box_wins": 0,
+            "model_paper_net_usd": -3,
+            "random_paper_net_usd": -3,
+            "model_fair_expected_box_wins": 0.0072,
+            "random_fair_expected_box_wins": 0.0072,
+            "model_log_gain_vs_fair": 0.0
+          }
+        }
       }
     ],
     "pick5": [
@@ -234,9 +267,27 @@
             ]
           ]
         },
-        "result": null
+        "result": {
+          "official_numbers": [
+            4,
+            8,
+            4,
+            3,
+            7
+          ],
+          "graded_utc": "2026-11-21T20:11:59.212848+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "random_box_wins": 0,
+            "model_paper_net_usd": -3,
+            "random_paper_net_usd": -3,
+            "model_fair_expected_box_wins": 0.0036,
+            "random_fair_expected_box_wins": 0.0036,
+            "model_log_gain_vs_fair": 0.0
+          }
+        }
       }
     ]
   },
-  "last_run_utc": "2026-11-21T04:06:17.812578+00:00"
+  "last_run_utc": "2026-11-21T20:11:59.212848+00:00"
 }

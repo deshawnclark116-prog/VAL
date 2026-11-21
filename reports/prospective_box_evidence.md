@@ -7,18 +7,9 @@ A full Any Order hit requires all digits including repetitions.
 
 | Game | Settled draws | Model Box wins | Random Box wins | Model paper net | Random paper net | Prospectively active | Mean log gain |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| pick3 | 0 | 0 | 0 | $0 | $0 | 0 | +0.000000 |
-| pick4 | 0 | 0 | 0 | $0 | $0 | 0 | +0.000000 |
-| pick5 | 0 | 0 | 0 | $0 | $0 | 0 | +0.000000 |
-
-Latest frozen pick3: 2026-11-20 Day; saved 2026-11-20T17:15:12.969750+00:00.
-Model active: No — fair baseline; Box tickets: [[0, 2, 6], [0, 3, 6], [2, 3, 9]]; controls: [[1, 2, 6], [1, 4, 6], [1, 5, 8]].
-
-Latest frozen pick4: 2026-11-20 Day; saved 2026-11-20T17:15:12.969750+00:00.
-Model active: No — fair baseline; Box tickets: [[1, 2, 3, 7], [1, 5, 6, 8], [1, 5, 7, 8]]; controls: [[2, 3, 8, 9], [3, 4, 6, 9], [3, 7, 8, 9]].
-
-Latest frozen pick5: 2026-11-20 Day; saved 2026-11-20T17:15:12.969750+00:00.
-Model active: No — fair baseline; Box tickets: [[0, 1, 2, 4, 9], [0, 2, 6, 7, 8], [1, 3, 4, 7, 9]]; controls: [[0, 1, 3, 7, 9], [0, 4, 5, 6, 9], [1, 4, 5, 8, 9]].
+| pick3 | 1 | 0 | 0 | $-3 | $-3 | 0 | +0.000000 |
+| pick4 | 1 | 0 | 0 | $-3 | $-3 | 0 | +0.000000 |
+| pick5 | 1 | 0 | 0 | $-3 | $-3 | 0 | +0.000000 |
 
 ## Promotion rule
 
