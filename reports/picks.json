@@ -1,42 +1,25 @@
 {
-  "generated_at": "2026-11-21T02:19:16.414958+00:00",
+  "generated_at": "2026-11-21T11:07:24.543977+00:00",
   "batches": [
     {
       "game": "pick3",
       "name": "Pick 3",
-      "id": 113,
-      "created": "2026-11-20T20:04:22.515143+00:00",
-      "stream": "Night",
+      "id": 116,
+      "created": "2026-11-21T11:07:24.543977+00:00",
+      "stream": "Day",
       "method": "digit_box_v4",
       "picks": [
         {
           "numbers": [
-            0,
-            8,
-            9
+            1,
+            2,
+            8
           ],
           "bonus": null,
           "rank": 1,
           "role": "primary",
-          "ranking_version": "digit_box_v4",
-          "model_weight_score": 0.006,
-          "box_probability": 0.006,
-          "box_ways": 6,
-          "box_payout_usd_1_dollar": 80,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            1,
-            3,
-            4
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "ranking_version": "digit_box_v4",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "model_weight_score": 0.006,
           "box_probability": 0.006,
           "box_ways": 6,
@@ -48,13 +31,33 @@
         {
           "numbers": [
             2,
-            4,
+            5,
+            9
+          ],
+          "bonus": null,
+          "rank": 2,
+          "role": "alternative_1",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "model_weight_score": 0.006,
+          "box_probability": 0.006,
+          "box_ways": 6,
+          "box_payout_usd_1_dollar": 80,
+          "play_type": "any_order",
+          "signal_gate_passed": false,
+          "formula_version": "digit_box_v4"
+        },
+        {
+          "numbers": [
+            2,
+            7,
             9
           ],
           "bonus": null,
           "rank": 3,
           "role": "alternative_2",
-          "ranking_version": "digit_box_v4",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "model_weight_score": 0.006,
           "box_probability": 0.006,
           "box_ways": 6,
@@ -67,9 +70,19 @@
       "baseline": [
         {
           "numbers": [
-            1,
-            7,
-            8
+            0,
+            4,
+            7
+          ],
+          "bonus": null,
+          "play_type": "any_order",
+          "box_ways": 6
+        },
+        {
+          "numbers": [
+            0,
+            8,
+            9
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -84,20 +97,11 @@
           "bonus": null,
           "play_type": "any_order",
           "box_ways": 6
-        },
-        {
-          "numbers": [
-            4,
-            6,
-            8
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 6
         }
       ],
       "model_meta": {
         "formula_version": "digit_box_v4",
+        "formula_revision": "fixed_epoch_evidence_v1",
         "play_type": "any_order",
         "ticket_stake_usd": 1,
         "complete_multiset_match_required": true,
@@ -110,12 +114,17 @@
           "active": null,
           "confirmed": false,
           "log_evidence": {
-            "pooled": -57.7131439337112,
-            "position": -147.59654008049372,
-            "session": -205.42757023259995,
-            "echo": -275.4258838855509
+            "pooled": 0.7706486979029306,
+            "position": 2.1569826068991254,
+            "session": -3.311864149427907,
+            "echo": -4.848272901026764
           },
-          "threshold": 5.480638923341991,
+          "threshold": 7.272398392570047,
+          "epoch": 1,
+          "epoch_draws": 510,
+          "prewarm_draws": 700,
+          "anchor": "2024-01-01",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "recent_n": 0,
           "recent_mean": 0.0,
           "recent_first_half": 0.0,
@@ -123,43 +132,44 @@
         }
       },
       "target": {
-        "at": "2026-11-21T04:00:00+00:00",
-        "stream": "Night"
+        "at": "2026-11-21T18:59:00+00:00",
+        "stream": "Day"
       },
       "training_latest": {
         "game": "pick3",
-        "at": "2026-11-20T18:59:00+00:00",
-        "stream": "Day",
+        "at": "2026-11-21T04:00:00+00:00",
+        "stream": "Night",
         "numbers": [
-          1,
+          5,
           6,
-          3
+          8
         ],
         "bonus": null,
-        "extra": 7,
-        "source": "Virginia Lottery latest-result page"
+        "extra": 2,
+        "source": "Virginia Lottery official download"
       },
       "result": null
     },
     {
       "game": "pick4",
       "name": "Pick 4",
-      "id": 114,
-      "created": "2026-11-20T20:04:22.515143+00:00",
-      "stream": "Night",
+      "id": 117,
+      "created": "2026-11-21T11:07:24.543977+00:00",
+      "stream": "Day",
       "method": "digit_box_v4",
       "picks": [
         {
           "numbers": [
             0,
             1,
-            6,
+            4,
             8
           ],
           "bonus": null,
           "rank": 1,
           "role": "primary",
-          "ranking_version": "digit_box_v4",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "model_weight_score": 0.0024,
           "box_probability": 0.0024,
           "box_ways": 24,
@@ -170,15 +180,16 @@
         },
         {
           "numbers": [
-            0,
-            3,
-            8,
+            1,
+            2,
+            4,
             9
           ],
           "bonus": null,
           "rank": 2,
           "role": "alternative_1",
-          "ranking_version": "digit_box_v4",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "model_weight_score": 0.0024,
           "box_probability": 0.0024,
           "box_ways": 24,
@@ -189,15 +200,16 @@
         },
         {
           "numbers": [
-            3,
+            1,
             4,
-            6,
+            8,
             9
           ],
           "bonus": null,
           "rank": 3,
           "role": "alternative_2",
-          "ranking_version": "digit_box_v4",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "model_weight_score": 0.0024,
           "box_probability": 0.0024,
           "box_ways": 24,
@@ -211,18 +223,7 @@
         {
           "numbers": [
             0,
-            7,
-            8,
-            9
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 24
-        },
-        {
-          "numbers": [
             1,
-            3,
             5,
             7
           ],
@@ -232,10 +233,21 @@
         },
         {
           "numbers": [
+            1,
             4,
-            5,
             7,
-            9
+            8
+          ],
+          "bonus": null,
+          "play_type": "any_order",
+          "box_ways": 24
+        },
+        {
+          "numbers": [
+            1,
+            6,
+            7,
+            8
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -244,6 +256,7 @@
       ],
       "model_meta": {
         "formula_version": "digit_box_v4",
+        "formula_revision": "fixed_epoch_evidence_v1",
         "play_type": "any_order",
         "ticket_stake_usd": 1,
         "complete_multiset_match_required": true,
@@ -256,12 +269,17 @@
           "active": null,
           "confirmed": false,
           "log_evidence": {
-            "pooled": -45.75091006017882,
-            "position": -167.45954701532662,
-            "session": -226.3079546415514,
-            "echo": -386.33557837360735
+            "pooled": -0.012913154753498121,
+            "position": -2.759080006194809,
+            "session": -5.495835069054892,
+            "echo": -2.6381121922853468
           },
-          "threshold": 5.480638923341991,
+          "threshold": 7.272398392570047,
+          "epoch": 1,
+          "epoch_draws": 510,
+          "prewarm_draws": 700,
+          "anchor": "2024-01-01",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "recent_n": 0,
           "recent_mean": 0.0,
           "recent_first_half": 0.0,
@@ -269,85 +287,88 @@
         }
       },
       "target": {
-        "at": "2026-11-21T04:00:00+00:00",
-        "stream": "Night"
+        "at": "2026-11-21T18:59:00+00:00",
+        "stream": "Day"
       },
       "training_latest": {
         "game": "pick4",
-        "at": "2026-11-20T18:59:00+00:00",
-        "stream": "Day",
+        "at": "2026-11-21T04:00:00+00:00",
+        "stream": "Night",
         "numbers": [
-          9,
           8,
           6,
-          8
+          0,
+          1
         ],
         "bonus": null,
-        "extra": 6,
-        "source": "Virginia Lottery latest-result page"
+        "extra": 2,
+        "source": "Virginia Lottery official download"
       },
       "result": null
     },
     {
       "game": "pick5",
       "name": "Pick 5",
-      "id": 115,
-      "created": "2026-11-20T20:04:22.515143+00:00",
-      "stream": "Night",
+      "id": 118,
+      "created": "2026-11-21T11:07:24.543977+00:00",
+      "stream": "Day",
       "method": "digit_box_v4",
       "picks": [
         {
           "numbers": [
             0,
+            3,
+            4,
+            7,
+            8
+          ],
+          "bonus": null,
+          "rank": 1,
+          "role": "primary",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "model_weight_score": 0.0012000000000000025,
+          "box_probability": 0.0012000000000000025,
+          "box_ways": 120,
+          "box_payout_usd_1_dollar": 400,
+          "play_type": "any_order",
+          "signal_gate_passed": false,
+          "formula_version": "digit_box_v4"
+        },
+        {
+          "numbers": [
+            2,
+            3,
+            4,
             6,
+            7
+          ],
+          "bonus": null,
+          "rank": 2,
+          "role": "alternative_1",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "model_weight_score": 0.0012000000000000025,
+          "box_probability": 0.0012000000000000025,
+          "box_ways": 120,
+          "box_payout_usd_1_dollar": 400,
+          "play_type": "any_order",
+          "signal_gate_passed": false,
+          "formula_version": "digit_box_v4"
+        },
+        {
+          "numbers": [
+            2,
+            3,
             7,
             8,
             9
           ],
           "bonus": null,
-          "rank": 1,
-          "role": "primary",
-          "ranking_version": "digit_box_v4",
-          "model_weight_score": 0.0012000000000000025,
-          "box_probability": 0.0012000000000000025,
-          "box_ways": 120,
-          "box_payout_usd_1_dollar": 400,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            1,
-            2,
-            5,
-            8,
-            9
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "ranking_version": "digit_box_v4",
-          "model_weight_score": 0.0012000000000000025,
-          "box_probability": 0.0012000000000000025,
-          "box_ways": 120,
-          "box_payout_usd_1_dollar": 400,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            1,
-            4,
-            5,
-            6,
-            8
-          ],
-          "bonus": null,
           "rank": 3,
           "role": "alternative_2",
-          "ranking_version": "digit_box_v4",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "model_weight_score": 0.0012000000000000025,
           "box_probability": 0.0012000000000000025,
           "box_ways": 120,
@@ -363,6 +384,18 @@
             0,
             3,
             4,
+            6,
+            9
+          ],
+          "bonus": null,
+          "play_type": "any_order",
+          "box_ways": 120
+        },
+        {
+          "numbers": [
+            0,
+            3,
+            6,
             7,
             8
           ],
@@ -372,23 +405,11 @@
         },
         {
           "numbers": [
-            1,
-            3,
-            6,
-            7,
-            9
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 120
-        },
-        {
-          "numbers": [
             2,
-            3,
+            4,
             5,
             7,
-            9
+            8
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -397,6 +418,7 @@
       ],
       "model_meta": {
         "formula_version": "digit_box_v4",
+        "formula_revision": "fixed_epoch_evidence_v1",
         "play_type": "any_order",
         "ticket_stake_usd": 1,
         "complete_multiset_match_required": true,
@@ -409,12 +431,17 @@
           "active": null,
           "confirmed": false,
           "log_evidence": {
-            "pooled": -7.937356884142368,
-            "position": -23.578982871002154,
-            "session": -35.60387290322338,
-            "echo": -74.89158471481733
+            "pooled": -2.33390649382248,
+            "position": -1.2574775333065558,
+            "session": -7.441980073927281,
+            "echo": -17.012542359295768
           },
-          "threshold": 5.480638923341991,
+          "threshold": 7.272398392570047,
+          "epoch": 1,
+          "epoch_draws": 510,
+          "prewarm_draws": 700,
+          "anchor": "2024-01-01",
+          "formula_revision": "fixed_epoch_evidence_v1",
           "recent_n": 0,
           "recent_mean": 0.0,
           "recent_first_half": 0.0,
@@ -422,93 +449,83 @@
         }
       },
       "target": {
-        "at": "2026-11-21T04:00:00+00:00",
-        "stream": "Night"
+        "at": "2026-11-21T18:59:00+00:00",
+        "stream": "Day"
       },
       "training_latest": {
         "game": "pick5",
-        "at": "2026-11-20T18:59:00+00:00",
-        "stream": "Day",
+        "at": "2026-11-21T04:00:00+00:00",
+        "stream": "Night",
         "numbers": [
-          4,
-          8,
-          4,
-          3,
-          7
+          2,
+          0,
+          7,
+          2,
+          5
         ],
         "bonus": null,
-        "extra": 6,
-        "source": "Virginia Lottery latest-result page"
+        "extra": 8,
+        "source": "Virginia Lottery official download"
       },
       "result": null
     },
     {
       "game": "cash5",
       "name": "Cash 5",
-      "id": 108,
-      "created": "2026-11-20T11:44:35.505472+00:00",
+      "id": 119,
+      "created": "2026-11-21T11:07:24.543977+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            1,
-            6,
-            12,
+            2,
+            7,
+            26,
             30,
-            33
+            41
           ],
           "bonus": null,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 1.2435263440369509e-06,
+          "model_weight_score": 9.061536538230545e-07,
           "ranking_version": "ensemble_sampling_v1"
         },
         {
           "numbers": [
-            4,
             5,
             6,
+            18,
             23,
-            24
+            38
           ],
           "bonus": null,
           "rank": 2,
           "role": "alternative_1",
-          "model_weight_score": 8.949943274696807e-07,
+          "model_weight_score": 7.481326540883912e-07,
           "ranking_version": "ensemble_sampling_v1"
         },
         {
           "numbers": [
-            1,
-            4,
             5,
+            11,
+            17,
             31,
-            37
+            35
           ],
           "bonus": null,
           "rank": 3,
           "role": "alternative_2",
-          "model_weight_score": 6.48582331431695e-07,
+          "model_weight_score": 6.452840658874681e-07,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
         {
           "numbers": [
-            6,
-            17,
-            35,
-            40,
-            41
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            12,
-            34,
-            35,
+            1,
+            5,
+            13,
             41,
             43
           ],
@@ -516,29 +533,39 @@
         },
         {
           "numbers": [
-            10,
+            2,
+            5,
+            11,
+            24,
+            28
+          ],
+          "bonus": null
+        },
+        {
+          "numbers": [
             16,
             17,
             27,
-            40
+            42,
+            45
           ],
           "bonus": null
         }
       ],
       "target": {
-        "at": "2026-11-21T04:00:00+00:00",
+        "at": "2026-11-22T04:00:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "cash5",
-        "at": "2026-11-20T04:00:00+00:00",
+        "at": "2026-11-21T04:00:00+00:00",
         "stream": "Main",
         "numbers": [
-          3,
-          14,
-          19,
-          30,
-          43
+          17,
+          18,
+          33,
+          34,
+          38
         ],
         "bonus": null,
         "extra": null,
@@ -653,100 +680,100 @@
     {
       "game": "megamillions",
       "name": "Mega Millions",
-      "id": 87,
-      "created": "2026-11-18T11:46:55.816247+00:00",
+      "id": 120,
+      "created": "2026-11-21T11:07:24.543977+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
             5,
-            30,
-            31,
-            59,
-            70
+            25,
+            28,
+            34,
+            38
           ],
-          "bonus": 20,
+          "bonus": 14,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 5.526503336097684e-09,
+          "model_weight_score": 3.3508747179602954e-09,
           "ranking_version": "ensemble_sampling_v1"
         },
         {
           "numbers": [
-            21,
-            22,
-            26,
-            41,
-            70
+            9,
+            18,
+            31,
+            43,
+            45
           ],
-          "bonus": 3,
+          "bonus": 21,
           "rank": 2,
           "role": "alternative_1",
-          "model_weight_score": 5.510064466637592e-09,
+          "model_weight_score": 3.0279683689510368e-09,
           "ranking_version": "ensemble_sampling_v1"
         },
         {
           "numbers": [
-            16,
-            18,
             24,
-            26,
-            29
+            28,
+            31,
+            34,
+            42
           ],
-          "bonus": 20,
+          "bonus": 4,
           "rank": 3,
           "role": "alternative_2",
-          "model_weight_score": 3.293133130620616e-09,
+          "model_weight_score": 2.8891581714464857e-09,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
         {
           "numbers": [
-            22,
-            39,
-            41,
-            48,
-            65
-          ],
-          "bonus": 18
-        },
-        {
-          "numbers": [
-            4,
-            17,
+            13,
+            18,
             24,
-            31,
-            58
+            35,
+            43
           ],
-          "bonus": 1
+          "bonus": 17
         },
         {
           "numbers": [
-            11,
-            22,
-            30,
-            33,
-            40
+            13,
+            18,
+            25,
+            52,
+            67
           ],
-          "bonus": 6
+          "bonus": 2
+        },
+        {
+          "numbers": [
+            14,
+            35,
+            38,
+            40,
+            64
+          ],
+          "bonus": 7
         }
       ],
       "target": {
-        "at": "2026-11-21T04:00:00+00:00",
+        "at": "2026-11-25T04:00:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "megamillions",
-        "at": "2026-11-18T04:00:00+00:00",
+        "at": "2026-11-21T04:00:00+00:00",
         "stream": "Main",
         "numbers": [
-          3,
-          10,
-          19,
-          28,
-          33
+          32,
+          35,
+          48,
+          58,
+          61
         ],
         "bonus": 21,
         "extra": null,
@@ -757,102 +784,102 @@
     {
       "game": "millionaireforlife",
       "name": "Millionaire for Life",
-      "id": 109,
-      "created": "2026-11-20T11:44:35.505472+00:00",
+      "id": 121,
+      "created": "2026-11-21T11:07:24.543977+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            2,
-            28,
-            31,
-            37,
-            39
+            13,
+            18,
+            29,
+            38,
+            57
           ],
           "bonus": 3,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 4.8537840126556744e-08,
+          "model_weight_score": 8.842698023752823e-08,
           "ranking_version": "ensemble_sampling_v1"
         },
         {
           "numbers": [
-            19,
-            40,
-            41,
-            48,
-            49
+            9,
+            27,
+            35,
+            39,
+            54
           ],
           "bonus": 5,
           "rank": 2,
           "role": "alternative_1",
-          "model_weight_score": 4.838872128036181e-08,
+          "model_weight_score": 5.7340494714909176e-08,
           "ranking_version": "ensemble_sampling_v1"
         },
         {
           "numbers": [
+            3,
+            13,
             18,
-            19,
-            28,
-            30,
-            54
+            55,
+            56
           ],
-          "bonus": 5,
+          "bonus": 3,
           "rank": 3,
           "role": "alternative_2",
-          "model_weight_score": 4.544538125583043e-08,
+          "model_weight_score": 4.2584832951166364e-08,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
         {
           "numbers": [
-            12,
-            13,
+            2,
+            8,
+            25,
+            34,
+            48
+          ],
+          "bonus": 2
+        },
+        {
+          "numbers": [
+            7,
+            16,
+            23,
+            27,
+            50
+          ],
+          "bonus": 4
+        },
+        {
+          "numbers": [
             15,
-            47,
-            56
+            35,
+            52,
+            54,
+            58
           ],
           "bonus": 5
-        },
-        {
-          "numbers": [
-            1,
-            22,
-            24,
-            35,
-            47
-          ],
-          "bonus": 1
-        },
-        {
-          "numbers": [
-            1,
-            10,
-            17,
-            34,
-            46
-          ],
-          "bonus": 1
         }
       ],
       "target": {
-        "at": "2026-11-21T04:15:00+00:00",
+        "at": "2026-11-22T04:15:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "millionaireforlife",
-        "at": "2026-11-20T04:15:00+00:00",
+        "at": "2026-11-21T04:15:00+00:00",
         "stream": "Main",
         "numbers": [
-          1,
-          15,
-          27,
-          28,
-          41
+          2,
+          6,
+          19,
+          20,
+          30
         ],
-        "bonus": 5,
+        "bonus": 4,
         "extra": null,
         "source": "Virginia Lottery official download"
       },
@@ -973,7 +1000,7 @@
   "failures": [
     {
       "game": "cashpop",
-      "error": "Waiting for latest completed Prime Time result (2026-11-20T21:00:00-05:00); new picks withheld"
+      "error": "Waiting for latest completed After Hours result (2026-11-20T23:59:00-05:00); new picks withheld"
     }
   ]
 }
