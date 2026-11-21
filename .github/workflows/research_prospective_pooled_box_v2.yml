@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - formula/pooled-full-box-v2-20261120
+      - fix/prospective-statistical-guard-20261120
     paths:
       - 'val_pooled_box_formula.py'
       - 'research_prospective_pooled_box_v2.py'
