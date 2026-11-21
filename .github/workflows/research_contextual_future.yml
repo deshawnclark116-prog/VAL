@@ -1,0 +1,42 @@
+name: VAL contextual full Box future prediction challenge
+on:
+  schedule:
+    - cron: '30 13 * * *'
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - research/contextual-regime-forecast-v1-20261120
+    paths:
+      - 'research_contextual_future.py'
+      - 'tests/test_research_contextual_future.py'
+      - '.github/workflows/research_contextual_future.yml'
+permissions:
+  contents: write
+concurrency:
+  group: val-contextual-future-v1
+  cancel-in-progress: false
+jobs:
+  contextual_future:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify prospective contextual no-lookahead and exact Box grading
+        run: python -m unittest discover -s tests -p 'test_research_contextual_future.py' -v
+      - name: Freeze next real contextual forecast before cutoff and settle old results
+        run: python -u research_contextual_future.py
+      - name: Commit separate irreversible research predictions
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/prospective_contextual_box_v1.json reports/prospective_contextual_box_v1.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze prospective contextual full Any Order predictions and grade old results'
+          git pull --rebase origin main
+          git push origin HEAD:main
