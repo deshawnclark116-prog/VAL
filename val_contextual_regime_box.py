@@ -34,6 +34,7 @@ import math
 import random
 
 from val_box import any_order_prize, box_ways, digits_key, random_box_picks
+from val import ET
 
 VERSION = "contextual_regime_box_v1"
 GAMES = ("pick3", "pick4", "pick5")
@@ -57,7 +58,8 @@ TOP_PROPOSALS = 90
 def _date(target):
     value=target.get("date")
     if value is None:
-        value=datetime.fromisoformat(target["at"]).date().isoformat()
+        stamp=datetime.fromisoformat(target["at"])
+        value=(stamp.astimezone(ET) if stamp.tzinfo else stamp).date().isoformat()
     return date.fromisoformat(value)
 
 
