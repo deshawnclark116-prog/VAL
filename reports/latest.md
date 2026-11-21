@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-21T16:04:12.099439-05:00 · Eastern time
+Updated: 2026-11-21T16:08:59.668293-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -34,6 +34,22 @@ Payout and net are **hypothetical** $1 Any Order paper-wagers using published no
 | Pick 3 | 22 | 0 | 0 | 0 | 0 | $-22 | $-22 |
 | Pick 4 | 22 | 2 | 0 | 1 | 0 | $378 | $-22 |
 | Pick 5 | 22 | 0 | 0 | 0 | 0 | $-22 | $-22 |
+
+## Fallback watch — one original ticket per drawing
+
+Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are included. Each row uses the first saved ticket and its original first random control; alternatives are never counted. Grouping by formula version avoids combining distinct experiments. Fair-expected wins come from the exact digit-multiplicity odds of those tickets, not estimated predictive probabilities. **These results do not demonstrate an edge**, especially when examining a version after its early wins.
+
+| Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Pick 3 | `digit_box_v3` | 1 | 0 | 0 | 0.0060 |
+| Pick 3 | `digit_box_v4` | 2 | 0 | 0 | 0.0120 |
+| Pick 3 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0240 |
+| Pick 4 | `digit_box_v3` | 1 | 0 | 0 | 0.0024 |
+| Pick 4 | `digit_box_v4` | 2 | 2 | 0 | 0.0048 |
+| Pick 4 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0060 |
+| Pick 5 | `digit_box_v3` | 1 | 0 | 0 | 0.0012 |
+| Pick 5 | `digit_box_v4` | 2 | 0 | 0 | 0.0024 |
+| Pick 5 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0042 |
 
 ## Other game results
 
