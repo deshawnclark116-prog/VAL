@@ -1,6 +1,6 @@
 # VAL — Virginia Lottery Lab
 
-A research bot for Virginia drawing games that runs automatically on GitHub Actions, with an optional local dashboard. It downloads official draw history, generates small batches of picks, runs chronological backtests and Monte Carlo frequency checks, and records prospective picks alongside equal-sized uniform random controls.
+A research bot for Virginia drawing games that runs automatically on GitHub Actions, with an optional local dashboard. It downloads official draw history, generates one forward prediction per draw, runs chronological backtests and Monte Carlo frequency checks, and records prospective picks alongside equal-sized uniform random controls.
 
 **No method here has an established predictive edge.** More calculations do not make a fair independent draw predictable. Backtest hits and partial matches are not evidence of profit. Start with paper picks.
 
@@ -12,7 +12,7 @@ Each report shows **one next upcoming draw per game**, with its date, Eastern ti
 
 The full-history download can omit today's partially completed Day/Night pair. The bot supplements same-day Pick results from the official latest-result cards. Before generating picks it checks that the most recently scheduled completed result is present. Missing results cause that game to wait, rather than silently using old data. It avoids generating a new batch within 15 minutes of its draw. Once saved, a batch stays fixed for that exact target and is scored only against that date/time/session. Previous batches retain their original scoring rule and remain in the ledger.
 
-Each run downloads nine game feeds, settles previous batches, and saves three model-generated combinations plus three independent random controls per draw. **Pick 3/4/5 now use `digit_box_v3`** (details below); all other games retain the legacy weighted ensemble. The Box v3 formula ranks complete any-order digit sets by their summed permutation probabilities. When no expert shows credible earlier-draw predictive power, it generates three different all-distinct Box paper tickets, rather than implying historical predictive superiority. Three independently sampled same-play-type controls are saved for comparison. Existing historical predictions are never overwritten. Old ensemble and digit v2 records remain frozen. Box v3 appends its own new immutable record even if one already targets the SAME drawing, enabling prospective comparisons without rewriting predictions. The full report includes the exact source history timestamp and latest result used. No tickets are purchased.
+Each run downloads nine game feeds, settles previous batches, and saves **exactly one model/paper prediction plus one independent random control per future draw**. Pick 3/4/5 use `digit_box_v4` to target complete Any Order (Box) matches. When no predictive expert passes its evidence threshold, the one Pick 3/4/5 ticket is explicitly labeled a random paper selection rather than falsely advertising an advantage. Other games retain the legacy ensemble, selecting one candidate. Previous three-ticket ledgers are kept untouched for auditability; the live report and one-pick results use only each batch's originally saved first ticket and first control, never retrospective selection of a winner. No tickets are purchased.
 
 The repository stores `reports/latest.md`, `reports/picks.json`, `reports/analysis.json`, and the complete `reports/ledger.json`. These records are public because this repository is public. The interactive dashboard below is optional; GitHub Actions runs without a computer left on. GitHub displays reports rather than hosting the running Python dashboard.
 
@@ -104,7 +104,7 @@ Methods sample combinations with these **experimental selection weights**, not e
 - **Cold:** `1 / sqrt(count + 2)` over the previous 500 draws. An underrepresented number is not "due."
 - **Ensemble:** fixed `0.4 × normalized frequency + 0.4 × normalized recent + 0.2 × normalized cold`.
 
-Pick games model each digit position separately; separately selected special balls use their own pool and history. Each batch contains unique combinations. Cash Pop has only 15 single-number combinations, so batches cap at 15. Methods use the selected draw session; history methods need at least 30 draws. No automatic method tuning or retrospective winner selection takes place.
+Pick games model each digit position separately; separately selected special balls use their own pool and history. The automated forward runner publishes one combination per draw. Manual research tools may still generate multi-ticket candidate sets for experiments. Methods use the selected draw session; history methods need at least 30 draws. No automatic method tuning or retrospective winner selection takes place.
 
 ### Rolling evaluation
 

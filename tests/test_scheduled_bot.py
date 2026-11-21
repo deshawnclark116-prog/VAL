@@ -39,19 +39,20 @@ class DailyBotTests(unittest.TestCase):
             self.assertIn('Keno needs a CSV import',(output/'latest.md').read_text())
             batches=json.loads((output/'picks.json').read_text())['batches']
             p3=next(b for b in batches if b['game']=='pick3')
-            self.assertEqual([p['rank'] for p in p3['picks']], [1,2,3])
+            self.assertEqual([p['rank'] for p in p3['picks']], [1])
+            self.assertTrue(all(len(b['picks']) == 1 and len(b['baseline']) == 1 for b in batches))
             self.assertEqual(p3["method"],LIVE_BOX_VERSION)
             self.assertIn("model_meta",p3)
             self.assertIn("signal_gate_passed",p3["model_meta"])
             self.assertEqual(p3["model_meta"]["formula_version"],LIVE_BOX_VERSION)
-            self.assertEqual([p['role'] for p in p3['picks']], ['primary','alternative_1','alternative_2'])
+            self.assertEqual([p['role'] for p in p3['picks']], ['primary'])
             self.assertTrue(all('model_weight_score' in p for p in p3['picks']))
-            self.assertIn('**Paper 1:**' if not p3["model_meta"]["signal_gate_passed"] else '**Primary:**',
+            self.assertIn('**Paper:**' if not p3["model_meta"]["signal_gate_passed"] else '**Primary:**',
                           (output/'latest.md').read_text())
             self.assertTrue(all(p["play_type"]=="any_order" for p in p3["picks"]))
             self.assertTrue(all(len(set(p["numbers"]))==3
                                 for p in p3["picks"] if not p3["model_meta"]["signal_gate_passed"]))
-            self.assertEqual(len({tuple(sorted(p["numbers"])) for p in p3["picks"]}),3)
+            self.assertEqual(len({tuple(sorted(p["numbers"])) for p in p3["picks"]}),1)
             self.assertIn('## Complete Any Order (Box) results',(output/'latest.md').read_text())
             self.assertEqual(p3['target']['stream'],'Night')
             self.assertEqual(p3['training_latest']['stream'],'Day')
@@ -77,7 +78,16 @@ class DailyBotTests(unittest.TestCase):
         self.assertIsNone(old['result'])
         self.assertIsNone(challenger['result'])
         self.assertEqual(len(saved),2)
-        self.assertIn('**Paper 1:**',(output/'latest.md').read_text())
+        self.assertIn('**Paper:**',(output/'latest.md').read_text())
+        visible=next(b for b in json.loads((output/'picks.json').read_text())['batches'] if b['game']=='pick3')
+        self.assertEqual(len(visible['picks']),1)
+        self.assertEqual(len(visible['baseline']),1)
+        self.assertEqual(len(challenger['data']['picks']),1)
+        self.assertEqual(len(old['data']['picks']),3)
+
+    def test_live_runner_disallows_multiple_predictions(self):
+        with self.assertRaisesRegex(ValueError,'exactly one prediction'):
+            scheduled_bot.run(Store(self.root/'invalid.db'),self.root/'invalid',count=3,syncer=self.fake_sync,now=self.now)
 
     def test_feed_failure_skips_new_picks_and_is_visible(self):
         def fail(store,game): raise OSError('feed unavailable')

@@ -6,7 +6,7 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, simulate, sync_game, draw_schedule, next_draw
+from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, score, simulate, sync_game, draw_schedule, next_draw
 from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_formula
 from val_box import random_box_picks, box_score_batch
 
@@ -46,16 +46,19 @@ def selection(pick):
 
 
 def ranked_selection(picks):
-    """Never retroactively rank older saved combinations."""
-    if all(p.get("rank") == i for i, p in enumerate(picks, 1)):
-        if picks and picks[0].get("formula_version") == DIGIT_FORMULA_VERSION and not picks[0].get("signal_gate_passed"):
-            roles = ("Paper 1", "Paper 2", "Paper 3")
-        else:
-            roles = ("Primary", "Alt 1", "Alt 2")
-        return " / ".join(f"**{roles[i] if i < 3 else 'Alt'}:** `{selection(p)}`" for i, p in enumerate(picks))
-    return " / ".join(f"`{selection(p)}`" for p in picks) + " (legacy: unranked)"
+    """Show only the original first prediction, including archived multi-pick batches."""
+    if not picks:
+        return "—"
+    pick = picks[0]
+    if pick.get("rank") == 1:
+        label = ("Paper" if pick.get("formula_version") == DIGIT_FORMULA_VERSION
+                 and not pick.get("signal_gate_passed") else "Primary")
+        return f"**{label}:** `{selection(pick)}`"
+    return f"`{selection(pick)}` (legacy first saved pick)"
 
-def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
+def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
+    if count != 1:
+        raise ValueError("Live VAL supports exactly one prediction and one random control per draw")
     output = Path(output); output.mkdir(parents=True,exist_ok=True)
     now = now or datetime.now(timezone.utc)
     day = now.astimezone(ET).date()
@@ -65,8 +68,8 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
               "## Picks", "",
               "Only the next scheduled drawing for each game is shown, as of the update time above. The Target column is the drawing these picks are for. After that time, the row is expired until this report refreshes.", "",
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
-              "**Pick 3/4/5 target complete Any Order (Box) digit sets.** Box v4 uses cumulative evidence plus recent confirmation to rank complete unordered digit-multisets by summed probabilities of all permutations, not partial-position matches. Without a proven signal it uses three nonoverlapping, all-distinct random Box candidates and three independent same-type Box controls (Paper 1/2/3, not purported ranked predictions). Each Box ticket represents a hypothetical $1 Any Order play; no purchases are made. Other games retain their existing methods. Old saved predictions remain unchanged. Missing latest results withhold new picks.", "",
-              "| Game | Target draw (ET) | Session | Batch | Combinations | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
+              "**Exactly one prediction and one independent random control per upcoming game draw.** Pick 3/4/5 target complete Any Order (Box) digit sets, not partial-position matches. Box v4 evaluates cumulative and recent evidence; without a proven signal it returns one clearly labeled random paper Box selection, not an asserted edge. All tickets are hypothetical; none are purchased. Older multi-ticket batches are preserved unchanged in the ledger, but only each original first ticket is shown and counted in the one-pick comparison. Missing latest results withhold new picks.", "",
+              "| Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
     failures=[]; batches=[]; summaries=[]; all_records=[]
     for game,g in GAMES.items():
         if "id" not in g: continue
@@ -107,11 +110,13 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
                                  training_latest=history[-1],created=now,
                                  model_meta=model_meta)
                 existing=next(r for r in store.ledger(game) if r["id"]==pid)
-            batches.append(dict(game=game,name=g["name"],**existing))
+            # Preserve the original ledger unchanged; publish the primary ticket only.
+            public_batch = dict(existing, picks=existing["picks"][:1], baseline=existing["baseline"][:1])
+            batches.append(dict(game=game,name=g["name"],**public_batch))
             used=existing["training_latest"]
             latest=datetime.fromisoformat(used["at"]).astimezone(ET).isoformat()
             target_label=datetime.fromisoformat(target["at"]).astimezone(ET).isoformat()
-            report.append(f"| {g['name']} | {target_label} | {stream} | #{existing['id']} | "+ranked_selection(existing["picks"])+f" | {latest} | `{selection(used)}` ({used['stream']}) |")
+            report.append(f"| {g['name']} | {target_label} | {stream} | #{existing['id']} | "+ranked_selection(public_batch["picks"])+f" | {latest} | `{selection(used)}` ({used['stream']}) |")
             # Analysis uses All sessions, clearly separate from prospective session picks.
             test=backtest(game,history,count=count,tests=100)
             mc=simulate(game,history,trials=trials)
@@ -120,15 +125,15 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
             failures.append(dict(game=game,error=safe(exc)))
         all_records.extend(dict(game=game,**r) for r in store.ledger(game))
     report += ["", "## Complete Any Order (Box) results — PRIMARY METRIC", "",
-               "A Box match requires ALL selected digits, including repeated digits, regardless of their order. A one-way all-identical pattern is Straight-only. Every settled batch is rescored from its original immutable picks and actual drawing; historical picks were not necessarily purchased as Box tickets.", "",
-               "Payout and net are **hypothetical** $1 Any Order paper-wagers using published no-FIREBALL prize tables. No tickets were bought. Equal-cost random controls are compared where possible; historical legacy picks may have different digit multiplicities.", "",
+               "A Box match requires ALL selected digits, including repeated digits, regardless of their order. A one-way all-identical pattern is Straight-only. Every settled batch is rescored using only its FIRST originally saved ticket and the FIRST original random control. Old three-ticket ledgers stay immutable, but their alternatives do not count toward this one-pick score. Historical picks were not necessarily purchased as Box tickets.", "",
+               "Payout and net are **hypothetical** $1 Any Order paper-wagers using published no-FIREBALL prize tables, one ticket per side per settled batch. No tickets were bought. Historical first-choice tickets may have different digit multiplicities.", "",
                "| Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |",
                "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for game in ("pick3","pick4","pick5"):
         entries=[r for r in all_records if r["game"]==game and r["result"] is not None]
-        model=[box_score_batch(game,r["picks"],r["result"]["draw"]) for r in entries]
-        control=[box_score_batch(game,r["baseline"],r["result"]["draw"]) for r in entries]
-        exact=lambda side:sum(r["result"][side]["exact"] for r in entries)
+        model=[box_score_batch(game,r["picks"][:1],r["result"]["draw"]) for r in entries]
+        control=[box_score_batch(game,r["baseline"][:1],r["result"]["draw"]) for r in entries]
+        exact=lambda side:sum(score(game, r["picks"][0] if side=="model" else r["baseline"][0], r["result"]["draw"])["exact"] for r in entries)
         report.append(f"| {GAMES[game]['name']} | {len(entries)} | "
                       f"{sum(z['box_wins'] for z in model)} | {sum(z['box_wins'] for z in control)} | "
                       f"{exact('model')} | {exact('random')} | "
@@ -139,9 +144,9 @@ def run(store, output, count=3, trials=1000, now=None, syncer=sync_game):
                "| --- | ---: | ---: | ---: | ---: | ---: |"]
     for game,g in GAMES.items():
         if g.get("digits") or "id" not in g: continue
-        settled=[r["result"] for r in all_records if r["game"]==game and r["result"] is not None]
-        total=lambda group,key:sum(r[group][key] for r in settled)
-        report.append(f"| {g['name']} | {len(settled)} | {total('model','tickets')} | {total('model','exact')} | {total('random','tickets')} | {total('random','exact')} |")
+        settled=[r for r in all_records if r["game"]==game and r["result"] is not None]
+        hits=lambda side:sum(score(game, r["picks"][0] if side=="model" else r["baseline"][0],r["result"]["draw"])["exact"] for r in settled)
+        report.append(f"| {g['name']} | {len(settled)} | {len(settled)} | {hits('model')} | {len(settled)} | {hits('random')} |")
     pending=sum(r["result"] is None for r in all_records)
     report += ["",f"Pending batches: {pending}. This report retains the original saved picks and controls; no retrospective replacement.","",
                "## Historical checks", "",
