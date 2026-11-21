@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:07:24.543977+00:00",
+  "generated_at": "2026-11-21T14:51:22.064329+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -27,44 +27,6 @@
           "play_type": "any_order",
           "signal_gate_passed": false,
           "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            2,
-            5,
-            9
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
-          "formula_revision": "fixed_epoch_evidence_v1",
-          "model_weight_score": 0.006,
-          "box_probability": 0.006,
-          "box_ways": 6,
-          "box_payout_usd_1_dollar": 80,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            2,
-            7,
-            9
-          ],
-          "bonus": null,
-          "rank": 3,
-          "role": "alternative_2",
-          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
-          "formula_revision": "fixed_epoch_evidence_v1",
-          "model_weight_score": 0.006,
-          "box_probability": 0.006,
-          "box_ways": 6,
-          "box_payout_usd_1_dollar": 80,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
         }
       ],
       "baseline": [
@@ -73,26 +35,6 @@
             0,
             4,
             7
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 6
-        },
-        {
-          "numbers": [
-            0,
-            8,
-            9
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 6
-        },
-        {
-          "numbers": [
-            3,
-            6,
-            9
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -177,46 +119,6 @@
           "play_type": "any_order",
           "signal_gate_passed": false,
           "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            1,
-            2,
-            4,
-            9
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
-          "formula_revision": "fixed_epoch_evidence_v1",
-          "model_weight_score": 0.0024,
-          "box_probability": 0.0024,
-          "box_ways": 24,
-          "box_payout_usd_1_dollar": 200,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            1,
-            4,
-            8,
-            9
-          ],
-          "bonus": null,
-          "rank": 3,
-          "role": "alternative_2",
-          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
-          "formula_revision": "fixed_epoch_evidence_v1",
-          "model_weight_score": 0.0024,
-          "box_probability": 0.0024,
-          "box_ways": 24,
-          "box_payout_usd_1_dollar": 200,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
         }
       ],
       "baseline": [
@@ -226,28 +128,6 @@
             1,
             5,
             7
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 24
-        },
-        {
-          "numbers": [
-            1,
-            4,
-            7,
-            8
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 24
-        },
-        {
-          "numbers": [
-            1,
-            6,
-            7,
-            8
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -334,48 +214,6 @@
           "play_type": "any_order",
           "signal_gate_passed": false,
           "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            2,
-            3,
-            4,
-            6,
-            7
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
-          "formula_revision": "fixed_epoch_evidence_v1",
-          "model_weight_score": 0.0012000000000000025,
-          "box_probability": 0.0012000000000000025,
-          "box_ways": 120,
-          "box_payout_usd_1_dollar": 400,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
-        },
-        {
-          "numbers": [
-            2,
-            3,
-            7,
-            8,
-            9
-          ],
-          "bonus": null,
-          "rank": 3,
-          "role": "alternative_2",
-          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
-          "formula_revision": "fixed_epoch_evidence_v1",
-          "model_weight_score": 0.0012000000000000025,
-          "box_probability": 0.0012000000000000025,
-          "box_ways": 120,
-          "box_payout_usd_1_dollar": 400,
-          "play_type": "any_order",
-          "signal_gate_passed": false,
-          "formula_version": "digit_box_v4"
         }
       ],
       "baseline": [
@@ -386,30 +224,6 @@
             4,
             6,
             9
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 120
-        },
-        {
-          "numbers": [
-            0,
-            3,
-            6,
-            7,
-            8
-          ],
-          "bonus": null,
-          "play_type": "any_order",
-          "box_ways": 120
-        },
-        {
-          "numbers": [
-            2,
-            4,
-            5,
-            7,
-            8
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -490,34 +304,6 @@
           "role": "primary",
           "model_weight_score": 9.061536538230545e-07,
           "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            5,
-            6,
-            18,
-            23,
-            38
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "model_weight_score": 7.481326540883912e-07,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            5,
-            11,
-            17,
-            31,
-            35
-          ],
-          "bonus": null,
-          "rank": 3,
-          "role": "alternative_2",
-          "model_weight_score": 6.452840658874681e-07,
-          "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
@@ -528,26 +314,6 @@
             13,
             41,
             43
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            2,
-            5,
-            11,
-            24,
-            28
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            16,
-            17,
-            27,
-            42,
-            45
           ],
           "bonus": null
         }
@@ -594,34 +360,6 @@
           "role": "primary",
           "model_weight_score": 4.97545785012813e-09,
           "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            20,
-            27,
-            50,
-            64,
-            65
-          ],
-          "bonus": 6,
-          "rank": 2,
-          "role": "alternative_1",
-          "model_weight_score": 2.9271850843273074e-09,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            3,
-            7,
-            60,
-            61,
-            62
-          ],
-          "bonus": 18,
-          "rank": 3,
-          "role": "alternative_2",
-          "model_weight_score": 2.573466478260958e-09,
-          "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
@@ -634,26 +372,6 @@
             68
           ],
           "bonus": 18
-        },
-        {
-          "numbers": [
-            28,
-            33,
-            35,
-            52,
-            61
-          ],
-          "bonus": 7
-        },
-        {
-          "numbers": [
-            5,
-            17,
-            19,
-            26,
-            58
-          ],
-          "bonus": 1
         }
       ],
       "target": {
@@ -698,34 +416,6 @@
           "role": "primary",
           "model_weight_score": 3.3508747179602954e-09,
           "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            9,
-            18,
-            31,
-            43,
-            45
-          ],
-          "bonus": 21,
-          "rank": 2,
-          "role": "alternative_1",
-          "model_weight_score": 3.0279683689510368e-09,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            24,
-            28,
-            31,
-            34,
-            42
-          ],
-          "bonus": 4,
-          "rank": 3,
-          "role": "alternative_2",
-          "model_weight_score": 2.8891581714464857e-09,
-          "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
@@ -738,26 +428,6 @@
             43
           ],
           "bonus": 17
-        },
-        {
-          "numbers": [
-            13,
-            18,
-            25,
-            52,
-            67
-          ],
-          "bonus": 2
-        },
-        {
-          "numbers": [
-            14,
-            35,
-            38,
-            40,
-            64
-          ],
-          "bonus": 7
         }
       ],
       "target": {
@@ -802,34 +472,6 @@
           "role": "primary",
           "model_weight_score": 8.842698023752823e-08,
           "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            9,
-            27,
-            35,
-            39,
-            54
-          ],
-          "bonus": 5,
-          "rank": 2,
-          "role": "alternative_1",
-          "model_weight_score": 5.7340494714909176e-08,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            3,
-            13,
-            18,
-            55,
-            56
-          ],
-          "bonus": 3,
-          "rank": 3,
-          "role": "alternative_2",
-          "model_weight_score": 4.2584832951166364e-08,
-          "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
@@ -842,26 +484,6 @@
             48
           ],
           "bonus": 2
-        },
-        {
-          "numbers": [
-            7,
-            16,
-            23,
-            27,
-            50
-          ],
-          "bonus": 4
-        },
-        {
-          "numbers": [
-            15,
-            35,
-            52,
-            54,
-            58
-          ],
-          "bonus": 5
         }
       ],
       "target": {
@@ -907,36 +529,6 @@
           "role": "primary",
           "model_weight_score": 4.34148807745912e-07,
           "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            8,
-            14,
-            25,
-            26,
-            35,
-            39
-          ],
-          "bonus": null,
-          "rank": 2,
-          "role": "alternative_1",
-          "model_weight_score": 2.5838870321981525e-07,
-          "ranking_version": "ensemble_sampling_v1"
-        },
-        {
-          "numbers": [
-            4,
-            6,
-            9,
-            14,
-            29,
-            35
-          ],
-          "bonus": null,
-          "rank": 3,
-          "role": "alternative_2",
-          "model_weight_score": 1.7865464792295486e-07,
-          "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
@@ -948,28 +540,6 @@
             10,
             20,
             27
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            12,
-            22,
-            25,
-            29,
-            31,
-            36
-          ],
-          "bonus": null
-        },
-        {
-          "numbers": [
-            1,
-            7,
-            8,
-            21,
-            36,
-            38
           ],
           "bonus": null
         }
@@ -1000,7 +570,7 @@
   "failures": [
     {
       "game": "cashpop",
-      "error": "Waiting for latest completed After Hours result (2026-11-20T23:59:00-05:00); new picks withheld"
+      "error": "Waiting for latest completed Coffee Break result (2026-11-21T09:00:00-05:00); new picks withheld"
     }
   ]
 }

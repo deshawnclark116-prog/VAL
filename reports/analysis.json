@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:07:24.543977+00:00",
+  "generated_at": "2026-11-21T14:51:22.064329+00:00",
   "games": [
     {
       "game": "pick3",
@@ -8,92 +8,92 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.2733333333333333,
+            "average_matches": 0.27,
             "ci95": [
-              0.22049238060656134,
-              0.3261742860601053
+              0.17821570302215545,
+              0.3617842969778446
             ],
             "bonus_matches": 0,
             "box_wins": 0,
-            "box_tickets": 297,
-            "box_spend_usd": 297,
+            "box_tickets": 99,
+            "box_spend_usd": 99,
             "box_payout_usd": 0,
-            "box_net_usd": -297,
-            "box_fair_expected_wins": 1.5779999999999994
+            "box_net_usd": -99,
+            "box_fair_expected_wins": 0.5280000000000004
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.29666666666666663,
+            "average_matches": 0.27,
             "ci95": [
-              0.24260367974924574,
-              0.35072965358408753
+              0.17821570302215545,
+              0.3617842969778446
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 298,
-            "box_spend_usd": 298,
-            "box_payout_usd": 160,
-            "box_net_usd": -138,
-            "box_fair_expected_wins": 1.5629999999999995
+            "box_wins": 0,
+            "box_tickets": 99,
+            "box_spend_usd": 99,
+            "box_payout_usd": 0,
+            "box_net_usd": -99,
+            "box_fair_expected_wins": 0.5280000000000004
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.31,
+            "average_matches": 0.22,
             "ci95": [
-              0.24963693684098368,
-              0.37036306315901635
+              0.1383986928209276,
+              0.3016013071790724
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 298,
-            "box_spend_usd": 298,
-            "box_payout_usd": 160,
-            "box_net_usd": -138,
-            "box_fair_expected_wins": 1.565999999999999
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.4950000000000004
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.26999999999999996,
+            "average_matches": 0.25,
             "ci95": [
-              0.21530272844874693,
-              0.324697271551253
+              0.16026796344761596,
+              0.33973203655238404
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 297,
-            "box_spend_usd": 297,
-            "box_payout_usd": 80,
-            "box_net_usd": -217,
-            "box_fair_expected_wins": 1.5659999999999996
+            "box_wins": 0,
+            "box_tickets": 99,
+            "box_spend_usd": 99,
+            "box_payout_usd": 0,
+            "box_net_usd": -99,
+            "box_fair_expected_wins": 0.5220000000000004
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.30333333333333334,
+            "average_matches": 0.26,
             "ci95": [
-              0.24754341312897626,
-              0.3591232535376904
+              0.1692146587723647,
+              0.35078534122763533
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 298,
-            "box_spend_usd": 298,
-            "box_payout_usd": 160,
-            "box_net_usd": -138,
-            "box_fair_expected_wins": 1.5629999999999995
+            "box_wins": 0,
+            "box_tickets": 99,
+            "box_spend_usd": 99,
+            "box_payout_usd": 0,
+            "box_net_usd": -99,
+            "box_fair_expected_wins": 0.5250000000000004
           }
         ],
         "from_draw": "2026-10-02T17:59:00+00:00",
@@ -116,92 +116,92 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.3733333333333333,
+            "average_matches": 0.39,
             "ci95": [
-              0.30123606022176924,
-              0.44543060644489735
+              0.2824838447657114,
+              0.4975161552342886
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 200,
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
             "box_net_usd": -100,
-            "box_fair_expected_wins": 0.5290000000000005
+            "box_fair_expected_wins": 0.17400000000000035
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.4533333333333333,
+            "average_matches": 0.41,
             "ci95": [
-              0.3721027264618786,
-              0.534563940204788
+              0.30176442452696156,
+              0.5182355754730384
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 200,
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
             "box_net_usd": -100,
-            "box_fair_expected_wins": 0.5276000000000004
+            "box_fair_expected_wins": 0.17920000000000033
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.4433333333333333,
+            "average_matches": 0.42,
             "ci95": [
-              0.36729233665255256,
-              0.519374330014114
+              0.29485484145572904,
+              0.5451451585442709
             ],
             "bonus_matches": 0,
             "box_wins": 1,
-            "box_tickets": 299,
-            "box_spend_usd": 299,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
             "box_payout_usd": 200,
-            "box_net_usd": -99,
-            "box_fair_expected_wins": 0.5302000000000003
+            "box_net_usd": 100,
+            "box_fair_expected_wins": 0.18260000000000035
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.36666666666666664,
+            "average_matches": 0.38,
             "ci95": [
-              0.29037377013883736,
-              0.4429595631944959
+              0.27289969961090516,
+              0.48710030038909485
             ],
             "bonus_matches": 0,
             "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 200,
-            "box_net_usd": -100,
-            "box_fair_expected_wins": 0.5150000000000006
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 400,
+            "box_net_usd": 300,
+            "box_fair_expected_wins": 0.16820000000000035
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.42,
+            "average_matches": 0.4,
             "ci95": [
-              0.3436393176777878,
-              0.49636068232221214
+              0.2921055510176167,
+              0.5078944489823833
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 200,
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
             "box_net_usd": -100,
-            "box_fair_expected_wins": 0.5214000000000004
+            "box_fair_expected_wins": 0.17680000000000035
           }
         ],
         "from_draw": "2026-10-02T17:59:00+00:00",
@@ -224,92 +224,92 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.48666666666666664,
+            "average_matches": 0.63,
             "ci95": [
-              0.40084202463015217,
-              0.5724913087031811
+              0.4808738937826259,
+              0.7791261062173741
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 800,
-            "box_net_usd": 500,
-            "box_fair_expected_wins": 0.21770000000000006
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.07320000000000011
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.5066666666666666,
+            "average_matches": 0.56,
             "ci95": [
-              0.4203111558196594,
-              0.5930221775136738
+              0.42261628461667944,
+              0.6973837153833207
             ],
             "bonus_matches": 0,
             "box_wins": 0,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
             "box_payout_usd": 0,
-            "box_net_usd": -300,
-            "box_fair_expected_wins": 0.21760000000000004
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.07040000000000012
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.52,
+            "average_matches": 0.59,
             "ci95": [
-              0.42839202834152224,
-              0.6116079716584778
+              0.44769108008677494,
+              0.732308919913225
             ],
             "bonus_matches": 0,
             "box_wins": 0,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
             "box_payout_usd": 0,
-            "box_net_usd": -300,
-            "box_fair_expected_wins": 0.21260000000000004
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.07670000000000012
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.47,
+            "average_matches": 0.63,
             "ci95": [
-              0.3858623126196682,
-              0.5541376873803318
+              0.4834990964277874,
+              0.7765009035722126
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 800,
-            "box_net_usd": 500,
-            "box_fair_expected_wins": 0.2134000000000001
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.07370000000000011
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.5066666666666666,
+            "average_matches": 0.65,
             "ci95": [
-              0.4198133106316494,
-              0.5935200227016838
+              0.5042426258427652,
+              0.7957573741572348
             ],
             "bonus_matches": 0,
-            "box_wins": 1,
-            "box_tickets": 300,
-            "box_spend_usd": 300,
-            "box_payout_usd": 800,
-            "box_net_usd": 500,
-            "box_fair_expected_wins": 0.21870000000000006
+            "box_wins": 0,
+            "box_tickets": 100,
+            "box_spend_usd": 100,
+            "box_payout_usd": 0,
+            "box_net_usd": -100,
+            "box_fair_expected_wins": 0.0699000000000001
           }
         ],
         "from_draw": "2026-10-02T17:59:00+00:00",
@@ -332,60 +332,60 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.58,
+            "average_matches": 0.65,
             "ci95": [
-              0.4961060752063419,
-              0.6638939247936579
+              0.5124610248076216,
+              0.7875389751923785
             ],
             "bonus_matches": 0
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.5666666666666667,
+            "average_matches": 0.61,
             "ci95": [
-              0.4783268473253469,
-              0.6550064860079864
+              0.47382198815854704,
+              0.7461780118414529
             ],
             "bonus_matches": 0
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.6266666666666666,
+            "average_matches": 0.7,
             "ci95": [
-              0.5522157325307209,
-              0.7011176008026123
+              0.5649522344135268,
+              0.8350477655864731
             ],
             "bonus_matches": 0
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.6066666666666667,
+            "average_matches": 0.67,
             "ci95": [
-              0.5255104030477745,
-              0.6878229302855589
+              0.5333668274598594,
+              0.8066331725401407
             ],
             "bonus_matches": 0
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.63,
+            "average_matches": 0.61,
             "ci95": [
-              0.5540497782487579,
-              0.7059502217512421
+              0.47964552446145436,
+              0.7403544755385456
             ],
             "bonus_matches": 0
           }
@@ -410,62 +410,62 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.35333333333333333,
+            "average_matches": 0.35,
             "ci95": [
-              0.28845030606245226,
-              0.4182163606042144
+              0.252,
+              0.44799999999999995
             ],
-            "bonus_matches": 5
+            "bonus_matches": 3
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.32999999999999996,
+            "average_matches": 0.37,
             "ci95": [
-              0.26600350879427664,
-              0.3939964912057233
+              0.256309077501386,
+              0.483690922498614
             ],
-            "bonus_matches": 11
+            "bonus_matches": 3
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.35,
+            "average_matches": 0.29,
             "ci95": [
-              0.2909950448161224,
-              0.4090049551838776
+              0.1846715843111881,
+              0.39532841568881183
             ],
-            "bonus_matches": 12
+            "bonus_matches": 2
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.32,
+            "average_matches": 0.34,
             "ci95": [
-              0.26281707301958795,
-              0.37718292698041206
+              0.24261567130822603,
+              0.437384328691774
             ],
-            "bonus_matches": 10
+            "bonus_matches": 2
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.36,
+            "average_matches": 0.35,
             "ci95": [
-              0.2952100713095917,
-              0.42478992869040827
+              0.24811731840945286,
+              0.4518826815905471
             ],
-            "bonus_matches": 8
+            "bonus_matches": 3
           }
         ],
         "from_draw": "2026-04-02T02:59:00+00:00",
@@ -488,62 +488,62 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.35333333333333333,
+            "average_matches": 0.37,
             "ci95": [
-              0.297756345144321,
-              0.4089103215223457
+              0.24967632205277518,
+              0.4903236779472248
             ],
-            "bonus_matches": 9
+            "bonus_matches": 6
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.36666666666666664,
+            "average_matches": 0.42,
             "ci95": [
-              0.30133333333333334,
-              0.43199999999999994
+              0.30453109387013194,
+              0.5354689061298681
             ],
-            "bonus_matches": 11
+            "bonus_matches": 2
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.36666666666666664,
+            "average_matches": 0.44,
             "ci95": [
-              0.30133333333333334,
-              0.43199999999999994
+              0.30838646104460365,
+              0.5716135389553963
             ],
-            "bonus_matches": 15
+            "bonus_matches": 3
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.35,
+            "average_matches": 0.36,
             "ci95": [
-              0.2971631271831076,
-              0.40283687281689234
+              0.24339410067421222,
+              0.4766058993257878
             ],
-            "bonus_matches": 9
+            "bonus_matches": 7
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.3433333333333333,
+            "average_matches": 0.38,
             "ci95": [
-              0.28211914514940956,
-              0.4045475215172571
+              0.25300803493165724,
+              0.5069919650683428
             ],
-            "bonus_matches": 10
+            "bonus_matches": 3
           }
         ],
         "from_draw": "2025-12-10T04:00:00+00:00",
@@ -566,62 +566,62 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.4533333333333333,
+            "average_matches": 0.5,
             "ci95": [
-              0.38932000138859957,
-              0.517346665278067
+              0.36785682695720456,
+              0.6321431730427954
             ],
-            "bonus_matches": 58
+            "bonus_matches": 23
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.4666666666666666,
+            "average_matches": 0.54,
             "ci95": [
-              0.39970382288976963,
-              0.5336295104435637
+              0.39148664516058984,
+              0.6885133548394102
             ],
-            "bonus_matches": 57
+            "bonus_matches": 21
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.48333333333333334,
+            "average_matches": 0.5,
             "ci95": [
-              0.4111792707019835,
-              0.5554873959646831
+              0.36495223441352687,
+              0.6350477655864731
             ],
-            "bonus_matches": 65
+            "bonus_matches": 21
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.5033333333333333,
+            "average_matches": 0.51,
             "ci95": [
-              0.44209097803038344,
-              0.5645756886362832
+              0.3838818959799341,
+              0.6361181040200659
             ],
-            "bonus_matches": 58
+            "bonus_matches": 22
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.48333333333333334,
+            "average_matches": 0.46,
             "ci95": [
-              0.416774127011984,
-              0.5498925396546827
+              0.32518229891719513,
+              0.5948177010828049
             ],
-            "bonus_matches": 63
+            "bonus_matches": 20
           }
         ],
         "from_draw": "2026-08-14T03:15:00+00:00",
@@ -644,60 +644,60 @@
           {
             "method": "random",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.8966666666666666,
+            "average_matches": 0.86,
             "ci95": [
-              0.8044138164526216,
-              0.9889195168807117
+              0.7206531599992959,
+              0.9993468400007041
             ],
             "bonus_matches": 0
           },
           {
             "method": "frequency",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.9033333333333333,
+            "average_matches": 0.79,
             "ci95": [
-              0.7977432622087726,
-              1.008923404457894
+              0.6471467716553636,
+              0.9328532283446365
             ],
             "bonus_matches": 0
           },
           {
             "method": "recent",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.86,
+            "average_matches": 0.96,
             "ci95": [
-              0.7643128592164257,
-              0.9556871407835743
+              0.812798858151113,
+              1.107201141848887
             ],
             "bonus_matches": 0
           },
           {
             "method": "cold",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.8333333333333334,
+            "average_matches": 0.86,
             "ci95": [
-              0.7430623607848531,
-              0.9236043058818136
+              0.7234662642051386,
+              0.9965337357948614
             ],
             "bonus_matches": 0
           },
           {
             "method": "ensemble",
             "draws": 100,
-            "tickets": 300,
+            "tickets": 100,
             "exact": 0,
-            "average_matches": 0.9066666666666666,
+            "average_matches": 0.81,
             "ci95": [
-              0.8044860725956112,
-              1.0088472607377221
+              0.6633931857661521,
+              0.956606814233848
             ],
             "bonus_matches": 0
           }
