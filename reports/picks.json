@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T21:08:59.668293+00:00",
+  "generated_at": "2026-11-21T23:20:34.309017+00:00",
   "batches": [
     {
       "game": "pick3",
@@ -570,7 +570,7 @@
   "failures": [
     {
       "game": "cashpop",
-      "error": "Waiting for latest completed Lunch Break result (2026-11-21T12:00:00-05:00); new picks withheld"
+      "error": "Waiting for latest completed Rush Hour result (2026-11-21T17:00:00-05:00); new picks withheld"
     }
   ]
 }
