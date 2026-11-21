@@ -25,7 +25,7 @@ from pathlib import Path
 
 from research_decades import fetch_full
 from research_pooled_digit_followup import probabilities as pooled_digits
-from research_virtual_draw_lab import simulate
+from research_virtual_draw_lab import truth_distribution, choose
 from val import ET
 from val_box import box_ways,digits_key,random_box_picks
 from val_pooled_box_formula import top_box_portfolio
@@ -241,11 +241,53 @@ def real_study(game):
     return report
 
 
+def simulate_temporally_valid(game,scenario,n,seed):
+    """Invented physical drawing: equipment chosen, pretests, THEN result.
+
+    Using the same immutable seed gives exactly the same simulated outcomes
+    whether equipment observations are withheld or published in advance.
+    This avoids any post-target pretest or accidental oracle leakage.
+    """
+    if game not in GAMES or n%2:
+        raise ValueError("Simulated game/draws must be valid Day/Night pairs")
+    width=int(game[-1])
+    rng=stable_rng("chronological_machine",game,scenario,seed)
+    start=date(2026,1,1)
+    rows=[]
+    machine=None
+    for idx in range(n):
+        day=start+timedelta(days=idx//2)
+        stream="Day" if idx%2==0 else "Night"
+        if idx%2==0:
+            machine=rng.randrange(2)
+        def draw_numbers():
+            outcome=[]
+            for position in range(width):
+                p=truth_distribution(
+                    scenario,width,stream,machine,idx/n,
+                    position,outcome)
+                outcome.append(choose(rng,p))
+            return outcome
+        # Pretest observations are generated before the target official draw
+        # in the *actual synthetic event sequence*, not just relabeled.
+        pretests=[draw_numbers() for _ in range(2)]
+        result=draw_numbers()
+        hour,minute=(13,59) if stream=="Day" else (23,0)
+        timestamp=datetime.combine(
+            day,time(hour,minute),tzinfo=ET).astimezone(
+                timezone.utc).isoformat()
+        rows.append(dict(
+            game=game,at=timestamp,stream=stream,numbers=result,
+            machine=machine,pretests=pretests,
+            simulation_pretests_before_official=True))
+    return rows
+
+
 def synthetic_study(game,scenario,public):
     events=[]
     for seed in SYNTHETIC_REPLICATES:
         n=SYNTHETIC_TRAIN+SYNTHETIC_TEST
-        rows=simulate(game,scenario,n,seed)
+        rows=simulate_temporally_valid(game,scenario,n,seed)
         part=evaluate(game,rows,SYNTHETIC_TRAIN,
                       scenario+("_public_equipment" if public
                                else "_hidden_equipment"),
@@ -291,7 +333,8 @@ def markdown(data):
         "## Equipment genuinely unavailable vs available in invented scenarios",
         "",
         "Public equipment here means **hypothetical** machine/pretest",
-        "observations, explicitly timestamped BEFORE a synthetic cutoff.",
+        "observations, generated before the simulated winning draw and",
+        "explicitly timestamped BEFORE its synthetic cutoff.",
         "Hidden scenarios do not allow the predictor to read the simulator",
         "machine field or private pretests. This does NOT demonstrate",
         "that this information is public before real Virginia wagers.",
