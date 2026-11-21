@@ -271,11 +271,17 @@ class ContextualBox:
                 for name,p in avg.items())
             candidates.append((approximate,combo))
         candidates.sort(key=lambda x:(-x[0],x[1]))
-        # Include all combinations that are all-distinct when computing
-        # the exact ranking, allowing a strict fair-coverage comparison.
+        # Include high-priority all-distinct alternatives for fair
+        # coverage. This is a deterministic proposal beam, not an
+        # unproven claim of global exact search optimality.
         proposed={combo for _,combo in candidates[:proposals]}
-        proposed.update(combo for _,combo in candidates
-                        if len(set(combo))==self.width)
+        distinct_added=0
+        for _,combo in candidates:
+            if len(set(combo))==self.width:
+                proposed.add(combo)
+                distinct_added+=1
+            if distinct_added>=max(35,proposals//2):
+                break
         exact=[]
         for combo in proposed:
             p=sum(weight*full_box_mass(self.game,
