@@ -1,0 +1,138 @@
+{
+  "version": "val_complete_box_validity_v1",
+  "updated_utc": "2026-11-21T00:12:35.938483+00:00",
+  "scientific_claim": "no real predictive lift established",
+  "familywise_alpha": 0.05,
+  "target_power": 0.8,
+  "assumed_relative_lift": 1.25,
+  "source_historical_previously_inspected": true,
+  "power": {
+    "pick3": {
+      "draws": 8491,
+      "critical_full_box_hits": 180,
+      "fair_null_hit_probability": 0.018,
+      "alternative_hit_probability": 0.0225,
+      "null_tail_at_threshold": 0.016540811818443944,
+      "achieved_power": 0.8000380613848687,
+      "years_at_730_draws_per_year": 11.631506849315068
+    },
+    "pick4": {
+      "draws": 21466,
+      "critical_full_box_hits": 182,
+      "fair_null_hit_probability": 0.0072,
+      "alternative_hit_probability": 0.009,
+      "null_tail_at_threshold": 0.016604654812733342,
+      "achieved_power": 0.8000640121035952,
+      "years_at_730_draws_per_year": 29.405479452054795
+    },
+    "pick5": {
+      "draws": 43167,
+      "critical_full_box_hits": 183,
+      "fair_null_hit_probability": 0.0036,
+      "alternative_hit_probability": 0.0045,
+      "null_tail_at_threshold": 0.01651136898286931,
+      "achieved_power": 0.8000388025425591,
+      "years_at_730_draws_per_year": 59.132876712328766
+    }
+  },
+  "real_historical": {
+    "pick3": {
+      "targets": 1376,
+      "model_full_box_wins": 22,
+      "control_full_box_wins": 29,
+      "both": 3,
+      "neither": 1328,
+      "model_only": 19,
+      "control_only": 26,
+      "coverage_mismatches": 0,
+      "paired_exploratory_only": {
+        "model_only": 19,
+        "control_only": 26,
+        "discordant": 45,
+        "one_sided_p": 0.8836534040458467,
+        "net_model_only_advantage": -7
+      },
+      "confirmatory_valid": false,
+      "reason": "2025/2026 history was previously inspected; no untouched validation."
+    },
+    "pick4": {
+      "targets": 1376,
+      "model_full_box_wins": 9,
+      "control_full_box_wins": 7,
+      "both": 0,
+      "neither": 1360,
+      "model_only": 9,
+      "control_only": 7,
+      "coverage_mismatches": 0,
+      "paired_exploratory_only": {
+        "model_only": 9,
+        "control_only": 7,
+        "discordant": 16,
+        "one_sided_p": 0.4018096923828131,
+        "net_model_only_advantage": 2
+      },
+      "confirmatory_valid": false,
+      "reason": "2025/2026 history was previously inspected; no untouched validation."
+    },
+    "pick5": {
+      "targets": 1376,
+      "model_full_box_wins": 6,
+      "control_full_box_wins": 6,
+      "both": 0,
+      "neither": 1364,
+      "model_only": 6,
+      "control_only": 6,
+      "coverage_mismatches": 0,
+      "paired_exploratory_only": {
+        "model_only": 6,
+        "control_only": 6,
+        "discordant": 12,
+        "one_sided_p": 0.6127929687499976,
+        "net_model_only_advantage": 0
+      },
+      "confirmatory_valid": false,
+      "reason": "2025/2026 history was previously inspected; no untouched validation."
+    }
+  },
+  "prospective": {
+    "pick3": {
+      "frozen": 1,
+      "settled": 0,
+      "unsettled": 1,
+      "invalid_records": [],
+      "equal_coverage": true,
+      "model_only": 0,
+      "control_only": 0,
+      "both": 0,
+      "neither": 0,
+      "paired_evidence": null,
+      "eligible_for_model_promotion": false
+    },
+    "pick4": {
+      "frozen": 1,
+      "settled": 0,
+      "unsettled": 1,
+      "invalid_records": [],
+      "equal_coverage": true,
+      "model_only": 0,
+      "control_only": 0,
+      "both": 0,
+      "neither": 0,
+      "paired_evidence": null,
+      "eligible_for_model_promotion": false
+    },
+    "pick5": {
+      "frozen": 1,
+      "settled": 0,
+      "unsettled": 1,
+      "invalid_records": [],
+      "equal_coverage": true,
+      "model_only": 0,
+      "control_only": 0,
+      "both": 0,
+      "neither": 0,
+      "paired_evidence": null,
+      "eligible_for_model_promotion": false
+    }
+  }
+}
