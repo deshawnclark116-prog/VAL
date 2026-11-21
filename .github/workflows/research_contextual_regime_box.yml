@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Check full-Box model math, source timestamps, and no future leakage
-        run: python -m unittest discover -s tests -p 'test_val_contextual_regime_box.py' -v
+        run: python -m unittest discover -s tests -p 'test*contextual*.py' -v
       - name: Score real future-from-past full Box predictions and injected-bias simulations
         run: python -u research_contextual_regime_box.py
       - name: Publish audited contextual challenger results from main
