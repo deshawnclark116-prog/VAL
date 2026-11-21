@@ -5,7 +5,7 @@ import unittest
 from datetime import date,timedelta
 
 from val_contextual_regime_box import (
-    ContextualBox, _features, full_box_mass, forecast_full_box,
+    ContextualBox, _features, _date, full_box_mass, forecast_full_box,
     VERSION, ALL_EXPERTS,
 )
 from val_box import digits_key,box_ways
@@ -35,6 +35,11 @@ class ContextualTests(unittest.TestCase):
             for key in ((9,)*w,tuple(range(w)),(0,)*(w-1)+(9,)):
                 fair=box_ways(key)*math.prod(bias[0][d] for d in key)
                 self.assertAlmostEqual(full_box_mass(game,bias,key),fair,12)
+
+    def test_target_utc_night_is_mapped_to_draw_location_weekday(self):
+        target={"at":"2026-11-21T04:00:00+00:00",
+                "stream":"Night"}
+        self.assertEqual(_date(target).isoformat(),"2026-11-20")
 
     def test_frozen_probs_normalized_and_all_candidate_sets_distinct(self):
         for game in ("pick3","pick4","pick5"):
