@@ -27,3 +27,12 @@ jobs:
           name: online-box-mixture-synthetic
           path: reports/research_online_box_mixture.json
           if-no-files-found: warn
+      - name: Actual Virginia 2025-26 chronological complete-Box evaluation (exploratory)
+        run: python research_online_box_mixture.py --mode real
+      - name: Save real historical research artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: online-box-mixture-real-exploratory
+          path: reports/research_online_box_mixture.json
+          if-no-files-found: warn
