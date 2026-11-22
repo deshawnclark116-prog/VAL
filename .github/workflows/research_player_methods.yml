@@ -2,7 +2,7 @@ name: VAL player methods on real history
 
 on:
   push:
-    branches: [main]
+    branches: [main, ccr-89b396fc-aaip30]
     paths:
       - 'research_player_methods.py'
       - 'val_player_methods.py'
