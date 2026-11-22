@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-11-21T23:20:34.309017+00:00",
+  "generated_at": "2026-11-22T06:52:53.714037+00:00",
   "batches": [
     {
       "game": "pick3",
       "name": "Pick 3",
-      "id": 122,
-      "created": "2026-11-21T21:04:12.099439+00:00",
-      "stream": "Night",
+      "id": 125,
+      "created": "2026-11-22T06:52:53.714037+00:00",
+      "stream": "Day",
       "method": "digit_box_v4",
       "picks": [
         {
           "numbers": [
-            3,
             5,
-            8
+            7,
+            9
           ],
           "bonus": null,
           "rank": 1,
@@ -32,9 +32,9 @@
       "baseline": [
         {
           "numbers": [
-            3,
-            6,
-            7
+            5,
+            7,
+            8
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -56,14 +56,14 @@
           "active": null,
           "confirmed": false,
           "log_evidence": {
-            "pooled": 0.9400042324533173,
-            "position": 2.241985368060978,
-            "session": -3.239743362473046,
-            "echo": -4.526916827320016
+            "pooled": 0.969755197487679,
+            "position": 2.3273743554960333,
+            "session": -3.096119999119578,
+            "echo": -4.405458332182122
           },
           "threshold": 7.272398392570047,
           "epoch": 1,
-          "epoch_draws": 511,
+          "epoch_draws": 512,
           "prewarm_draws": 700,
           "anchor": "2024-01-01",
           "formula_revision": "fixed_epoch_evidence_v1",
@@ -74,38 +74,38 @@
         }
       },
       "target": {
-        "at": "2026-11-22T04:00:00+00:00",
-        "stream": "Night"
+        "at": "2026-11-22T18:59:00+00:00",
+        "stream": "Day"
       },
       "training_latest": {
         "game": "pick3",
-        "at": "2026-11-21T18:59:00+00:00",
-        "stream": "Day",
+        "at": "2026-11-22T04:00:00+00:00",
+        "stream": "Night",
         "numbers": [
+          5,
           7,
-          2,
-          7
+          2
         ],
         "bonus": null,
-        "extra": 6,
-        "source": "Virginia Lottery latest-result page"
+        "extra": 7,
+        "source": "Virginia Lottery official download"
       },
       "result": null
     },
     {
       "game": "pick4",
       "name": "Pick 4",
-      "id": 123,
-      "created": "2026-11-21T21:04:12.099439+00:00",
-      "stream": "Night",
+      "id": 126,
+      "created": "2026-11-22T06:52:53.714037+00:00",
+      "stream": "Day",
       "method": "digit_box_v4",
       "picks": [
         {
           "numbers": [
             0,
-            1,
-            5,
-            8
+            3,
+            7,
+            9
           ],
           "bonus": null,
           "rank": 1,
@@ -124,10 +124,10 @@
       "baseline": [
         {
           "numbers": [
-            2,
+            0,
             4,
             5,
-            9
+            7
           ],
           "bonus": null,
           "play_type": "any_order",
@@ -149,14 +149,14 @@
           "active": null,
           "confirmed": false,
           "log_evidence": {
-            "pooled": -0.036335700206523686,
-            "position": -2.607696056699421,
-            "session": -5.35998702600087,
-            "echo": -2.746620597614712
+            "pooled": -0.09542038941057676,
+            "position": -2.718736902371065,
+            "session": -5.373671888439,
+            "echo": -2.8126673744524178
           },
           "threshold": 7.272398392570047,
           "epoch": 1,
-          "epoch_draws": 511,
+          "epoch_draws": 512,
           "prewarm_draws": 700,
           "anchor": "2024-01-01",
           "formula_revision": "fixed_epoch_evidence_v1",
@@ -167,40 +167,40 @@
         }
       },
       "target": {
-        "at": "2026-11-22T04:00:00+00:00",
-        "stream": "Night"
+        "at": "2026-11-22T18:59:00+00:00",
+        "stream": "Day"
       },
       "training_latest": {
         "game": "pick4",
-        "at": "2026-11-21T18:59:00+00:00",
-        "stream": "Day",
+        "at": "2026-11-22T04:00:00+00:00",
+        "stream": "Night",
         "numbers": [
-          0,
+          3,
           1,
-          4,
-          8
+          5,
+          1
         ],
         "bonus": null,
-        "extra": 1,
-        "source": "Virginia Lottery latest-result page"
+        "extra": 9,
+        "source": "Virginia Lottery official download"
       },
       "result": null
     },
     {
       "game": "pick5",
       "name": "Pick 5",
-      "id": 124,
-      "created": "2026-11-21T21:04:12.099439+00:00",
-      "stream": "Night",
+      "id": 127,
+      "created": "2026-11-22T06:52:53.714037+00:00",
+      "stream": "Day",
       "method": "digit_box_v4",
       "picks": [
         {
           "numbers": [
-            1,
+            0,
             3,
             4,
             6,
-            7
+            9
           ],
           "bonus": null,
           "rank": 1,
@@ -219,9 +219,9 @@
       "baseline": [
         {
           "numbers": [
+            1,
+            3,
             4,
-            5,
-            6,
             7,
             8
           ],
@@ -245,14 +245,14 @@
           "active": null,
           "confirmed": false,
           "log_evidence": {
-            "pooled": -2.245281512266509,
-            "position": -0.8759322327581891,
-            "session": -6.976190021254366,
-            "echo": -16.91202343196629
+            "pooled": -2.344443112528714,
+            "position": -0.9191253004686185,
+            "session": -6.868503980526113,
+            "echo": -16.97553287102071
           },
           "threshold": 7.272398392570047,
           "epoch": 1,
-          "epoch_draws": 511,
+          "epoch_draws": 512,
           "prewarm_draws": 700,
           "anchor": "2024-01-01",
           "formula_revision": "fixed_epoch_evidence_v1",
@@ -263,73 +263,73 @@
         }
       },
       "target": {
-        "at": "2026-11-22T04:00:00+00:00",
-        "stream": "Night"
+        "at": "2026-11-22T18:59:00+00:00",
+        "stream": "Day"
       },
       "training_latest": {
         "game": "pick5",
-        "at": "2026-11-21T18:59:00+00:00",
-        "stream": "Day",
+        "at": "2026-11-22T04:00:00+00:00",
+        "stream": "Night",
         "numbers": [
-          4,
-          0,
-          6,
-          8,
-          5
+          3,
+          7,
+          9,
+          3,
+          1
         ],
         "bonus": null,
         "extra": 4,
-        "source": "Virginia Lottery latest-result page"
+        "source": "Virginia Lottery official download"
       },
       "result": null
     },
     {
       "game": "cash5",
       "name": "Cash 5",
-      "id": 119,
-      "created": "2026-11-21T11:07:24.543977+00:00",
+      "id": 128,
+      "created": "2026-11-22T06:52:53.714037+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            2,
-            7,
-            26,
-            30,
-            41
+            24,
+            40,
+            41,
+            42,
+            43
           ],
           "bonus": null,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 9.061536538230545e-07,
+          "model_weight_score": 9.793931750392149e-07,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
         {
           "numbers": [
-            1,
-            5,
-            13,
-            41,
-            43
+            2,
+            17,
+            30,
+            33,
+            38
           ],
           "bonus": null
         }
       ],
       "target": {
-        "at": "2026-11-22T04:00:00+00:00",
+        "at": "2026-11-23T04:00:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "cash5",
-        "at": "2026-11-21T04:00:00+00:00",
+        "at": "2026-11-22T04:00:00+00:00",
         "stream": "Main",
         "numbers": [
-          17,
-          18,
-          33,
+          8,
+          30,
+          32,
           34,
           38
         ],
@@ -342,54 +342,54 @@
     {
       "game": "powerball",
       "name": "Powerball",
-      "id": 99,
-      "created": "2026-11-19T11:43:22.922700+00:00",
+      "id": 129,
+      "created": "2026-11-22T06:52:53.714037+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            15,
-            33,
-            55,
-            58,
-            69
+            14,
+            27,
+            36,
+            45,
+            60
           ],
-          "bonus": 3,
+          "bonus": 7,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 4.97545785012813e-09,
+          "model_weight_score": 3.5016230340537647e-09,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
         {
           "numbers": [
-            7,
-            20,
-            38,
-            45,
-            68
+            4,
+            14,
+            32,
+            47,
+            59
           ],
-          "bonus": 18
+          "bonus": 22
         }
       ],
       "target": {
-        "at": "2026-11-22T03:59:00+00:00",
+        "at": "2026-11-24T03:59:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "powerball",
-        "at": "2026-11-19T03:59:00+00:00",
+        "at": "2026-11-22T03:59:00+00:00",
         "stream": "Main",
         "numbers": [
-          18,
-          31,
-          43,
-          51,
-          62
+          5,
+          29,
+          33,
+          36,
+          45
         ],
-        "bonus": 12,
+        "bonus": 22,
         "extra": null,
         "source": "Virginia Lottery official download"
       },
@@ -454,54 +454,54 @@
     {
       "game": "millionaireforlife",
       "name": "Millionaire for Life",
-      "id": 121,
-      "created": "2026-11-21T11:07:24.543977+00:00",
+      "id": 130,
+      "created": "2026-11-22T06:52:53.714037+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            13,
-            18,
-            29,
-            38,
-            57
+            2,
+            8,
+            21,
+            22,
+            47
           ],
-          "bonus": 3,
+          "bonus": 1,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 8.842698023752823e-08,
+          "model_weight_score": 3.616714451552135e-08,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
       "baseline": [
         {
           "numbers": [
-            2,
-            8,
-            25,
-            34,
-            48
+            3,
+            26,
+            30,
+            47,
+            57
           ],
-          "bonus": 2
+          "bonus": 3
         }
       ],
       "target": {
-        "at": "2026-11-22T04:15:00+00:00",
+        "at": "2026-11-23T04:15:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "millionaireforlife",
-        "at": "2026-11-21T04:15:00+00:00",
+        "at": "2026-11-22T04:15:00+00:00",
         "stream": "Main",
         "numbers": [
-          2,
-          6,
-          19,
-          20,
-          30
+          10,
+          12,
+          18,
+          26,
+          33
         ],
-        "bonus": 4,
+        "bonus": 2,
         "extra": null,
         "source": "Virginia Lottery official download"
       },
@@ -510,24 +510,24 @@
     {
       "game": "bankamillion",
       "name": "Bank a Million",
-      "id": 101,
-      "created": "2026-11-19T11:43:22.922700+00:00",
+      "id": 131,
+      "created": "2026-11-22T06:52:53.714037+00:00",
       "stream": "Main",
       "method": "ensemble",
       "picks": [
         {
           "numbers": [
-            2,
+            3,
             10,
-            21,
-            30,
-            32,
-            36
+            17,
+            19,
+            25,
+            27
           ],
           "bonus": null,
           "rank": 1,
           "role": "primary",
-          "model_weight_score": 4.34148807745912e-07,
+          "model_weight_score": 3.3901396767478325e-07,
           "ranking_version": "ensemble_sampling_v1"
         }
       ],
@@ -535,33 +535,33 @@
         {
           "numbers": [
             1,
-            3,
-            5,
-            10,
-            20,
-            27
+            2,
+            4,
+            9,
+            27,
+            38
           ],
           "bonus": null
         }
       ],
       "target": {
-        "at": "2026-11-22T04:00:00+00:00",
+        "at": "2026-11-26T04:00:00+00:00",
         "stream": "Main"
       },
       "training_latest": {
         "game": "bankamillion",
-        "at": "2026-11-19T04:00:00+00:00",
+        "at": "2026-11-22T04:00:00+00:00",
         "stream": "Main",
         "numbers": [
-          5,
-          6,
-          10,
-          17,
-          29,
-          38
+          4,
+          12,
+          14,
+          15,
+          22,
+          33
         ],
         "bonus": null,
-        "extra": 12,
+        "extra": 19,
         "source": "Virginia Lottery official download"
       },
       "result": null
@@ -570,7 +570,7 @@
   "failures": [
     {
       "game": "cashpop",
-      "error": "Waiting for latest completed Rush Hour result (2026-11-21T17:00:00-05:00); new picks withheld"
+      "error": "Waiting for latest completed After Hours result (2026-11-21T23:59:00-05:00); new picks withheld"
     }
   ]
 }

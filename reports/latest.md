@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-21T18:20:34.309017-05:00 · Eastern time
+Updated: 2026-11-22T01:52:53.714037-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,14 +14,14 @@ Picks use previous completed results from ALL sessions of the same game: today's
 
 | Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-21T23:00:00-05:00 | Night | #122 | **Paper:** `3 5 8` | 2026-11-21T13:59:00-05:00 | `7 2 7` (Day) |
-| Pick 4 | 2026-11-21T23:00:00-05:00 | Night | #123 | **Paper:** `0 1 5 8` | 2026-11-21T13:59:00-05:00 | `0 1 4 8` (Day) |
-| Pick 5 | 2026-11-21T23:00:00-05:00 | Night | #124 | **Paper:** `1 3 4 6 7` | 2026-11-21T13:59:00-05:00 | `4 0 6 8 5` (Day) |
-| Cash 5 | 2026-11-21T23:00:00-05:00 | Main | #119 | **Primary:** `2 7 26 30 41` | 2026-11-20T23:00:00-05:00 | `17 18 33 34 38` (Main) |
-| Powerball | 2026-11-21T22:59:00-05:00 | Main | #99 | **Primary:** `15 33 55 58 69 + 3` | 2026-11-18T22:59:00-05:00 | `18 31 43 51 62 + 12` (Main) |
+| Pick 3 | 2026-11-22T13:59:00-05:00 | Day | #125 | **Paper:** `5 7 9` | 2026-11-21T23:00:00-05:00 | `5 7 2` (Night) |
+| Pick 4 | 2026-11-22T13:59:00-05:00 | Day | #126 | **Paper:** `0 3 7 9` | 2026-11-21T23:00:00-05:00 | `3 1 5 1` (Night) |
+| Pick 5 | 2026-11-22T13:59:00-05:00 | Day | #127 | **Paper:** `0 3 4 6 9` | 2026-11-21T23:00:00-05:00 | `3 7 9 3 1` (Night) |
+| Cash 5 | 2026-11-22T23:00:00-05:00 | Main | #128 | **Primary:** `24 40 41 42 43` | 2026-11-21T23:00:00-05:00 | `8 30 32 34 38` (Main) |
+| Powerball | 2026-11-23T22:59:00-05:00 | Main | #129 | **Primary:** `14 27 36 45 60 + 7` | 2026-11-21T22:59:00-05:00 | `5 29 33 36 45 + 22` (Main) |
 | Mega Millions | 2026-11-24T23:00:00-05:00 | Main | #120 | **Primary:** `5 25 28 34 38 + 14` | 2026-11-20T23:00:00-05:00 | `32 35 48 58 61 + 21` (Main) |
-| Millionaire for Life | 2026-11-21T23:15:00-05:00 | Main | #121 | **Primary:** `13 18 29 38 57 + 3` | 2026-11-20T23:15:00-05:00 | `2 6 19 20 30 + 4` (Main) |
-| Bank a Million | 2026-11-21T23:00:00-05:00 | Main | #101 | **Primary:** `2 10 21 30 32 36` | 2026-11-18T23:00:00-05:00 | `5 6 10 17 29 38` (Main) |
+| Millionaire for Life | 2026-11-22T23:15:00-05:00 | Main | #130 | **Primary:** `2 8 21 22 47 + 1` | 2026-11-21T23:15:00-05:00 | `10 12 18 26 33 + 2` (Main) |
+| Bank a Million | 2026-11-25T23:00:00-05:00 | Main | #131 | **Primary:** `3 10 17 19 25 27` | 2026-11-21T23:00:00-05:00 | `4 12 14 15 22 33` (Main) |
 
 ## Complete Any Order (Box) results — PRIMARY METRIC
 
@@ -31,9 +31,9 @@ Payout and net are **hypothetical** $1 Any Order paper-wagers using published no
 
 | Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 22 | 0 | 0 | 0 | 0 | $-22 | $-22 |
-| Pick 4 | 22 | 2 | 0 | 1 | 0 | $378 | $-22 |
-| Pick 5 | 22 | 0 | 0 | 0 | 0 | $-22 | $-22 |
+| Pick 3 | 23 | 0 | 0 | 0 | 0 | $-23 | $-23 |
+| Pick 4 | 23 | 2 | 0 | 1 | 0 | $377 | $-23 |
+| Pick 5 | 23 | 0 | 0 | 0 | 0 | $-23 | $-23 |
 
 ## Fallback watch — one original ticket per drawing
 
@@ -42,24 +42,24 @@ Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are in
 | Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Pick 3 | `digit_box_v3` | 1 | 0 | 0 | 0.0060 |
-| Pick 3 | `digit_box_v4` | 2 | 0 | 0 | 0.0120 |
+| Pick 3 | `digit_box_v4` | 3 | 0 | 0 | 0.0180 |
 | Pick 3 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0240 |
 | Pick 4 | `digit_box_v3` | 1 | 0 | 0 | 0.0024 |
-| Pick 4 | `digit_box_v4` | 2 | 2 | 0 | 0.0048 |
+| Pick 4 | `digit_box_v4` | 3 | 2 | 0 | 0.0072 |
 | Pick 4 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0060 |
 | Pick 5 | `digit_box_v3` | 1 | 0 | 0 | 0.0012 |
-| Pick 5 | `digit_box_v4` | 2 | 0 | 0 | 0.0024 |
+| Pick 5 | `digit_box_v4` | 3 | 0 | 0 | 0.0036 |
 | Pick 5 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0042 |
 
 ## Other game results
 
 | Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Cash 5 | 10 | 10 | 0 | 10 | 0 |
-| Powerball | 4 | 4 | 0 | 4 | 0 |
+| Cash 5 | 11 | 11 | 0 | 11 | 0 |
+| Powerball | 5 | 5 | 0 | 5 | 0 |
 | Mega Millions | 4 | 4 | 0 | 4 | 0 |
-| Millionaire for Life | 10 | 10 | 0 | 10 | 0 |
-| Bank a Million | 3 | 3 | 0 | 3 | 0 |
+| Millionaire for Life | 11 | 11 | 0 | 11 | 0 |
+| Bank a Million | 4 | 4 | 0 | 4 | 0 |
 | Cash Pop | 18 | 18 | 3 | 18 | 3 |
 
 Pending batches: 9. This report retains the original saved picks and controls; no retrospective replacement.
@@ -70,14 +70,14 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 1 | 1 | 0 | 0 | 0.3836 |
-| Pick 4 | 0 | 0 | 0 | 0 | 0.9750 |
-| Pick 5 | 0 | 0 | 0 | 0 | 0.8551 |
-| Cash 5 | — | — | 0 | 0 | 0.4705 |
-| Powerball | — | — | 0 | 0 | 0.6943 |
+| Pick 3 | 0 | 0 | 0 | 0 | 0.3467 |
+| Pick 4 | 0 | 0 | 0 | 0 | 0.9790 |
+| Pick 5 | 0 | 0 | 0 | 0 | 0.8541 |
+| Cash 5 | — | — | 0 | 0 | 0.5504 |
+| Powerball | — | — | 0 | 0 | 0.7063 |
 | Mega Millions | — | — | 0 | 0 | 0.3367 |
-| Millionaire for Life | — | — | 0 | 0 | 0.5514 |
-| Bank a Million | — | — | 0 | 0 | 0.3167 |
+| Millionaire for Life | — | — | 0 | 0 | 0.6154 |
+| Bank a Million | — | — | 0 | 0 | 0.3127 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
 
@@ -89,4 +89,4 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 ### Update / analysis failures
 
-- Cash Pop: Waiting for latest completed Rush Hour result (2026-11-21T17:00:00-05:00); new picks withheld
+- Cash Pop: Waiting for latest completed After Hours result (2026-11-21T23:59:00-05:00); new picks withheld
