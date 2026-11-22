@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-22T10:21:08.955613-05:00 · Eastern time
+Updated: 2026-11-22T16:47:32.444881-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,9 +14,9 @@ Picks use previous completed results from ALL sessions of the same game: today's
 
 | Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-22T13:59:00-05:00 | Day | #125 | **Paper:** `5 7 9` | 2026-11-21T23:00:00-05:00 | `5 7 2` (Night) |
-| Pick 4 | 2026-11-22T13:59:00-05:00 | Day | #126 | **Paper:** `0 3 7 9` | 2026-11-21T23:00:00-05:00 | `3 1 5 1` (Night) |
-| Pick 5 | 2026-11-22T13:59:00-05:00 | Day | #127 | **Paper:** `0 3 4 6 9` | 2026-11-21T23:00:00-05:00 | `3 7 9 3 1` (Night) |
+| Pick 3 | 2026-11-22T23:00:00-05:00 | Night | #132 | **Paper:** `0 4 6` | 2026-11-22T13:59:00-05:00 | `4 0 1` (Day) |
+| Pick 4 | 2026-11-22T23:00:00-05:00 | Night | #133 | **Paper:** `0 6 7 8` | 2026-11-22T13:59:00-05:00 | `4 8 5 9` (Day) |
+| Pick 5 | 2026-11-22T23:00:00-05:00 | Night | #134 | **Paper:** `0 1 2 5 7` | 2026-11-22T13:59:00-05:00 | `4 7 2 6 5` (Day) |
 | Cash 5 | 2026-11-22T23:00:00-05:00 | Main | #128 | **Primary:** `24 40 41 42 43` | 2026-11-21T23:00:00-05:00 | `8 30 32 34 38` (Main) |
 | Powerball | 2026-11-23T22:59:00-05:00 | Main | #129 | **Primary:** `14 27 36 45 60 + 7` | 2026-11-21T22:59:00-05:00 | `5 29 33 36 45 + 22` (Main) |
 | Mega Millions | 2026-11-24T23:00:00-05:00 | Main | #120 | **Primary:** `5 25 28 34 38 + 14` | 2026-11-20T23:00:00-05:00 | `32 35 48 58 61 + 21` (Main) |
@@ -31,9 +31,9 @@ Payout and net are **hypothetical** $1 Any Order paper-wagers using published no
 
 | Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 23 | 0 | 0 | 0 | 0 | $-23 | $-23 |
-| Pick 4 | 23 | 2 | 0 | 1 | 0 | $377 | $-23 |
-| Pick 5 | 23 | 0 | 0 | 0 | 0 | $-23 | $-23 |
+| Pick 3 | 24 | 0 | 0 | 0 | 0 | $-24 | $-24 |
+| Pick 4 | 24 | 2 | 0 | 1 | 0 | $376 | $-24 |
+| Pick 5 | 24 | 0 | 0 | 0 | 0 | $-24 | $-24 |
 
 ## Fallback watch — one original ticket per drawing
 
@@ -42,13 +42,13 @@ Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are in
 | Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Pick 3 | `digit_box_v3` | 1 | 0 | 0 | 0.0060 |
-| Pick 3 | `digit_box_v4` | 3 | 0 | 0 | 0.0180 |
+| Pick 3 | `digit_box_v4` | 4 | 0 | 0 | 0.0240 |
 | Pick 3 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0240 |
 | Pick 4 | `digit_box_v3` | 1 | 0 | 0 | 0.0024 |
-| Pick 4 | `digit_box_v4` | 3 | 2 | 0 | 0.0072 |
+| Pick 4 | `digit_box_v4` | 4 | 2 | 0 | 0.0096 |
 | Pick 4 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0060 |
 | Pick 5 | `digit_box_v3` | 1 | 0 | 0 | 0.0012 |
-| Pick 5 | `digit_box_v4` | 3 | 0 | 0 | 0.0036 |
+| Pick 5 | `digit_box_v4` | 4 | 0 | 0 | 0.0048 |
 | Pick 5 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0042 |
 
 ## Other game results
@@ -70,9 +70,9 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 0 | 0 | 0 | 0 | 0.3467 |
+| Pick 3 | 0 | 0 | 0 | 0 | 0.3477 |
 | Pick 4 | 0 | 0 | 0 | 0 | 0.9790 |
-| Pick 5 | 0 | 0 | 0 | 0 | 0.8541 |
+| Pick 5 | 0 | 0 | 0 | 0 | 0.8761 |
 | Cash 5 | — | — | 0 | 0 | 0.5504 |
 | Powerball | — | — | 0 | 0 | 0.7063 |
 | Mega Millions | — | — | 0 | 0 | 0.3367 |
@@ -89,4 +89,4 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 ### Update / analysis failures
 
-- Cash Pop: Waiting for latest completed Coffee Break result (2026-11-22T09:00:00-05:00); new picks withheld
+- Cash Pop: Waiting for latest completed Lunch Break result (2026-11-22T12:00:00-05:00); new picks withheld
