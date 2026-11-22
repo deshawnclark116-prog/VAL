@@ -1,0 +1,40 @@
+name: VAL player methods on real history
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_player_methods.py'
+      - 'val_player_methods.py'
+      - '.github/workflows/research_player_methods.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: val-player-methods
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate all code
+        run: python -m unittest discover -s tests -v
+      - name: Test player methods on the real official Pick 3/4/5 history
+        run: python research_player_methods.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit research outputs only, to the branch that ran
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_player_methods.md reports/research_player_methods.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish VAL player methods real-history test'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
