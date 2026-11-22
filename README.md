@@ -23,6 +23,10 @@ Actions must be enabled and allow the workflow's `contents: write` permission to
 
 The report's **Luck check** table asks, for each Pick 3/4/5 formula, how surprising its Box wins would be if the picks were completely random. The chance is adjusted for the number of formulas watched at once, counting starts from each formula's first saved pick, and only the original first ticket counts. It also shows roughly how many settled picks are needed before a formula that truly doubled the fair win rate could be told apart from luck. Code: [val_luck.py](val_luck.py).
 
+## Popular player methods
+
+Pick 3/4/5 also track five well-known player "adding" systems as separate paper experiments, each with its own random pick for the same drawing: tic-tac-toe columns, rows and diagonals (stack the last results into a grid, add, keep the last digit), adding the last two results, and mirroring the last result (+5). They are not proven formulas. They appear in the luck check and are kept out of the main Box scoreboard. Code: [val_player_methods.py](val_player_methods.py).
+
 ## Digit model falsification and prospective horizon monitoring
 
 - The [long-history digit/horizon report](reports/research_digit_horizons.md) reads the official history of Pick 3, Pick 4, and Pick 5. Each method sees only completed past drawings. On a frozen later period it compares the legacy ensemble, long-term frequency, same-session, multi-scale and lag-transition models against a 10%-per-digit fair null. It also generates three experimental ensemble tickets and three independent random controls before the first target and scores the SAME tickets against pre-specified subsequent draw offsets (0, 1, 2, 3, 5, 7).

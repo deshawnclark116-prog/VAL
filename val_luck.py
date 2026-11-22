@@ -113,7 +113,7 @@ def luck_check(records):
     return rows
 
 
-def luck_report(rows, game_names):
+def luck_report(rows, game_names, labels=None):
     """Markdown section for latest.md."""
     watched = rows[0]["formulas_watched"] if rows else 0
     lines = [
@@ -134,10 +134,11 @@ def luck_report(rows, game_names):
     for row in rows:
         since = (datetime.fromisoformat(row["since"]).astimezone(ET).date().isoformat()
                  if row["since"] else "—")
+        name = (labels or {}).get(row["version"]) or f"`{row['version']}`"
         needed = f"{row['needed']:,}" if row["needed"] else "—"
         chance = "—" if row["wins"] == 0 else one_in(row["adjusted_chance"])
         lines.append(
-            f"| {game_names[row['game']]} | `{row['version']}` | {since} | {row['settled']} | "
+            f"| {game_names[row['game']]} | {name} | {since} | {row['settled']} | "
             f"{row['wins']} | {row['control_wins']} | {row['fair_expected']:.3f} | {chance} | "
             f"{needed} | {row['verdict']} |")
     if not rows:

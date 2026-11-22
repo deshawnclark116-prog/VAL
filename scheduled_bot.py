@@ -10,6 +10,7 @@ from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, score
 from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_formula
 from val_box import random_box_picks, box_score_batch
 from val_luck import luck_check, luck_report
+from val_player_methods import METHODS as PLAYER_METHODS, is_player_method, player_pick
 
 
 def restore(store, path):
@@ -101,7 +102,7 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
               "**Exactly one prediction and one independent random control per upcoming game draw.** Pick 3/4/5 target complete Any Order (Box) digit sets, not partial-position matches. Box v4 evaluates cumulative and recent evidence; without a proven signal it returns one clearly labeled random paper Box selection, not an asserted edge. All tickets are hypothetical; none are purchased. Older multi-ticket batches are preserved unchanged in the ledger, but only each original first ticket is shown and counted in the one-pick comparison. Missing latest results withhold new picks.", "",
               "| Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
-    failures=[]; batches=[]; summaries=[]; all_records=[]
+    failures=[]; batches=[]; summaries=[]; all_records=[]; player_rows=[]
     for game,g in GAMES.items():
         if "id" not in g: continue
         try:
@@ -141,6 +142,17 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                                  training_latest=history[-1],created=now,
                                  model_meta=model_meta)
                 existing=next(r for r in store.ledger(game) if r["id"]==pid)
+            if g.get("digits"):
+                # Popular player methods: separate paper experiments for the same target.
+                for pm,label in PLAYER_METHODS.items():
+                    saved=next((r for r in store.ledger(game) if r.get("target")==target and r["method"]==pm),None)
+                    if saved is None:
+                        pick=player_pick(pm,history,g["size"])
+                        pm_id=store.record(game,stream,pm,[pick],random_box_picks(game,1),target=target,
+                                           training_latest=history[-1],created=now,
+                                           model_meta=dict(formula_version=pm,player_method=True))
+                        saved=next(r for r in store.ledger(game) if r["id"]==pm_id)
+                    player_rows.append(f"| {g['name']} | {label} | #{saved['id']} | `{selection(saved['picks'][0])}` | `{selection(saved['baseline'][0])}` |")
             # Preserve the original ledger unchanged; publish the primary ticket only.
             public_batch = dict(existing, picks=existing["picks"][:1], baseline=existing["baseline"][:1])
             batches.append(dict(game=game,name=g["name"],**public_batch))
@@ -155,13 +167,17 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
         except Exception as exc:
             failures.append(dict(game=game,error=safe(exc)))
         all_records.extend(dict(game=game,**r) for r in store.ledger(game))
+    report += ["", "## Popular player methods being tested", "",
+               "These are well-known player \"adding\" systems, not proven formulas. Each one makes a paper pick for the same next drawing, next to its own random pick, so the luck check can show whether any of them beats random. Tic-tac-toe stacks the last results into a grid and adds the numbers, keeping the last digit (17 becomes 7).", "",
+               "| Game | Method | Batch | Method pick | Random pick |", "| --- | --- | --- | --- | --- |"]
+    report += player_rows or ["| — | — | — | — | — |"]
     report += ["", "## Complete Any Order (Box) results — PRIMARY METRIC", "",
                "A Box match requires ALL selected digits, including repeated digits, regardless of their order. A one-way all-identical pattern is Straight-only. Every settled batch is rescored using only its FIRST originally saved ticket and the FIRST original random control. Old three-ticket ledgers stay immutable, but their alternatives do not count toward this one-pick score. Historical picks were not necessarily purchased as Box tickets.", "",
                "Payout and net are **hypothetical** $1 Any Order paper-wagers using published no-FIREBALL prize tables, one ticket per side per settled batch. No tickets were bought. Historical first-choice tickets may have different digit multiplicities.", "",
                "| Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |",
                "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for game in ("pick3","pick4","pick5"):
-        entries=[r for r in all_records if r["game"]==game and r["result"] is not None]
+        entries=[r for r in all_records if r["game"]==game and r["result"] is not None and not is_player_method(r)]
         model=[box_score_batch(game,r["picks"][:1],r["result"]["draw"]) for r in entries]
         control=[box_score_batch(game,r["baseline"][:1],r["result"]["draw"]) for r in entries]
         exact=lambda side:sum(score(game, r["picks"][0] if side=="model" else r["baseline"][0], r["result"]["draw"])["exact"] for r in entries)
@@ -172,7 +188,7 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                       f"${sum(z['box_net_usd'] for z in control):,} |")
     report += ["", "Positive paper net from a handful of wins is not evidence of skill. See the luck check below.", ""]
     luck_rows=luck_check(all_records)
-    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()})
+    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()},PLAYER_METHODS)
     report += ["", "## Fallback watch — one original ticket per drawing", "",
                "Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are included. Each row uses the first saved ticket and its original first random control; alternatives are never counted. Grouping by formula version avoids combining distinct experiments. Fair-expected wins come from the exact digit-multiplicity odds of those tickets, not estimated predictive probabilities. **These results do not demonstrate an edge**, especially when examining a version after its early wins.", "",
                "| Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |",
