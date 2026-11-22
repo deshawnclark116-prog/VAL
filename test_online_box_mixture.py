@@ -19,6 +19,8 @@ class TestOnlineBoxMixture(unittest.TestCase):
 
     def test_no_future_observation_in_frozen_prediction(self):
         model = OnlineBoxMixture("pick3")
+        for i in range(100):
+            model.observe({"numbers": [1, 1, 9] if i % 2 else [1, 2, 3]})
         before = model.predict()
         old = dict(before["distribution"])
         old_weights = dict(model.log_weights)
