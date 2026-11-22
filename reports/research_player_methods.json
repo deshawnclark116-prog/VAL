@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T23:28:11.157471+00:00",
+  "generated_at": "2026-11-22T23:41:32.115172+00:00",
   "seed": 20261122,
   "rows": [
     {
@@ -103,6 +103,26 @@
       "verdict": "About the same as luck."
     },
     {
+      "game": "pick3",
+      "method": "player_ultimate",
+      "label": "Ultimate generator (all methods vote)",
+      "draws": 23763,
+      "box_hits": 146,
+      "box_expected": 142.57800000000518,
+      "straight_hits": 26,
+      "straight_expected": 23.76300000000606,
+      "random_box_hits": 107,
+      "first_draw": "1989-05-26T03:00:00+00:00",
+      "last_draw": "2026-11-22T18:59:00+00:00",
+      "box_ratio": 1.0240008977541746,
+      "box_luck_chance": 0.39827890060093407,
+      "box_adjusted_chance": 1.0,
+      "straight_ratio": 1.094137945545317,
+      "straight_luck_chance": 0.34972809018829687,
+      "straight_adjusted_chance": 1.0,
+      "verdict": "About the same as luck."
+    },
+    {
       "game": "pick4",
       "method": "player_ttt_columns",
       "label": "Tic-tac-toe: add each column",
@@ -159,7 +179,7 @@
       "box_adjusted_chance": 1.0,
       "straight_ratio": 2.605523710265271,
       "straight_luck_chance": 0.03012651131279398,
-      "straight_adjusted_chance": 0.9037953393838194,
+      "straight_adjusted_chance": 1.0,
       "verdict": "About the same as luck."
     },
     {
@@ -199,6 +219,26 @@
       "box_adjusted_chance": 1.0,
       "straight_ratio": 1.3027618551326354,
       "straight_luck_chance": 0.404703555124613,
+      "straight_adjusted_chance": 1.0,
+      "verdict": "About the same as luck."
+    },
+    {
+      "game": "pick4",
+      "method": "player_ultimate",
+      "label": "Ultimate generator (all methods vote)",
+      "draws": 23028,
+      "box_hits": 65,
+      "box_expected": 55.26720000002354,
+      "straight_hits": 1,
+      "straight_expected": 2.302800000000435,
+      "random_box_hits": 30,
+      "first_draw": "1991-10-05T03:00:00+00:00",
+      "last_draw": "2026-11-22T18:59:00+00:00",
+      "box_ratio": 1.1761044525500173,
+      "box_luck_chance": 0.1090791930797913,
+      "box_adjusted_chance": 1.0,
+      "straight_ratio": 0.4342539517108785,
+      "straight_luck_chance": 0.9000214883915533,
       "straight_adjusted_chance": 1.0,
       "verdict": "About the same as luck."
     },
@@ -296,6 +336,26 @@
       "last_draw": "2026-11-22T18:59:00+00:00",
       "box_ratio": 0.5611829737085817,
       "box_luck_chance": 0.8316903767036021,
+      "box_adjusted_chance": 1.0,
+      "straight_ratio": 0.0,
+      "straight_luck_chance": 1.0,
+      "straight_adjusted_chance": 1.0,
+      "verdict": "About the same as luck, or a bit worse."
+    },
+    {
+      "game": "pick5",
+      "method": "player_ultimate",
+      "label": "Ultimate generator (all methods vote)",
+      "draws": 2528,
+      "box_hits": 0,
+      "box_expected": 3.033599999999949,
+      "straight_hits": 0,
+      "straight_expected": 0.02527999999999914,
+      "random_box_hits": 3,
+      "first_draw": "2023-06-08T03:00:00+00:00",
+      "last_draw": "2026-11-22T18:59:00+00:00",
+      "box_ratio": 0.0,
+      "box_luck_chance": 1.0,
       "box_adjusted_chance": 1.0,
       "straight_ratio": 0.0,
       "straight_luck_chance": 1.0,
