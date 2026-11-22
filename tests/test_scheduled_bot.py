@@ -54,6 +54,8 @@ class DailyBotTests(unittest.TestCase):
                                 for p in p3["picks"] if not p3["model_meta"]["signal_gate_passed"]))
             self.assertEqual(len({tuple(sorted(p["numbers"])) for p in p3["picks"]}),1)
             self.assertIn('## Complete Any Order (Box) results',(output/'latest.md').read_text())
+            self.assertIn('## Luck check',(output/'latest.md').read_text())
+            self.assertIn('luck_check',json.loads((output/'analysis.json').read_text()))
             self.assertEqual(p3['target']['stream'],'Night')
             self.assertEqual(p3['training_latest']['stream'],'Day')
             self.assertEqual(datetime.fromisoformat(p3['target']['at']).astimezone(ET).date(),self.now.astimezone(ET).date())

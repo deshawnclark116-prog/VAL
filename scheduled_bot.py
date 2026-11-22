@@ -9,6 +9,7 @@ from pathlib import Path
 from val import ET, GAMES, Store, backtest, generate, rank_ensemble_picks, score, simulate, sync_game, draw_schedule, next_draw
 from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_picks as generate_digit_formula
 from val_box import random_box_picks, box_score_batch
+from val_luck import luck_check, luck_report
 
 
 def restore(store, path):
@@ -169,6 +170,9 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                       f"{exact('model')} | {exact('random')} | "
                       f"${sum(z['box_net_usd'] for z in model):,} | "
                       f"${sum(z['box_net_usd'] for z in control):,} |")
+    report += ["", "Positive paper net from a handful of wins is not evidence of skill. See the luck check below.", ""]
+    luck_rows=luck_check(all_records)
+    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()})
     report += ["", "## Fallback watch — one original ticket per drawing", "",
                "Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are included. Each row uses the first saved ticket and its original first random control; alternatives are never counted. Grouping by formula version avoids combining distinct experiments. Fair-expected wins come from the exact digit-multiplicity odds of those tickets, not estimated predictive probabilities. **These results do not demonstrate an edge**, especially when examining a version after its early wins.", "",
                "| Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |",
@@ -207,7 +211,7 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
     save_ledger(store,output/"ledger.json")
     (output/"latest.md").write_text("\n".join(report)+"\n")
     (output/"picks.json").write_text(json.dumps(dict(generated_at=now.isoformat(),batches=batches,failures=failures),indent=2)+"\n")
-    (output/"analysis.json").write_text(json.dumps(dict(generated_at=now.isoformat(),games=summaries),indent=2)+"\n")
+    (output/"analysis.json").write_text(json.dumps(dict(generated_at=now.isoformat(),games=summaries,luck_check=luck_rows),indent=2)+"\n")
     return dict(batches=len(batches),failures=failures)
 
 
