@@ -32,10 +32,37 @@ class TestOnlineBoxMixture(unittest.TestCase):
         self.assertNotEqual(model.log_weights, old_weights)
         self.assertEqual(model.machine.counts[(1, 1, 9)], 1)
 
+    def test_discounted_expert_update_is_past_only(self):
+        # Compare the exact prequential recurrence against the frozen
+        # probability of the observed complete unordered outcome.
+        for discount in (1.0, 0.95):
+            model = OnlineBoxMixture("pick3", discount=discount)
+            row = {"numbers": [1, 1, 9]}
+            model.predict()
+            frozen = {name: model.frozen[name][(1, 1, 9)]
+                      for name in EXPERTS}
+            model.observe(row)
+            for name in EXPERTS:
+                self.assertAlmostEqual(model.log_weights[name],
+                                       math.log(frozen[name]))
+            previous = dict(model.log_weights)
+            model.predict()
+            frozen2 = {name: model.frozen[name][(1, 1, 9)]
+                       for name in EXPERTS}
+            model.observe(row)
+            for name in EXPERTS:
+                self.assertAlmostEqual(
+                    model.log_weights[name],
+                    discount * previous[name] + math.log(frozen2[name]))
+            self.assertIsNone(model.frozen)
+
     def test_invalid_hyperparameters(self):
         for floor, rate in ((-0.1, .25), (1.1, .25), (.5, 0), (.5, 1.1)):
             with self.assertRaises(ValueError):
                 OnlineBoxMixture("pick3", floor, rate)
+        for discount in (0, -0.01, 1.01):
+            with self.assertRaises(ValueError):
+                OnlineBoxMixture("pick3", discount=discount)
 
 
 if __name__ == "__main__":
