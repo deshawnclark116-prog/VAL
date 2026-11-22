@@ -40,8 +40,8 @@ def synthetic(game, mechanism, seed, n=1800):
     return rows
 
 
-def evaluate(game, rows, start):
-    model = OnlineBoxMixture(game)
+def evaluate(game, rows, start, discount=1.0):
+    model = OnlineBoxMixture(game, discount=discount)
     stats = defaultdict(lambda: {"wins": 0, "fair_expected_wins": 0.,
                                   "log_gain": 0., "brier_delta": 0.})
     # Fair comparator is a fixed, deterministic, distinct all-unique Box
@@ -91,11 +91,16 @@ def main():
             rows = sorted(rows, key=lambda r: (r["date"], r["stream"] != "Day"))
             start = next((i for i,r in enumerate(rows)
                           if r["date"][:4] >= "2025" and i >= 500), len(rows))
-            output["results"][game] = evaluate(game, rows, start)
+            output["results"][game] = {
+                "cumulative": evaluate(game, rows, start, discount=1.0),
+                "discount_0995": evaluate(game, rows, start, discount=0.995),
+            }
         else:
             output["results"][game] = {
-                mechanism: evaluate(game, synthetic(game, mechanism, 431),
-                                    1000)
+                mechanism: {
+                    "cumulative": evaluate(game, synthetic(game, mechanism, 431), 1000, 1.0),
+                    "discount_0995": evaluate(game, synthetic(game, mechanism, 431), 1000, 0.995),
+                }
                 for mechanism in ("fair", "injected_box")}
         print(game, json.dumps(output["results"][game]), flush=True)
     OUTPUT.parent.mkdir(exist_ok=True)
