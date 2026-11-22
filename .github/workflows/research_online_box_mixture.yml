@@ -1,0 +1,29 @@
+name: Research online full Box mixture
+on:
+  push:
+    branches:
+      - research/full-box-online-mixture-20261121
+    paths:
+      - research_online_box_mixture.py
+      - .github/workflows/research_online_box_mixture.yml
+  workflow_dispatch:
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install 'numpy>=1.26,<3' 'scikit-learn>=1.5,<2'
+      - name: Synthetic fair and injected-bias prequential comparison
+        run: python research_online_box_mixture.py --mode synthetic
+      - name: Save research artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: online-box-mixture-synthetic
+          path: reports/research_online_box_mixture.json
+          if-no-files-found: warn
