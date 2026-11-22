@@ -13,15 +13,19 @@ from val_box import digits_key
 EXPERTS = ("fair", "pooled", "exact_bag", "pair_shape")
 FAIR_FLOOR = 0.5
 LEARNING_RATE = 0.25
+# Research alternative: forgetting prevents ancient expert evidence from
+# permanently dominating when a genuine generating mechanism changes.
+DEFAULT_DISCOUNT = 1.0
 
 
 class OnlineBoxMixture:
-    def __init__(self, game, fair_floor=FAIR_FLOOR, learning_rate=LEARNING_RATE):
-        if not 0 <= fair_floor <= 1 or not 0 < learning_rate <= 1:
+    def __init__(self, game, fair_floor=FAIR_FLOOR, learning_rate=LEARNING_RATE, discount=DEFAULT_DISCOUNT):
+        if not 0 <= fair_floor <= 1 or not 0 < learning_rate <= 1 or not 0 < discount <= 1:
             raise ValueError("Invalid mixture parameters")
         self.machine = BayesianBox(game)
         self.fair_floor = fair_floor
         self.learning_rate = learning_rate
+        self.discount = discount
         self.log_weights = {name: 0.0 for name in EXPERTS}
         self.frozen = None
         self.last_distribution = None
@@ -52,7 +56,8 @@ class OnlineBoxMixture:
         if self.frozen is not None:
             actual = digits_key(row["numbers"])
             for name in EXPERTS:
-                self.log_weights[name] += log(self.frozen[name][actual])
+                self.log_weights[name] = (self.discount * self.log_weights[name]
+                                          + log(self.frozen[name][actual]))
             self.frozen = None
         self.machine.observe(row)
 
