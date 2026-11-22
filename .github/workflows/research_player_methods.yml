@@ -6,6 +6,7 @@ on:
     paths:
       - 'research_player_methods.py'
       - 'val_player_methods.py'
+      - 'val_ultimate.py'
       - '.github/workflows/research_player_methods.yml'
   workflow_dispatch:
 

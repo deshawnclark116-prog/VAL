@@ -30,7 +30,7 @@ class ResearchPlayerMethodsTests(unittest.TestCase):
 
     def test_random_history_looks_like_luck(self):
         rows = judge(evaluate("pick3", history(3, 3000)))
-        self.assertEqual(len(rows), 5)
+        self.assertEqual(len(rows), 6)
         for r in rows:
             self.assertEqual(r["draws"], 2997)
             self.assertGreater(r["box_expected"], 0)

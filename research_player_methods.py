@@ -28,6 +28,7 @@ from val import GAMES, Store, sync_game
 from val_box import fair_any_order_probability, is_any_order_win
 from val_luck import one_in
 from val_player_methods import METHODS, player_pick
+from val_ultimate import HOT_WINDOW, LABEL as ULTIMATE_LABEL, VERSION as ULTIMATE_VERSION, ultimate_digit_pick
 
 DIGIT_GAMES = ("pick3", "pick4", "pick5")
 SEED = 20261122
@@ -50,13 +51,16 @@ def evaluate(game, history, seed=SEED):
     rng = random.Random(f"{seed}:{game}")
     rows = {m: dict(game=game, method=m, label=label, draws=0, box_hits=0, box_expected=0.0,
                     straight_hits=0, straight_expected=0.0, random_box_hits=0)
-            for m, label in METHODS.items()}
+            for m, label in {**METHODS, ULTIMATE_VERSION: ULTIMATE_LABEL}.items()}
     for i in range(width, len(history)):
         past, actual = history[i - width:i], history[i]["numbers"]  # methods only use the last few results
         control = [rng.randrange(10) for _ in range(width)]
         control_box_win = is_any_order_win(game, control, actual)
         for method, row in rows.items():
-            pick = player_pick(method, past, width)["numbers"]
+            if method == ULTIMATE_VERSION:
+                pick = ultimate_digit_pick(history[max(0, i - HOT_WINDOW):i], width)["numbers"]
+            else:
+                pick = player_pick(method, past, width)["numbers"]
             row["draws"] += 1
             row["straight_hits"] += pick == list(actual)
             row["straight_expected"] += 10 ** -width

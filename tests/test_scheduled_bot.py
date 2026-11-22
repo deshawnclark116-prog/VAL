@@ -57,7 +57,8 @@ class DailyBotTests(unittest.TestCase):
             self.assertIn('## Luck check',(output/'latest.md').read_text())
             self.assertIn('## Popular player methods being tested',(output/'latest.md').read_text())
             saved=json.loads((output/'ledger.json').read_text())['predictions']
-            self.assertEqual(sum(r['method'].startswith('player_') for r in saved),15)
+            self.assertEqual(sum(r['method'].startswith('player_') for r in saved),18)
+            self.assertIn('## Ultimate generator picks',(output/'latest.md').read_text())
             self.assertIn('luck_check',json.loads((output/'analysis.json').read_text()))
             self.assertEqual(p3['target']['stream'],'Night')
             self.assertEqual(p3['training_latest']['stream'],'Day')
@@ -83,7 +84,7 @@ class DailyBotTests(unittest.TestCase):
         self.assertIsNone(old['result'])
         self.assertIsNone(challenger['result'])
         self.assertEqual(len([x for x in saved if not x['method'].startswith('player_')]),2)
-        self.assertEqual(len([x for x in saved if x['method'].startswith('player_')]),5)
+        self.assertEqual(len([x for x in saved if x['method'].startswith('player_')]),6)
         self.assertIn('**Paper:**',(output/'latest.md').read_text())
         visible=next(b for b in json.loads((output/'picks.json').read_text())['batches'] if b['game']=='pick3')
         self.assertEqual(len(visible['picks']),1)

@@ -11,6 +11,7 @@ from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_pick
 from val_box import random_box_picks, box_score_batch
 from val_luck import luck_check, luck_report
 from val_player_methods import METHODS as PLAYER_METHODS, is_player_method, player_pick
+from val_ultimate import LABEL as ULTIMATE_LABEL, VERSION as ULTIMATE_VERSION, ultimate_pick
 
 
 def restore(store, path):
@@ -88,6 +89,10 @@ def fallback_scorecard(records):
     return [grouped[k] for k in sorted(grouped)]
 
 
+def target_label_for(target):
+    return datetime.fromisoformat(target["at"]).astimezone(ET).strftime("%a %b %d, %I:%M %p")
+
+
 def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
     if count != 1:
         raise ValueError("Live VAL supports exactly one prediction and one random control per draw")
@@ -102,7 +107,7 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
               "Picks use previous completed results from ALL sessions of the same game: today's Day result is included when preparing Night picks. No future draw or other game's results are used. Batches stay fixed for their target; refreshes do not replace losing picks.", "",
               "**Exactly one prediction and one independent random control per upcoming game draw.** Pick 3/4/5 target complete Any Order (Box) digit sets, not partial-position matches. Box v4 evaluates cumulative and recent evidence; without a proven signal it returns one clearly labeled random paper Box selection, not an asserted edge. All tickets are hypothetical; none are purchased. Older multi-ticket batches are preserved unchanged in the ledger, but only each original first ticket is shown and counted in the one-pick comparison. Missing latest results withhold new picks.", "",
               "| Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |", "| --- | --- | --- | --- | --- | --- | --- |"]
-    failures=[]; batches=[]; summaries=[]; all_records=[]; player_rows=[]
+    failures=[]; batches=[]; summaries=[]; all_records=[]; player_rows=[]; ultimate_rows=[]
     for game,g in GAMES.items():
         if "id" not in g: continue
         try:
@@ -143,6 +148,19 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                                  model_meta=model_meta)
                 existing=next(r for r in store.ledger(game) if r["id"]==pid)
             if g.get("digits"):
+                # Ultimate generator: saved once per target and tracked like every method.
+                saved=next((r for r in store.ledger(game) if r.get("target")==target and r["method"]==ULTIMATE_VERSION),None)
+                if saved is None:
+                    pick,_=ultimate_pick(game,history)
+                    u_id=store.record(game,stream,ULTIMATE_VERSION,[pick],random_box_picks(game,1),target=target,
+                                      training_latest=history[-1],created=now,
+                                      model_meta=dict(formula_version=ULTIMATE_VERSION,player_method=True))
+                    saved=next(r for r in store.ledger(game) if r["id"]==u_id)
+                ultimate_rows.append(f"| {g['name']} | {target_label_for(target)} | **`{selection(saved['picks'][0])}`** | Box · {saved['picks'][0]['box_ways']}-way | All methods voted; top distinct digits (most Box ways) |")
+            else:
+                pick,how=ultimate_pick(game,history)
+                ultimate_rows.append(f"| {g['name']} | {target_label_for(target)} | **`{selection(pick)}`** | — | {how} |")
+            if g.get("digits"):
                 # Popular player methods: separate paper experiments for the same target.
                 for pm,label in PLAYER_METHODS.items():
                     saved=next((r for r in store.ledger(game) if r.get("target")==target and r["method"]==pm),None)
@@ -167,6 +185,11 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
         except Exception as exc:
             failures.append(dict(game=game,error=safe(exc)))
         all_records.extend(dict(game=game,**r) for r in store.ledger(game))
+    report[report.index("## Picks"):report.index("## Picks")] = [
+        "## Ultimate generator picks", "",
+        "One pick per game for the next drawing. Pick 3/4/5: every method (tic-tac-toe, adding, mirror, hot and due digits) votes, and the top different digits become the pick, which gives the most ways to win Box. Other games: numbers spread across the range, avoiding birthdays, runs and one-decade picks, so a win is less likely to be split. Pick 3/4/5 ultimate picks are tracked in the luck check below.", "",
+        "| Game | Drawing (ET) | Pick | Bet | How it was made |", "| --- | --- | --- | --- | --- |",
+        *(ultimate_rows or ["| — | — | — | — | — |"]), ""]
     report += ["", "## Popular player methods being tested", "",
                "These are well-known player \"adding\" systems, not proven formulas. Each one makes a paper pick for the same next drawing, next to its own random pick, so the luck check can show whether any of them beats random. Tic-tac-toe stacks the last results into a grid and adds the numbers, keeping the last digit (17 becomes 7).", "",
                "| Game | Method | Batch | Method pick | Random pick |", "| --- | --- | --- | --- | --- |"]
@@ -188,7 +211,7 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                       f"${sum(z['box_net_usd'] for z in control):,} |")
     report += ["", "Positive paper net from a handful of wins is not evidence of skill. See the luck check below.", ""]
     luck_rows=luck_check(all_records)
-    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()},PLAYER_METHODS)
+    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()},{**PLAYER_METHODS,ULTIMATE_VERSION:ULTIMATE_LABEL})
     report += ["", "## Fallback watch — one original ticket per drawing", "",
                "Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are included. Each row uses the first saved ticket and its original first random control; alternatives are never counted. Grouping by formula version avoids combining distinct experiments. Fair-expected wins come from the exact digit-multiplicity odds of those tickets, not estimated predictive probabilities. **These results do not demonstrate an edge**, especially when examining a version after its early wins.", "",
                "| Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |",

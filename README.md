@@ -23,6 +23,10 @@ Actions must be enabled and allow the workflow's `contents: write` permission to
 
 The report's **Luck check** table asks, for each Pick 3/4/5 formula, how surprising its Box wins would be if the picks were completely random. The chance is adjusted for the number of formulas watched at once, counting starts from each formula's first saved pick, and only the original first ticket counts. It also shows roughly how many settled picks are needed before a formula that truly doubled the fair win rate could be told apart from luck. Code: [val_luck.py](val_luck.py).
 
+## Ultimate generator
+
+The top of each report shows one **ultimate generator** pick per game. For Pick 3/4/5, every player method plus hot and due digits votes, and the top distinct digits become the pick (the most Box ways). For other games, numbers are spread across the range, avoiding birthdays, runs and one-decade picks. Pick 3/4/5 ultimate picks are saved and tracked in the luck check. Code: [val_ultimate.py](val_ultimate.py).
+
 ## Popular player methods
 
 Pick 3/4/5 also track five well-known player "adding" systems as separate paper experiments, each with its own random pick for the same drawing: tic-tac-toe columns, rows and diagonals (stack the last results into a grid, add, keep the last digit), adding the last two results, and mirroring the last result (+5). They are not proven formulas. They appear in the luck check and are kept out of the main Box scoreboard. Code: [val_player_methods.py](val_player_methods.py).
