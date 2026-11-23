@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-11-23T00:04:22.990744+00:00",
+  "rows": [
+    {
+      "game": "pick3",
+      "rule": "drawings before 2016",
+      "weightings_tried": 16383,
+      "best_weights": {
+        "Tic-tac-toe: add each column": 0,
+        "Tic-tac-toe: add each row": 3,
+        "Tic-tac-toe: add each diagonal": 3,
+        "Add the last two results": 2,
+        "Mirror the last result (add 5)": 1,
+        "Hot digits": 2,
+        "Due digits": 0
+      },
+      "train_draws": 15708,
+      "train_from": "1989-09-16",
+      "train_to": "2015-12-31",
+      "train_hits": 130,
+      "train_luck": 94.248,
+      "test_draws": 7958,
+      "test_from": "2016-01-01",
+      "test_to": "2026-11-22",
+      "test_tuned_hits": 48,
+      "test_plain_hits": 41,
+      "test_luck": 47.748,
+      "test_luck_chance": 1.0
+    },
+    {
+      "game": "pick4",
+      "rule": "drawings before 2016",
+      "weightings_tried": 16383,
+      "best_weights": {
+        "Tic-tac-toe: add each column": 0,
+        "Tic-tac-toe: add each row": 2,
+        "Tic-tac-toe: add each diagonal": 1,
+        "Add the last two results": 3,
+        "Mirror the last result (add 5)": 0,
+        "Hot digits": 3,
+        "Due digits": 0
+      },
+      "train_draws": 14974,
+      "train_from": "1992-01-26",
+      "train_to": "2015-12-31",
+      "train_hits": 61,
+      "train_luck": 35.937599999999996,
+      "test_draws": 7958,
+      "test_from": "2016-01-01",
+      "test_to": "2026-11-22",
+      "test_tuned_hits": 27,
+      "test_plain_hits": 21,
+      "test_luck": 19.0992,
+      "test_luck_chance": 0.15311700432259612
+    },
+    {
+      "game": "pick5",
+      "rule": "first 70% of drawings",
+      "weightings_tried": 16383,
+      "best_weights": {
+        "Tic-tac-toe: add each column": 0,
+        "Tic-tac-toe: add each row": 1,
+        "Tic-tac-toe: add each diagonal": 0,
+        "Add the last two results": 1,
+        "Mirror the last result (add 5)": 0,
+        "Hot digits": 2,
+        "Due digits": 2
+      },
+      "train_draws": 1703,
+      "train_from": "2023-07-25",
+      "train_to": "2025-11-22",
+      "train_hits": 4,
+      "train_luck": 2.0435999999999996,
+      "test_draws": 730,
+      "test_from": "2025-11-23",
+      "test_to": "2026-11-22",
+      "test_tuned_hits": 0,
+      "test_plain_hits": 0,
+      "test_luck": 0.8759999999999999,
+      "test_luck_chance": 1.0
+    }
+  ]
+}
