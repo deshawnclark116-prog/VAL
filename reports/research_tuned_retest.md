@@ -1,6 +1,6 @@
 # Tuned ultimate generator — retest
 
-Generated: 2026-11-23T00:33:18.106091+00:00
+Generated: 2026-11-23T02:05:35.303717+00:00
 
 **Part 1, rolling rounds:** each round re-tunes using only drawings before the test years, then scores the tuned version on those years. **Part 2, steadiness:** the version tuned before 2016 (the one that looked a little good on Pick 4) is checked on each stretch of 2016–now separately. "Luck would give" is what any all-different-digit pick gets by chance. Real results only.
 
