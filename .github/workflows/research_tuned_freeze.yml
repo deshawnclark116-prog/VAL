@@ -1,0 +1,43 @@
+name: VAL freeze tuned Pick 4 weights
+
+on:
+  push:
+    branches: [main, ccr-89b396fc-aaip30]
+    paths:
+      - 'research_tuned_freeze.py'
+      - '.github/workflows/research_tuned_freeze.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: val-tuned-freeze
+  cancel-in-progress: false
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numpy
+        run: python -m pip install 'numpy>=1.26,<3' 'scikit-learn>=1.5,<2'
+      - name: Validate all code
+        run: python -m unittest discover -s tests -v
+      - name: Tune once on all real Pick 4 history and freeze the weights
+        run: |
+          if [ -f research/tuned_pick4_weights.json ]; then echo 'Already frozen'; exit 0; fi
+          python research_tuned_freeze.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit the frozen weights, to the branch that ran
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/tuned_pick4_weights.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze tuned Pick 4 weights'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"

@@ -78,3 +78,48 @@ def ultimate_pick(game, history):
     if GAMES[game].get("digits"):
         return ultimate_digit_pick(history, GAMES[game]["size"]), "All methods voted; top distinct digits (most Box ways)"
     return spread_pick(game), "Spread across the range; avoids birthdays, runs and one-decade picks"
+
+
+TUNED_VERSION = "player_tuned_pick4"
+TUNED_LABEL = "Tuned Pick 4 generator (frozen weights)"
+TUNED_WEIGHTS_FILE = "research/tuned_pick4_weights.json"
+SOURCE_ORDER = [*METHODS, "hot", "due"]
+
+
+def source_digits(history, width):
+    """Digits each vote source picks from the last 100 results, plus tie-break scores."""
+    window = history[-HOT_WINDOW:]
+    out = {m: set(player_pick(m, window, width)["numbers"]) for m in METHODS}
+    recent = Counter(d for r in window for d in r["numbers"])
+    out["hot"] = {d for d, _ in recent.most_common(width)}
+    last_seen = {}
+    for k, r in enumerate(window):
+        for d in r["numbers"]:
+            last_seen[d] = k
+    out["due"] = set(sorted(range(10), key=lambda d: last_seen.get(d, -1))[:width])
+    tiebreak = [recent[d] * 1e-3 - d * 1e-6 for d in range(10)]
+    return out, tiebreak
+
+
+def weighted_digit_pick(history, width, weights):
+    """Ultimate pick with each vote source weighted (weights listed in SOURCE_ORDER)."""
+    if len(history) < width:
+        raise ValueError(f"Need at least {width} completed results")
+    chosen, tiebreak = source_digits(history, width)
+    scores = [sum(w for s, w in zip(SOURCE_ORDER, weights) if d in chosen[s]) + tiebreak[d] for d in range(10)]
+    digits = sorted(sorted(range(10), key=lambda d: -scores[d])[:width])
+    return dict(numbers=digits, bonus=None, play_type="any_order", box_ways=box_ways(digits),
+                rank=1, role="primary")
+
+
+def load_tuned_weights(path=TUNED_WEIGHTS_FILE):
+    import json
+    from pathlib import Path
+    p = Path(__file__).resolve().parent / path
+    if not p.exists():
+        return None
+    data = json.loads(p.read_text())
+    if data.get("sources") != SOURCE_ORDER:
+        raise ValueError("Tuned weights file does not match the current vote sources")
+    return data
+

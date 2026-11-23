@@ -11,7 +11,8 @@ from val_digit_formula_v2 import VERSION as DIGIT_FORMULA_VERSION, generate_pick
 from val_box import random_box_picks, box_score_batch
 from val_luck import luck_check, luck_report
 from val_player_methods import METHODS as PLAYER_METHODS, is_player_method, player_pick
-from val_ultimate import LABEL as ULTIMATE_LABEL, VERSION as ULTIMATE_VERSION, ultimate_pick
+from val_ultimate import (LABEL as ULTIMATE_LABEL, VERSION as ULTIMATE_VERSION, ultimate_pick,
+                          TUNED_LABEL, TUNED_VERSION, load_tuned_weights, weighted_digit_pick)
 
 
 def restore(store, path):
@@ -157,6 +158,17 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                                       model_meta=dict(formula_version=ULTIMATE_VERSION,player_method=True))
                     saved=next(r for r in store.ledger(game) if r["id"]==u_id)
                 ultimate_rows.append(f"| {g['name']} | {target_label_for(target)} | **`{selection(saved['picks'][0])}`** | Box · {saved['picks'][0]['box_ways']}-way | All methods voted; top distinct digits (most Box ways) |")
+                tuned=load_tuned_weights() if game=="pick4" else None
+                if tuned:
+                    saved=next((r for r in store.ledger(game) if r.get("target")==target and r["method"]==TUNED_VERSION),None)
+                    if saved is None:
+                        pick=weighted_digit_pick(history,g["size"],tuned["weights"])
+                        t_id=store.record(game,stream,TUNED_VERSION,[pick],random_box_picks(game,1),target=target,
+                                          training_latest=history[-1],created=now,
+                                          model_meta=dict(formula_version=TUNED_VERSION,player_method=True,
+                                                          weights=tuned["weights"],frozen_at=tuned["frozen_at"]))
+                        saved=next(r for r in store.ledger(game) if r["id"]==t_id)
+                    ultimate_rows.append(f"| {g['name']} | {target_label_for(target)} | **`{selection(saved['picks'][0])}`** | Box · {saved['picks'][0]['box_ways']}-way | Tuned Pick 4 (frozen weights); beat luck 4 of 5 rounds on real history, now tracked live |")
             else:
                 pick,how=ultimate_pick(game,history)
                 ultimate_rows.append(f"| {g['name']} | {target_label_for(target)} | **`{selection(pick)}`** | — | {how} |")
@@ -211,7 +223,7 @@ def run(store, output, count=1, trials=1000, now=None, syncer=sync_game):
                       f"${sum(z['box_net_usd'] for z in control):,} |")
     report += ["", "Positive paper net from a handful of wins is not evidence of skill. See the luck check below.", ""]
     luck_rows=luck_check(all_records)
-    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()},{**PLAYER_METHODS,ULTIMATE_VERSION:ULTIMATE_LABEL})
+    report += luck_report(luck_rows,{k:v["name"] for k,v in GAMES.items()},{**PLAYER_METHODS,ULTIMATE_VERSION:ULTIMATE_LABEL,TUNED_VERSION:TUNED_LABEL})
     report += ["", "## Fallback watch — one original ticket per drawing", "",
                "Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are included. Each row uses the first saved ticket and its original first random control; alternatives are never counted. Grouping by formula version avoids combining distinct experiments. Fair-expected wins come from the exact digit-multiplicity odds of those tickets, not estimated predictive probabilities. **These results do not demonstrate an edge**, especially when examining a version after its early wins.", "",
                "| Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |",
