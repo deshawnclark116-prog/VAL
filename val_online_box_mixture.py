@@ -2,7 +2,7 @@
 
 Each expert is scored on the *next* complete multiset BEFORE observing it.
 The fair component retains at least half of all predictive mass. Expert
-weights use sequential log likelihood, with no target leakage. This is not
+weights use sequential log likelihood RATIO to the fair model, with no target leakage. This is not
 an assertion of a real lottery edge or an approved production model.
 """
 from __future__ import annotations
@@ -57,7 +57,7 @@ class OnlineBoxMixture:
             actual = digits_key(row["numbers"])
             for name in EXPERTS:
                 self.log_weights[name] = (self.discount * self.log_weights[name]
-                                          + log(self.frozen[name][actual]))
+                                          + log(self.frozen[name][actual] / self.frozen["fair"][actual]))
             self.frozen = None
         self.machine.observe(row)
 
