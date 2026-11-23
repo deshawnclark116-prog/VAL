@@ -42,5 +42,10 @@ jobs:
           git add reports/prospective_pooled_full_box_v2.json reports/prospective_pooled_full_box_v2.md
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Freeze and grade future pooled v2 full Any Order predictions'
+          # The validity audit generates other tracked reports. They are not part
+          # of this immutable ledger commit and block git pull --rebase if dirty.
+          # Discard only uncommitted tracked worktree changes after the ledger
+          # has been committed; never reset the committed prospective records.
+          git restore --worktree .
           git pull --rebase origin main
           git push origin HEAD:main
