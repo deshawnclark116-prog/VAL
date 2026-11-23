@@ -1,0 +1,237 @@
+{
+  "generated_at": "2026-11-23T00:33:18.106091+00:00",
+  "rows": [
+    {
+      "game": "pick3",
+      "rounds": [
+        {
+          "tuned_before": "2001",
+          "test": "2001\u20132005",
+          "draws": 3131,
+          "hits": 16,
+          "luck": 18.786,
+          "weights": {
+            "Tic-tac-toe: add each column": 1,
+            "Tic-tac-toe: add each row": 2,
+            "Tic-tac-toe: add each diagonal": 1,
+            "Add the last two results": 0,
+            "Mirror the last result (add 5)": 1,
+            "Hot digits": 1,
+            "Due digits": 0
+          }
+        },
+        {
+          "tuned_before": "2006",
+          "test": "2006\u20132010",
+          "draws": 3544,
+          "hits": 18,
+          "luck": 21.264,
+          "weights": {
+            "Tic-tac-toe: add each column": 2,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 1,
+            "Add the last two results": 0,
+            "Mirror the last result (add 5)": 0,
+            "Hot digits": 3,
+            "Due digits": 0
+          }
+        },
+        {
+          "tuned_before": "2011",
+          "test": "2011\u20132015",
+          "draws": 3652,
+          "hits": 23,
+          "luck": 21.912,
+          "weights": {
+            "Tic-tac-toe: add each column": 0,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 3,
+            "Add the last two results": 2,
+            "Mirror the last result (add 5)": 1,
+            "Hot digits": 2,
+            "Due digits": 0
+          }
+        },
+        {
+          "tuned_before": "2016",
+          "test": "2016\u20132020",
+          "draws": 3654,
+          "hits": 11,
+          "luck": 21.924,
+          "weights": {
+            "Tic-tac-toe: add each column": 0,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 3,
+            "Add the last two results": 2,
+            "Mirror the last result (add 5)": 1,
+            "Hot digits": 2,
+            "Due digits": 0
+          }
+        },
+        {
+          "tuned_before": "2021",
+          "test": "2021\u20132026",
+          "draws": 4304,
+          "hits": 33,
+          "luck": 25.824,
+          "weights": {
+            "Tic-tac-toe: add each column": 1,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 3,
+            "Add the last two results": 3,
+            "Mirror the last result (add 5)": 2,
+            "Hot digits": 3,
+            "Due digits": 0
+          }
+        }
+      ],
+      "stretches": [
+        {
+          "test": "2016\u20132018",
+          "draws": 2192,
+          "hits": 9,
+          "luck": 13.152000000000001
+        },
+        {
+          "test": "2019\u20132021",
+          "draws": 2192,
+          "hits": 7,
+          "luck": 13.152000000000001
+        },
+        {
+          "test": "2022\u20132024",
+          "draws": 2192,
+          "hits": 25,
+          "luck": 13.152000000000001
+        },
+        {
+          "test": "2025\u20132026",
+          "draws": 1382,
+          "hits": 7,
+          "luck": 8.292
+        }
+      ],
+      "total_hits": 101,
+      "total_luck": 109.71,
+      "luck_chance": 1.0,
+      "rounds_beating_luck": 2,
+      "stretches_beating_luck": 1
+    },
+    {
+      "game": "pick4",
+      "rounds": [
+        {
+          "tuned_before": "2001",
+          "test": "2001\u20132005",
+          "draws": 3131,
+          "hits": 7,
+          "luck": 7.514399999999999,
+          "weights": {
+            "Tic-tac-toe: add each column": 1,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 1,
+            "Add the last two results": 2,
+            "Mirror the last result (add 5)": 0,
+            "Hot digits": 3,
+            "Due digits": 1
+          }
+        },
+        {
+          "tuned_before": "2006",
+          "test": "2006\u20132010",
+          "draws": 3546,
+          "hits": 15,
+          "luck": 8.510399999999999,
+          "weights": {
+            "Tic-tac-toe: add each column": 1,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 0,
+            "Add the last two results": 2,
+            "Mirror the last result (add 5)": 0,
+            "Hot digits": 3,
+            "Due digits": 1
+          }
+        },
+        {
+          "tuned_before": "2011",
+          "test": "2011\u20132015",
+          "draws": 3652,
+          "hits": 12,
+          "luck": 8.7648,
+          "weights": {
+            "Tic-tac-toe: add each column": 1,
+            "Tic-tac-toe: add each row": 3,
+            "Tic-tac-toe: add each diagonal": 0,
+            "Add the last two results": 2,
+            "Mirror the last result (add 5)": 0,
+            "Hot digits": 3,
+            "Due digits": 1
+          }
+        },
+        {
+          "tuned_before": "2016",
+          "test": "2016\u20132020",
+          "draws": 3654,
+          "hits": 11,
+          "luck": 8.769599999999999,
+          "weights": {
+            "Tic-tac-toe: add each column": 0,
+            "Tic-tac-toe: add each row": 2,
+            "Tic-tac-toe: add each diagonal": 1,
+            "Add the last two results": 3,
+            "Mirror the last result (add 5)": 0,
+            "Hot digits": 3,
+            "Due digits": 0
+          }
+        },
+        {
+          "tuned_before": "2021",
+          "test": "2021\u20132026",
+          "draws": 4304,
+          "hits": 14,
+          "luck": 10.3296,
+          "weights": {
+            "Tic-tac-toe: add each column": 0,
+            "Tic-tac-toe: add each row": 2,
+            "Tic-tac-toe: add each diagonal": 0,
+            "Add the last two results": 2,
+            "Mirror the last result (add 5)": 0,
+            "Hot digits": 3,
+            "Due digits": 1
+          }
+        }
+      ],
+      "stretches": [
+        {
+          "test": "2016\u20132018",
+          "draws": 2192,
+          "hits": 3,
+          "luck": 5.2608
+        },
+        {
+          "test": "2019\u20132021",
+          "draws": 2192,
+          "hits": 10,
+          "luck": 5.2608
+        },
+        {
+          "test": "2022\u20132024",
+          "draws": 2192,
+          "hits": 7,
+          "luck": 5.2608
+        },
+        {
+          "test": "2025\u20132026",
+          "draws": 1382,
+          "hits": 7,
+          "luck": 3.3167999999999997
+        }
+      ],
+      "total_hits": 59,
+      "total_luck": 43.888799999999996,
+      "luck_chance": 0.03387934649156987,
+      "rounds_beating_luck": 4,
+      "stretches_beating_luck": 3
+    }
+  ]
+}
