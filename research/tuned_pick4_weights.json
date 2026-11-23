@@ -1,0 +1,27 @@
+{
+  "game": "pick4",
+  "frozen_at": "2026-11-23T01:55:23.637033+00:00",
+  "sources": [
+    "player_ttt_columns",
+    "player_ttt_rows",
+    "player_ttt_diagonals",
+    "player_add_last_two",
+    "player_mirror",
+    "hot",
+    "due"
+  ],
+  "weights": [
+    0,
+    2,
+    1,
+    3,
+    0,
+    3,
+    0
+  ],
+  "tuned_on_draws": 22932,
+  "tuned_from": "1991-10-01T03:00:00+00:00",
+  "tuned_to": "2026-11-22T18:59:00+00:00",
+  "tuned_hits": 88,
+  "weightings_tried": 16383
+}
