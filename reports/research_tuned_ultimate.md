@@ -1,6 +1,6 @@
 # Tuned ultimate generator — tuned on old results, tested on new ones
 
-Generated: 2026-11-23T00:04:22.990744+00:00
+Generated: 2026-11-23T01:56:52.066698+00:00
 
 The computer tried every way of weighting the ultimate generator's 7 vote sources (5 methods, hot digits, due digits; each weight 0 to 3) on OLD real drawings and kept the one with the most Box hits. Then that tuned version was tested on NEWER real drawings it never saw. "Luck would give" is what any all-different-digit pick gets by pure chance.
 
