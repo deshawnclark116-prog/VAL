@@ -57,7 +57,8 @@ class DailyBotTests(unittest.TestCase):
             self.assertIn('## Luck check',(output/'latest.md').read_text())
             self.assertIn('## Popular player methods being tested',(output/'latest.md').read_text())
             saved=json.loads((output/'ledger.json').read_text())['predictions']
-            self.assertEqual(sum(r['method'].startswith('player_') for r in saved),18)
+            self.assertEqual(sum(r['method'].startswith('player_') for r in saved),19)
+            self.assertEqual(sum(r['method']=='player_tuned_pick4' for r in saved),1)
             self.assertIn('## Ultimate generator picks',(output/'latest.md').read_text())
             self.assertIn('luck_check',json.loads((output/'analysis.json').read_text()))
             self.assertEqual(p3['target']['stream'],'Night')
