@@ -1,0 +1,42 @@
+name: VAL tuned ultimate retest on real history
+
+on:
+  push:
+    branches: [main, ccr-89b396fc-aaip30]
+    paths:
+      - 'research_tuned_retest.py'
+      - 'val_ultimate.py'
+      - '.github/workflows/research_tuned_ultimate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: val-tuned-retest
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numpy
+        run: python -m pip install 'numpy>=1.26,<3' 'scikit-learn>=1.5,<2'
+      - name: Validate all code
+        run: python -m unittest discover -s tests -v
+      - name: Retest the tuned generator on real results
+        run: python research_tuned_retest.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit research outputs only, to the branch that ran
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/research_tuned_retest.md reports/research_tuned_retest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish VAL tuned ultimate retest'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
