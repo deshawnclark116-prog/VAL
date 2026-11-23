@@ -17,6 +17,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - name: Use the newest version of the branch (also on re-runs)
+        run: |
+          git fetch origin "$GITHUB_REF_NAME"
+          git checkout -B "$GITHUB_REF_NAME" "origin/$GITHUB_REF_NAME"
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -29,5 +33,5 @@ jobs:
           git add reports/preview_picks.md
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Preview new generator picks'
-          git pull --rebase origin "$GITHUB_REF_NAME"
+          git pull --rebase -X theirs origin "$GITHUB_REF_NAME"
           git push origin HEAD:"$GITHUB_REF_NAME"
