@@ -44,7 +44,7 @@ class TestOnlineBoxMixture(unittest.TestCase):
             model.observe(row)
             for name in EXPERTS:
                 self.assertAlmostEqual(model.log_weights[name],
-                                       math.log(frozen[name]))
+                                       math.log(frozen[name] / frozen["fair"]))
             previous = dict(model.log_weights)
             model.predict()
             frozen2 = {name: model.frozen[name][(1, 1, 9)]
@@ -53,8 +53,18 @@ class TestOnlineBoxMixture(unittest.TestCase):
             for name in EXPERTS:
                 self.assertAlmostEqual(
                     model.log_weights[name],
-                    discount * previous[name] + math.log(frozen2[name]))
+                    discount * previous[name] + math.log(frozen2[name] / frozen2["fair"]))
             self.assertIsNone(model.frozen)
+
+    def test_fair_expert_evidence_stays_zero_after_many_draws(self):
+        # Log likelihood ratios avoid accumulating thousands of common
+        # negative log probabilities that have no effect on model ranking.
+        model = OnlineBoxMixture("pick3", discount=0.995)
+        for i in range(120):
+            model.predict()
+            model.observe({"numbers": [i % 10, (i + 1) % 10, (i + 2) % 10]})
+        self.assertAlmostEqual(model.log_weights["fair"], 0.0, places=12)
+        self.assertTrue(all(math.isfinite(v) for v in model.log_weights.values()))
 
     def test_invalid_hyperparameters(self):
         for floor, rate in ((-0.1, .25), (1.1, .25), (.5, 0), (.5, 1.1)):
