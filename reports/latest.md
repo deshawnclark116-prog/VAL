@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-23T07:50:08.164272-05:00 · Eastern time
+Updated: 2026-11-23T19:54:30.991709-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,9 +14,9 @@ Picks use previous completed results from ALL sessions of the same game: today's
 
 | Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-23T13:59:00-05:00 | Day | #135 | **Paper:** `5 6 7` | 2026-11-22T23:00:00-05:00 | `8 7 7` (Night) |
-| Pick 4 | 2026-11-23T13:59:00-05:00 | Day | #136 | **Paper:** `0 1 3 5` | 2026-11-22T23:00:00-05:00 | `1 3 9 0` (Night) |
-| Pick 5 | 2026-11-23T13:59:00-05:00 | Day | #137 | **Paper:** `0 2 4 5 9` | 2026-11-22T23:00:00-05:00 | `8 9 7 0 0` (Night) |
+| Pick 3 | 2026-11-23T23:00:00-05:00 | Night | #140 | **Paper:** `1 5 6` | 2026-11-23T13:59:00-05:00 | `6 5 1` (Day) |
+| Pick 4 | 2026-11-23T23:00:00-05:00 | Night | #141 | **Paper:** `0 2 7 9` | 2026-11-23T13:59:00-05:00 | `0 4 5 9` (Day) |
+| Pick 5 | 2026-11-23T23:00:00-05:00 | Night | #142 | **Paper:** `3 5 6 8 9` | 2026-11-23T13:59:00-05:00 | `1 8 3 7 9` (Day) |
 | Cash 5 | 2026-11-23T23:00:00-05:00 | Main | #138 | **Primary:** `6 9 20 42 43` | 2026-11-22T23:00:00-05:00 | `4 9 14 34 35` (Main) |
 | Powerball | 2026-11-23T22:59:00-05:00 | Main | #129 | **Primary:** `14 27 36 45 60 + 7` | 2026-11-21T22:59:00-05:00 | `5 29 33 36 45 + 22` (Main) |
 | Mega Millions | 2026-11-24T23:00:00-05:00 | Main | #120 | **Primary:** `5 25 28 34 38 + 14` | 2026-11-20T23:00:00-05:00 | `32 35 48 58 61 + 21` (Main) |
@@ -31,9 +31,9 @@ Payout and net are **hypothetical** $1 Any Order paper-wagers using published no
 
 | Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 25 | 0 | 0 | 0 | 0 | $-25 | $-25 |
-| Pick 4 | 25 | 2 | 0 | 1 | 0 | $375 | $-25 |
-| Pick 5 | 25 | 0 | 0 | 0 | 0 | $-25 | $-25 |
+| Pick 3 | 26 | 0 | 0 | 0 | 0 | $-26 | $-26 |
+| Pick 4 | 26 | 2 | 0 | 1 | 0 | $374 | $-26 |
+| Pick 5 | 26 | 0 | 0 | 0 | 0 | $-26 | $-26 |
 
 ## Fallback watch — one original ticket per drawing
 
@@ -42,13 +42,13 @@ Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are in
 | Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Pick 3 | `digit_box_v3` | 1 | 0 | 0 | 0.0060 |
-| Pick 3 | `digit_box_v4` | 5 | 0 | 0 | 0.0300 |
+| Pick 3 | `digit_box_v4` | 6 | 0 | 0 | 0.0360 |
 | Pick 3 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0240 |
 | Pick 4 | `digit_box_v3` | 1 | 0 | 0 | 0.0024 |
-| Pick 4 | `digit_box_v4` | 5 | 2 | 0 | 0.0120 |
+| Pick 4 | `digit_box_v4` | 6 | 2 | 0 | 0.0144 |
 | Pick 4 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0060 |
 | Pick 5 | `digit_box_v3` | 1 | 0 | 0 | 0.0012 |
-| Pick 5 | `digit_box_v4` | 5 | 0 | 0 | 0.0060 |
+| Pick 5 | `digit_box_v4` | 6 | 0 | 0 | 0.0072 |
 | Pick 5 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0042 |
 
 ## Other game results
@@ -70,9 +70,9 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 0 | 0 | 0 | 0 | 0.3217 |
-| Pick 4 | 0 | 0 | 0 | 0 | 0.9770 |
-| Pick 5 | 0 | 0 | 0 | 0 | 0.9141 |
+| Pick 3 | 0 | 0 | 0 | 0 | 0.3367 |
+| Pick 4 | 1 | 0 | 0 | 0 | 0.9530 |
+| Pick 5 | 0 | 0 | 0 | 0 | 0.9231 |
 | Cash 5 | — | — | 0 | 0 | 0.5445 |
 | Powerball | — | — | 0 | 0 | 0.7063 |
 | Mega Millions | — | — | 0 | 0 | 0.3367 |
@@ -89,4 +89,4 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 ### Update / analysis failures
 
-- Cash Pop: Waiting for latest completed After Hours result (2026-11-22T23:59:00-05:00); new picks withheld
+- Cash Pop: Waiting for latest completed Rush Hour result (2026-11-23T17:00:00-05:00); new picks withheld
