@@ -18,18 +18,18 @@ rotation-based v1 trial remains frozen and separate.
 
 | Game | Settled draws | Model BOX wins | Control BOX wins | Model $1 paper net | Control $1 paper net | Exact model | Exact control | Anytime evidence gate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| pick3 | 2 | 0 | 0 | $-6 | $-6 | 0 | 0 | No |
+| pick3 | 3 | 0 | 0 | $-9 | $-9 | 0 | 0 | No |
 
-Latest frozen target for pick3: 2026-11-23 Night (saved 2026-11-24T01:03:58.182456+00:00).
-Pooled top digit (not an Any Order pick): 2; candidates: 026, 027, 024; independently seeded controls: 024, 456, 679.
-| pick4 | 2 | 0 | 0 | $-6 | $-6 | 0 | 0 | No |
+Latest frozen target for pick3: 2026-11-24 Day (saved 2026-11-24T07:00:30.204479+00:00).
+Pooled top digit (not an Any Order pick): 2; candidates: 026, 024, 027; independently seeded controls: 137, 257, 258.
+| pick4 | 3 | 0 | 0 | $-9 | $-9 | 0 | 0 | No |
 
-Latest frozen target for pick4: 2026-11-23 Night (saved 2026-11-24T01:03:58.182456+00:00).
-Pooled top digit (not an Any Order pick): 4; candidates: 3479, 4789, 4679; independently seeded controls: 0678, 2578, 5689.
-| pick5 | 2 | 0 | 0 | $-6 | $-6 | 0 | 0 | No |
+Latest frozen target for pick4: 2026-11-24 Day (saved 2026-11-24T07:00:30.204479+00:00).
+Pooled top digit (not an Any Order pick): 4; candidates: 3479, 4789, 4679; independently seeded controls: 0356, 0578, 6789.
+| pick5 | 3 | 0 | 0 | $-9 | $-9 | 0 | 0 | No |
 
-Latest frozen target for pick5: 2026-11-23 Night (saved 2026-11-24T01:03:58.182456+00:00).
-Pooled top digit (not an Any Order pick): 5; candidates: 04579, 04589, 45789; independently seeded controls: 02357, 04567, 23579.
+Latest frozen target for pick5: 2026-11-24 Day (saved 2026-11-24T07:00:30.204479+00:00).
+Pooled top digit (not an Any Order pick): 5; candidates: 04589, 04579, 04578; independently seeded controls: 01256, 01678, 02358.
 
 Fair e-value evidence threshold is log(60) with a
 three-game union-bound allocation; it begins at the first
