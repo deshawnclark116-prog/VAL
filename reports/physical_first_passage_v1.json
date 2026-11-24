@@ -1,0 +1,429 @@
+{
+  "version": "physical_first_passage_v1",
+  "assumptions": "Illustrative drag-to-mass acceleration surrogate; unmeasured actual Virginia equipment. Independent exponential travel distances, device shared by chambers; no winning-history training. Stress scenarios are not claims of real tolerances. Wrong-physics stress reverses the assumed effect.",
+  "rigs": 6,
+  "trials_per_rig": 20000,
+  "devices": 4,
+  "results": [
+    {
+      "game": "pick3",
+      "scenario": "fair",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 731,
+          "expected_hits": 720,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 691,
+          "expected_hits": 720,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "measured_selected_device": {
+          "hits": 691,
+          "expected_hits": 720,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "oracle_selected_device": {
+          "hits": 691,
+          "expected_hits": 720,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        }
+      }
+    },
+    {
+      "game": "pick3",
+      "scenario": "small_variation",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 703,
+          "expected_hits": 719.7207,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 0.999612
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 716,
+          "expected_hits": 724.0116,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.00000331,
+          "expected_lift_vs_max_fair": 1.005572
+        },
+        "measured_selected_device": {
+          "hits": 712,
+          "expected_hits": 724.8552,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.00001265,
+          "expected_lift_vs_max_fair": 1.006743
+        },
+        "oracle_selected_device": {
+          "hits": 730,
+          "expected_hits": 735.3317,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.00006066,
+          "expected_lift_vs_max_fair": 1.021294
+        }
+      }
+    },
+    {
+      "game": "pick3",
+      "scenario": "large_variation_stress",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 761,
+          "expected_hits": 732.4588,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1.017304
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 749,
+          "expected_hits": 797.8357,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.00132711,
+          "expected_lift_vs_max_fair": 1.108105
+        },
+        "measured_selected_device": {
+          "hits": 853,
+          "expected_hits": 886.6488,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.00591089,
+          "expected_lift_vs_max_fair": 1.231457
+        },
+        "oracle_selected_device": {
+          "hits": 857,
+          "expected_hits": 891.2175,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.0061356,
+          "expected_lift_vs_max_fair": 1.237802
+        }
+      }
+    },
+    {
+      "game": "pick3",
+      "scenario": "large_variation_wrong_physics",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 742,
+          "expected_hits": 712.1414,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 0.989085
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 652,
+          "expected_hits": 650.0397,
+          "fair_expected_hits": 720,
+          "box_log_gain": -0.00443545,
+          "expected_lift_vs_max_fair": 0.902833
+        },
+        "measured_selected_device": {
+          "hits": 573,
+          "expected_hits": 575.2101,
+          "fair_expected_hits": 720,
+          "box_log_gain": -0.01874673,
+          "expected_lift_vs_max_fair": 0.798903
+        },
+        "oracle_selected_device": {
+          "hits": 933,
+          "expected_hits": 899.892,
+          "fair_expected_hits": 720,
+          "box_log_gain": 0.00671878,
+          "expected_lift_vs_max_fair": 1.24985
+        }
+      }
+    },
+    {
+      "game": "pick4",
+      "scenario": "fair",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 271,
+          "expected_hits": 288,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 307,
+          "expected_hits": 288,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "measured_selected_device": {
+          "hits": 307,
+          "expected_hits": 288,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "oracle_selected_device": {
+          "hits": 307,
+          "expected_hits": 288,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        }
+      }
+    },
+    {
+      "game": "pick4",
+      "scenario": "small_variation",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 269,
+          "expected_hits": 288.1845,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1.000641
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 299,
+          "expected_hits": 289.4252,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00000434,
+          "expected_lift_vs_max_fair": 1.004949
+        },
+        "measured_selected_device": {
+          "hits": 309,
+          "expected_hits": 290.7737,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00001005,
+          "expected_lift_vs_max_fair": 1.009631
+        },
+        "oracle_selected_device": {
+          "hits": 308,
+          "expected_hits": 294.0697,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00005995,
+          "expected_lift_vs_max_fair": 1.021075
+        }
+      }
+    },
+    {
+      "game": "pick4",
+      "scenario": "large_variation_stress",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 247,
+          "expected_hits": 275.8914,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 0.957956
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 323,
+          "expected_hits": 320.8449,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00183404,
+          "expected_lift_vs_max_fair": 1.114045
+        },
+        "measured_selected_device": {
+          "hits": 357,
+          "expected_hits": 353.9479,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00663541,
+          "expected_lift_vs_max_fair": 1.228986
+        },
+        "oracle_selected_device": {
+          "hits": 362,
+          "expected_hits": 355.3954,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00687515,
+          "expected_lift_vs_max_fair": 1.234012
+        }
+      }
+    },
+    {
+      "game": "pick4",
+      "scenario": "large_variation_wrong_physics",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 265,
+          "expected_hits": 293.136,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1.017833
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 257,
+          "expected_hits": 254.5491,
+          "fair_expected_hits": 288,
+          "box_log_gain": -0.00532414,
+          "expected_lift_vs_max_fair": 0.883851
+        },
+        "measured_selected_device": {
+          "hits": 211,
+          "expected_hits": 230.3097,
+          "fair_expected_hits": 288,
+          "box_log_gain": -0.0196168,
+          "expected_lift_vs_max_fair": 0.799686
+        },
+        "oracle_selected_device": {
+          "hits": 343,
+          "expected_hits": 358.2885,
+          "fair_expected_hits": 288,
+          "box_log_gain": 0.00695782,
+          "expected_lift_vs_max_fair": 1.244057
+        }
+      }
+    },
+    {
+      "game": "pick5",
+      "scenario": "fair",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 149,
+          "expected_hits": 144,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 130,
+          "expected_hits": 144,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "measured_selected_device": {
+          "hits": 130,
+          "expected_hits": 144,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        },
+        "oracle_selected_device": {
+          "hits": 130,
+          "expected_hits": 144,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1
+        }
+      }
+    },
+    {
+      "game": "pick5",
+      "scenario": "small_variation",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 136,
+          "expected_hits": 144.1046,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1.000726
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 123,
+          "expected_hits": 144.8313,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.0000055,
+          "expected_lift_vs_max_fair": 1.005773
+        },
+        "measured_selected_device": {
+          "hits": 136,
+          "expected_hits": 145.5739,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.00001812,
+          "expected_lift_vs_max_fair": 1.01093
+        },
+        "oracle_selected_device": {
+          "hits": 151,
+          "expected_hits": 147.0756,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.00007676,
+          "expected_lift_vs_max_fair": 1.021358
+        }
+      }
+    },
+    {
+      "game": "pick5",
+      "scenario": "large_variation_stress",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 149,
+          "expected_hits": 149.5483,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1.03853
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 178,
+          "expected_hits": 158.3106,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.00160493,
+          "expected_lift_vs_max_fair": 1.099379
+        },
+        "measured_selected_device": {
+          "hits": 180,
+          "expected_hits": 173.6351,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.00628828,
+          "expected_lift_vs_max_fair": 1.205799
+        },
+        "oracle_selected_device": {
+          "hits": 177,
+          "expected_hits": 174.0777,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.00652117,
+          "expected_lift_vs_max_fair": 1.208873
+        }
+      }
+    },
+    {
+      "game": "pick5",
+      "scenario": "large_variation_wrong_physics",
+      "draws": 120000,
+      "metrics": {
+        "unmeasured_fair": {
+          "hits": 158,
+          "expected_hits": 146.7442,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0,
+          "expected_lift_vs_max_fair": 1.019057
+        },
+        "calibrated_pool_hidden_device": {
+          "hits": 130,
+          "expected_hits": 128.4915,
+          "fair_expected_hits": 144,
+          "box_log_gain": -0.0065888,
+          "expected_lift_vs_max_fair": 0.892302
+        },
+        "measured_selected_device": {
+          "hits": 114,
+          "expected_hits": 117.2187,
+          "fair_expected_hits": 144,
+          "box_log_gain": -0.02130209,
+          "expected_lift_vs_max_fair": 0.814019
+        },
+        "oracle_selected_device": {
+          "hits": 180,
+          "expected_hits": 177.2791,
+          "fair_expected_hits": 144,
+          "box_log_gain": 0.00771714,
+          "expected_lift_vs_max_fair": 1.231105
+        }
+      }
+    }
+  ]
+}
