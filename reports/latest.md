@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-23T19:54:30.991709-05:00 · Eastern time
+Updated: 2026-11-24T05:57:41.769618-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,13 +14,13 @@ Picks use previous completed results from ALL sessions of the same game: today's
 
 | Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-23T23:00:00-05:00 | Night | #140 | **Paper:** `1 5 6` | 2026-11-23T13:59:00-05:00 | `6 5 1` (Day) |
-| Pick 4 | 2026-11-23T23:00:00-05:00 | Night | #141 | **Paper:** `0 2 7 9` | 2026-11-23T13:59:00-05:00 | `0 4 5 9` (Day) |
-| Pick 5 | 2026-11-23T23:00:00-05:00 | Night | #142 | **Paper:** `3 5 6 8 9` | 2026-11-23T13:59:00-05:00 | `1 8 3 7 9` (Day) |
-| Cash 5 | 2026-11-23T23:00:00-05:00 | Main | #138 | **Primary:** `6 9 20 42 43` | 2026-11-22T23:00:00-05:00 | `4 9 14 34 35` (Main) |
-| Powerball | 2026-11-23T22:59:00-05:00 | Main | #129 | **Primary:** `14 27 36 45 60 + 7` | 2026-11-21T22:59:00-05:00 | `5 29 33 36 45 + 22` (Main) |
+| Pick 3 | 2026-11-24T13:59:00-05:00 | Day | #143 | **Paper:** `0 6 8` | 2026-11-23T23:00:00-05:00 | `0 8 4` (Night) |
+| Pick 4 | 2026-11-24T13:59:00-05:00 | Day | #144 | **Paper:** `1 4 6 9` | 2026-11-23T23:00:00-05:00 | `9 5 7 4` (Night) |
+| Pick 5 | 2026-11-24T13:59:00-05:00 | Day | #145 | **Paper:** `0 1 2 4 7` | 2026-11-23T23:00:00-05:00 | `1 2 0 4 8` (Night) |
+| Cash 5 | 2026-11-24T23:00:00-05:00 | Main | #146 | **Primary:** `19 27 30 33 43` | 2026-11-23T23:00:00-05:00 | `30 37 38 40 44` (Main) |
+| Powerball | 2026-11-25T22:59:00-05:00 | Main | #147 | **Primary:** `14 42 57 58 68 + 23` | 2026-11-23T22:59:00-05:00 | `7 9 27 40 58 + 19` (Main) |
 | Mega Millions | 2026-11-24T23:00:00-05:00 | Main | #120 | **Primary:** `5 25 28 34 38 + 14` | 2026-11-20T23:00:00-05:00 | `32 35 48 58 61 + 21` (Main) |
-| Millionaire for Life | 2026-11-23T23:15:00-05:00 | Main | #139 | **Primary:** `11 13 19 22 28 + 5` | 2026-11-22T23:15:00-05:00 | `11 12 37 43 44 + 2` (Main) |
+| Millionaire for Life | 2026-11-24T23:15:00-05:00 | Main | #148 | **Primary:** `2 13 36 40 46 + 2` | 2026-11-23T23:15:00-05:00 | `5 8 10 20 32 + 5` (Main) |
 | Bank a Million | 2026-11-25T23:00:00-05:00 | Main | #131 | **Primary:** `3 10 17 19 25 27` | 2026-11-21T23:00:00-05:00 | `4 12 14 15 22 33` (Main) |
 
 ## Complete Any Order (Box) results — PRIMARY METRIC
@@ -31,9 +31,9 @@ Payout and net are **hypothetical** $1 Any Order paper-wagers using published no
 
 | Digit game | Settled batches | Model Box wins | Control Box wins | Model Straight | Control Straight | Model paper net | Control paper net |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 26 | 0 | 0 | 0 | 0 | $-26 | $-26 |
-| Pick 4 | 26 | 2 | 0 | 1 | 0 | $374 | $-26 |
-| Pick 5 | 26 | 0 | 0 | 0 | 0 | $-26 | $-26 |
+| Pick 3 | 27 | 0 | 0 | 0 | 0 | $-27 | $-27 |
+| Pick 4 | 27 | 2 | 0 | 1 | 0 | $373 | $-27 |
+| Pick 5 | 27 | 0 | 0 | 0 | 0 | $-27 | $-27 |
 
 ## Fallback watch — one original ticket per drawing
 
@@ -42,23 +42,23 @@ Only settled Pick 3/4/5 batches explicitly tagged as a no-signal fallback are in
 | Game | Fallback formula | Settled picks | Box wins | Random-control wins | Fair expected Box wins |
 | --- | --- | ---: | ---: | ---: | ---: |
 | Pick 3 | `digit_box_v3` | 1 | 0 | 0 | 0.0060 |
-| Pick 3 | `digit_box_v4` | 6 | 0 | 0 | 0.0360 |
+| Pick 3 | `digit_box_v4` | 7 | 0 | 0 | 0.0420 |
 | Pick 3 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0240 |
 | Pick 4 | `digit_box_v3` | 1 | 0 | 0 | 0.0024 |
-| Pick 4 | `digit_box_v4` | 6 | 2 | 0 | 0.0144 |
+| Pick 4 | `digit_box_v4` | 7 | 2 | 0 | 0.0168 |
 | Pick 4 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0060 |
 | Pick 5 | `digit_box_v3` | 1 | 0 | 0 | 0.0012 |
-| Pick 5 | `digit_box_v4` | 6 | 0 | 0 | 0.0072 |
+| Pick 5 | `digit_box_v4` | 7 | 0 | 0 | 0.0084 |
 | Pick 5 | `digit_conditional_v2` | 4 | 0 | 0 | 0.0042 |
 
 ## Other game results
 
 | Game | Settled batches | Model tickets | Model exact hits | Random tickets | Random exact hits |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Cash 5 | 12 | 12 | 0 | 12 | 0 |
-| Powerball | 5 | 5 | 0 | 5 | 0 |
+| Cash 5 | 13 | 13 | 0 | 13 | 0 |
+| Powerball | 6 | 6 | 0 | 6 | 0 |
 | Mega Millions | 4 | 4 | 0 | 4 | 0 |
-| Millionaire for Life | 12 | 12 | 0 | 12 | 0 |
+| Millionaire for Life | 13 | 13 | 0 | 13 | 0 |
 | Bank a Million | 4 | 4 | 0 | 4 | 0 |
 | Cash Pop | 18 | 18 | 3 | 18 | 3 |
 
@@ -70,13 +70,13 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 0 | 0 | 0 | 0 | 0.3367 |
-| Pick 4 | 1 | 0 | 0 | 0 | 0.9530 |
-| Pick 5 | 0 | 0 | 0 | 0 | 0.9231 |
-| Cash 5 | — | — | 0 | 0 | 0.5445 |
-| Powerball | — | — | 0 | 0 | 0.7063 |
+| Pick 3 | 0 | 0 | 0 | 0 | 0.3626 |
+| Pick 4 | 0 | 0 | 0 | 0 | 0.9351 |
+| Pick 5 | 0 | 0 | 0 | 0 | 0.9321 |
+| Cash 5 | — | — | 0 | 0 | 0.5055 |
+| Powerball | — | — | 0 | 0 | 0.7263 |
 | Mega Millions | — | — | 0 | 0 | 0.3367 |
-| Millionaire for Life | — | — | 0 | 0 | 0.6494 |
+| Millionaire for Life | — | — | 0 | 0 | 0.6454 |
 | Bank a Million | — | — | 0 | 0 | 0.3127 |
 
 Full five-method statistics and simulation details: [analysis.json](analysis.json).
@@ -89,4 +89,4 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 ### Update / analysis failures
 
-- Cash Pop: Waiting for latest completed Rush Hour result (2026-11-23T17:00:00-05:00); new picks withheld
+- Cash Pop: Waiting for latest completed After Hours result (2026-11-23T23:59:00-05:00); new picks withheld
