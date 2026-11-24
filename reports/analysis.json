@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T10:57:41.769618+00:00",
+  "generated_at": "2026-11-24T21:14:33.505705+00:00",
   "games": [
     {
       "game": "pick3",
@@ -10,10 +10,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.39,
+            "average_matches": 0.34,
             "ci95": [
-              0.27893333333333337,
-              0.5010666666666667
+              0.2387093869954956,
+              0.44129061300450445
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -28,10 +28,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.37,
+            "average_matches": 0.35,
             "ci95": [
-              0.2597750252868931,
-              0.4802249747131069
+              0.24437726752179897,
+              0.45562273247820095
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -46,28 +46,28 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.42,
+            "average_matches": 0.31,
             "ci95": [
-              0.2979949595344934,
-              0.5420050404655066
+              0.21074101623235375,
+              0.40925898376764624
             ],
             "bonus_matches": 0,
             "box_wins": 0,
-            "box_tickets": 100,
-            "box_spend_usd": 100,
+            "box_tickets": 99,
+            "box_spend_usd": 99,
             "box_payout_usd": 0,
-            "box_net_usd": -100,
-            "box_fair_expected_wins": 0.5130000000000003
+            "box_net_usd": -99,
+            "box_fair_expected_wins": 0.4950000000000004
           },
           {
             "method": "cold",
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.35,
+            "average_matches": 0.32,
             "ci95": [
-              0.24437726752179897,
-              0.45562273247820095
+              0.22002039803999615,
+              0.41997960196000383
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -82,10 +82,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.4,
+            "average_matches": 0.33,
             "ci95": [
-              0.28856709225146765,
-              0.5114329077485325
+              0.22934348034282653,
+              0.4306565196571735
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -96,16 +96,16 @@
             "box_fair_expected_wins": 0.5220000000000004
           }
         ],
-        "from_draw": "2026-10-05T17:59:00+00:00",
-        "to_draw": "2026-11-24T04:00:00+00:00",
+        "from_draw": "2026-10-06T03:00:00+00:00",
+        "to_draw": "2026-11-24T18:59:00+00:00",
         "expected_matches": 0.3,
         "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 10.0,
-        "p_value": 0.3626373626373626,
+        "statistic": 10.5,
+        "p_value": 0.3306693306693307,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -118,10 +118,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.5,
+            "average_matches": 0.39,
             "ci95": [
-              0.3769814007656738,
-              0.6230185992343262
+              0.2824838447657114,
+              0.4975161552342886
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -136,10 +136,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.46,
+            "average_matches": 0.45,
             "ci95": [
-              0.3372340059587783,
-              0.5827659940412218
+              0.32737632505684044,
+              0.5726236749431596
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -154,10 +154,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.46,
+            "average_matches": 0.51,
             "ci95": [
-              0.3310672620740144,
-              0.5889327379259857
+              0.3869971733920909,
+              0.6330028266079091
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -165,24 +165,24 @@
             "box_spend_usd": 100,
             "box_payout_usd": 0,
             "box_net_usd": -100,
-            "box_fair_expected_wins": 0.1764000000000003
+            "box_fair_expected_wins": 0.17880000000000032
           },
           {
             "method": "cold",
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.48,
+            "average_matches": 0.37,
             "ci95": [
-              0.36690795024772205,
-              0.5930920497522779
+              0.26335355494708584,
+              0.47664644505291415
             ],
             "bonus_matches": 0,
-            "box_wins": 0,
+            "box_wins": 1,
             "box_tickets": 100,
             "box_spend_usd": 100,
-            "box_payout_usd": 0,
-            "box_net_usd": -100,
+            "box_payout_usd": 200,
+            "box_net_usd": 100,
             "box_fair_expected_wins": 0.16700000000000034
           },
           {
@@ -190,10 +190,10 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.46,
+            "average_matches": 0.41,
             "ci95": [
-              0.3372340059587783,
-              0.5827659940412218
+              0.2851186809871715,
+              0.5348813190128284
             ],
             "bonus_matches": 0,
             "box_wins": 0,
@@ -201,19 +201,19 @@
             "box_spend_usd": 100,
             "box_payout_usd": 0,
             "box_net_usd": -100,
-            "box_fair_expected_wins": 0.17660000000000034
+            "box_fair_expected_wins": 0.17900000000000035
           }
         ],
-        "from_draw": "2026-10-05T17:59:00+00:00",
-        "to_draw": "2026-11-24T04:00:00+00:00",
+        "from_draw": "2026-10-06T03:00:00+00:00",
+        "to_draw": "2026-11-24T18:59:00+00:00",
         "expected_matches": 0.4,
         "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 3.625,
-        "p_value": 0.935064935064935,
+        "statistic": 3.5,
+        "p_value": 0.9430569430569431,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
@@ -226,17 +226,17 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.53,
+            "average_matches": 0.61,
             "ci95": [
-              0.38944703144473625,
-              0.6705529685552638
+              0.46823747841812163,
+              0.7517625215818784
             ],
             "bonus_matches": 0,
-            "box_wins": 0,
+            "box_wins": 1,
             "box_tickets": 100,
             "box_spend_usd": 100,
-            "box_payout_usd": 0,
-            "box_net_usd": -100,
+            "box_payout_usd": 800,
+            "box_net_usd": 700,
             "box_fair_expected_wins": 0.07320000000000011
           },
           {
@@ -244,17 +244,17 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.56,
+            "average_matches": 0.62,
             "ci95": [
-              0.4254704328244366,
-              0.6945295671755636
+              0.47855261320079745,
+              0.7614473867992025
             ],
             "bonus_matches": 0,
-            "box_wins": 0,
+            "box_wins": 1,
             "box_tickets": 100,
             "box_spend_usd": 100,
-            "box_payout_usd": 0,
-            "box_net_usd": -100,
+            "box_payout_usd": 800,
+            "box_net_usd": 700,
             "box_fair_expected_wins": 0.0698000000000001
           },
           {
@@ -262,66 +262,66 @@
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.45,
+            "average_matches": 0.54,
             "ci95": [
-              0.3212027668281369,
-              0.5787972331718632
+              0.41106726207401434,
+              0.6689327379259857
             ],
             "bonus_matches": 0,
-            "box_wins": 0,
+            "box_wins": 1,
             "box_tickets": 100,
             "box_spend_usd": 100,
-            "box_payout_usd": 0,
-            "box_net_usd": -100,
-            "box_fair_expected_wins": 0.0747000000000001
+            "box_payout_usd": 800,
+            "box_net_usd": 700,
+            "box_fair_expected_wins": 0.0722000000000001
           },
           {
             "method": "cold",
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.52,
+            "average_matches": 0.63,
             "ci95": [
-              0.3793780280685163,
-              0.6606219719314838
+              0.4861722073471405,
+              0.7738277926528595
             ],
             "bonus_matches": 0,
-            "box_wins": 0,
+            "box_wins": 1,
             "box_tickets": 100,
             "box_spend_usd": 100,
-            "box_payout_usd": 0,
-            "box_net_usd": -100,
-            "box_fair_expected_wins": 0.07250000000000012
+            "box_payout_usd": 800,
+            "box_net_usd": 700,
+            "box_fair_expected_wins": 0.07310000000000011
           },
           {
             "method": "ensemble",
             "draws": 100,
             "tickets": 100,
             "exact": 0,
-            "average_matches": 0.51,
+            "average_matches": 0.57,
             "ci95": [
-              0.3749666019613719,
-              0.6450333980386281
+              0.43000028282856845,
+              0.7099997171714314
             ],
             "bonus_matches": 0,
-            "box_wins": 0,
+            "box_wins": 1,
             "box_tickets": 100,
             "box_spend_usd": 100,
-            "box_payout_usd": 0,
-            "box_net_usd": -100,
-            "box_fair_expected_wins": 0.0737000000000001
+            "box_payout_usd": 800,
+            "box_net_usd": 700,
+            "box_fair_expected_wins": 0.0718000000000001
           }
         ],
-        "from_draw": "2026-10-05T17:59:00+00:00",
-        "to_draw": "2026-11-24T04:00:00+00:00",
+        "from_draw": "2026-10-06T03:00:00+00:00",
+        "to_draw": "2026-11-24T18:59:00+00:00",
         "expected_matches": 0.5,
         "note": "Chronological rolling test, uses earlier draws only. Digit games now report complete Any Order (Box) matches, distinct permutation counts, and hypothetical $1 Any Order payout/net; these are paper comparisons, not purchased wagers. Box payouts exclude FIREBALL, Combo, and 50/50. A ticket with all digits identical is not a valid Box play. Other games still use their own full-draw exact rules. Partial positions are never a win."
       },
       "frequency_check": {
         "trials": 1000,
         "draws": 200,
-        "statistic": 3.7,
-        "p_value": 0.932067932067932,
+        "statistic": 4.5,
+        "p_value": 0.8811188811188811,
         "note": "Tests aggregate number-frequency dispersion against fair simulated draws. A small p-value is a reason to investigate data quality, not a prediction or proof of bias. Multiple tests can produce small p-values by chance."
       }
     },
