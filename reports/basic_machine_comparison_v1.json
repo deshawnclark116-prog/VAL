@@ -1,0 +1,137 @@
+{
+  "version": "basic_machine_comparison_v1",
+  "source": "VAL ledger official result records, retrospective, deduplicated by game and target timestamp/session",
+  "seeds": 2000,
+  "notes": "Each seed defines a separate one-selection-per-target replay, not a portfolio. No winning seed is selected. First seed fixed before execution of this comparison. Distinct pool is a different selection rule, not a replica of official digit chambers. Expected matches conditional on actual outcomes integrate all random seeds exactly. Equal mix methods have identical probabilities. All-identical full matches count for research, not Box prize eligibility.",
+  "games": {
+    "pick3": {
+      "draws": 22,
+      "all_distinct_actual_draws": 15,
+      "earliest": "2026-11-13T04:00:00+00:00",
+      "latest": "2026-11-23T18:59:00+00:00",
+      "results": {
+        "independent_chambers": {
+          "first_seed_matches": 1,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [
+            {
+              "at": "2026-11-23T18:59:00+00:00",
+              "stream": "Day",
+              "pick": [
+                1,
+                6,
+                5
+              ],
+              "actual": [
+                6,
+                5,
+                1
+              ]
+            }
+          ],
+          "mean_matches_per_replay": 0.115,
+          "mean_straight_matches_per_replay": 0.0275,
+          "exact_expected_matches_against_actual_targets": 0.11100000000000004,
+          "mean_fair_expected_matches_per_replay": 0.11308649999996888,
+          "expected_matches_per_1000_fair_draws": 5.13999999999999
+        },
+        "extra_mixing": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.108,
+          "mean_straight_matches_per_replay": 0.0175,
+          "exact_expected_matches_against_actual_targets": 0.11100000000000004,
+          "mean_fair_expected_matches_per_replay": 0.11308149999996894,
+          "expected_matches_per_1000_fair_draws": 5.13999999999999
+        },
+        "distinct_ball_pool": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.116,
+          "mean_straight_matches_per_replay": 0.0175,
+          "exact_expected_matches_against_actual_targets": 0.125,
+          "mean_fair_expected_matches_per_replay": 0.13199999999998593,
+          "expected_matches_per_1000_fair_draws": 6
+        }
+      }
+    },
+    "pick4": {
+      "draws": 22,
+      "all_distinct_actual_draws": 13,
+      "earliest": "2026-11-13T04:00:00+00:00",
+      "latest": "2026-11-23T18:59:00+00:00",
+      "results": {
+        "independent_chambers": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.036,
+          "mean_straight_matches_per_replay": 0.0025,
+          "exact_expected_matches_against_actual_targets": 0.04139999999999999,
+          "mean_fair_expected_matches_per_replay": 0.03865724999998531,
+          "expected_matches_per_1000_fair_draws": 1.7587000000001547
+        },
+        "extra_mixing": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.04,
+          "mean_straight_matches_per_replay": 0.0005,
+          "exact_expected_matches_against_actual_targets": 0.04139999999999999,
+          "mean_fair_expected_matches_per_replay": 0.03876124999998533,
+          "expected_matches_per_1000_fair_draws": 1.7587000000001547
+        },
+        "distinct_ball_pool": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.0625,
+          "mean_straight_matches_per_replay": 0.0025,
+          "exact_expected_matches_against_actual_targets": 0.06190476190476191,
+          "mean_fair_expected_matches_per_replay": 0.05279999999996605,
+          "expected_matches_per_1000_fair_draws": 2.4
+        }
+      }
+    },
+    "pick5": {
+      "draws": 22,
+      "all_distinct_actual_draws": 6,
+      "earliest": "2026-11-13T04:00:00+00:00",
+      "latest": "2026-11-23T18:59:00+00:00",
+      "results": {
+        "independent_chambers": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.0145,
+          "mean_straight_matches_per_replay": 0.0005,
+          "exact_expected_matches_against_actual_targets": 0.0157,
+          "mean_fair_expected_matches_per_replay": 0.015707354999995943,
+          "expected_matches_per_1000_fair_draws": 0.7132059999995695
+        },
+        "extra_mixing": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.016,
+          "mean_straight_matches_per_replay": 0,
+          "exact_expected_matches_against_actual_targets": 0.0157,
+          "mean_fair_expected_matches_per_replay": 0.01561168999999592,
+          "expected_matches_per_1000_fair_draws": 0.7132059999995695
+        },
+        "distinct_ball_pool": {
+          "first_seed_matches": 0,
+          "first_seed_straight": 0,
+          "first_seed_match_details": [],
+          "mean_matches_per_replay": 0.022,
+          "mean_straight_matches_per_replay": 0,
+          "exact_expected_matches_against_actual_targets": 0.023809523809523808,
+          "mean_fair_expected_matches_per_replay": 0.026399999999983024,
+          "expected_matches_per_1000_fair_draws": 1.2
+        }
+      }
+    }
+  }
+}
