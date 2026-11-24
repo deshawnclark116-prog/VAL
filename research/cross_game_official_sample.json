@@ -1,0 +1,2708 @@
+[
+  {
+    "game": "pick3",
+    "date": "2026-11-22",
+    "session": "Day",
+    "numbers": [
+      4,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-22",
+    "session": "Night",
+    "numbers": [
+      8,
+      7,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-21",
+    "session": "Day",
+    "numbers": [
+      7,
+      2,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-21",
+    "session": "Night",
+    "numbers": [
+      5,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-20",
+    "session": "Day",
+    "numbers": [
+      1,
+      6,
+      3
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-20",
+    "session": "Night",
+    "numbers": [
+      5,
+      6,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-19",
+    "session": "Day",
+    "numbers": [
+      2,
+      5,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-19",
+    "session": "Night",
+    "numbers": [
+      7,
+      6,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-18",
+    "session": "Day",
+    "numbers": [
+      1,
+      8,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-18",
+    "session": "Night",
+    "numbers": [
+      5,
+      0,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-17",
+    "session": "Day",
+    "numbers": [
+      1,
+      2,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-17",
+    "session": "Night",
+    "numbers": [
+      4,
+      7,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-16",
+    "session": "Day",
+    "numbers": [
+      0,
+      6,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-16",
+    "session": "Night",
+    "numbers": [
+      4,
+      9,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-15",
+    "session": "Day",
+    "numbers": [
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-15",
+    "session": "Night",
+    "numbers": [
+      6,
+      4,
+      5
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-14",
+    "session": "Day",
+    "numbers": [
+      3,
+      8,
+      0
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-14",
+    "session": "Night",
+    "numbers": [
+      0,
+      3,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-13",
+    "session": "Day",
+    "numbers": [
+      2,
+      0,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-13",
+    "session": "Night",
+    "numbers": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-12",
+    "session": "Day",
+    "numbers": [
+      6,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-12",
+    "session": "Night",
+    "numbers": [
+      7,
+      2,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-11",
+    "session": "Day",
+    "numbers": [
+      4,
+      3,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-11",
+    "session": "Night",
+    "numbers": [
+      6,
+      7,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-10",
+    "session": "Day",
+    "numbers": [
+      0,
+      7,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-10",
+    "session": "Night",
+    "numbers": [
+      5,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-09",
+    "session": "Day",
+    "numbers": [
+      8,
+      7,
+      5
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-09",
+    "session": "Night",
+    "numbers": [
+      9,
+      9,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-08",
+    "session": "Day",
+    "numbers": [
+      9,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-08",
+    "session": "Night",
+    "numbers": [
+      7,
+      0,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-07",
+    "session": "Day",
+    "numbers": [
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-07",
+    "session": "Night",
+    "numbers": [
+      5,
+      0,
+      4
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-06",
+    "session": "Day",
+    "numbers": [
+      5,
+      3,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-06",
+    "session": "Night",
+    "numbers": [
+      3,
+      0,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-05",
+    "session": "Day",
+    "numbers": [
+      4,
+      4,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-05",
+    "session": "Night",
+    "numbers": [
+      5,
+      7,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-04",
+    "session": "Day",
+    "numbers": [
+      4,
+      8,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-04",
+    "session": "Night",
+    "numbers": [
+      6,
+      2,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-03",
+    "session": "Day",
+    "numbers": [
+      6,
+      6,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-03",
+    "session": "Night",
+    "numbers": [
+      6,
+      0,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-02",
+    "session": "Day",
+    "numbers": [
+      1,
+      9,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-02",
+    "session": "Night",
+    "numbers": [
+      5,
+      5,
+      3
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-01",
+    "session": "Day",
+    "numbers": [
+      7,
+      4,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-11-01",
+    "session": "Night",
+    "numbers": [
+      2,
+      4,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-31",
+    "session": "Day",
+    "numbers": [
+      2,
+      5,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-31",
+    "session": "Night",
+    "numbers": [
+      6,
+      0,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-30",
+    "session": "Day",
+    "numbers": [
+      2,
+      7,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-30",
+    "session": "Night",
+    "numbers": [
+      1,
+      9,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-29",
+    "session": "Day",
+    "numbers": [
+      2,
+      2,
+      4
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-29",
+    "session": "Night",
+    "numbers": [
+      2,
+      7,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-28",
+    "session": "Day",
+    "numbers": [
+      1,
+      0,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-28",
+    "session": "Night",
+    "numbers": [
+      7,
+      7,
+      0
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-27",
+    "session": "Day",
+    "numbers": [
+      6,
+      6,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-27",
+    "session": "Night",
+    "numbers": [
+      7,
+      5,
+      3
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-26",
+    "session": "Day",
+    "numbers": [
+      5,
+      8,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-26",
+    "session": "Night",
+    "numbers": [
+      5,
+      3,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-25",
+    "session": "Day",
+    "numbers": [
+      8,
+      2,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-25",
+    "session": "Night",
+    "numbers": [
+      5,
+      9,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-24",
+    "session": "Day",
+    "numbers": [
+      0,
+      6,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-24",
+    "session": "Night",
+    "numbers": [
+      7,
+      1,
+      5
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-23",
+    "session": "Day",
+    "numbers": [
+      9,
+      3,
+      6
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-23",
+    "session": "Night",
+    "numbers": [
+      3,
+      0,
+      3
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-22",
+    "session": "Day",
+    "numbers": [
+      9,
+      6,
+      3
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-22",
+    "session": "Night",
+    "numbers": [
+      5,
+      3,
+      4
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-21",
+    "session": "Day",
+    "numbers": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-21",
+    "session": "Night",
+    "numbers": [
+      2,
+      9,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-20",
+    "session": "Day",
+    "numbers": [
+      1,
+      2,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-20",
+    "session": "Night",
+    "numbers": [
+      8,
+      3,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-19",
+    "session": "Day",
+    "numbers": [
+      9,
+      1,
+      1
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-19",
+    "session": "Night",
+    "numbers": [
+      9,
+      9,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-18",
+    "session": "Day",
+    "numbers": [
+      2,
+      6,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-18",
+    "session": "Night",
+    "numbers": [
+      9,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-17",
+    "session": "Day",
+    "numbers": [
+      8,
+      8,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-17",
+    "session": "Night",
+    "numbers": [
+      1,
+      4,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-16",
+    "session": "Day",
+    "numbers": [
+      2,
+      2,
+      3
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-16",
+    "session": "Night",
+    "numbers": [
+      4,
+      7,
+      7
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-15",
+    "session": "Day",
+    "numbers": [
+      1,
+      5,
+      8
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-15",
+    "session": "Night",
+    "numbers": [
+      7,
+      8,
+      0
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-14",
+    "session": "Day",
+    "numbers": [
+      8,
+      4,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-14",
+    "session": "Night",
+    "numbers": [
+      0,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-13",
+    "session": "Day",
+    "numbers": [
+      4,
+      4,
+      9
+    ]
+  },
+  {
+    "game": "pick3",
+    "date": "2026-10-13",
+    "session": "Night",
+    "numbers": [
+      2,
+      3,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-22",
+    "session": "Day",
+    "numbers": [
+      4,
+      8,
+      5,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-22",
+    "session": "Night",
+    "numbers": [
+      1,
+      3,
+      9,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-21",
+    "session": "Day",
+    "numbers": [
+      0,
+      1,
+      4,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-21",
+    "session": "Night",
+    "numbers": [
+      3,
+      1,
+      5,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-20",
+    "session": "Day",
+    "numbers": [
+      9,
+      8,
+      6,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-20",
+    "session": "Night",
+    "numbers": [
+      8,
+      6,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-19",
+    "session": "Day",
+    "numbers": [
+      7,
+      6,
+      4,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-19",
+    "session": "Night",
+    "numbers": [
+      4,
+      4,
+      9,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-18",
+    "session": "Day",
+    "numbers": [
+      5,
+      4,
+      2,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-18",
+    "session": "Night",
+    "numbers": [
+      0,
+      8,
+      1,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-17",
+    "session": "Day",
+    "numbers": [
+      5,
+      5,
+      4,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-17",
+    "session": "Night",
+    "numbers": [
+      4,
+      5,
+      2,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-16",
+    "session": "Day",
+    "numbers": [
+      9,
+      1,
+      4,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-16",
+    "session": "Night",
+    "numbers": [
+      5,
+      8,
+      6,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-15",
+    "session": "Day",
+    "numbers": [
+      6,
+      8,
+      4,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-15",
+    "session": "Night",
+    "numbers": [
+      6,
+      5,
+      7,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-14",
+    "session": "Day",
+    "numbers": [
+      9,
+      9,
+      2,
+      2
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-14",
+    "session": "Night",
+    "numbers": [
+      1,
+      8,
+      6,
+      6
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-13",
+    "session": "Day",
+    "numbers": [
+      0,
+      2,
+      6,
+      2
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-13",
+    "session": "Night",
+    "numbers": [
+      1,
+      8,
+      6,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-12",
+    "session": "Day",
+    "numbers": [
+      1,
+      5,
+      8,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-12",
+    "session": "Night",
+    "numbers": [
+      2,
+      5,
+      9,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-11",
+    "session": "Day",
+    "numbers": [
+      4,
+      4,
+      6,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-11",
+    "session": "Night",
+    "numbers": [
+      4,
+      9,
+      2,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-10",
+    "session": "Day",
+    "numbers": [
+      1,
+      9,
+      3,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-10",
+    "session": "Night",
+    "numbers": [
+      3,
+      1,
+      7,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-09",
+    "session": "Day",
+    "numbers": [
+      8,
+      2,
+      3,
+      2
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-09",
+    "session": "Night",
+    "numbers": [
+      6,
+      1,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-08",
+    "session": "Day",
+    "numbers": [
+      5,
+      9,
+      4,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-08",
+    "session": "Night",
+    "numbers": [
+      5,
+      5,
+      0,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-07",
+    "session": "Day",
+    "numbers": [
+      8,
+      1,
+      4,
+      6
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-07",
+    "session": "Night",
+    "numbers": [
+      0,
+      8,
+      2,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-06",
+    "session": "Day",
+    "numbers": [
+      0,
+      2,
+      6,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-06",
+    "session": "Night",
+    "numbers": [
+      8,
+      1,
+      5,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-05",
+    "session": "Day",
+    "numbers": [
+      2,
+      9,
+      9,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-05",
+    "session": "Night",
+    "numbers": [
+      4,
+      9,
+      4,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-04",
+    "session": "Day",
+    "numbers": [
+      9,
+      0,
+      8,
+      7
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-04",
+    "session": "Night",
+    "numbers": [
+      0,
+      6,
+      4,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-03",
+    "session": "Day",
+    "numbers": [
+      1,
+      7,
+      8,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-03",
+    "session": "Night",
+    "numbers": [
+      1,
+      5,
+      6,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-02",
+    "session": "Day",
+    "numbers": [
+      3,
+      1,
+      0,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-02",
+    "session": "Night",
+    "numbers": [
+      7,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-01",
+    "session": "Day",
+    "numbers": [
+      6,
+      5,
+      4,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-11-01",
+    "session": "Night",
+    "numbers": [
+      4,
+      0,
+      2,
+      2
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-31",
+    "session": "Day",
+    "numbers": [
+      4,
+      6,
+      5,
+      6
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-31",
+    "session": "Night",
+    "numbers": [
+      6,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-30",
+    "session": "Day",
+    "numbers": [
+      2,
+      3,
+      5,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-30",
+    "session": "Night",
+    "numbers": [
+      0,
+      4,
+      8,
+      6
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-29",
+    "session": "Day",
+    "numbers": [
+      2,
+      2,
+      6,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-29",
+    "session": "Night",
+    "numbers": [
+      4,
+      0,
+      5,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-28",
+    "session": "Day",
+    "numbers": [
+      2,
+      0,
+      2,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-28",
+    "session": "Night",
+    "numbers": [
+      3,
+      3,
+      8,
+      7
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-27",
+    "session": "Day",
+    "numbers": [
+      4,
+      9,
+      6,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-27",
+    "session": "Night",
+    "numbers": [
+      7,
+      2,
+      0,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-26",
+    "session": "Day",
+    "numbers": [
+      3,
+      5,
+      0,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-26",
+    "session": "Night",
+    "numbers": [
+      7,
+      1,
+      3,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-25",
+    "session": "Day",
+    "numbers": [
+      0,
+      1,
+      7,
+      7
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-25",
+    "session": "Night",
+    "numbers": [
+      1,
+      0,
+      8,
+      7
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-24",
+    "session": "Day",
+    "numbers": [
+      0,
+      3,
+      0,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-24",
+    "session": "Night",
+    "numbers": [
+      7,
+      2,
+      2,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-23",
+    "session": "Day",
+    "numbers": [
+      2,
+      8,
+      3,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-23",
+    "session": "Night",
+    "numbers": [
+      3,
+      5,
+      7,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-22",
+    "session": "Day",
+    "numbers": [
+      6,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-22",
+    "session": "Night",
+    "numbers": [
+      3,
+      2,
+      9,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-21",
+    "session": "Day",
+    "numbers": [
+      7,
+      1,
+      8,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-21",
+    "session": "Night",
+    "numbers": [
+      2,
+      5,
+      6,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-20",
+    "session": "Day",
+    "numbers": [
+      8,
+      0,
+      6,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-20",
+    "session": "Night",
+    "numbers": [
+      8,
+      2,
+      8,
+      4
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-19",
+    "session": "Day",
+    "numbers": [
+      1,
+      8,
+      4,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-19",
+    "session": "Night",
+    "numbers": [
+      0,
+      9,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-18",
+    "session": "Day",
+    "numbers": [
+      1,
+      1,
+      5,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-18",
+    "session": "Night",
+    "numbers": [
+      5,
+      8,
+      4,
+      0
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-17",
+    "session": "Day",
+    "numbers": [
+      1,
+      6,
+      9,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-17",
+    "session": "Night",
+    "numbers": [
+      0,
+      8,
+      9,
+      9
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-16",
+    "session": "Day",
+    "numbers": [
+      1,
+      2,
+      2,
+      7
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-16",
+    "session": "Night",
+    "numbers": [
+      0,
+      5,
+      8,
+      8
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-15",
+    "session": "Day",
+    "numbers": [
+      3,
+      2,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-15",
+    "session": "Night",
+    "numbers": [
+      4,
+      2,
+      5,
+      1
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-14",
+    "session": "Day",
+    "numbers": [
+      5,
+      3,
+      2,
+      3
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-14",
+    "session": "Night",
+    "numbers": [
+      2,
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-13",
+    "session": "Day",
+    "numbers": [
+      4,
+      4,
+      0,
+      5
+    ]
+  },
+  {
+    "game": "pick4",
+    "date": "2026-10-13",
+    "session": "Night",
+    "numbers": [
+      6,
+      4,
+      3,
+      8
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-22",
+    "session": "Day",
+    "numbers": [
+      4,
+      7,
+      2,
+      6,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-22",
+    "session": "Night",
+    "numbers": [
+      8,
+      9,
+      7,
+      0,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-21",
+    "session": "Day",
+    "numbers": [
+      4,
+      0,
+      6,
+      8,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-21",
+    "session": "Night",
+    "numbers": [
+      3,
+      7,
+      9,
+      3,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-20",
+    "session": "Day",
+    "numbers": [
+      4,
+      8,
+      4,
+      3,
+      7
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-20",
+    "session": "Night",
+    "numbers": [
+      2,
+      0,
+      7,
+      2,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-19",
+    "session": "Day",
+    "numbers": [
+      2,
+      5,
+      3,
+      5,
+      7
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-19",
+    "session": "Night",
+    "numbers": [
+      3,
+      0,
+      0,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-18",
+    "session": "Day",
+    "numbers": [
+      5,
+      8,
+      5,
+      7,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-18",
+    "session": "Night",
+    "numbers": [
+      7,
+      6,
+      6,
+      3,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-17",
+    "session": "Day",
+    "numbers": [
+      7,
+      4,
+      9,
+      4,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-17",
+    "session": "Night",
+    "numbers": [
+      1,
+      0,
+      8,
+      9,
+      7
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-16",
+    "session": "Day",
+    "numbers": [
+      5,
+      3,
+      0,
+      9,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-16",
+    "session": "Night",
+    "numbers": [
+      4,
+      5,
+      5,
+      0,
+      8
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-15",
+    "session": "Day",
+    "numbers": [
+      6,
+      6,
+      5,
+      5,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-15",
+    "session": "Night",
+    "numbers": [
+      0,
+      8,
+      4,
+      0,
+      4
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-14",
+    "session": "Day",
+    "numbers": [
+      2,
+      0,
+      7,
+      2,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-14",
+    "session": "Night",
+    "numbers": [
+      6,
+      7,
+      5,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-13",
+    "session": "Day",
+    "numbers": [
+      9,
+      5,
+      2,
+      2,
+      3
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-13",
+    "session": "Night",
+    "numbers": [
+      2,
+      2,
+      7,
+      3,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-12",
+    "session": "Day",
+    "numbers": [
+      2,
+      8,
+      9,
+      3,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-12",
+    "session": "Night",
+    "numbers": [
+      3,
+      4,
+      9,
+      1,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-11",
+    "session": "Day",
+    "numbers": [
+      2,
+      6,
+      1,
+      4,
+      7
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-11",
+    "session": "Night",
+    "numbers": [
+      4,
+      9,
+      4,
+      1,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-10",
+    "session": "Day",
+    "numbers": [
+      5,
+      5,
+      3,
+      4,
+      3
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-10",
+    "session": "Night",
+    "numbers": [
+      2,
+      9,
+      9,
+      1,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-09",
+    "session": "Day",
+    "numbers": [
+      3,
+      1,
+      4,
+      6,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-09",
+    "session": "Night",
+    "numbers": [
+      9,
+      1,
+      4,
+      3,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-08",
+    "session": "Day",
+    "numbers": [
+      4,
+      1,
+      7,
+      8,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-08",
+    "session": "Night",
+    "numbers": [
+      0,
+      5,
+      7,
+      6,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-07",
+    "session": "Day",
+    "numbers": [
+      4,
+      9,
+      4,
+      1,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-07",
+    "session": "Night",
+    "numbers": [
+      5,
+      3,
+      5,
+      3,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-06",
+    "session": "Day",
+    "numbers": [
+      3,
+      5,
+      4,
+      1,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-06",
+    "session": "Night",
+    "numbers": [
+      5,
+      6,
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-05",
+    "session": "Day",
+    "numbers": [
+      1,
+      9,
+      2,
+      0,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-05",
+    "session": "Night",
+    "numbers": [
+      8,
+      1,
+      0,
+      6,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-04",
+    "session": "Day",
+    "numbers": [
+      2,
+      7,
+      0,
+      7,
+      9
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-04",
+    "session": "Night",
+    "numbers": [
+      5,
+      8,
+      4,
+      1,
+      7
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-03",
+    "session": "Day",
+    "numbers": [
+      2,
+      5,
+      8,
+      6,
+      9
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-03",
+    "session": "Night",
+    "numbers": [
+      8,
+      3,
+      2,
+      2,
+      7
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-02",
+    "session": "Day",
+    "numbers": [
+      7,
+      5,
+      3,
+      2,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-02",
+    "session": "Night",
+    "numbers": [
+      6,
+      0,
+      5,
+      9,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-01",
+    "session": "Day",
+    "numbers": [
+      1,
+      8,
+      8,
+      7,
+      8
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-11-01",
+    "session": "Night",
+    "numbers": [
+      2,
+      7,
+      8,
+      4,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-31",
+    "session": "Day",
+    "numbers": [
+      8,
+      3,
+      2,
+      1,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-31",
+    "session": "Night",
+    "numbers": [
+      3,
+      5,
+      8,
+      9,
+      8
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-30",
+    "session": "Day",
+    "numbers": [
+      5,
+      2,
+      4,
+      9,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-30",
+    "session": "Night",
+    "numbers": [
+      2,
+      8,
+      6,
+      9,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-29",
+    "session": "Day",
+    "numbers": [
+      0,
+      5,
+      5,
+      4,
+      3
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-29",
+    "session": "Night",
+    "numbers": [
+      9,
+      2,
+      5,
+      8,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-28",
+    "session": "Day",
+    "numbers": [
+      1,
+      6,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-28",
+    "session": "Night",
+    "numbers": [
+      4,
+      2,
+      0,
+      6,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-27",
+    "session": "Day",
+    "numbers": [
+      8,
+      5,
+      8,
+      7,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-27",
+    "session": "Night",
+    "numbers": [
+      0,
+      8,
+      4,
+      7,
+      4
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-26",
+    "session": "Day",
+    "numbers": [
+      0,
+      7,
+      3,
+      4,
+      9
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-26",
+    "session": "Night",
+    "numbers": [
+      7,
+      3,
+      4,
+      9,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-25",
+    "session": "Day",
+    "numbers": [
+      4,
+      1,
+      5,
+      9,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-25",
+    "session": "Night",
+    "numbers": [
+      8,
+      1,
+      8,
+      4,
+      9
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-24",
+    "session": "Day",
+    "numbers": [
+      2,
+      0,
+      7,
+      3,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-24",
+    "session": "Night",
+    "numbers": [
+      7,
+      7,
+      0,
+      5,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-23",
+    "session": "Day",
+    "numbers": [
+      9,
+      1,
+      4,
+      9,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-23",
+    "session": "Night",
+    "numbers": [
+      0,
+      5,
+      2,
+      7,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-22",
+    "session": "Day",
+    "numbers": [
+      0,
+      3,
+      6,
+      7,
+      4
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-22",
+    "session": "Night",
+    "numbers": [
+      0,
+      0,
+      6,
+      6,
+      3
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-21",
+    "session": "Day",
+    "numbers": [
+      7,
+      1,
+      2,
+      5,
+      3
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-21",
+    "session": "Night",
+    "numbers": [
+      0,
+      4,
+      3,
+      3,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-20",
+    "session": "Day",
+    "numbers": [
+      3,
+      9,
+      8,
+      4,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-20",
+    "session": "Night",
+    "numbers": [
+      9,
+      6,
+      3,
+      1,
+      4
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-19",
+    "session": "Day",
+    "numbers": [
+      8,
+      1,
+      9,
+      5,
+      9
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-19",
+    "session": "Night",
+    "numbers": [
+      3,
+      3,
+      4,
+      3,
+      4
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-18",
+    "session": "Day",
+    "numbers": [
+      9,
+      0,
+      3,
+      8,
+      8
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-18",
+    "session": "Night",
+    "numbers": [
+      3,
+      3,
+      0,
+      3,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-17",
+    "session": "Day",
+    "numbers": [
+      2,
+      8,
+      6,
+      8,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-17",
+    "session": "Night",
+    "numbers": [
+      1,
+      5,
+      3,
+      9,
+      2
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-16",
+    "session": "Day",
+    "numbers": [
+      9,
+      3,
+      8,
+      6,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-16",
+    "session": "Night",
+    "numbers": [
+      5,
+      3,
+      4,
+      3,
+      6
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-15",
+    "session": "Day",
+    "numbers": [
+      6,
+      0,
+      6,
+      0,
+      1
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-15",
+    "session": "Night",
+    "numbers": [
+      4,
+      0,
+      7,
+      1,
+      0
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-14",
+    "session": "Day",
+    "numbers": [
+      4,
+      7,
+      5,
+      2,
+      3
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-14",
+    "session": "Night",
+    "numbers": [
+      2,
+      0,
+      7,
+      2,
+      9
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-13",
+    "session": "Day",
+    "numbers": [
+      6,
+      4,
+      7,
+      6,
+      5
+    ]
+  },
+  {
+    "game": "pick5",
+    "date": "2026-10-13",
+    "session": "Night",
+    "numbers": [
+      1,
+      3,
+      2,
+      8,
+      4
+    ]
+  }
+]
