@@ -1,0 +1,76 @@
+{
+  "version": "virtual_ball_machine_v1",
+  "scope": "Independent fair virtual chambers; synthetic validation only, no predictive advantage claimed.",
+  "tests": "pass",
+  "results": [
+    {
+      "game": "pick3",
+      "draws": 100000,
+      "position_chi_square": [
+        10.5268,
+        15.325800000000001,
+        6.131399999999999
+      ],
+      "pair_chi_square": 124.56399999999996,
+      "observed_repeat_fraction": 0.2801,
+      "expected_repeat_fraction": 0.2799999999999999,
+      "independent_machine_box_hits": 498,
+      "expected_box_hits": 513.9999999999983,
+      "independent_machine_straight_hits": 99,
+      "expected_straight_hits": 100,
+      "example": [
+        4,
+        8,
+        7
+      ]
+    },
+    {
+      "game": "pick4",
+      "draws": 100000,
+      "position_chi_square": [
+        11.5176,
+        14.316400000000002,
+        3.809799999999999,
+        4.8638
+      ],
+      "pair_chi_square": 91.214,
+      "observed_repeat_fraction": 0.49582,
+      "expected_repeat_fraction": 0.496,
+      "independent_machine_box_hits": 176,
+      "expected_box_hits": 175.86999999999915,
+      "independent_machine_straight_hits": 7,
+      "expected_straight_hits": 10,
+      "example": [
+        0,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "game": "pick5",
+      "draws": 100000,
+      "position_chi_square": [
+        9.548000000000002,
+        8.326,
+        5.504800000000001,
+        6.252599999999999,
+        5.672
+      ],
+      "pair_chi_square": 101.196,
+      "observed_repeat_fraction": 0.69953,
+      "expected_repeat_fraction": 0.6976,
+      "independent_machine_box_hits": 73,
+      "expected_box_hits": 71.32059999999971,
+      "independent_machine_straight_hits": 2,
+      "expected_straight_hits": 1,
+      "example": [
+        8,
+        5,
+        1,
+        9,
+        6
+      ]
+    }
+  ]
+}
