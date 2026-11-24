@@ -1,0 +1,180 @@
+{
+  "version": "cross_game_previous_session_v1",
+  "notes": "Retrospective exploratory test. Each method makes one distinct-digit selection per target. All have identical fair Any Order coverage. Only prior session used, never contemporaneous or later outcomes. Fixed 10% tilt and stable date/game/session tie break. Positive log gain and excess hits require independent replication. Same-game methods are comparators; not a new claim of historical discovery.",
+  "dates": 41,
+  "first": "2026-10-13",
+  "last": "2026-11-22",
+  "games": {
+    "pick3": {
+      "fair": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": 0,
+        "source_overlap_count": 146,
+        "expected_overlap_count": 151.1999999999999,
+        "expected_fair_any_order_hits": 0.486,
+        "mean_box_log_gain": 0,
+        "actual_source_overlap_rate": 0.6008230452674898,
+        "expected_source_overlap_rate": 0.6222222222222218
+      },
+      "cross_repeat": {
+        "draws": 81,
+        "hits": 1,
+        "log_gain_sum": -2.0505031993789067,
+        "source_overlap_count": 146,
+        "expected_overlap_count": 151.1999999999999,
+        "expected_fair_any_order_hits": 0.486,
+        "mean_box_log_gain": -0.025314854313319837,
+        "actual_source_overlap_rate": 0.6008230452674898,
+        "expected_source_overlap_rate": 0.6222222222222218
+      },
+      "cross_avoid": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -0.21318840074718864,
+        "source_overlap_count": 146,
+        "expected_overlap_count": 151.1999999999999,
+        "expected_fair_any_order_hits": 0.486,
+        "mean_box_log_gain": -0.002631955564780107,
+        "actual_source_overlap_rate": 0.6008230452674898,
+        "expected_source_overlap_rate": 0.6222222222222218
+      },
+      "same_game_repeat": {
+        "draws": 81,
+        "hits": 1,
+        "log_gain_sum": -6.359310227130896,
+        "source_overlap_count": 55,
+        "expected_overlap_count": 64.49999999999997,
+        "expected_fair_any_order_hits": 0.486,
+        "mean_box_log_gain": -0.07851000280408514,
+        "actual_source_overlap_rate": 0.22633744855967078,
+        "expected_source_overlap_rate": 0.265432098765432
+      },
+      "same_game_avoid": {
+        "draws": 81,
+        "hits": 1,
+        "log_gain_sum": -1.2597191798431284,
+        "source_overlap_count": 55,
+        "expected_overlap_count": 64.49999999999997,
+        "expected_fair_any_order_hits": 0.486,
+        "mean_box_log_gain": -0.015552088640038623,
+        "actual_source_overlap_rate": 0.22633744855967078,
+        "expected_source_overlap_rate": 0.265432098765432
+      }
+    },
+    "pick4": {
+      "fair": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": 0,
+        "source_overlap_count": 185,
+        "expected_overlap_count": 184.40000000000015,
+        "expected_fair_any_order_hits": 0.1944,
+        "mean_box_log_gain": 0,
+        "actual_source_overlap_rate": 0.5709876543209876,
+        "expected_source_overlap_rate": 0.5691358024691363
+      },
+      "cross_repeat": {
+        "draws": 81,
+        "hits": 1,
+        "log_gain_sum": -0.6347445074134561,
+        "source_overlap_count": 185,
+        "expected_overlap_count": 184.40000000000015,
+        "expected_fair_any_order_hits": 0.1944,
+        "mean_box_log_gain": -0.007836351943376,
+        "actual_source_overlap_rate": 0.5709876543209876,
+        "expected_source_overlap_rate": 0.5691358024691363
+      },
+      "cross_avoid": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -3.3842953125256883,
+        "source_overlap_count": 185,
+        "expected_overlap_count": 184.40000000000015,
+        "expected_fair_any_order_hits": 0.1944,
+        "mean_box_log_gain": -0.04178142361142825,
+        "actual_source_overlap_rate": 0.5709876543209876,
+        "expected_source_overlap_rate": 0.5691358024691363
+      },
+      "same_game_repeat": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -3.4198361780002178,
+        "source_overlap_count": 111,
+        "expected_overlap_count": 111.99999999999996,
+        "expected_fair_any_order_hits": 0.1944,
+        "mean_box_log_gain": -0.04222019972839775,
+        "actual_source_overlap_rate": 0.3425925925925926,
+        "expected_source_overlap_rate": 0.3456790123456789
+      },
+      "same_game_avoid": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -4.198743179224156,
+        "source_overlap_count": 111,
+        "expected_overlap_count": 111.99999999999996,
+        "expected_fair_any_order_hits": 0.1944,
+        "mean_box_log_gain": -0.05183633554597723,
+        "actual_source_overlap_rate": 0.3425925925925926,
+        "expected_source_overlap_rate": 0.3456790123456789
+      }
+    },
+    "pick5": {
+      "fair": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": 0,
+        "source_overlap_count": 210,
+        "expected_overlap_count": 214,
+        "expected_fair_any_order_hits": 0.0972,
+        "mean_box_log_gain": 0,
+        "actual_source_overlap_rate": 0.5185185185185185,
+        "expected_source_overlap_rate": 0.528395061728395
+      },
+      "cross_repeat": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -0.9697460554727195,
+        "source_overlap_count": 210,
+        "expected_overlap_count": 214,
+        "expected_fair_any_order_hits": 0.0972,
+        "mean_box_log_gain": -0.011972173524354562,
+        "actual_source_overlap_rate": 0.5185185185185185,
+        "expected_source_overlap_rate": 0.528395061728395
+      },
+      "cross_avoid": {
+        "draws": 81,
+        "hits": 1,
+        "log_gain_sum": -5.672852654541125,
+        "source_overlap_count": 210,
+        "expected_overlap_count": 214,
+        "expected_fair_any_order_hits": 0.0972,
+        "mean_box_log_gain": -0.07003521795729784,
+        "actual_source_overlap_rate": 0.5185185185185185,
+        "expected_source_overlap_rate": 0.528395061728395
+      },
+      "same_game_repeat": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -0.7849137878656083,
+        "source_overlap_count": 179,
+        "expected_overlap_count": 169.5,
+        "expected_fair_any_order_hits": 0.0972,
+        "mean_box_log_gain": -0.009690293677353188,
+        "actual_source_overlap_rate": 0.4419753086419753,
+        "expected_source_overlap_rate": 0.4185185185185185
+      },
+      "same_game_avoid": {
+        "draws": 81,
+        "hits": 0,
+        "log_gain_sum": -6.537066701766719,
+        "source_overlap_count": 179,
+        "expected_overlap_count": 169.5,
+        "expected_fair_any_order_hits": 0.0972,
+        "mean_box_log_gain": -0.08070452718230517,
+        "actual_source_overlap_rate": 0.4419753086419753,
+        "expected_source_overlap_rate": 0.4185185185185185
+      }
+    }
+  }
+}
