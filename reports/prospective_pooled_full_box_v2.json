@@ -479,6 +479,107 @@
           "model_fair_full_box_coverage": 0.018000000000000006,
           "control_fair_full_box_coverage": 0.018000000000000006
         },
+        "result": {
+          "official_numbers": [
+            1,
+            2,
+            3
+          ],
+          "official_fireball": 6,
+          "graded_utc": "2026-11-25T05:33:14.999311+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.018000000000000002,
+            "control_box_fair_expected_wins": 0.018000000000000002,
+            "top1_position_matches": 1,
+            "top3_position_matches": 1,
+            "total_positions": 3,
+            "mean_log_gain_vs_fair": 0.019377230097273213,
+            "model_ticket_max_position_matches": 1,
+            "control_ticket_max_position_matches": 0,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": false,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
+      },
+      {
+        "id": "3019dacfebfc4e31",
+        "created_utc": "2026-11-25T05:33:14.999311+00:00",
+        "version": "val_pooled_full_box_future_v2",
+        "target": {
+          "game": "pick3",
+          "date": "2026-11-25",
+          "stream": "Day",
+          "draw_at_utc": "2026-11-25T18:59:00+00:00",
+          "wagers_close_utc": "2026-11-25T18:53:00+00:00"
+        },
+        "forecast": {
+          "training_size": 23771,
+          "training_latest_date": "2026-11-24",
+          "probability_by_digit": [
+            0.10138029509757258,
+            0.09904807234650166,
+            0.10342693955259401,
+            0.09961922893860066,
+            0.10014278914802476,
+            0.09747739171822942,
+            0.10038077106139934,
+            0.10014278914802476,
+            0.09833412660637791,
+            0.10004759638267492
+          ],
+          "best_position_digit": 2,
+          "top_three_digits": [
+            2,
+            0,
+            6
+          ],
+          "model_tickets": [
+            [
+              0,
+              2,
+              6
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              2,
+              7
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              2,
+              6
+            ],
+            [
+              0,
+              2,
+              7
+            ]
+          ],
+          "model_predicted_full_box_coverage": 0.018915738427010352,
+          "control_predicted_full_box_coverage": 0.018882799829147895,
+          "model_fair_full_box_coverage": 0.018000000000000006,
+          "control_fair_full_box_coverage": 0.018000000000000006
+        },
         "result": null
       }
     ],
@@ -989,6 +1090,114 @@
           ],
           "model_predicted_full_box_coverage": 0.007505161725585518,
           "control_predicted_full_box_coverage": 0.007242745385176788,
+          "model_fair_full_box_coverage": 0.0072000000000000015,
+          "control_fair_full_box_coverage": 0.0072000000000000015
+        },
+        "result": {
+          "official_numbers": [
+            7,
+            5,
+            9,
+            9
+          ],
+          "official_fireball": 7,
+          "graded_utc": "2026-11-25T05:33:14.999311+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.0072,
+            "control_box_fair_expected_wins": 0.0072,
+            "top1_position_matches": 2,
+            "top3_position_matches": 3,
+            "total_positions": 4,
+            "mean_log_gain_vs_fair": 0.018450076421002493,
+            "model_ticket_max_position_matches": 1,
+            "control_ticket_max_position_matches": 1,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": true,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
+      },
+      {
+        "id": "5935003b9297ccf5",
+        "created_utc": "2026-11-25T05:33:14.999311+00:00",
+        "version": "val_pooled_full_box_future_v2",
+        "target": {
+          "game": "pick4",
+          "date": "2026-11-25",
+          "stream": "Day",
+          "draw_at_utc": "2026-11-25T18:59:00+00:00",
+          "wagers_close_utc": "2026-11-25T18:53:00+00:00"
+        },
+        "forecast": {
+          "training_size": 23037,
+          "training_latest_date": "2026-11-24",
+          "probability_by_digit": [
+            0.09942877543734381,
+            0.0982506247768654,
+            0.09953588004284185,
+            0.10035701535166013,
+            0.10139235987147448,
+            0.09796501249553731,
+            0.10014280614066405,
+            0.10103534451981436,
+            0.10035701535166013,
+            0.10153516601213852
+          ],
+          "best_position_digit": 9,
+          "top_three_digits": [
+            9,
+            4,
+            7
+          ],
+          "model_tickets": [
+            [
+              3,
+              4,
+              7,
+              9
+            ],
+            [
+              4,
+              7,
+              8,
+              9
+            ],
+            [
+              4,
+              6,
+              7,
+              9
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              3,
+              5,
+              6
+            ],
+            [
+              0,
+              3,
+              8,
+              9
+            ],
+            [
+              5,
+              7,
+              8,
+              9
+            ]
+          ],
+          "model_predicted_full_box_coverage": 0.007510453610379747,
+          "control_predicted_full_box_coverage": 0.007210263656188843,
           "model_fair_full_box_coverage": 0.0072000000000000015,
           "control_fair_full_box_coverage": 0.0072000000000000015
         },
@@ -1539,9 +1748,124 @@
           "model_fair_full_box_coverage": 0.0036000000000000016,
           "control_fair_full_box_coverage": 0.0036000000000000016
         },
+        "result": {
+          "official_numbers": [
+            7,
+            4,
+            2,
+            9,
+            9
+          ],
+          "official_fireball": 0,
+          "graded_utc": "2026-11-25T05:33:14.999311+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.0036,
+            "control_box_fair_expected_wins": 0.0036,
+            "top1_position_matches": 0,
+            "top3_position_matches": 1,
+            "total_positions": 5,
+            "mean_log_gain_vs_fair": -0.011793935736593042,
+            "model_ticket_max_position_matches": 2,
+            "control_ticket_max_position_matches": 2,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": true,
+            "model_at_least_two_on_single_ticket": true,
+            "control_at_least_two_on_single_ticket": true,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
+      },
+      {
+        "id": "4a5a657d786939a1",
+        "created_utc": "2026-11-25T05:33:14.999311+00:00",
+        "version": "val_pooled_full_box_future_v2",
+        "target": {
+          "game": "pick5",
+          "date": "2026-11-25",
+          "stream": "Day",
+          "draw_at_utc": "2026-11-25T18:59:00+00:00",
+          "wagers_close_utc": "2026-11-25T18:53:00+00:00"
+        },
+        "forecast": {
+          "training_size": 2538,
+          "training_latest_date": "2026-11-24",
+          "probability_by_digit": [
+            0.09995594713656387,
+            0.09907488986784141,
+            0.0986784140969163,
+            0.09898678414096916,
+            0.10066079295154184,
+            0.10400881057268722,
+            0.0992511013215859,
+            0.09969162995594713,
+            0.09969162995594713,
+            0.1
+          ],
+          "best_position_digit": 5,
+          "top_three_digits": [
+            5,
+            4,
+            9
+          ],
+          "model_tickets": [
+            [
+              0,
+              4,
+              5,
+              7,
+              9
+            ],
+            [
+              0,
+              4,
+              5,
+              8,
+              9
+            ],
+            [
+              4,
+              5,
+              7,
+              8,
+              9
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              2,
+              6,
+              8,
+              9
+            ],
+            [
+              1,
+              2,
+              3,
+              7,
+              8
+            ],
+            [
+              1,
+              3,
+              5,
+              8,
+              9
+            ]
+          ],
+          "model_predicted_full_box_coverage": 0.0037524709392127856,
+          "control_predicted_full_box_coverage": 0.0035455367288253353,
+          "model_fair_full_box_coverage": 0.0036000000000000016,
+          "control_fair_full_box_coverage": 0.0036000000000000016
+        },
         "result": null
       }
     ]
   },
-  "last_run_utc": "2026-11-24T23:08:56.597876+00:00"
+  "last_run_utc": "2026-11-25T05:33:14.999311+00:00"
 }
