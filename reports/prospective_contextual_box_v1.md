@@ -9,15 +9,15 @@ partial digit or position matches are never scored as hits.
 
 | Game | Actual future draws graded | New complete Box wins | Fair random complete Box wins | Proper mean full-outcome log gain |
 | --- | ---: | ---: | ---: | ---: |
-| pick3 | 5 | 0 | 0 | +0.010703 |
+| pick3 | 6 | 0 | 0 | +0.005436 |
 
-Frozen pick3 2026-11-24 Night at 2026-11-24T23:11:51.105322+00:00: [[2, 6, 7], [2, 6, 9], [2, 7, 9]] (controls [[2, 5, 9], [3, 4, 7], [3, 5, 8]])
-| pick4 | 5 | 0 | 0 | -0.016841 |
+Frozen pick3 2026-11-25 Night at 2026-11-25T22:39:39.313111+00:00: [[2, 6, 7], [2, 6, 9], [2, 7, 9]] (controls [[3, 4, 6], [3, 8, 9], [6, 7, 9]])
+| pick4 | 6 | 0 | 0 | -0.012022 |
 
-Frozen pick4 2026-11-24 Night at 2026-11-24T23:11:51.105322+00:00: [[0, 1, 4, 6], [0, 1, 6, 8], [0, 1, 6, 9]] (controls [[0, 1, 4, 7], [0, 1, 7, 8], [1, 5, 6, 8]])
-| pick5 | 5 | 0 | 0 | +0.003075 |
+Frozen pick4 2026-11-25 Night at 2026-11-25T22:39:39.313111+00:00: [[0, 3, 4, 8], [2, 3, 4, 8], [0, 2, 3, 4]] (controls [[1, 2, 6, 7], [2, 3, 5, 8], [3, 4, 6, 7]])
+| pick5 | 6 | 0 | 0 | +0.001194 |
 
-Frozen pick5 2026-11-24 Night at 2026-11-24T23:11:51.105322+00:00: [[1, 4, 5, 8, 9], [1, 4, 5, 6, 8], [1, 3, 4, 5, 8]] (controls [[0, 2, 3, 4, 7], [1, 3, 4, 7, 8], [4, 5, 7, 8, 9]])
+Frozen pick5 2026-11-25 Night at 2026-11-25T22:39:39.313111+00:00: [[1, 4, 5, 7, 8], [1, 3, 4, 5, 7], [1, 3, 4, 5, 8]] (controls [[0, 1, 3, 4, 5], [1, 2, 4, 6, 8], [4, 5, 7, 8, 9]])
 
 These predictions cannot be retroactively rewritten;
 only new future official results settle the previously frozen
