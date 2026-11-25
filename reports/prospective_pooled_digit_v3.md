@@ -15,18 +15,18 @@ Exact-order overlaps are diagnostic, not Straight wagers.
 
 | Game | Settled draws | Model BOX wins | Control BOX wins | Model $1 paper net | Control $1 paper net | Exact model | Exact control | Anytime evidence gate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| pick3 | 7 | 0 | 0 | $-21 | $-21 | 0 | 0 | No |
+| pick3 | 9 | 0 | 0 | $-27 | $-27 | 0 | 0 | No |
 
-Latest frozen target for pick3: 2026-11-24 Night (saved 2026-11-24T23:08:55.121627+00:00).
-Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 164, 715, 376.
-| pick4 | 7 | 0 | 0 | $-21 | $-21 | 0 | 0 | No |
+Latest frozen target for pick3: 2026-11-25 Day (saved 2026-11-25T05:35:11.338376+00:00).
+Model top digit: 2; candidates: 206, 062, 620; independently seeded controls: 690, 835, 972.
+| pick4 | 9 | 0 | 0 | $-27 | $-27 | 0 | 0 | No |
 
-Latest frozen target for pick4: 2026-11-24 Night (saved 2026-11-24T23:08:55.121627+00:00).
-Model top digit: 4; candidates: 4974, 9749, 7497; independently seeded controls: 6715, 9444, 8133.
-| pick5 | 7 | 0 | 0 | $-21 | $-21 | 0 | 0 | No |
+Latest frozen target for pick4: 2026-11-25 Day (saved 2026-11-25T05:35:11.338376+00:00).
+Model top digit: 9; candidates: 9479, 4794, 7947; independently seeded controls: 8112, 1964, 7696.
+| pick5 | 9 | 0 | 0 | $-27 | $-27 | 0 | 0 | No |
 
-Latest frozen target for pick5: 2026-11-24 Night (saved 2026-11-24T23:08:55.121627+00:00).
-Model top digit: 5; candidates: 54054, 40540, 05405; independently seeded controls: 54323, 60545, 88438.
+Latest frozen target for pick5: 2026-11-25 Day (saved 2026-11-25T05:35:11.338376+00:00).
+Model top digit: 5; candidates: 54954, 49549, 95495; independently seeded controls: 98076, 89533, 64705.
 
 Fair e-value evidence threshold is log(60) with a
 three-game union-bound allocation; it begins at the first
