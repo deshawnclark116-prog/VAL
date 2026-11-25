@@ -7,18 +7,18 @@ A full Any Order hit requires all digits including repetitions.
 
 | Game | Settled draws | Model Box wins | Random Box wins | Model paper net | Random paper net | Prospectively active | Mean log gain |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| pick3 | 1 | 0 | 0 | $-3 | $-3 | 0 | +0.000000 |
-| pick4 | 1 | 0 | 0 | $-3 | $-3 | 0 | +0.000000 |
-| pick5 | 1 | 0 | 0 | $-3 | $-3 | 0 | +0.000000 |
+| pick3 | 2 | 0 | 0 | $-6 | $-6 | 0 | +0.000000 |
+| pick4 | 2 | 0 | 0 | $-6 | $-6 | 0 | +0.000000 |
+| pick5 | 2 | 0 | 0 | $-6 | $-6 | 0 | +0.000000 |
 
-Latest frozen pick3: 2026-11-24 Day; saved 2026-11-24T06:59:39.286221+00:00.
-Model active: No — fair baseline; Box tickets: [[0, 1, 4], [0, 6, 8], [2, 5, 6]]; controls: [[0, 2, 5], [2, 7, 8], [5, 7, 8]].
+Latest frozen pick3: 2026-11-25 Day; saved 2026-11-25T05:32:10.588949+00:00.
+Model active: No — fair baseline; Box tickets: [[1, 2, 5], [1, 2, 9], [4, 6, 9]]; controls: [[0, 1, 6], [0, 2, 3], [0, 5, 6]].
 
-Latest frozen pick4: 2026-11-24 Day; saved 2026-11-24T06:59:39.286221+00:00.
-Model active: No — fair baseline; Box tickets: [[0, 4, 7, 9], [1, 3, 4, 6], [2, 5, 6, 7]]; controls: [[0, 2, 8, 9], [0, 3, 7, 8], [1, 2, 3, 7]].
+Latest frozen pick4: 2026-11-25 Day; saved 2026-11-25T05:32:10.588949+00:00.
+Model active: No — fair baseline; Box tickets: [[1, 3, 4, 9], [2, 3, 7, 9], [2, 5, 6, 9]]; controls: [[0, 1, 2, 4], [0, 2, 3, 9], [5, 6, 7, 8]].
 
-Latest frozen pick5: 2026-11-24 Day; saved 2026-11-24T06:59:39.286221+00:00.
-Model active: No — fair baseline; Box tickets: [[0, 1, 2, 4, 7], [0, 1, 3, 4, 7], [0, 5, 6, 7, 8]]; controls: [[0, 2, 3, 7, 9], [0, 2, 5, 8, 9], [0, 3, 4, 7, 8]].
+Latest frozen pick5: 2026-11-25 Day; saved 2026-11-25T05:32:10.588949+00:00.
+Model active: No — fair baseline; Box tickets: [[0, 1, 5, 8, 9], [0, 4, 6, 7, 8], [3, 4, 5, 7, 9]]; controls: [[1, 2, 3, 4, 6], [1, 2, 3, 4, 7], [2, 5, 6, 7, 9]].
 
 ## Promotion rule
 
