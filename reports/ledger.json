@@ -14772,7 +14772,37 @@
           "source": "Virginia Lottery official download"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "megamillions",
+          "at": "2026-11-25T04:00:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            38,
+            42,
+            44,
+            45,
+            62
+          ],
+          "bonus": 16,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 3,
+          "tickets": 3,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 3,
+          "bonus_matches": 0
+        }
+      }
     },
     {
       "id": 121,
@@ -17943,7 +17973,37 @@
           "source": "Virginia Lottery official download"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "cash5",
+          "at": "2026-11-25T04:00:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            22,
+            25,
+            40,
+            41,
+            45
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0
+        }
+      }
     },
     {
       "id": 147,
@@ -18057,7 +18117,37 @@
           "source": "Virginia Lottery official download"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "millionaireforlife",
+          "at": "2026-11-25T04:15:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            15,
+            21,
+            29,
+            46,
+            55
+          ],
+          "bonus": 2,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 1,
+          "bonus_matches": 1
+        },
+        "random": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 1,
+          "bonus_matches": 0
+        }
+      }
     },
     {
       "id": 149,
@@ -18753,6 +18843,177 @@
           ],
           "bonus": null,
           "extra": 0,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 155,
+      "game": "cash5",
+      "created": "2026-11-25T14:37:18.769167+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              19,
+              29,
+              34,
+              37,
+              44
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "model_weight_score": 1.0524322464435924e-06,
+            "ranking_version": "ensemble_sampling_v1"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              7,
+              15,
+              19,
+              21,
+              31
+            ],
+            "bonus": null
+          }
+        ],
+        "target": {
+          "at": "2026-11-26T04:00:00+00:00",
+          "stream": "Main"
+        },
+        "training_latest": {
+          "game": "cash5",
+          "at": "2026-11-25T04:00:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            22,
+            25,
+            40,
+            41,
+            45
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 156,
+      "game": "megamillions",
+      "created": "2026-11-25T14:37:18.769167+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              52,
+              55,
+              62,
+              65,
+              68
+            ],
+            "bonus": 17,
+            "rank": 1,
+            "role": "primary",
+            "model_weight_score": 4.4558801972033174e-09,
+            "ranking_version": "ensemble_sampling_v1"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              9,
+              16,
+              27,
+              35,
+              60
+            ],
+            "bonus": 7
+          }
+        ],
+        "target": {
+          "at": "2026-11-28T04:00:00+00:00",
+          "stream": "Main"
+        },
+        "training_latest": {
+          "game": "megamillions",
+          "at": "2026-11-25T04:00:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            38,
+            42,
+            44,
+            45,
+            62
+          ],
+          "bonus": 16,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 157,
+      "game": "millionaireforlife",
+      "created": "2026-11-25T14:37:18.769167+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              1,
+              5,
+              30,
+              43,
+              50
+            ],
+            "bonus": 2,
+            "rank": 1,
+            "role": "primary",
+            "model_weight_score": 2.2300231136667395e-08,
+            "ranking_version": "ensemble_sampling_v1"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              9,
+              23,
+              33,
+              41,
+              58
+            ],
+            "bonus": 3
+          }
+        ],
+        "target": {
+          "at": "2026-11-26T04:15:00+00:00",
+          "stream": "Main"
+        },
+        "training_latest": {
+          "game": "millionaireforlife",
+          "at": "2026-11-25T04:15:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            15,
+            21,
+            29,
+            46,
+            55
+          ],
+          "bonus": 2,
+          "extra": null,
           "source": "Virginia Lottery official download"
         }
       },
