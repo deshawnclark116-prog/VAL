@@ -1,6 +1,6 @@
 # VAL frozen future-draw one-number test
 
-Latest run (UTC): 2026-11-26T05:21:43.855975+00:00
+Latest run (UTC): 2026-11-26T22:30:36.444104+00:00
 
 **Paper predictions only. No money wagered.**
 Each named method gets one number for the same exact future
@@ -15,7 +15,7 @@ A few hits cannot prove a persistent lottery advantage.
 
 ## Pick3
 
-Draws recorded: 19. Graded: 18. Pending: 1.
+Draws recorded: 20. Graded: 18. Pending: 2.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -41,13 +41,13 @@ Position matches alone do not constitute prize wins.
 | 7 | 12 | 8.33% | 8.33% | 13.89% | 8.33% | 0.00% |
 
 
-Most recent future target: 2026-11-26 Day; created 2026-11-26T05:21:43.855975+00:00.
+Most recent future target: 2026-11-26 Night; created 2026-11-26T22:30:36.444104+00:00.
 
-Precommitted paper numbers: random: 616, position_hot_top_500: 242, position_cold_top_30: 945, session_hier_sample_500: 220, position_cold_sample_1000: 091.
+Precommitted paper numbers: random: 935, position_hot_top_500: 242, position_cold_top_30: 995, session_hier_sample_500: 419, position_cold_sample_1000: 738.
 
 ## Pick4
 
-Draws recorded: 19. Graded: 18. Pending: 1.
+Draws recorded: 20. Graded: 18. Pending: 2.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -73,13 +73,13 @@ Position matches alone do not constitute prize wins.
 | 7 | 12 | 12.50% | 8.33% | 6.25% | 10.42% | 16.67% |
 
 
-Most recent future target: 2026-11-26 Day; created 2026-11-26T05:21:43.855975+00:00.
+Most recent future target: 2026-11-26 Night; created 2026-11-26T22:30:36.444104+00:00.
 
-Precommitted paper numbers: random: 1887, position_hot_top_500: 7949, position_cold_top_30: 2035, session_hier_sample_500: 7131, position_cold_sample_1000: 1066.
+Precommitted paper numbers: random: 5858, position_hot_top_500: 7949, position_cold_top_30: 8035, session_hier_sample_500: 1883, position_cold_sample_1000: 7948.
 
 ## Pick5
 
-Draws recorded: 19. Graded: 18. Pending: 1.
+Draws recorded: 20. Graded: 18. Pending: 2.
 
 | Method | Paper picks graded | Straight | Any Order | Fair expected Any Order | Average log-score vs fair |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -105,9 +105,9 @@ Position matches alone do not constitute prize wins.
 | 7 | 12 | 13.33% | 16.67% | 11.67% | 10.00% | 5.00% |
 
 
-Most recent future target: 2026-11-26 Day; created 2026-11-26T05:21:43.855975+00:00.
+Most recent future target: 2026-11-26 Night; created 2026-11-26T22:30:36.444104+00:00.
 
-Precommitted paper numbers: random: 97243, position_hot_top_500: 40431, position_cold_top_30: 91162, session_hier_sample_500: 05710, position_cold_sample_1000: 03859.
+Precommitted paper numbers: random: 44490, position_hot_top_500: 40431, position_cold_top_30: 91863, session_hier_sample_500: 04280, position_cold_sample_1000: 92532.
 
 ## Reliability
 
