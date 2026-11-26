@@ -944,7 +944,35 @@
             ]
           ]
         },
-        "result": null
+        "result": {
+          "official_numbers": [
+            5,
+            2,
+            3
+          ],
+          "official_fireball": 3,
+          "graded_utc": "2026-11-26T05:18:04.216585+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.018000000000000002,
+            "control_box_fair_expected_wins": 0.018000000000000002,
+            "top1_position_matches": 1,
+            "top3_position_matches": 1,
+            "total_positions": 3,
+            "mean_log_gain_vs_fair": 0.004330586326827479,
+            "model_ticket_max_position_matches": 1,
+            "control_ticket_max_position_matches": 0,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": false,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
       },
       {
         "id": "37b830a6d6b06073",
@@ -1010,6 +1038,103 @@
               7,
               9,
               1
+            ]
+          ]
+        },
+        "result": {
+          "official_numbers": [
+            5,
+            1,
+            4
+          ],
+          "official_fireball": 7,
+          "graded_utc": "2026-11-26T05:18:04.216585+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.018000000000000002,
+            "control_box_fair_expected_wins": 0.018000000000000002,
+            "top1_position_matches": 0,
+            "top3_position_matches": 0,
+            "total_positions": 3,
+            "mean_log_gain_vs_fair": -0.033687716124367384,
+            "model_ticket_max_position_matches": 0,
+            "control_ticket_max_position_matches": 0,
+            "model_at_least_one_position": false,
+            "control_at_least_one_position": false,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
+      },
+      {
+        "id": "2289024601634639",
+        "created_utc": "2026-11-26T05:18:04.216585+00:00",
+        "version": "val_pooled_digit_future_accuracy_v1",
+        "target": {
+          "game": "pick3",
+          "date": "2026-11-26",
+          "stream": "Day",
+          "draw_at_utc": "2026-11-26T18:59:00+00:00",
+          "wagers_close_utc": "2026-11-26T18:53:00+00:00"
+        },
+        "forecast": {
+          "training_size": 23773,
+          "training_latest_date": "2026-11-25",
+          "probability_by_digit": [
+            0.10128510233222275,
+            0.09909566872917658,
+            0.10342693955259401,
+            0.09961922893860066,
+            0.10019038553069967,
+            0.09757258448357925,
+            0.10038077106139934,
+            0.10004759638267492,
+            0.09833412660637791,
+            0.10004759638267492
+          ],
+          "best_position_digit": 2,
+          "top_three_digits": [
+            2,
+            0,
+            6
+          ],
+          "model_tickets": [
+            [
+              2,
+              0,
+              6
+            ],
+            [
+              0,
+              6,
+              2
+            ],
+            [
+              6,
+              2,
+              0
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              2,
+              4,
+              1
+            ],
+            [
+              5,
+              3,
+              6
+            ],
+            [
+              1,
+              5,
+              0
             ]
           ]
         },
@@ -2026,7 +2151,36 @@
             ]
           ]
         },
-        "result": null
+        "result": {
+          "official_numbers": [
+            6,
+            4,
+            6,
+            1
+          ],
+          "official_fireball": 9,
+          "graded_utc": "2026-11-26T05:18:04.216585+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.0036,
+            "control_box_fair_expected_wins": 0.0048,
+            "top1_position_matches": 0,
+            "top3_position_matches": 1,
+            "total_positions": 4,
+            "mean_log_gain_vs_fair": -0.0009669349183543119,
+            "model_ticket_max_position_matches": 1,
+            "control_ticket_max_position_matches": 1,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": true,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
       },
       {
         "id": "00963fc500232278",
@@ -2098,6 +2252,110 @@
               5,
               3,
               5
+            ]
+          ]
+        },
+        "result": {
+          "official_numbers": [
+            3,
+            5,
+            8,
+            3
+          ],
+          "official_fireball": 5,
+          "graded_utc": "2026-11-26T05:18:04.216585+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.0036,
+            "control_box_fair_expected_wins": 0.005999999999999999,
+            "top1_position_matches": 0,
+            "top3_position_matches": 0,
+            "total_positions": 4,
+            "mean_log_gain_vs_fair": -0.009868399475061906,
+            "model_ticket_max_position_matches": 0,
+            "control_ticket_max_position_matches": 1,
+            "model_at_least_one_position": false,
+            "control_at_least_one_position": true,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
+      },
+      {
+        "id": "857803c0f8fc2d6a",
+        "created_utc": "2026-11-26T05:18:04.216585+00:00",
+        "version": "val_pooled_digit_future_accuracy_v1",
+        "target": {
+          "game": "pick4",
+          "date": "2026-11-26",
+          "stream": "Day",
+          "draw_at_utc": "2026-11-26T18:59:00+00:00",
+          "wagers_close_utc": "2026-11-26T18:53:00+00:00"
+        },
+        "forecast": {
+          "training_size": 23039,
+          "training_latest_date": "2026-11-25",
+          "probability_by_digit": [
+            0.09942877543734381,
+            0.09821492324169939,
+            0.09950017850767583,
+            0.10035701535166013,
+            0.10139235987147448,
+            0.09800071403070332,
+            0.10021420921099607,
+            0.10103534451981436,
+            0.1003213138164941,
+            0.10153516601213852
+          ],
+          "best_position_digit": 9,
+          "top_three_digits": [
+            9,
+            4,
+            7
+          ],
+          "model_tickets": [
+            [
+              9,
+              4,
+              7,
+              9
+            ],
+            [
+              4,
+              7,
+              9,
+              4
+            ],
+            [
+              7,
+              9,
+              4,
+              7
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              0,
+              9,
+              1,
+              2
+            ],
+            [
+              7,
+              8,
+              6,
+              7
+            ],
+            [
+              9,
+              4,
+              5,
+              8
             ]
           ]
         },
@@ -3183,7 +3441,37 @@
             ]
           ]
         },
-        "result": null
+        "result": {
+          "official_numbers": [
+            2,
+            7,
+            3,
+            5,
+            1
+          ],
+          "official_fireball": 2,
+          "graded_utc": "2026-11-26T05:18:04.216585+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.0009,
+            "control_box_fair_expected_wins": 0.003,
+            "top1_position_matches": 1,
+            "top3_position_matches": 1,
+            "total_positions": 5,
+            "mean_log_gain_vs_fair": 0.0034349993355409225,
+            "model_ticket_max_position_matches": 1,
+            "control_ticket_max_position_matches": 0,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": false,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": false,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
       },
       {
         "id": "e909a0c23a6900f1",
@@ -3264,9 +3552,120 @@
             ]
           ]
         },
+        "result": {
+          "official_numbers": [
+            1,
+            8,
+            0,
+            2,
+            9
+          ],
+          "official_fireball": 3,
+          "graded_utc": "2026-11-26T05:18:04.216585+00:00",
+          "accuracy": {
+            "model_box_wins": 0,
+            "control_box_wins": 0,
+            "model_box_paper_net_usd": -3,
+            "control_box_paper_net_usd": -3,
+            "model_box_fair_expected_wins": 0.0009,
+            "control_box_fair_expected_wins": 0.0013999999999999998,
+            "top1_position_matches": 0,
+            "top3_position_matches": 1,
+            "total_positions": 5,
+            "mean_log_gain_vs_fair": -0.026127214680011335,
+            "model_ticket_max_position_matches": 1,
+            "control_ticket_max_position_matches": 2,
+            "model_at_least_one_position": true,
+            "control_at_least_one_position": true,
+            "model_at_least_two_on_single_ticket": false,
+            "control_at_least_two_on_single_ticket": true,
+            "model_exact": 0,
+            "control_exact": 0
+          }
+        }
+      },
+      {
+        "id": "3b0186dee953266a",
+        "created_utc": "2026-11-26T05:18:04.216585+00:00",
+        "version": "val_pooled_digit_future_accuracy_v1",
+        "target": {
+          "game": "pick5",
+          "date": "2026-11-26",
+          "stream": "Day",
+          "draw_at_utc": "2026-11-26T18:59:00+00:00",
+          "wagers_close_utc": "2026-11-26T18:53:00+00:00"
+        },
+        "forecast": {
+          "training_size": 2540,
+          "training_latest_date": "2026-11-25",
+          "probability_by_digit": [
+            0.09995596653456627,
+            0.0991193306913254,
+            0.09872302950242184,
+            0.09898723029502422,
+            0.10061646851607221,
+            0.10400704535446939,
+            0.09920739762219287,
+            0.0996917657419639,
+            0.0996917657419639,
+            0.1
+          ],
+          "best_position_digit": 5,
+          "top_three_digits": [
+            5,
+            4,
+            9
+          ],
+          "model_tickets": [
+            [
+              5,
+              4,
+              9,
+              5,
+              4
+            ],
+            [
+              4,
+              9,
+              5,
+              4,
+              9
+            ],
+            [
+              9,
+              5,
+              4,
+              9,
+              5
+            ]
+          ],
+          "uniform_coverage_controls": [
+            [
+              7,
+              4,
+              3,
+              1,
+              7
+            ],
+            [
+              4,
+              2,
+              0,
+              6,
+              9
+            ],
+            [
+              9,
+              0,
+              4,
+              3,
+              8
+            ]
+          ]
+        },
         "result": null
       }
     ]
   },
-  "last_run_utc": "2026-11-25T22:38:43.379432+00:00"
+  "last_run_utc": "2026-11-26T05:18:04.216585+00:00"
 }
