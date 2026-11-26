@@ -1,6 +1,6 @@
 # VAL next-draw report
 
-Updated: 2026-11-26T03:23:30.244477-05:00 · Eastern time
+Updated: 2026-11-26T14:03:33.385455-05:00 · Eastern time
 
 Paper picks for research. These weights are not proven winning probabilities.
 
@@ -14,9 +14,6 @@ Picks use previous completed results from ALL sessions of the same game: today's
 
 | Game | Target draw (ET) | Session | Batch | One prediction | Latest result used (ET) | Latest winning numbers used |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pick 3 | 2026-11-26T13:59:00-05:00 | Day | #161 | **Paper:** `3 4 8` | 2026-11-25T23:00:00-05:00 | `5 1 4` (Night) |
-| Pick 4 | 2026-11-26T13:59:00-05:00 | Day | #162 | **Paper:** `1 2 8 9` | 2026-11-25T23:00:00-05:00 | `3 5 8 3` (Night) |
-| Pick 5 | 2026-11-26T13:59:00-05:00 | Day | #163 | **Paper:** `1 2 3 6 7` | 2026-11-25T23:00:00-05:00 | `1 8 0 2 9` (Night) |
 | Cash 5 | 2026-11-26T23:00:00-05:00 | Main | #164 | **Primary:** `9 26 29 31 32` | 2026-11-25T23:00:00-05:00 | `7 14 18 30 45` (Main) |
 | Powerball | 2026-11-28T22:59:00-05:00 | Main | #165 | **Primary:** `17 37 48 56 62 + 10` | 2026-11-25T22:59:00-05:00 | `23 43 57 58 68 + 12` (Main) |
 | Mega Millions | 2026-11-27T23:00:00-05:00 | Main | #156 | **Primary:** `52 55 62 65 68 + 17` | 2026-11-24T23:00:00-05:00 | `38 42 44 45 62 + 16` (Main) |
@@ -70,9 +67,6 @@ Pending batches: 9. This report retains the original saved picks and controls; n
 
 | Game (all sessions) | Ensemble full Box wins | Random full Box wins | Ensemble exact wins | Random exact wins | Frequency p-value |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Pick 3 | 0 | 1 | 0 | 0 | 0.3427 |
-| Pick 4 | 0 | 0 | 0 | 0 | 0.9510 |
-| Pick 5 | 0 | 0 | 0 | 0 | 0.8551 |
 | Cash 5 | — | — | 0 | 0 | 0.8022 |
 | Powerball | — | — | 0 | 0 | 0.7143 |
 | Mega Millions | — | — | 0 | 0 | 0.3506 |
@@ -89,4 +83,7 @@ Nine recurring games update from Virginia Lottery official downloads. Same-day P
 
 ### Update / analysis failures
 
-- Cash Pop: Waiting for latest completed After Hours result (2026-11-25T23:59:00-05:00); new picks withheld
+- Pick 3: Waiting for latest completed Day result (2026-11-26T13:59:00-05:00); new picks withheld
+- Pick 4: Waiting for latest completed Day result (2026-11-26T13:59:00-05:00); new picks withheld
+- Pick 5: Waiting for latest completed Day result (2026-11-26T13:59:00-05:00); new picks withheld
+- Cash Pop: Waiting for latest completed Lunch Break result (2026-11-26T12:00:00-05:00); new picks withheld
