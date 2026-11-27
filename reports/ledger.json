@@ -20152,7 +20152,37 @@
           "source": "Virginia Lottery official download"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "cash5",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            4,
+            11,
+            43,
+            44,
+            45
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 1,
+          "bonus_matches": 0
+        }
+      }
     },
     {
       "id": 165,
@@ -20266,7 +20296,37 @@
           "source": "Virginia Lottery official download"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "millionaireforlife",
+          "at": "2026-11-27T04:15:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            11,
+            23,
+            27,
+            50,
+            53
+          ],
+          "bonus": 4,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 1,
+          "bonus_matches": 0
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0
+        }
+      }
     },
     {
       "id": 167,
@@ -20418,7 +20478,49 @@
           "source": "Virginia Lottery latest-result page"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "pick3",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            3,
+            6,
+            3
+          ],
+          "bonus": null,
+          "extra": 5,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0,
+          "box_wins": 0,
+          "box_tickets": 1,
+          "box_payout_usd": 0,
+          "box_spend_usd": 1,
+          "box_net_usd": -1,
+          "box_fair_expected_wins": 0.006,
+          "box_fair_at_least_one_prob": 0.006
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0,
+          "box_wins": 0,
+          "box_tickets": 1,
+          "box_payout_usd": 0,
+          "box_spend_usd": 1,
+          "box_net_usd": -1,
+          "box_fair_expected_wins": 0.006,
+          "box_fair_at_least_one_prob": 0.006
+        }
+      }
     },
     {
       "id": 169,
@@ -20513,7 +20615,50 @@
           "source": "Virginia Lottery latest-result page"
         }
       },
-      "result": null
+      "result": {
+        "draw": {
+          "game": "pick4",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            1,
+            6,
+            3,
+            6
+          ],
+          "bonus": null,
+          "extra": 8,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0,
+          "box_wins": 0,
+          "box_tickets": 1,
+          "box_payout_usd": 0,
+          "box_spend_usd": 1,
+          "box_net_usd": -1,
+          "box_fair_expected_wins": 0.0024,
+          "box_fair_at_least_one_prob": 0.0024
+        },
+        "random": {
+          "best": 0,
+          "exact": 0,
+          "total_matches": 0,
+          "tickets": 1,
+          "bonus_matches": 0,
+          "box_wins": 0,
+          "box_tickets": 1,
+          "box_payout_usd": 0,
+          "box_spend_usd": 1,
+          "box_net_usd": -1,
+          "box_fair_expected_wins": 0.0024,
+          "box_fair_at_least_one_prob": 0.0024
+        }
+      }
     },
     {
       "id": 170,
@@ -20609,6 +20754,449 @@
           "bonus": null,
           "extra": 8,
           "source": "Virginia Lottery latest-result page"
+        }
+      },
+      "result": {
+        "draw": {
+          "game": "pick5",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            1,
+            6,
+            3,
+            0,
+            9
+          ],
+          "bonus": null,
+          "extra": 6,
+          "source": "Virginia Lottery official download"
+        },
+        "model": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 1,
+          "bonus_matches": 0,
+          "box_wins": 0,
+          "box_tickets": 1,
+          "box_payout_usd": 0,
+          "box_spend_usd": 1,
+          "box_net_usd": -1,
+          "box_fair_expected_wins": 0.0012,
+          "box_fair_at_least_one_prob": 0.0012
+        },
+        "random": {
+          "best": 1,
+          "exact": 0,
+          "total_matches": 1,
+          "tickets": 1,
+          "bonus_matches": 0,
+          "box_wins": 0,
+          "box_tickets": 1,
+          "box_payout_usd": 0,
+          "box_spend_usd": 1,
+          "box_net_usd": -1,
+          "box_fair_expected_wins": 0.0012,
+          "box_fair_at_least_one_prob": 0.0012
+        }
+      }
+    },
+    {
+      "id": 171,
+      "game": "pick3",
+      "created": "2026-11-27T10:55:48.813655+00:00",
+      "stream": "Day",
+      "method": "digit_box_v4",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              0,
+              8,
+              9
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+            "formula_revision": "fixed_epoch_evidence_v1",
+            "model_weight_score": 0.006,
+            "box_probability": 0.006,
+            "box_ways": 6,
+            "box_payout_usd_1_dollar": 80,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v4"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              4,
+              5
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 6
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_box_v4",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "play_type": "any_order",
+          "ticket_stake_usd": 1,
+          "complete_multiset_match_required": true,
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140,
+          "online_evidence": {
+            "active": null,
+            "confirmed": false,
+            "log_evidence": {
+              "pooled": 0.6524647433216078,
+              "position": 1.6299978238602928,
+              "session": -3.935592553580958,
+              "echo": -4.669055455236962
+            },
+            "threshold": 7.272398392570047,
+            "epoch": 1,
+            "epoch_draws": 522,
+            "prewarm_draws": 700,
+            "anchor": "2024-01-01",
+            "formula_revision": "fixed_epoch_evidence_v1",
+            "recent_n": 0,
+            "recent_mean": 0.0,
+            "recent_first_half": 0.0,
+            "recent_second_half": 0.0
+          }
+        },
+        "target": {
+          "at": "2026-11-27T18:59:00+00:00",
+          "stream": "Day"
+        },
+        "training_latest": {
+          "game": "pick3",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            3,
+            6,
+            3
+          ],
+          "bonus": null,
+          "extra": 5,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 172,
+      "game": "pick4",
+      "created": "2026-11-27T10:55:48.813655+00:00",
+      "stream": "Day",
+      "method": "digit_box_v4",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              3,
+              5,
+              7,
+              9
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+            "formula_revision": "fixed_epoch_evidence_v1",
+            "model_weight_score": 0.0024,
+            "box_probability": 0.0024,
+            "box_ways": 24,
+            "box_payout_usd_1_dollar": 200,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v4"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              1,
+              2,
+              7
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 24
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_box_v4",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "play_type": "any_order",
+          "ticket_stake_usd": 1,
+          "complete_multiset_match_required": true,
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140,
+          "online_evidence": {
+            "active": null,
+            "confirmed": false,
+            "log_evidence": {
+              "pooled": 0.020357939135795783,
+              "position": -2.77151867789206,
+              "session": -4.953165474945383,
+              "echo": -4.19795244191225
+            },
+            "threshold": 7.272398392570047,
+            "epoch": 1,
+            "epoch_draws": 522,
+            "prewarm_draws": 700,
+            "anchor": "2024-01-01",
+            "formula_revision": "fixed_epoch_evidence_v1",
+            "recent_n": 0,
+            "recent_mean": 0.0,
+            "recent_first_half": 0.0,
+            "recent_second_half": 0.0
+          }
+        },
+        "target": {
+          "at": "2026-11-27T18:59:00+00:00",
+          "stream": "Day"
+        },
+        "training_latest": {
+          "game": "pick4",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            1,
+            6,
+            3,
+            6
+          ],
+          "bonus": null,
+          "extra": 8,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 173,
+      "game": "pick5",
+      "created": "2026-11-27T10:55:48.813655+00:00",
+      "stream": "Day",
+      "method": "digit_box_v4",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              2,
+              4,
+              6,
+              7,
+              8
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+            "formula_revision": "fixed_epoch_evidence_v1",
+            "model_weight_score": 0.0012000000000000025,
+            "box_probability": 0.0012000000000000025,
+            "box_ways": 120,
+            "box_payout_usd_1_dollar": 400,
+            "play_type": "any_order",
+            "signal_gate_passed": false,
+            "formula_version": "digit_box_v4"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              0,
+              2,
+              3,
+              5,
+              8
+            ],
+            "bonus": null,
+            "play_type": "any_order",
+            "box_ways": 120
+          }
+        ],
+        "model_meta": {
+          "formula_version": "digit_box_v4",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "play_type": "any_order",
+          "ticket_stake_usd": 1,
+          "complete_multiset_match_required": true,
+          "signal_gate_passed": false,
+          "signal_strength": 0.0,
+          "passed_experts": [],
+          "calibration_observations": 140,
+          "calibration_cluster_days": 140,
+          "online_evidence": {
+            "active": null,
+            "confirmed": false,
+            "log_evidence": {
+              "pooled": -2.6205494180218953,
+              "position": -1.1071042516262506,
+              "session": -6.915549001971451,
+              "echo": -18.03433407593879
+            },
+            "threshold": 7.272398392570047,
+            "epoch": 1,
+            "epoch_draws": 522,
+            "prewarm_draws": 700,
+            "anchor": "2024-01-01",
+            "formula_revision": "fixed_epoch_evidence_v1",
+            "recent_n": 0,
+            "recent_mean": 0.0,
+            "recent_first_half": 0.0,
+            "recent_second_half": 0.0
+          }
+        },
+        "target": {
+          "at": "2026-11-27T18:59:00+00:00",
+          "stream": "Day"
+        },
+        "training_latest": {
+          "game": "pick5",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Night",
+          "numbers": [
+            1,
+            6,
+            3,
+            0,
+            9
+          ],
+          "bonus": null,
+          "extra": 6,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 174,
+      "game": "cash5",
+      "created": "2026-11-27T10:55:48.813655+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              7,
+              23,
+              24,
+              25,
+              26
+            ],
+            "bonus": null,
+            "rank": 1,
+            "role": "primary",
+            "model_weight_score": 8.071180620242232e-07,
+            "ranking_version": "ensemble_sampling_v1"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              5,
+              28,
+              36,
+              38,
+              44
+            ],
+            "bonus": null
+          }
+        ],
+        "target": {
+          "at": "2026-11-28T04:00:00+00:00",
+          "stream": "Main"
+        },
+        "training_latest": {
+          "game": "cash5",
+          "at": "2026-11-27T04:00:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            4,
+            11,
+            43,
+            44,
+            45
+          ],
+          "bonus": null,
+          "extra": null,
+          "source": "Virginia Lottery official download"
+        }
+      },
+      "result": null
+    },
+    {
+      "id": 175,
+      "game": "millionaireforlife",
+      "created": "2026-11-27T10:55:48.813655+00:00",
+      "stream": "Main",
+      "method": "ensemble",
+      "data": {
+        "picks": [
+          {
+            "numbers": [
+              17,
+              31,
+              42,
+              43,
+              45
+            ],
+            "bonus": 5,
+            "rank": 1,
+            "role": "primary",
+            "model_weight_score": 2.296385752411854e-08,
+            "ranking_version": "ensemble_sampling_v1"
+          }
+        ],
+        "baseline": [
+          {
+            "numbers": [
+              6,
+              7,
+              31,
+              33,
+              56
+            ],
+            "bonus": 4
+          }
+        ],
+        "target": {
+          "at": "2026-11-28T04:15:00+00:00",
+          "stream": "Main"
+        },
+        "training_latest": {
+          "game": "millionaireforlife",
+          "at": "2026-11-27T04:15:00+00:00",
+          "stream": "Main",
+          "numbers": [
+            11,
+            23,
+            27,
+            50,
+            53
+          ],
+          "bonus": 4,
+          "extra": null,
+          "source": "Virginia Lottery official download"
         }
       },
       "result": null
