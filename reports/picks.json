@@ -1,6 +1,288 @@
 {
-  "generated_at": "2026-11-26T19:03:33.385455+00:00",
+  "generated_at": "2026-11-27T02:12:52.474193+00:00",
   "batches": [
+    {
+      "game": "pick3",
+      "name": "Pick 3",
+      "id": 168,
+      "created": "2026-11-27T02:12:52.474193+00:00",
+      "stream": "Night",
+      "method": "digit_box_v4",
+      "picks": [
+        {
+          "numbers": [
+            4,
+            7,
+            9
+          ],
+          "bonus": null,
+          "rank": 1,
+          "role": "primary",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "model_weight_score": 0.006,
+          "box_probability": 0.006,
+          "box_ways": 6,
+          "box_payout_usd_1_dollar": 80,
+          "play_type": "any_order",
+          "signal_gate_passed": false,
+          "formula_version": "digit_box_v4"
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            2,
+            5,
+            9
+          ],
+          "bonus": null,
+          "play_type": "any_order",
+          "box_ways": 6
+        }
+      ],
+      "model_meta": {
+        "formula_version": "digit_box_v4",
+        "formula_revision": "fixed_epoch_evidence_v1",
+        "play_type": "any_order",
+        "ticket_stake_usd": 1,
+        "complete_multiset_match_required": true,
+        "signal_gate_passed": false,
+        "signal_strength": 0.0,
+        "passed_experts": [],
+        "calibration_observations": 140,
+        "calibration_cluster_days": 140,
+        "online_evidence": {
+          "active": null,
+          "confirmed": false,
+          "log_evidence": {
+            "pooled": 0.7475480401182103,
+            "position": 1.672881569092381,
+            "session": -3.9430316119212643,
+            "echo": -4.559587415443435
+          },
+          "threshold": 7.272398392570047,
+          "epoch": 1,
+          "epoch_draws": 521,
+          "prewarm_draws": 700,
+          "anchor": "2024-01-01",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "recent_n": 0,
+          "recent_mean": 0.0,
+          "recent_first_half": 0.0,
+          "recent_second_half": 0.0
+        }
+      },
+      "target": {
+        "at": "2026-11-27T04:00:00+00:00",
+        "stream": "Night"
+      },
+      "training_latest": {
+        "game": "pick3",
+        "at": "2026-11-26T18:59:00+00:00",
+        "stream": "Day",
+        "numbers": [
+          5,
+          1,
+          5
+        ],
+        "bonus": null,
+        "extra": 5,
+        "source": "Virginia Lottery latest-result page"
+      },
+      "result": null
+    },
+    {
+      "game": "pick4",
+      "name": "Pick 4",
+      "id": 169,
+      "created": "2026-11-27T02:12:52.474193+00:00",
+      "stream": "Night",
+      "method": "digit_box_v4",
+      "picks": [
+        {
+          "numbers": [
+            2,
+            3,
+            5,
+            9
+          ],
+          "bonus": null,
+          "rank": 1,
+          "role": "primary",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "model_weight_score": 0.0024,
+          "box_probability": 0.0024,
+          "box_ways": 24,
+          "box_payout_usd_1_dollar": 200,
+          "play_type": "any_order",
+          "signal_gate_passed": false,
+          "formula_version": "digit_box_v4"
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "bonus": null,
+          "play_type": "any_order",
+          "box_ways": 24
+        }
+      ],
+      "model_meta": {
+        "formula_version": "digit_box_v4",
+        "formula_revision": "fixed_epoch_evidence_v1",
+        "play_type": "any_order",
+        "ticket_stake_usd": 1,
+        "complete_multiset_match_required": true,
+        "signal_gate_passed": false,
+        "signal_strength": 0.0,
+        "passed_experts": [],
+        "calibration_observations": 140,
+        "calibration_cluster_days": 140,
+        "online_evidence": {
+          "active": null,
+          "confirmed": false,
+          "log_evidence": {
+            "pooled": 0.06062648238465544,
+            "position": -2.7461658565151437,
+            "session": -4.905975592142425,
+            "echo": -4.099972033552046
+          },
+          "threshold": 7.272398392570047,
+          "epoch": 1,
+          "epoch_draws": 521,
+          "prewarm_draws": 700,
+          "anchor": "2024-01-01",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "recent_n": 0,
+          "recent_mean": 0.0,
+          "recent_first_half": 0.0,
+          "recent_second_half": 0.0
+        }
+      },
+      "target": {
+        "at": "2026-11-27T04:00:00+00:00",
+        "stream": "Night"
+      },
+      "training_latest": {
+        "game": "pick4",
+        "at": "2026-11-26T18:59:00+00:00",
+        "stream": "Day",
+        "numbers": [
+          8,
+          6,
+          1,
+          1
+        ],
+        "bonus": null,
+        "extra": 1,
+        "source": "Virginia Lottery latest-result page"
+      },
+      "result": null
+    },
+    {
+      "game": "pick5",
+      "name": "Pick 5",
+      "id": 170,
+      "created": "2026-11-27T02:12:52.474193+00:00",
+      "stream": "Night",
+      "method": "digit_box_v4",
+      "picks": [
+        {
+          "numbers": [
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "bonus": null,
+          "rank": 1,
+          "role": "primary",
+          "ranking_version": "digit_box_v4_fixed_epoch_evidence_v1",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "model_weight_score": 0.0012000000000000025,
+          "box_probability": 0.0012000000000000025,
+          "box_ways": 120,
+          "box_payout_usd_1_dollar": 400,
+          "play_type": "any_order",
+          "signal_gate_passed": false,
+          "formula_version": "digit_box_v4"
+        }
+      ],
+      "baseline": [
+        {
+          "numbers": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "bonus": null,
+          "play_type": "any_order",
+          "box_ways": 120
+        }
+      ],
+      "model_meta": {
+        "formula_version": "digit_box_v4",
+        "formula_revision": "fixed_epoch_evidence_v1",
+        "play_type": "any_order",
+        "ticket_stake_usd": 1,
+        "complete_multiset_match_required": true,
+        "signal_gate_passed": false,
+        "signal_strength": 0.0,
+        "passed_experts": [],
+        "calibration_observations": 140,
+        "calibration_cluster_days": 140,
+        "online_evidence": {
+          "active": null,
+          "confirmed": false,
+          "log_evidence": {
+            "pooled": -2.5657995316658706,
+            "position": -1.1597109395952567,
+            "session": -6.888221363129535,
+            "echo": -18.18717231685389
+          },
+          "threshold": 7.272398392570047,
+          "epoch": 1,
+          "epoch_draws": 521,
+          "prewarm_draws": 700,
+          "anchor": "2024-01-01",
+          "formula_revision": "fixed_epoch_evidence_v1",
+          "recent_n": 0,
+          "recent_mean": 0.0,
+          "recent_first_half": 0.0,
+          "recent_second_half": 0.0
+        }
+      },
+      "target": {
+        "at": "2026-11-27T04:00:00+00:00",
+        "stream": "Night"
+      },
+      "training_latest": {
+        "game": "pick5",
+        "at": "2026-11-26T18:59:00+00:00",
+        "stream": "Day",
+        "numbers": [
+          6,
+          3,
+          2,
+          8,
+          9
+        ],
+        "bonus": null,
+        "extra": 8,
+        "source": "Virginia Lottery latest-result page"
+      },
+      "result": null
+    },
     {
       "game": "cash5",
       "name": "Cash 5",
@@ -287,20 +569,8 @@
   ],
   "failures": [
     {
-      "game": "pick3",
-      "error": "Waiting for latest completed Day result (2026-11-26T13:59:00-05:00); new picks withheld"
-    },
-    {
-      "game": "pick4",
-      "error": "Waiting for latest completed Day result (2026-11-26T13:59:00-05:00); new picks withheld"
-    },
-    {
-      "game": "pick5",
-      "error": "Waiting for latest completed Day result (2026-11-26T13:59:00-05:00); new picks withheld"
-    },
-    {
       "game": "cashpop",
-      "error": "Waiting for latest completed Lunch Break result (2026-11-26T12:00:00-05:00); new picks withheld"
+      "error": "Waiting for latest completed Prime Time result (2026-11-26T21:00:00-05:00); new picks withheld"
     }
   ]
 }
