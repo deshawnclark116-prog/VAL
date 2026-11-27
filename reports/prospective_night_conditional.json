@@ -443,6 +443,100 @@
             "model_log_gain_vs_fair": 0.0
           }
         }
+      },
+      {
+        "id": "d8ca513de7053b786f5c",
+        "created_utc": "2026-11-27T03:41:48.389424+00:00",
+        "target": {
+          "game": "pick3",
+          "date": "2026-11-26",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-27T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-27T03:45:00+00:00"
+        },
+        "forecast": {
+          "model_version": "day_night_conditional_box_v1",
+          "evidence_start": "2024-01-01",
+          "past_draws": 2121,
+          "latest_training_draw": {
+            "date": "2026-11-26",
+            "stream": "Day",
+            "numbers": [
+              5,
+              1,
+              5
+            ]
+          },
+          "selected_expert": null,
+          "diagnostics": {
+            "epoch": 0,
+            "threshold": 7.783224016336037,
+            "paired": 1060,
+            "experts": {
+              "presence": {
+                "log_e": -11.040007466414242,
+                "avg": -0.022536324377302373,
+                "first": -0.03049142938391327,
+                "second": -0.014581219370691489,
+                "improvement_vs_pooled": -0.015000943830620627,
+                "pooled_first": -0.02121304334444917,
+                "pooled_second": -0.008788844316792083,
+                "passed": false
+              },
+              "tokens": {
+                "log_e": -8.691291977480212,
+                "avg": -0.01623665657309207,
+                "first": -0.020283051137177183,
+                "second": -0.012190262009006952,
+                "improvement_vs_pooled": -0.008701276026410316,
+                "pooled_first": -0.011004665097713084,
+                "pooled_second": -0.006397886955107545,
+                "passed": false
+              }
+            },
+            "last_day": "2026-11-26",
+            "warmup_pairs": 0,
+            "current_epoch_pairs": 1060,
+            "selected_expert": null,
+            "revision": "day_night_conditional_box_v1"
+          },
+          "selected_joint_forecast": null,
+          "candidate_tickets": [
+            [
+              1,
+              2,
+              6
+            ],
+            [
+              1,
+              5,
+              8
+            ],
+            [
+              1,
+              6,
+              9
+            ]
+          ],
+          "random_control_tickets": [
+            [
+              0,
+              6,
+              9
+            ],
+            [
+              4,
+              6,
+              8
+            ],
+            [
+              5,
+              7,
+              9
+            ]
+          ]
+        },
+        "result": null
       }
     ],
     "pick4": [
@@ -917,6 +1011,107 @@
             "model_log_gain_vs_fair": 0.0
           }
         }
+      },
+      {
+        "id": "3dfb91e3cc834108268e",
+        "created_utc": "2026-11-27T03:41:48.389424+00:00",
+        "target": {
+          "game": "pick4",
+          "date": "2026-11-26",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-27T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-27T03:45:00+00:00"
+        },
+        "forecast": {
+          "model_version": "day_night_conditional_box_v1",
+          "evidence_start": "2024-01-01",
+          "past_draws": 2121,
+          "latest_training_draw": {
+            "date": "2026-11-26",
+            "stream": "Day",
+            "numbers": [
+              8,
+              6,
+              1,
+              1
+            ]
+          },
+          "selected_expert": null,
+          "diagnostics": {
+            "epoch": 0,
+            "threshold": 7.783224016336037,
+            "paired": 1060,
+            "experts": {
+              "presence": {
+                "log_e": -10.18040242248507,
+                "avg": -0.0157802966276616,
+                "first": -0.009978054112782252,
+                "second": -0.021582539142540946,
+                "improvement_vs_pooled": -0.006134197682933157,
+                "pooled_first": -0.0008185931899421627,
+                "pooled_second": -0.01144980217592415,
+                "passed": false
+              },
+              "tokens": {
+                "log_e": -11.148049222792238,
+                "avg": -0.012951646732023047,
+                "first": -0.012115169439854401,
+                "second": -0.013788124024191694,
+                "improvement_vs_pooled": -0.0033055477872946048,
+                "pooled_first": -0.0029557085170143103,
+                "pooled_second": -0.0036553870575748992,
+                "passed": false
+              }
+            },
+            "last_day": "2026-11-26",
+            "warmup_pairs": 0,
+            "current_epoch_pairs": 1060,
+            "selected_expert": null,
+            "revision": "day_night_conditional_box_v1"
+          },
+          "selected_joint_forecast": null,
+          "candidate_tickets": [
+            [
+              1,
+              2,
+              3,
+              7
+            ],
+            [
+              1,
+              3,
+              5,
+              9
+            ],
+            [
+              2,
+              5,
+              6,
+              8
+            ]
+          ],
+          "random_control_tickets": [
+            [
+              0,
+              2,
+              4,
+              9
+            ],
+            [
+              1,
+              2,
+              6,
+              8
+            ],
+            [
+              1,
+              4,
+              6,
+              9
+            ]
+          ]
+        },
+        "result": null
       }
     ],
     "pick5": [
@@ -1423,8 +1618,116 @@
             "model_log_gain_vs_fair": 0.0
           }
         }
+      },
+      {
+        "id": "ea38a90473b347773383",
+        "created_utc": "2026-11-27T03:41:48.389424+00:00",
+        "target": {
+          "game": "pick5",
+          "date": "2026-11-26",
+          "stream": "Night",
+          "draw_at_utc": "2026-11-27T04:00:00+00:00",
+          "wagers_close_utc": "2026-11-27T03:45:00+00:00"
+        },
+        "forecast": {
+          "model_version": "day_night_conditional_box_v1",
+          "evidence_start": "2024-01-01",
+          "past_draws": 2121,
+          "latest_training_draw": {
+            "date": "2026-11-26",
+            "stream": "Day",
+            "numbers": [
+              6,
+              3,
+              2,
+              8,
+              9
+            ]
+          },
+          "selected_expert": null,
+          "diagnostics": {
+            "epoch": 0,
+            "threshold": 7.783224016336037,
+            "paired": 1060,
+            "experts": {
+              "presence": {
+                "log_e": -11.323222939695167,
+                "avg": -0.008672836939016836,
+                "first": -0.0010858403644579573,
+                "second": -0.016259833513575718,
+                "improvement_vs_pooled": -0.004542202275437429,
+                "pooled_first": -0.006432479252392864,
+                "pooled_second": -0.002651925298481994,
+                "passed": false
+              },
+              "tokens": {
+                "log_e": -4.5955507892038945,
+                "avg": -0.007256547126936736,
+                "first": -0.0005319301952828148,
+                "second": -0.013981164058590656,
+                "improvement_vs_pooled": -0.0031259124633573276,
+                "pooled_first": -0.005878569083217722,
+                "pooled_second": -0.0003732558434969335,
+                "passed": false
+              }
+            },
+            "last_day": "2026-11-26",
+            "warmup_pairs": 0,
+            "current_epoch_pairs": 1060,
+            "selected_expert": null,
+            "revision": "day_night_conditional_box_v1"
+          },
+          "selected_joint_forecast": null,
+          "candidate_tickets": [
+            [
+              2,
+              3,
+              4,
+              6,
+              9
+            ],
+            [
+              3,
+              5,
+              7,
+              8,
+              9
+            ],
+            [
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "random_control_tickets": [
+            [
+              1,
+              3,
+              4,
+              8,
+              9
+            ],
+            [
+              1,
+              5,
+              6,
+              7,
+              9
+            ],
+            [
+              2,
+              4,
+              5,
+              6,
+              9
+            ]
+          ]
+        },
+        "result": null
       }
     ]
   },
-  "last_run_utc": "2026-11-26T09:43:40.815850+00:00"
+  "last_run_utc": "2026-11-27T03:41:48.389424+00:00"
 }
