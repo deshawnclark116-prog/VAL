@@ -11,6 +11,15 @@ A full Any Order hit requires all digits including repetitions.
 | pick4 | 5 | 0 | 0 | $-15 | $-15 | 0 | +0.000000 |
 | pick5 | 5 | 0 | 0 | $-15 | $-15 | 0 | +0.000000 |
 
+Latest frozen pick3: 2026-11-27 Night; saved 2026-11-28T03:24:28.756318+00:00.
+Model active: No — fair baseline; Box tickets: [[0, 2, 9], [0, 7, 8], [1, 6, 7]]; controls: [[0, 1, 3], [1, 8, 9], [2, 5, 7]].
+
+Latest frozen pick4: 2026-11-27 Night; saved 2026-11-28T03:24:28.756318+00:00.
+Model active: No — fair baseline; Box tickets: [[0, 1, 4, 5], [0, 3, 4, 9], [2, 5, 6, 8]]; controls: [[0, 1, 7, 9], [0, 2, 3, 6], [0, 4, 6, 9]].
+
+Latest frozen pick5: 2026-11-27 Night; saved 2026-11-28T03:24:28.756318+00:00.
+Model active: No — fair baseline; Box tickets: [[0, 1, 3, 6, 7], [1, 2, 4, 7, 8], [1, 2, 6, 7, 8]]; controls: [[0, 2, 5, 7, 9], [1, 2, 4, 5, 8], [1, 3, 4, 6, 8]].
+
 ## Promotion rule
 
 Only future Night drawings that were unknown when the model was
